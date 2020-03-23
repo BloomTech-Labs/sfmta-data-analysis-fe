@@ -1,11 +1,22 @@
 import React from 'react';
-import TestMap from './components/testMap';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
+import NavBar from './components/navBar';
+import TestMap from './components/testMap';
+import LandingPage from './components/landingPage';
+import AboutUs from './components/aboutUs';
 
 function App() {
   return (
     <div className="App">
-      <TestMap />
+      <Router>
+      <NavBar />
+      <Route exact path="/" component={LandingPage} />
+      <Route path = "/data" component={TestMap} />
+      <Route path='/aboutus' component={AboutUs} />
+      </Router>
     </div>
   );
 }
