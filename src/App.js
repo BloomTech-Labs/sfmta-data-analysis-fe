@@ -4,8 +4,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import NavBar from './components/navBar';
-import TestMap from './components/testMap';
 import LandingPage from './components/landingPage';
+import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Router>
       <NavBar />
       <Route exact path="/" component={LandingPage} />
-      <Route path = "/data" component={TestMap} />
+      <Route path = "/data" component={DataPage} />
       <Route path='/aboutus' component={AboutUs} />
       </Router>
     </div>
