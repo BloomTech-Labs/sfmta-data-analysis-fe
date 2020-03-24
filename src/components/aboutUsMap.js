@@ -9,7 +9,6 @@ Plotly.register([
 
 const Plot = createPlotlyComponent(Plotly);
 
-
 const AboutUsMap = props => {
     require('dotenv').config()
     return (

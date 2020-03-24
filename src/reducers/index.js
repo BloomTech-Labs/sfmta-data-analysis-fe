@@ -17,8 +17,6 @@ import {
         return {
           ...state,
           isFetching: true,
-          
-          
         };
       case FETCH_ALL_ROUTES_SUCCESS:
         return {

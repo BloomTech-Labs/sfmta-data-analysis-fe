@@ -7,7 +7,6 @@ const Wrapper = styled.div`
 `
     
 const MainNav = styled(Navbar)`    
-    border: 1px solid blue;
     background: #636667;
     color: white;
 `
