@@ -8,12 +8,15 @@ const Wrapper = styled.div`
     
 const MainNav = styled(Navbar)`    
     border: 1px solid blue;
+    background: #636667;
+    color: white;
 `
+
 
 const NavBar = props => {
     return (
       <Wrapper>
-            <MainNav color="light" light expand="md">
+            <MainNav color="#636667" light expand="md">
                 <NavbarBrand href="/">SFTMA Data Analysis</NavbarBrand>
                 <Nav className="mr-auto" navbar>
                     <NavItem>

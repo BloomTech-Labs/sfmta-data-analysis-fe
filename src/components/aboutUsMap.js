@@ -12,7 +12,6 @@ const Plot = createPlotlyComponent(Plotly);
 
 const AboutUsMap = props => {
     require('dotenv').config()
-    console.log(process.env.REACT_APP_PLOTLY_API_KEY)
     return (
         <Plot
             data={[{
