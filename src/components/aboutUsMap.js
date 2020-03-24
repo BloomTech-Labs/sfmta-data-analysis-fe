@@ -30,7 +30,6 @@ const AboutUsMap = props => {
                 "scrollZoom": false,
                 "dragmode": false
             }}
-
         />
 )}
 
