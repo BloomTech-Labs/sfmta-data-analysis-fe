@@ -1,26 +1,37 @@
 import React from 'react';
+import styled from 'styled-components'
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+
+const Wrapper = styled.div`
+    width: 100%;
+`
+    
+const MainNav = styled(Navbar)`    
+    background: #636667;
+    color: white;
+`
+
 
 const NavBar = props => {
     return (
-      <div>
-            <Navbar color="light" light expand="md">
+      <Wrapper>
+            <MainNav color="#636667" light expand="md">
                 <NavbarBrand href="/">SFTMA Data Analysis</NavbarBrand>
                 <Nav className="mr-auto" navbar>
                     <NavItem>
                         <NavLink href="/">Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="">Data</NavLink>
+                        <NavLink href="/data">Data</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="">About Us</NavLink>
+                        <NavLink href="/aboutus">About Us</NavLink>
                     </NavItem>
                 </Nav>
-            </Navbar>
+            </MainNav>
           
 
-      </div>
+      </Wrapper>
     )
 }
 
