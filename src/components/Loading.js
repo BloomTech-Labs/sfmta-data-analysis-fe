@@ -5,8 +5,10 @@ function Loading(props) {
     console.log("RouteList", props);
     return (
       <>
+        <Spinner color='dark' />
         <Spinner color="dark" />
-
+        <Spinner color="dark" />
+        <Spinner color="dark" />
       </>
     );
   }
