@@ -1,94 +1,151 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import createPlotlyComponent from "react-plotly.js/factory";
 
 import { connect } from "react-redux";
-import { fetchRoutes } from "../actions/index";
-import { fetchLayouts } from '../actions/index';
+import { fetchRoutes, fetchLayouts, fetchNames } from "../actions/index";
 
 import Loading from "./Loading";
+import { Input, Form } from "reactstrap";
 
 //Importing Plot.ly react
-var Plotly = require('plotly.js/lib/core');
-Plotly.register([
-    require('plotly.js/lib/scattermapbox'),
-]);
+var Plotly = require("plotly.js/lib/core");
+Plotly.register([require("plotly.js/lib/scattermapbox")]);
 const Plot = createPlotlyComponent(Plotly);
 
 //Component
 function RouteList(props) {
-
-//Get route data
+  //Get route data
   useEffect(() => {
     props.fetchRoutes();
     props.fetchLayouts();
-  }, [])
+    props.fetchNames();
+  }, []);
 
-//Setup for selecting/submitting the route data
-  const [selectedRoute, setSelectedRoute] = useState(0)
+  //Setup for state for selecting/submitting the route data
+  const [selectedRoute, setSelectedRoute] = useState(0);
   const [routeData, setRouteData] = useState({
-    ids: [],
-    latitude: [],
-    longitude: [],
-    marker: {color: "blue"},
-    mode: "lines",
-    type: "scattermapbox"
-  })
+    routeLatitude: [],
+    routeLongitude: [],
+    routeMarker: {},
+    routeMode: "lines",
+    routeType: "scattermapbox"
+  });
+  const [stopData, setStopData] = useState({
+    stopLatitude: [],
+    stopLongitude: [],
+    stopMarker: {},
+    stopMode: "markers",
+    stopType: "scattermapbox"
+  });
 
   const handleRouteSelect = e => {
-    setSelectedRoute(e.target.value)
-  }
+    setSelectedRoute(e.target.value);
+  };
 
   const handleRouteSubmit = e => {
-    e.preventDefault()
-    let route = props.allroutes[selectedRoute]
-
-    setRouteData({
-      ids: route.ids,
-      latitude: route.lat,
-      longitude: route.lon,
-      marker: route.marker,
-      mode: route.mode,
-      type: route.type
-    })
-  }
+    e.preventDefault();
+    props.names.map(route => {
+      if (route.route_name === selectedRoute) {
+        route.traces.map(trace => {
+          if (props.allroutes[trace].mode === "markers") {
+            setStopData({
+              ...stopData,
+              stopLatitude: props.allroutes[trace].lat,
+              stopLongitude: props.allroutes[trace].lon,
+              stopMarker: props.allroutes[trace].marker,
+              stopMode: props.allroutes[trace].mode,
+              stopType: props.allroutes[trace].type
+            });
+          }
+          setRouteData({
+            ...routeData,
+            routeLatitude: props.allroutes[trace].lat,
+            routeLongitude: props.allroutes[trace].lon,
+            routeMarker: props.allroutes[trace].marker,
+            routeMode: props.allroutes[trace].mode,
+            routeType: props.allroutes[trace].type
+          });
+        });
+      }
+    });
+  };
 
   //Grabbing plotly API key
-  require('dotenv').config()
-  
-    return (
+  require("dotenv").config();
+
+  return (
+    <div>
       <div>
-        {props.isFetching && <div><Loading/></div>}
         {props.error && <div>{props.error.message}</div>}
 
-        <form onSubmit={handleRouteSubmit}>
-
-          <select value={selectedRoute} onChange={handleRouteSelect}>
-          {props.allroutes.map((route, index) => <option>{index}</option>)}
-          </select>
-            <button>Get Data</button>
-          </form>
-
-          <Plot 
-            data={[{ "lat": routeData.latitude, 
-            "lon": routeData.longitude, 
-            "mode": routeData.mode,
-            "type": routeData.type
-          }]}
-          layout={{ "height": 800, "mapbox": { "accesstoken": process.env.REACT_APP_PLOTLY_API_KEY, "style": "outdoors", "zoom": 11.25, "center": { "lat": 37.76, "lon": -122.4 } }, "margin": { "b": 0, "l": 0, "r": 0, "t": 0 }, "showlegend": false, "width": 800 }}
-          />
+        <Form onSubmit={handleRouteSubmit}>
+          <Input
+            type="select"
+            value={selectedRoute}
+            onChange={handleRouteSelect}
+            name="selectedRoute"
+          >
+            <option>Select a Route</option>
+            {props.names.map(name => (
+              <option value={name.route_name} name="selectedRoute">
+                {name.route_name}
+              </option>
+            ))}
+          </Input>
+          <button>Get Data</button>
+        </Form>
+        {props.isFetching && (
+          <div>
+            <Loading />
+          </div>
+        )}
+        <Plot
+          data={[
+            {
+              lat: routeData.routeLatitude,
+              lon: routeData.routeLongitude,
+              marker: routeData.routeMarker,
+              mode: routeData.routeMode,
+              type: routeData.routeType
+            },
+            {
+              lat: stopData.stopLatitude,
+              lon: stopData.stopLongitude,
+              marker: stopData.stopMarker,
+              mode: stopData.stopMode,
+              type: stopData.stopType
+            }
+          ]}
+          layout={{
+            height: 700,
+            mapbox: {
+              accesstoken: process.env.REACT_APP_PLOTLY_API_KEY,
+              style: "outdoors",
+              zoom: 11.25,
+              center: { lat: 37.76, lon: -122.4 }
+            },
+            margin: { b: 0, l: 0, r: 0, t: 0 },
+            showlegend: false,
+            width: 1000
+          }}
+        />
       </div>
-)}
-  
-  const mapStateToProps = state => {
-    return{
+    </div>
+  );
+}
+
+const mapStateToProps = state => {
+  return {
     allroutes: state.allroutes,
     layout: state.layout,
+    names: state.names,
     error: state.error,
-    isFetching: state.isFetching 
-    }
+    isFetching: state.isFetching
   };
-  
-  export default connect( 
-    mapStateToProps, {fetchRoutes, fetchLayouts}
-  )(RouteList);
+};
 
+export default connect(mapStateToProps, {
+  fetchRoutes,
+  fetchLayouts,
+  fetchNames
+})(RouteList);
