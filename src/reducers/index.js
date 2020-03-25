@@ -1,11 +1,15 @@
 import {
     FETCH_ALL_ROUTES_LOADING,
     FETCH_ALL_ROUTES_SUCCESS,
-    FETCH_ALL_ROUTES_FAILED
+    FETCH_ALL_ROUTES_FAILED,
+    FETCH_LAYOUTS_LOADING,
+    FETCH_LAYOUTS_SUCCESS,
+    FETCH_LAYOUTS_FAILED
   } from "../actions/index.js";
   
   const initialState = {
     allroutes: [],
+    layout: [],
     error: '',
     isFetching: false
   };
@@ -26,6 +30,23 @@ import {
           
         };
       case FETCH_ALL_ROUTES_FAILED:
+        return {
+          ...state,
+          isFetching: false,
+          error: action.payload
+        };
+      case FETCH_LAYOUTS_LOADING:
+        return {
+          ...state,
+          isFetching: true
+        };
+      case FETCH_LAYOUTS_SUCCESS:
+        return {
+          ...state,
+          layout: action.payload,
+          isFetching: false
+        };
+      case FETCH_LAYOUTS_FAILED:
         return {
           ...state,
           isFetching: false,
