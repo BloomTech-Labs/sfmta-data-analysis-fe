@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 const Wrapper = styled.div`
@@ -7,8 +7,7 @@ const Wrapper = styled.div`
 `
     
 const MainNav = styled(Navbar)`    
-    background: #636667;
-    color: white;
+
 `
 
 
