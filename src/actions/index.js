@@ -9,44 +9,10 @@ export const fetchRoutes = () => dispatch => {
     axios
     .get('https://sfmta-test.herokuapp.com/all-routes')
     .then(res => {
-        console.log("resData", res.data)
-        dispatch({type:FETCH_ALL_ROUTES_SUCCESS, payload: res.data.traces})
+        console.log("resData",res.data)
+        dispatch({type:FETCH_ALL_ROUTES_SUCCESS, payload: res.data.results})
     })
     .catch(err => {
         dispatch({type: FETCH_ALL_ROUTES_FAILED, payload: err.response})
-    })
-}
-
-export const FETCH_LAYOUTS_LOADING = "FETCH_LAYOUTS_LOADING"
-export const FETCH_LAYOUTS_SUCCESS = "FETCH_LAYOUTS_SUCCESS"
-export const FETCH_LAYOUTS_FAILED = "FETCH_LAYOUTS_FAILED"
-
-export const fetchLayouts = () => dispatch => {
-    dispatch({ type: FETCH_LAYOUTS_LOADING});
-    axios
-    .get('https://sfmta-test.herokuapp.com/all-routes')
-    .then(res => {
-        console.log("layout", res.data.layout)
-        dispatch({type:FETCH_LAYOUTS_SUCCESS, payload: res.data.layout})
-    })
-    .catch(err => {
-        dispatch({type: FETCH_LAYOUTS_FAILED, payload: err.response})
-    })
-}
-
-export const FETCH_NAMES_LOADING = "FETCH_NAMES_LOADING"
-export const FETCH_NAMES_SUCCESS = "FETCH_NAMES_SUCCESS"
-export const FETCH_NAMES_FAILED = "FETCH_NAMES_FAILED"
-
-export const fetchNames = () => dispatch => {
-    dispatch({ type: FETCH_NAMES_LOADING});
-    axios
-    .get('https://sfmta-test.herokuapp.com/all-routes')
-    .then(res => {
-        console.log("route names", res.data.names)
-        dispatch({type:FETCH_NAMES_SUCCESS, payload: res.data.names})
-    })
-    .catch(err => {
-        dispatch({type: FETCH_NAMES_FAILED, payload: err.response})
     })
 }
