@@ -4,18 +4,20 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 const Wrapper = styled.div`
     width: 100%;
-`
+    
+`;
     
 const MainNav = styled(Navbar)`    
+    color: #FD5A1E;
+`;
 
-`
 
 
 const NavBar = props => {
     return (
       <Wrapper>
-            <MainNav color="#636667" light expand="md">
-                <NavbarBrand href="/">SFTMA Data Analysis</NavbarBrand>
+            <MainNav color="#636667" expand="md">
+                <NavbarBrand >SFTMA Data Analysis</NavbarBrand>
                 <Nav className="mr-auto" navbar>
                     <NavItem>
                         <NavLink href="/">Home</NavLink>

@@ -7,7 +7,7 @@ import agustin from '../images/agustin.jfif';
 
 const Agustin = props => {
     return (
-        <div>
+        <div className='profileDiv'>
             <Card>
                 <CardImg top width="100%" src={agustin} alt="Profile picture" />
                 <CardBody>
