@@ -21,62 +21,69 @@ function RouteList(props) {
     props.fetchNames();
   }, []);
 
-  //Setup for state for selecting/submitting the route data
+  //Setup state for selecting/submitting the route data
   const [selectedRoute, setSelectedRoute] = useState(0);
   const [routeData, setRouteData] = useState({
-    routeLatitude: [],
-    routeLongitude: [],
-    routeMarker: {},
-    routeMode: "lines",
-    routeType: "scattermapbox"
+    lat: [],
+    lon: [],
+    marker: {"color": "blue"},
+    mode: "lines",
+    type: "scattermapbox"
   });
   const [stopData, setStopData] = useState({
-    stopLatitude: [],
-    stopLongitude: [],
-    stopMarker: {},
-    stopMode: "markers",
-    stopType: "scattermapbox"
+    lat: [],
+    long: [],
+    marker: {},
+    mode: "",
+    type: ""
   });
 
   const handleRouteSelect = e => {
     setSelectedRoute(e.target.value);
   };
 
+  //Displaying the route that is selected
   const handleRouteSubmit = e => {
     e.preventDefault();
+
+    let traces = []
+
     props.names.map(route => {
+      //Finding the selected route
       if (route.route_name === selectedRoute) {
         route.traces.map(trace => {
+          //Check if it's stop data, and set state if it is
           if (props.allroutes[trace].mode === "markers") {
-            setStopData({
+             setStopData({
               ...stopData,
-              stopLatitude: props.allroutes[trace].lat,
-              stopLongitude: props.allroutes[trace].lon,
-              stopMarker: props.allroutes[trace].marker,
-              stopMode: props.allroutes[trace].mode,
-              stopType: props.allroutes[trace].type
+              lat: props.allroutes[trace].lat,
+              long: props.allroutes[trace].lon,
+              marker: props.allroutes[trace].marker,
+              mode: props.allroutes[trace].mode,
+              type: props.allroutes[trace].type
             });
           }
-          setRouteData({
-            ...routeData,
-            routeLatitude: props.allroutes[trace].lat,
-            routeLongitude: props.allroutes[trace].lon,
-            routeMarker: props.allroutes[trace].marker,
-            routeMode: props.allroutes[trace].mode,
-            routeType: props.allroutes[trace].type
-          });
+          //Take each trace object and add it to the traces array
+          return traces.push(props.allroutes[trace])
         });
       }
     });
+
+    //Add the stops state to the end of the traces
+    traces.push(stopData)
+
+    //Set route data state to the traces array which is get's displayed on the map
+    setRouteData(traces)
   };
 
   //Grabbing plotly API key
   require("dotenv").config();
-
+  console.log(routeData)
   return (
     <div>
       <div>
         {props.error && <div>{props.error.message}</div>}
+        {props.isFetching && (<div><Loading /></div>)}
 
         <Form onSubmit={handleRouteSubmit}>
           <Input
@@ -94,28 +101,8 @@ function RouteList(props) {
           </Input>
           <button>Get Data</button>
         </Form>
-        {props.isFetching && (
-          <div>
-            <Loading />
-          </div>
-        )}
         <Plot
-          data={[
-            {
-              lat: routeData.routeLatitude,
-              lon: routeData.routeLongitude,
-              marker: routeData.routeMarker,
-              mode: routeData.routeMode,
-              type: routeData.routeType
-            },
-            {
-              lat: stopData.stopLatitude,
-              lon: stopData.stopLongitude,
-              marker: stopData.stopMarker,
-              mode: stopData.stopMode,
-              type: stopData.stopType
-            }
-          ]}
+          data={routeData}
           layout={{
             height: 700,
             mapbox: {

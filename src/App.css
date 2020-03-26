@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  background: #27251F;
 }
 
 .App {
@@ -8,12 +7,11 @@ html {
   flex-direction: column;
   align-items: center;
 }
-html{
-  background: #27251F;
+
+a.nav-link {
   color: white;
 }
 
-
-
-
-
+a.nav-link:hover  {
+   color: #FD5A1E;
+}
