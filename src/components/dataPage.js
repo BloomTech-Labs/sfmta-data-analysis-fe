@@ -57,14 +57,16 @@ function RouteList(props) {
               stopType: props.allroutes[trace].type
             });
           }
-          setRouteData({
-            ...routeData,
-            routeLatitude: props.allroutes[trace].lat,
-            routeLongitude: props.allroutes[trace].lon,
-            routeMarker: props.allroutes[trace].marker,
-            routeMode: props.allroutes[trace].mode,
-            routeType: props.allroutes[trace].type
-          });
+          if (props.allroutes[trace].mode === 'lines') {
+            setRouteData({
+              ...routeData,
+              routeLatitude: props.allroutes[trace].lat,
+              routeLongitude: props.allroutes[trace].lon,
+              routeMarker: props.allroutes[trace].marker,
+              routeMode: props.allroutes[trace].mode,
+              routeType: props.allroutes[trace].type
+            });
+          }
         });
       }
     });

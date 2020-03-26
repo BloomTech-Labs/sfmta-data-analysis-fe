@@ -8,7 +8,7 @@ import NavBar from './components/navBar';
 import LandingPage from './components/landingPage';
 import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
-import Connor from './profiles/connor';
+import Agustin from './profiles/agustin';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <Route exact path="/" component={LandingPage} />
       <Route path = "/data" component={DataPage} />
       <Route path='/aboutus' component={AboutUs} />
-      <Route path='/profile' component={Connor} />
+      <Route path='/agustin' component={Agustin} />
       </Router>
     </div>
   );

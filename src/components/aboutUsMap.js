@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Connor from '../profiles/connor';
 
 import createPlotlyComponent from "react-plotly.js/factory";
 
@@ -17,20 +16,20 @@ const AboutUsMap = props => {
         console.log(element.points[0].hovertext)
         setTeamMember(element.points[0].hovertext)
         console.log('team member', teamMember)
-        if (teamMember === 'Connor') {
-            return (
-                <div><Connor/></div>
-            )
+        if (teamMember === 'Connor Angelis') {
+            window.location.href='/connor'
         }
+        if (teamMember === 'Agustin Vargas')
+            window.location.href='/agustin'
     }
     console.log(teamMember)
     return (
         <div>
         <Plot
         data={[{
-            "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 58.410460],
-            "lon": [-112.457310, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, 8.726921],
-            "hovertext": ["Michelle Sirimanivong", "Jonathan Allison", "Connor", "Cody Holman", 'Erik Sandoval', 'Jordan Ireland', 'Justin Menendez', 'Mathias Skerden'],
+            "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 34.0522, 33.895847, 58.410460],
+            "lon": [-112.457310, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.2437, -118.220070, 8.726921],
+            "hovertext": ["Michelle Sirimanivong", "Jonathan Allison", "Connor", "Cody Holman", 'Erik Sandoval', 'Jordan Ireland', 'Justin Menendez', 'Agustin Vargas', 'Daniel Aguilar', 'Mathias Skerden'],
             "mode": "markers",
             "type": "scattermapbox",
             "marker": {"size": 12},
