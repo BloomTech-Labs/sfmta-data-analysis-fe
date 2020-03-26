@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import styled from 'styled-components';
 
 import NavBar from './components/navBar';
 import LandingPage from './components/landingPage';

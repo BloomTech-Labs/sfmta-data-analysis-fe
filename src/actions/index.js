@@ -50,3 +50,9 @@ export const fetchNames = () => dispatch => {
         dispatch({type: FETCH_NAMES_FAILED, payload: err.response})
     })
 }
+
+export const TOGGLE_MODAL = 'TOGGLE_MODAL';
+
+export const toggleModal = data => dispatch => {
+    dispatch({type: TOGGLE_MODAL, payload: data})
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    CardTitle, CardSubtitle, CardLink
   } from 'reactstrap';
 import justin from '../images/justin.jpg';
 
@@ -14,8 +14,11 @@ const Justin = props => {
                     <CardTitle>Justin Menendez</CardTitle>
                     <CardSubtitle>UX Designer</CardSubtitle>
                     <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                    <Button>View Github</Button>
                 </CardBody>
+                <CardBody className='buttonsDiv'>
+                    <CardLink href='' target='_blank'>Portfolio</CardLink>
+                    <CardLink href='' target='_blank'>LinkedIn</CardLink>
+                </CardBody> 
             </Card>
         </div>
     )

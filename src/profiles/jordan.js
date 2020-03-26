@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    CardTitle, CardSubtitle, CardLink
   } from 'reactstrap';
 import jordan from '../images/jordan.jfif';
 
@@ -14,8 +14,12 @@ const Jordan = props => {
                     <CardTitle>Jordan Ireland</CardTitle>
                     <CardSubtitle>Data Scientist</CardSubtitle>
                     <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                    <Button>View Github</Button>
                 </CardBody>
+                <CardBody className='buttonsDiv'>
+                    <CardLink href='https://github.com/Jordan-Ireland' target='_blank'>Github</CardLink>
+                    <CardLink href='https://www.linkedin.com/in/jordan-b-ireland/' target='_blank'>LinkedIn</CardLink>
+                </CardBody> 
+                
             </Card>
         </div>
     )

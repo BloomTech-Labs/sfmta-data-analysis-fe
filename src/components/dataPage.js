@@ -63,21 +63,8 @@ function RouteList(props) {
               type: props.allroutes[trace].type
             });
           }
-<<<<<<< HEAD
-          if (props.allroutes[trace].mode === 'lines') {
-            setRouteData({
-              ...routeData,
-              routeLatitude: props.allroutes[trace].lat,
-              routeLongitude: props.allroutes[trace].lon,
-              routeMarker: props.allroutes[trace].marker,
-              routeMode: props.allroutes[trace].mode,
-              routeType: props.allroutes[trace].type
-            });
-          }
-=======
           //Take each trace object and add it to the traces array
           return traces.push(props.allroutes[trace])
->>>>>>> d03b67770a98518ce22a87c6900dc38640cf5e86
         });
       }
     });

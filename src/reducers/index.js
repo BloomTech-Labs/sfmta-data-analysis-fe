@@ -7,7 +7,8 @@ import {
     FETCH_LAYOUTS_FAILED,
     FETCH_NAMES_LOADING,
     FETCH_NAMES_SUCCESS,
-    FETCH_NAMES_FAILED
+    FETCH_NAMES_FAILED,
+    TOGGLE_MODAL
   } from "../actions/index.js";
   
   const initialState = {
@@ -15,7 +16,9 @@ import {
     layout: [],
     names: [],
     error: '',
-    isFetching: false
+    isFetching: false,
+    modal: false,
+    
   };
   
   const reducer = (state = initialState, action) => {
@@ -73,6 +76,12 @@ import {
           isFetching: false,
           error: action.payload
         };
+      case TOGGLE_MODAL:
+        console.log('click', action.payload)
+        return {
+          ...state,
+          modal: true
+        }
       default:
         return state;
     }
