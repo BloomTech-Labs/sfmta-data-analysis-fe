@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
- import { withRouter } from 'react-router-dom'
-import { toggleModal } from '../actions/';
+import { withRouter } from 'react-router-dom';
+import profileData from './profileData';
 
 import createPlotlyComponent from "react-plotly.js/factory";
 
@@ -13,16 +12,17 @@ Plotly.register([
 const Plot = createPlotlyComponent(Plotly);
 
 const AboutUsMap = props => {
-    console.log('props', props)
-useEffect(() => {
-    props.toggleModal();
-},[])
+    
+    const showModal = () => {
+        
+    }
+
     //Handle click to render component based on which team member was clicked
     const handleClick = (element) => {
         return(
         (element.points[0].hovertext === 'Agustin Vargas') ? props.history.push('/agustin'):
         (element.points[0].hovertext === 'Cody Holman') ? props.history.push('/cody'):
-        (element.points[0].hovertext === 'Connor Angelis') ? props.toggleModal(): 
+        (element.points[0].hovertext === 'Connor Angelis') ? props.history.push('/connor'): 
         (element.points[0].hovertext === 'Daniel Aguilar') ? props.history.push('/daniel'):
         (element.points[0].hovertext === 'Erik Sandoval') ? props.history.push('/erik'):
         (element.points[0].hovertext === 'Jonathan Allison') ? props.history.push('/jonathan'):
@@ -55,9 +55,4 @@ useEffect(() => {
         </div>
 )}
 
-const mapStateToProps = state => {
-    return {
-        modal: state.modal
-    }
-}
-export default connect(mapStateToProps, {toggleModal})(AboutUsMap);
+export default AboutUsMap;
