@@ -9,8 +9,8 @@ export const fetchRoutes = (type) => dispatch => {
     axios
     .get(`https://sfmta-test.herokuapp.com/type-map?type=${type}`)
     .then(res => {
-        console.log("resData", res.data)
-        dispatch({type:FETCH_ALL_ROUTES_SUCCESS, payload: res.data.traces})
+        console.log("resData",res.data)
+        dispatch({type:FETCH_ALL_ROUTES_SUCCESS, payload: res.data.results})
     })
     .catch(err => {
         dispatch({type: FETCH_ALL_ROUTES_FAILED, payload: err.response})
