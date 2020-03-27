@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+import profileData from './profileData';
 
 import createPlotlyComponent from "react-plotly.js/factory";
 
@@ -8,7 +10,6 @@ Plotly.register([
 ]);
 
 const Plot = createPlotlyComponent(Plotly);
-
 
 const AboutUsMap = props => {
     require('dotenv').config()
@@ -34,6 +35,3 @@ const AboutUsMap = props => {
 )}
 
 export default AboutUsMap;
-
-    
-

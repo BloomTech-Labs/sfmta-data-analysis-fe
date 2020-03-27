@@ -1,5 +1,9 @@
 import React from 'react';
-import erik from '../images/erik.jfif';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, CardLink
+  } from 'reactstrap';
+import erik from '../images/erik.jpg';
 
 const Erik = props => {
     return (

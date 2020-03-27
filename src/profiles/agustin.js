@@ -1,5 +1,9 @@
 import React from 'react';
-import agustin from '../images/agustin.jfif';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, CardLink
+  } from 'reactstrap';
+import agustin from '../images/agustin.jpg';
 
 const Agustin = props => {
     return (
