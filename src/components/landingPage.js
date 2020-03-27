@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import trolley from '../images/trolley.jpg';
-
+import city from '../images/city.jpg'
 // const Div = styled.div`
 // position: absolute;
 // width: 147px;
@@ -46,7 +46,7 @@ height: 272px;
 right:176px;
 top: 157px;
 margin:auto;
-border: 15px solid #FD5A1E;
+// border: 15px solid #FD5A1E;
 `
 const Div2 = styled.div`
 position: absolute;
@@ -57,6 +57,27 @@ top: 519px;
 
 background-image:url(${trolley});
 `
+const Div4 = styled.div`
+position: absolute;
+width: 446px;
+height: 398px;
+left: 821px;
+top: 1632px;
+bottom:300px;
+
+background-image:url(${city});
+`
+const Div3 = styled.div`
+position: absolute;
+width: 446px;
+height: 398px;
+left: 160px;
+top: 1083px;
+
+background: #080808;
+opacity: 0.5;
+`
+
 
 const LandingPage = () => {
   return (
@@ -67,7 +88,8 @@ const LandingPage = () => {
       
      </Div> 
     <Div2></Div2>
-    
+    <Div3></Div3>
+    <Div4></Div4>
       
 </section>
     

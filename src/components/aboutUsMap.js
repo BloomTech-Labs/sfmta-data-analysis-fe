@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'
+ import { withRouter } from 'react-router-dom'
 import { toggleModal } from '../actions/';
 
 import createPlotlyComponent from "react-plotly.js/factory";
@@ -16,7 +16,7 @@ const AboutUsMap = props => {
     console.log('props', props)
 useEffect(() => {
     props.toggleModal();
-}, [])
+},[])
     //Handle click to render component based on which team member was clicked
     const handleClick = (element) => {
         return(
