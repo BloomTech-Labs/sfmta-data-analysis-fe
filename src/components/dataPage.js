@@ -81,9 +81,11 @@ function RouteList(props) {
   console.log(routeData)
   return (
     <div>
+      {props.isFetching ? (
+        <Loading />
+      ) : (
       <div>
         {props.error && <div>{props.error.message}</div>}
-        {props.isFetching && (<div><Loading /></div>)}
 
         <Form onSubmit={handleRouteSubmit}>
           <Input
@@ -117,6 +119,7 @@ function RouteList(props) {
           }}
         />
       </div>
+      )}
     </div>
   );
 }

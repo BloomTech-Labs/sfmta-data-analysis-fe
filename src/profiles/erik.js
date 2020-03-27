@@ -3,7 +3,7 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, CardLink
   } from 'reactstrap';
-import erik from '../images/erik.jfif';
+import erik from '../images/erik.jpg';
 
 const Erik = props => {
     return (
