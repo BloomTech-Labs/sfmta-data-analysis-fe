@@ -90,6 +90,7 @@ function RouteList(props) {
   //Grabbing plotly API key
   require("dotenv").config();
 
+  console.log(routeData)
   return (
     <div>
       {props.isFetching ? (

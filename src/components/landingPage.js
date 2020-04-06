@@ -35,7 +35,7 @@ import city from '../images/city.jpg'
 // /* off white */
 
 // `
-const Div = styled.div`
+const Header = styled.div`
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -54,6 +54,7 @@ height: 398px;
 // left: 821px;
 // top: 519px;
 margin: 5%;
+margin-bottom: 300px;
 
 // background-image:url(${trolley});
 `
@@ -84,22 +85,40 @@ const Border = styled.div`
   border: 15px solid white;
   position: absolute;
   top: 490px;
-  right: 15%;
+  right: 20%;
   width: 446px;
   height: 398px;
+`
+const Border2 = styled.div`
+  border: 15px solid white;
+  position: absolute;
+  top: 1000px;
+  left: 15%;
+  width: 446px;
+  height: 398px;
+`
+const Spacer = styled.div`
+  width: 50%;
 `
 
 
 const LandingPage = () => {
   return (
     <section>
-    <Div>
+    <Header>
       <h1>Problem</h1>
        <p>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
-      
-     </Div> 
-    <Div2><p>Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p> <img src={trolley}/> <Border /></Div2>
-    <Div3><img src={city} /><p >Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p> </Div3>
+     </Header> 
+    <Div2>
+      <Spacer></Spacer>
+      <img src={trolley}/> 
+      <Border />
+    </Div2>
+    <Div3>
+      <img src={city} />
+      <Border2/>
+      <Spacer></Spacer> 
+    </Div3>
     <Div4><p>Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p></Div4>
       
 </section>
