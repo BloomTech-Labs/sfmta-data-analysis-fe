@@ -40,8 +40,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 text-align:center;
-position: absolute;
-width: 1047px;
+min-width: 500px;
 height: 272px;
 right:176px;
 top: 157px;
@@ -49,33 +48,44 @@ margin:auto;
 // border: 15px solid #FD5A1E;
 `
 const Div2 = styled.div`
-position: absolute;
-width: 446px;
-height: 398px;
-left: 821px;
-top: 519px;
+display: flex;
+min-width: 500px;
+// height: 398px;
+// left: 821px;
+// top: 519px;
+margin: 5%;
 
-background-image:url(${trolley});
+// background-image:url(${trolley});
 `
 const Div4 = styled.div`
-position: absolute;
-width: 446px;
+display: flex;
+flex-direction: reverse;
+min-width: 500px;
 height: 398px;
 left: 821px;
 top: 1632px;
 bottom:300px;
+margin: 5%;
 
-background-image:url(${city});
+//background-image:url(${city});
 `
 const Div3 = styled.div`
-position: absolute;
-width: 446px;
+display: flex;
+flex-direction: reverse;
+min-width: 500px;
 height: 398px;
 left: 160px;
 top: 1083px;
+//opacity: 0.5;
+margin: 5%;
+`
 
-background: #080808;
-opacity: 0.5;
+const Border = styled.div`
+  border: 8px solid white;
+  min-width: 398px;
+  height: 398px;
+  margin-left: -50%;
+  margin-bottom: -25%;
 `
 
 
@@ -87,9 +97,9 @@ const LandingPage = () => {
        <p>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
       
      </Div> 
-    <Div2></Div2>
-    <Div3></Div3>
-    <Div4></Div4>
+    <Div2><p>Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p> <img src={trolley}/><Border /></Div2>
+    <Div3><img src={city} /><p >Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p> </Div3>
+    <Div4><p>Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p></Div4>
       
 </section>
     

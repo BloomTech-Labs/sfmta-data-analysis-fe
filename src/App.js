@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import NavBar from './components/navBar';
+import Footer from './components/footer';
 import LandingPage from './components/landingPage';
 import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
@@ -38,6 +39,7 @@ function App() {
         <Route path='/justin' component={Justin} />
         <Route path='/mathias' component={Mathias} />
         <Route path='/michelle' component={Michelle} />
+        <Footer/>
       </Router>
     </div>
   );
