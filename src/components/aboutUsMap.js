@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import profileData from './profileData';
 
 import createPlotlyComponent from "react-plotly.js/factory";
+import { Modal } from 'reactstrap';
 
 var Plotly = require('plotly.js/lib/core');
 Plotly.register([
@@ -12,8 +13,40 @@ Plotly.register([
 const Plot = createPlotlyComponent(Plotly);
 
 const AboutUsMap = props => {
+    
+    const showModal = () => {
+        profileData.map(student => (
+            <Modal
+             key={student.id}
+             name={student.name}
+             title={student.title}
+             bio={student.bio}
+             img={student.img}
+             github={student.github}
+             linkedIn={student.linkedIn}
+            />
+        ))
+    }
+
+    //Handle click to render component based on which team member was clicked
+    const handleClick = (element) => {
+        return(
+        (element.points[0].hovertext === 'Agustin Vargas') ? props.history.push('/agustin'):
+        (element.points[0].hovertext === 'Cody Holman') ? props.history.push('/cody'):
+        (element.points[0].hovertext === 'Connor Angelis') ? props.history.push('/connor'): 
+        (element.points[0].hovertext === 'Daniel Aguilar') ? props.history.push('/daniel'):
+        (element.points[0].hovertext === 'Erik Sandoval') ? props.history.push('/erik'):
+        (element.points[0].hovertext === 'Jonathan Allison') ? props.history.push('/jonathan'):
+        (element.points[0].hovertext === 'Jordan Ireland') ? props.history.push('/jordan'):
+        (element.points[0].hovertext === 'Justin Menendez') ? props.history.push('/justin'):
+        (element.points[0].hovertext === 'Mathias Skerden') ? props.history.push('/mathias'):
+        (element.points[0].hovertext === 'Michelle Sirimanivong') ? props.history.push('/michelle'):
+        (element.points[0].hovertext === 'Agustin Vargas') ? props.history.push('/agustin') : null
+    )}
+
     require('dotenv').config()
     console.log(process.env.REACT_APP_PLOTLY_API_KEY)
+
     return (
         <Plot
             data={[{

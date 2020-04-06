@@ -17,8 +17,8 @@ const ModalCard = props => {
                     <p>{props.bio}</p>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" href={} >Github</Button>{' '}
-                    <Button color="secondary" >LinkedIn</Button>
+                    <Button color="primary" href={props.github} target='_blank'>Github</Button>{' '}
+                    <Button color="secondary" href={props.linkedIn} target='_blank'>LinkedIn</Button>
                 </ModalFooter>
             </Modal>
     </div>
