@@ -3,8 +3,9 @@ import { withRouter } from 'react-router-dom';
 import profileData from './profileData';
 
 import createPlotlyComponent from "react-plotly.js/factory";
-import { Modal } from 'reactstrap';
+import ModalCard from './modal';
 
+//Importing Plotly React
 var Plotly = require('plotly.js/lib/core');
 Plotly.register([
     require('plotly.js/lib/scattermapbox'),
@@ -13,43 +14,30 @@ Plotly.register([
 const Plot = createPlotlyComponent(Plotly);
 
 const AboutUsMap = props => {
+
+//Create state so modal can load properly on click
+    const [modal, setModal] = useState(false);
+    const [currentStudent, setCurrentStudent] = useState(null)
     
-    const showModal = () => {
-        profileData.map(student => (
-            <Modal
-             key={student.id}
-             name={student.name}
-             title={student.title}
-             bio={student.bio}
-             img={student.img}
-             github={student.github}
-             linkedIn={student.linkedIn}
-            />
-        ))
-    }
+    const switchModal = () => setModal(!modal);
 
-    //Handle click to render component based on which team member was clicked
-    const handleClick = (element) => {
-        return(
-        (element.points[0].hovertext === 'Agustin Vargas') ? props.history.push('/agustin'):
-        (element.points[0].hovertext === 'Cody Holman') ? props.history.push('/cody'):
-        (element.points[0].hovertext === 'Connor Angelis') ? props.history.push('/connor'): 
-        (element.points[0].hovertext === 'Daniel Aguilar') ? props.history.push('/daniel'):
-        (element.points[0].hovertext === 'Erik Sandoval') ? props.history.push('/erik'):
-        (element.points[0].hovertext === 'Jonathan Allison') ? props.history.push('/jonathan'):
-        (element.points[0].hovertext === 'Jordan Ireland') ? props.history.push('/jordan'):
-        (element.points[0].hovertext === 'Justin Menendez') ? props.history.push('/justin'):
-        (element.points[0].hovertext === 'Mathias Skerden') ? props.history.push('/mathias'):
-        (element.points[0].hovertext === 'Michelle Sirimanivong') ? props.history.push('/michelle'):
-        (element.points[0].hovertext === 'Agustin Vargas') ? props.history.push('/agustin') : null
-    )}
-
+    const showModal = (data) => {
+        let studentName = (data.points[0].hovertext)
+        profileData.map(student => {
+            if(student.name === studentName){
+                setCurrentStudent(student)
+                switchModal()
+            }})
+        }
+        
     return (
         <div>
+            {(modal && currentStudent) && <ModalCard student={currentStudent} modal={modal} toggle={switchModal}/> }
+            
         <Plot
         data={[{
             "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 34.0522, 33.895847, 58.410460],
-            "lon": [-112.457310, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.2437, -118.220070, 8.726921],
+            "lon": [-112.6, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.7, -118, 8.726921],
             "hovertext": ["Michelle Sirimanivong", "Jonathan Allison", "Connor Angelis", "Cody Holman", 'Erik Sandoval', 'Jordan Ireland', 'Justin Menendez', 'Agustin Vargas', 'Daniel Aguilar', 'Mathias Skerden'],
             "mode": "markers",
             "type": "scattermapbox",
@@ -61,8 +49,9 @@ const AboutUsMap = props => {
             "responsive": true,
             "scrollZoom": false,
         }}
-        onClick={(data) => {handleClick(data)}}
+        onClick={(data) => {showModal(data)}}
         />
+
         </div>
 )}
 
