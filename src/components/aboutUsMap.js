@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import profileData from './profileData';
 
 import createPlotlyComponent from "react-plotly.js/factory";
+import { Modal } from 'reactstrap';
 
 var Plotly = require('plotly.js/lib/core');
 Plotly.register([
@@ -14,7 +15,17 @@ const Plot = createPlotlyComponent(Plotly);
 const AboutUsMap = props => {
     
     const showModal = () => {
-        
+        profileData.map(student => (
+            <Modal
+             key={student.id}
+             name={student.name}
+             title={student.title}
+             bio={student.bio}
+             img={student.img}
+             github={student.github}
+             linkedIn={student.linkedIn}
+            />
+        ))
     }
 
     //Handle click to render component based on which team member was clicked
