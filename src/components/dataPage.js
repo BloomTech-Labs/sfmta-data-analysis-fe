@@ -1,35 +1,20 @@
-import React, { useState, useEffect } from "react";
-import createPlotlyComponent from "react-plotly.js/factory";
+import React from 'react';
 
 import { connect } from "react-redux";
-import { fetchRoutes, fetchLayouts, fetchNames } from "../actions/index";
-
+import { fetchRoutes } from "../actions/index";
 import Loading from "./Loading";
-import { Input, Form } from "reactstrap";
 
-//Importing Plot.ly react
-var Plotly = require("plotly.js/lib/core");
-Plotly.register([require("plotly.js/lib/scattermapbox")]);
-const Plot = createPlotlyComponent(Plotly);
-
-//Component
 function RouteList(props) {
-  //Get route data
-  useEffect(() => {
-    props.fetchRoutes();
-    props.fetchLayouts();
-    props.fetchNames();
-  }, []);
-
   //Setup state for selecting/submitting the route data
-  const [selectedRoute, setSelectedRoute] = useState(0);
-  const [routeData, setRouteData] = useState({
+  const [selectedRoute, setSelectedRoute] = useState("");
+  
+  const [routeData, setRouteData] = useState([{
     lat: [],
     lon: [],
     marker: {"color": "blue"},
     mode: "lines",
     type: "scattermapbox"
-  });
+  }]);
   const [stopData, setStopData] = useState({
     lat: [],
     long: [],
@@ -42,7 +27,17 @@ function RouteList(props) {
     setSelectedRoute(e.target.value);
   };
 
-  //Displaying the route that is selected
+  const handleTypeSelect = e => {
+    const type = e.target.value.toLowerCase()
+    
+    if(type) {
+    props.fetchRoutes(type);
+    props.fetchLayouts(type);
+    props.fetchNames(type);
+    }
+  };
+
+  //Displaying the route that is selected on the Plotly
   const handleRouteSubmit = e => {
     e.preventDefault();
 
@@ -78,21 +73,39 @@ function RouteList(props) {
 
   //Grabbing plotly API key
   require("dotenv").config();
-  console.log(routeData)
+
   return (
     <div>
+      {props.isFetching ? (
+        <Loading />
+      ) : (
       <div>
         {props.error && <div>{props.error.message}</div>}
-        {props.isFetching && (<div><Loading /></div>)}
 
         <Form onSubmit={handleRouteSubmit}>
+          <Input
+            type="select"
+            onChange={handleTypeSelect}
+            name="selectedType"
+          >
+            <option name="selectedType">Select a type</option>
+            <option name="selectedType">Bus</option>
+            <option>Rapid</option>
+            <option>Rail</option>
+            <option>StreetCar</option>
+            <option>Express</option>
+            <option>Shuttle</option>
+            <option>Overnight</option>
+            <option>Cablecar</option>
+          </Input>
+
           <Input
             type="select"
             value={selectedRoute}
             onChange={handleRouteSelect}
             name="selectedRoute"
           >
-            <option>Select a Route</option>
+            <option>Select type to see routes</option>
             {props.names.map(name => (
               <option value={name.route_name} name="selectedRoute">
                 {name.route_name}
@@ -101,6 +114,7 @@ function RouteList(props) {
           </Input>
           <button>Get Data</button>
         </Form>
+
         <Plot
           data={routeData}
           layout={{
@@ -117,6 +131,7 @@ function RouteList(props) {
           }}
         />
       </div>
+      )}
     </div>
   );
 }
@@ -124,15 +139,12 @@ function RouteList(props) {
 const mapStateToProps = state => {
   return {
     allroutes: state.allroutes,
-    layout: state.layout,
-    names: state.names,
     error: state.error,
-    isFetching: state.isFetching
+    isFetching: state.isFetching 
+    }
   };
-};
+  
+  export default connect( 
+    mapStateToProps, {fetchRoutes}
+  )(RouteList);
 
-export default connect(mapStateToProps, {
-  fetchRoutes,
-  fetchLayouts,
-  fetchNames
-})(RouteList);
