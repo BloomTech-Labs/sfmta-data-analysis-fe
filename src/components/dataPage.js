@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import createPlotlyComponent from "react-plotly.js/factory";
 
 import { connect } from "react-redux";
-import { fetchRoutes } from "../actions/index";
-import Loading from "./Loading";
+import { fetchRoutes, fetchLayouts, fetchNames } from "../actions/index";
 
+import Loading from "./Loading";
+import { Input, Form } from "reactstrap";
+
+//Importing Plot.ly react
+var Plotly = require("plotly.js/lib/core");
+Plotly.register([require("plotly.js/lib/scattermapbox")]);
+const Plot = createPlotlyComponent(Plotly);
+
+//Component
 function RouteList(props) {
+  //Get route data
+  // useEffect(() => {
+  //   props.fetchRoutes(selectedType);
+  //   props.fetchLayouts(selectedType);
+  //   props.fetchNames(selectedType);
+  // }, [selectedType]);
+
   //Setup state for selecting/submitting the route data
   const [selectedRoute, setSelectedRoute] = useState("");
   
@@ -140,12 +156,15 @@ function RouteList(props) {
 const mapStateToProps = state => {
   return {
     allroutes: state.allroutes,
+    layout: state.layout,
+    names: state.names,
     error: state.error,
-    isFetching: state.isFetching 
-    }
+    isFetching: state.isFetching
   };
-  
-  export default connect( 
-    mapStateToProps, {fetchRoutes}
-  )(RouteList);
+};
 
+export default connect(mapStateToProps, {
+  fetchRoutes,
+  fetchLayouts,
+  fetchNames
+})(RouteList);
