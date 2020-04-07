@@ -1,11 +1,127 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import trolley from '../images/trolley.jpg';
+import city from '../images/city.jpg'
+// const Div = styled.div`
+// position: absolute;
+// width: 147px;
+// height: 372px;
+// left: 376px;
+// top: 257px;
+// right:376px;
+// margin:0;
+
+
+// border: 15px solid #F5F5F5;
+// `
+
+// const H1 = styled.h1`
+// margin:0;
+// width: 308px;
+
+
+// top: 316px;
+
+// font-family: Khula;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 48px;
+// line-height: 77px;
+// /* identical to box height */
+
+
+// color: #FFFFFF;
+
+// /* off white */
+
+// `
+const Header = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+text-align:center;
+min-width: 500px;
+height: 272px;
+right:176px;
+top: 157px;
+margin:auto;
+// border: 15px solid #FD5A1E;
+`
+const Div2 = styled.div`
+display: flex;
+min-width: 398px;
+height: 398px;
+// left: 821px;
+// top: 519px;
+margin: 5%;
+margin-bottom: 300px;
+
+// background-image:url(${trolley});
+`
+const Div4 = styled.div`
+display: flex;
+flex-direction: reverse;
+min-width: 500px;
+height: 398px;
+left: 821px;
+top: 1632px;
+bottom:300px;
+margin: 5%;
+
+//background-image:url(${city});
+`
+const Div3 = styled.div`
+display: flex;
+flex-direction: reverse;
+min-width: 500px;
+height: 398px;
+left: 160px;
+top: 1083px;
+//opacity: 0.5;
+margin: 5%;
+`
+
+const Border = styled.div`
+  border: 15px solid white;
+  position: absolute;
+  top: 490px;
+  right: 20%;
+  width: 446px;
+  height: 398px;
+`
+const Border2 = styled.div`
+  border: 15px solid white;
+  position: absolute;
+  top: 1000px;
+  left: 15%;
+  width: 446px;
+  height: 398px;
+`
+const Spacer = styled.div`
+  width: 50%;
+`
+
 
 const LandingPage = () => {
   return (
-    <div>
-     <h1>Problem</h1>
-
-    The SFMTA has no publicly available historical data to determine the travel (both actual and average) times on muni bus and rail lines. This prevents Muni employees, citizens, and elected officials from understanding the root cause of performance problems. Realtime data is available, via (http://restbus.info/api/agencies/sf-muni/), but this data is not saved for historical analysis. Historical analysis of bus and rail location data would be an effective means to determine the root cause of bunches and gaps in the Muni service. A bunch is when a bus or rail car bunches up together while a gap is longer than the normal wait between a bus or rail car.
+    <section>
+    <Header>
+      <h1>Problem</h1>
+       <p>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
+     </Header> 
+    <Div2>
+      <Spacer></Spacer>
+      <img src={trolley}/> 
+      <Border />
+    </Div2>
+    <Div3>
+      <img src={city} />
+      <Border2/>
+      <Spacer></Spacer> 
+    </Div3>
+    <Div4><p>Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p></Div4>
+      
+</section>
     
    <h1>Mission</h1>
     

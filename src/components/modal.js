@@ -1,28 +1,67 @@
-import React from 'react';
+import React, {useState} from 'react';
+import styled from 'styled-components'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-const ModalCard = props => {
-    const [modal, setModal] = useState(false);
-    
-    const toggle = () => setModal(!modal);
-
+const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, toggle}) => {
     return (
-        <div>
-            <Button color="danger" onClick={toggle}>Click</Button>
-            <Modal isOpen={modal} toggle={toggle} className='modal'>
-                <ModalHeader toggle={toggle}>{props.name}</ModalHeader>
-                <ModalBody>
-                    <h2>{props.title}</h2>
-                    <img src={props.img} />
-                    <p>{props.bio}</p>
-                </ModalBody>
+        <Wrapper>
+            <StyledModal isOpen={modal} size='lg' style={{maxWidth: '800px', width: '80%'}}>
+                <ImageTextWrapper>
+                <ModalImg src={img} />
+                <StyledModalBody>
+                    <h1>{name}</h1>
+                    <h2>{title}</h2>
+                    <p>{bio}</p>
+                </StyledModalBody>
+                </ImageTextWrapper>
                 <ModalFooter>
-                    <Button color="primary" href={props.github} target='_blank'>Github</Button>{' '}
-                    <Button color="secondary" href={props.linkedIn} target='_blank'>LinkedIn</Button>
+                    <Button color="primary" href={github} target='_blank'>Github</Button>{' '}
+                    <Button color="secondary" href={linkedIn} target='_blank'>LinkedIn</Button>
+                    <Button color="danger" onClick={toggle}>Close</Button>
                 </ModalFooter>
-            </Modal>
-    </div>
-    )
-}
+            </StyledModal>
+        </Wrapper>
+)}
 
 export default ModalCard;
+
+const Wrapper = styled.div`
+    width: 100%;
+`
+
+const StyledModal = styled(Modal)`
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const StyledModalHeader = styled(ModalHeader)`
+    display:flex;
+    color: black;
+    justify-content:center;
+`
+
+const StyledModalBody = styled(ModalBody)`
+    color: black;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid blue;
+`
+
+const ImageTextWrapper = styled.div`
+    display: flex; 
+
+`
+
+const ModalImg = styled.img`
+    margin: 0 auto;
+    height: auto;
+    max-width: 50%;
+    border: none;
+    display: block;
+    padding: 5px 5px;
+    border-radius: 10px;
+`

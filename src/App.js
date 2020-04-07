@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import NavBar from './components/navBar';
+import Footer from './components/footer';
 import LandingPage from './components/landingPage';
 import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
@@ -12,10 +13,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <NavBar />
-      <Route exact path="/" component={LandingPage} />
-      <Route path = "/data" component={DataPage} />
-      <Route path='/aboutus' component={AboutUs} />
+        <NavBar />
+        <Route exact path="/" component={LandingPage} />
+        <Route path = "/data" component={DataPage} />
+        <Route path='/aboutus' component={AboutUs} />
+        <Footer/>
       </Router>
     </div>
   );
