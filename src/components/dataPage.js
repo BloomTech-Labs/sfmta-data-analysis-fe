@@ -14,15 +14,10 @@ const Plot = createPlotlyComponent(Plotly);
 
 //Component
 function RouteList(props) {
-  //Get route data
-  // useEffect(() => {
-  //   props.fetchRoutes(selectedType);
-  //   props.fetchLayouts(selectedType);
-  //   props.fetchNames(selectedType);
-  // }, [selectedType]);
 
   //Setup state for selecting/submitting the route data
   const [selectedRoute, setSelectedRoute] = useState("");
+  const [selectedType, setSelectedType] = useState("");
   
   const [routeData, setRouteData] = useState([{
     lat: [],
@@ -39,13 +34,17 @@ function RouteList(props) {
     type: ""
   });
 
+  //On change handler for the route selection
   const handleRouteSelect = e => {
     setSelectedRoute(e.target.value);
   };
 
+  //On change handler for the type selection
   const handleTypeSelect = e => {
     const type = e.target.value.toLowerCase()
+    setSelectedType(e.target.value)
     
+    //Api calls to retrieve selected type's routes
     if(type) {
     props.fetchRoutes(type);
     props.fetchLayouts(type);
@@ -83,14 +82,13 @@ function RouteList(props) {
     //Add the stops state to the end of the traces
     traces.push(stopData)
 
-    //Set route data state to the traces array which is get's displayed on the map
+    //Set route data state to the traces array which is gets displayed on the map
     setRouteData(traces)
   };
 
   //Grabbing plotly API key
   require("dotenv").config();
 
-  console.log(routeData)
   return (
     <div>
       {props.isFetching ? (
@@ -104,9 +102,10 @@ function RouteList(props) {
             type="select"
             onChange={handleTypeSelect}
             name="selectedType"
+            value={selectedType}
           >
-            <option name="selectedType">Select a type</option>
-            <option name="selectedType">Bus</option>
+            <option>Select a type</option>
+            <option>Bus</option>
             <option>Rapid</option>
             <option>Rail</option>
             <option>StreetCar</option>
@@ -124,7 +123,7 @@ function RouteList(props) {
           >
             <option>Select type to see routes</option>
             {props.names.map(name => (
-              <option value={name.route_name} name="selectedRoute">
+              <option key={name.route_id} value={name.route_name} name="selectedRoute">
                 {name.route_name}
               </option>
             ))}
