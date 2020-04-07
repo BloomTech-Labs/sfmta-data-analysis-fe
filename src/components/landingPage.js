@@ -122,11 +122,6 @@ const LandingPage = () => {
     <Div4><p>Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p></Div4>
 </section>
     
-   <h1>Mission</h1>
-    
-    The mission of this project is to have a publicly available, historical look at the SFMTA's bus and rail locations so that citizens, oversight committee members, and SFMTA staff can determine what impacts Muni service so that intelligent decisions can be made on where to put resources.
-
-    </div>
 )}
 
 export default LandingPage
