@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from 'styled-components'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap';
 
 const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, toggle}) => {
     return (
@@ -36,11 +36,7 @@ const StyledModal = styled(Modal)`
     align-items: center;
 `
 
-const StyledModalHeader = styled(ModalHeader)`
-    display:flex;
-    color: black;
-    justify-content:center;
-`
+
 
 const StyledModalBody = styled(ModalBody)`
     color: black;

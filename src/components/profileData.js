@@ -17,7 +17,7 @@ const profileData = [
         bio: '',
         img: agustin,
         github: 'https://github.com/avdata',
-        linkedIn: ''
+        linkedIn: 'http://linkedin.com/in/vargasstem'
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ const profileData = [
         bio: '',
         img: cody,
         github: 'https://github.com/cholman',
-        linkedIn: ''
+        linkedIn: 'https://www.linkedin.com/in/cody-holman'
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const profileData = [
         bio: '',
         img: connor,
         github: 'https://github.com/KonstadinosAngelis',
-        linkedIn: ''
+        linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/'
     },
     {
         id: 4,

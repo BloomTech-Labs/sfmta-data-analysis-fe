@@ -8,13 +8,16 @@ import {
     FETCH_NAMES_LOADING,
     FETCH_NAMES_SUCCESS,
     FETCH_NAMES_FAILED,
-    TOGGLE_MODAL
+    FETCH_ROUTESINFO_LOADING,
+    FETCH_ROUTESINFO_SUCCESS,
+    FETCH_ROUTESINFO_FAILED
   } from "../actions/index.js";
   
   const initialState = {
     allroutes: [],
     layout: [],
     names: [],
+    routesInfo: {},
     error: '',
     isFetching: false,
     modal: false,
@@ -76,12 +79,23 @@ import {
           isFetching: false,
           error: action.payload
         };
-      case TOGGLE_MODAL:
-        console.log('click', action.payload)
+      case FETCH_ROUTESINFO_LOADING:
         return {
           ...state,
-          modal: true
-        }
+          isFetching: true
+        };
+      case FETCH_ROUTESINFO_SUCCESS:
+        return {
+          ...state,
+          routesInfo: action.payload,
+          isFetching: false
+        };
+      case FETCH_ROUTESINFO_FAILED:
+        return {
+          ...state,
+          isFetching: false,
+          error: action.payload
+        };
       default:
         return state;
     }
