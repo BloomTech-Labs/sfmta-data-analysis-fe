@@ -123,6 +123,11 @@ const LandingPage = () => {
       
 </section>
     
+   <h1>Mission</h1>
+    
+    The mission of this project is to have a publicly available, historical look at the SFMTA's bus and rail locations so that citizens, oversight committee members, and SFMTA staff can determine what impacts Muni service so that intelligent decisions can be made on where to put resources.
+
+    </div>
 )}
 
 export default LandingPage

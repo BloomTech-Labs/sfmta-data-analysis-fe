@@ -3,51 +3,7 @@ html {
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
-a.nav-link {
-  color: white;
-}
-
-a.nav-link:hover  {
-   color: #FD5A1E;
-}
-
-.profileDiv {
-  color: black;
-  width: 600px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #636667;
-}
-
-.card img {
-  width: 40%;
-  border: 1px solid #27251F;
-  border-radius: 5px;
-  margin-top: 5%;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2%;
-}
-
-.linksDiv {
-  display: flex;
-  flex-direction: row;
-}
-
-.card-link {
-  color: rgba(253, 90, 30, 0.95);;
-}
 
