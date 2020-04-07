@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { useState } from 'react';
+
 import profileData from './profileData';
 
 import createPlotlyComponent from "react-plotly.js/factory";
@@ -42,9 +42,9 @@ const AboutUsMap = props => {
             "hovertemplate": '<b>Name:</b> %{customdata} <extra></extra>',
             "mode": "markers",
             "type": "scattermapbox",
-            "marker": {"size": 12, "color": "rgba(253, 90, 30, 0.95)"},
+            "marker": {"size": 12, "color": "rgba(253, 90, 30, 0.95)", },
         }]}
-        layout={{"height": "75%", "width": "75%", "mapbox": {"accesstoken": process.env.REACT_APP_PLOTLY_API_KEY, "style": "dark", "zoom": 3, "center": {"lat": 37.945318626818434, "lon": -98.85080973073082} }, "margin": { "b": 0, "l": 0, "r": 0, "t": 0 }, "showlegend": false, "dragmode": "lasso"}}
+        layout={{"height": "75%", "width": "75%", "mapbox": {"accesstoken": process.env.REACT_APP_PLOTLY_API_KEY, "style": "dark", "zoom": 3, "center": {"lat": 37.945318626818434, "lon": -98.85080973073082} }, "margin": { "b": 0, "l": 0, "r": 0, "t": 0 }, "showlegend": false, "dragmode": "lasso", "hovermode": "closest"}}
         config={{
             "displayModeBar": false,
             "responsive": true,

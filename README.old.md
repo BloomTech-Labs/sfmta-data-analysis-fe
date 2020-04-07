@@ -6,7 +6,7 @@
 
 #SFTMA Data Analysis
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE] https://master.d3j9ctmbednoov.amplifyapp.com/.
 
 ## 4️⃣ Contributors
 
