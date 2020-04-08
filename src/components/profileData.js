@@ -14,7 +14,7 @@ const profileData = [
         id: 1,
         name: 'Agustin Vargas',
         title: 'Data Scientist',
-        bio: '',
+        bio: 'Bio will go here.',
         img: agustin,
         github: 'https://github.com/avdata',
         linkedIn: 'http://linkedin.com/in/vargasstem'
@@ -23,7 +23,7 @@ const profileData = [
         id: 2,
         name: 'Cody Holman',
         title: 'Web Developer',
-        bio: '',
+        bio: 'Bio will go here.',
         img: cody,
         github: 'https://github.com/cholman',
         linkedIn: 'https://www.linkedin.com/in/cody-holman'
@@ -32,7 +32,7 @@ const profileData = [
         id: 3,
         name: 'Connor Angelis',
         title: 'Web Developer',
-        bio: '',
+        bio: 'Bio will go here.',
         img: connor,
         github: 'https://github.com/KonstadinosAngelis',
         linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/'
@@ -41,7 +41,7 @@ const profileData = [
         id: 4,
         name: 'Daniel Aguilar',
         title: 'Data Scientist',
-        bio: '',
+        bio: 'Bio will go here.',
         img: daniel,
         github: 'https://github.com/aguilargallardo',
         linkedIn: 'https://www.linkedin.com/in/daniel-aguilar-053377177/'
@@ -50,7 +50,7 @@ const profileData = [
         id: 5,
         name: 'Erik Sandoval',
         title: 'Web Developer & Team Lead',
-        bio: '',
+        bio: 'Bio will go here.',
         img: erik,
         github: 'https://github.com/erik-sandoval',
         linkedIn: ''
@@ -59,7 +59,7 @@ const profileData = [
         id: 6,
         name: 'Jonathan Allison',
         title: 'Web Developer',
-        bio: '',
+        bio: 'Jonathan is a Web Developer from North Carolina and proud father of four daughters and loves his five grandchildren.',
         img: jonathan,
         github: 'https://github.com/qb1968',
         linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/'
@@ -68,7 +68,7 @@ const profileData = [
         id: 7,
         name: 'Jordan Ireland',
         title: 'Data Scientist',
-        bio: '',
+        bio: 'Bio will go here.',
         img: jordan,
         github: 'https://github.com/Jordan-Ireland',
         linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/'
@@ -77,16 +77,16 @@ const profileData = [
         id: 8,
         name: 'Justin Menendez',
         title: 'UX Designer',
-        bio: '',
+        bio: 'Bio will go here.',
         img: justin,
         github: '',
         linkedIn: 'https://www.linkedin.com/in/justinmenendez/'
     },
     {
         id: 9,
-        name: 'Mathias Skerden',
+        name: 'Mathias Skreden',
         title: 'Data Scientist',
-        bio: '',
+        bio: 'Bio will go here.',
         img: mathias,
         github: 'https://github.com/skredenmathias/',
         linkedIn: 'https://www.linkedin.com/in/skredenmathias/'
@@ -95,7 +95,7 @@ const profileData = [
         id: 10,
         name: 'Michelle Sirimanivong',
         title: 'Web Developer',
-        bio: '',
+        bio: 'Michelle is a web developer from Arizona. In her free time, she enjoys spending time with her husband and her 3 dogs.',
         img: michelle,
         github: 'https://github.com/MicheSi',
         linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'

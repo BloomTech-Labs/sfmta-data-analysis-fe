@@ -37,14 +37,15 @@ import city from '../images/city.jpg'
 // `
 const Header = styled.div`
 display:flex;
-flex-direction:column;
+flex-direction:row;
 justify-content:center;
 text-align:center;
-min-width: 500px;
-height: 272px;
+max-width: 500px;
+height: auto;
 right:176px;
 top: 157px;
 margin:auto;
+margin-top: 50px;
 // border: 15px solid #FD5A1E;
 `
 const Div2 = styled.div`
@@ -83,22 +84,40 @@ margin: 5%;
 
 const Border = styled.div`
   border: 15px solid white;
-  position: absolute;
-  top: 490px;
-  right: 20%;
+  margin-left: -60%;
+  margin-top: 10%;
   width: 446px;
   height: 398px;
 `
 const Border2 = styled.div`
   border: 15px solid white;
-  position: absolute;
-  top: 1000px;
-  left: 15%;
+  margin-left: -30%;
+  margin-top: 10%;
   width: 446px;
   height: 398px;
 `
 const Spacer = styled.div`
   width: 50%;
+`
+const Bracket = styled.div`
+  width: 147px;
+  height: 300px;
+  border-left: 15px solid white;
+  border-top: 15px solid white;
+  border-bottom: 15px solid white;
+`
+const Bracket2 = styled.div`
+  width: 147px;
+  height: 300px;
+  border-right: 15px solid white;
+  border-top: 15px solid white;
+  border-bottom: 15px solid white;
+`
+const Head1 = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
 `
 
 
@@ -106,9 +125,12 @@ const LandingPage = () => {
   return (
     <section>
     <Header>
-      <h1>Problem</h1>
-       <p>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
-     </Header> 
+      <Bracket/>
+      <Head1><h1>Problem</h1>
+       <p style={{color:"#EFD19F"}}>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
+      </Head1>
+       <Bracket2/>
+     </Header>
     <Div2>
       <Spacer></Spacer>
       <img src={trolley}/> 

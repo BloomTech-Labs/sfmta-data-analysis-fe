@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios'
 import createPlotlyComponent from "react-plotly.js/factory";
 
 import { connect } from "react-redux";
@@ -15,11 +16,20 @@ const Plot = createPlotlyComponent(Plotly);
 //Component
 function RouteList(props) {
 
-  //Setup state for selecting/submitting the route data
-  const [selectedRoute, setSelectedRoute] = useState("");
+  //State for OnChange when a type is selected
   const [selectedType, setSelectedType] = useState("");
-  const [testData, setTestData] = useState([]);
+
+  //State for the list of routes that get displayed when type is selected
+  const [routesBasedOnType, setRoutesBasedOnType] = useState({
+    typeNames: [],
+    typeIds: []
+  });
+
+  //State for the specific route that get's selected
+  const [selectedRoute, setSelectedRoute] = useState("");
   
+  //State for Plotly map
+  const [lineData, setLineData] = useState({})
   const [routeData, setRouteData] = useState([{
     lat: [],
     lon: [],
@@ -34,32 +44,40 @@ function RouteList(props) {
     mode: "",
     type: ""
   });
-
-  //Get route data
+    
+  //Gets the routes and type data for the dropdowns
+  const [typeAndRouteData, setTypeAndRouteData] = useState({})
   useEffect(() => {
-    props.fetchRoutesInfo()
-    setTestData(props.routesInfo)
-    console.log("?????")
-  }, [testData]);
+    axios.get('https://sfmta-test.herokuapp.com/routes-info')
+    .then(res => {
+      setTypeAndRouteData(res.data)
+    })
+    .catch(err => {console.log(err)})
+  }, []);
   
-  
+
   //On change handler for the route selection
   const handleRouteSelect = e => {
-    setSelectedRoute(e.target.value);
+    setSelectedRoute(e.target.value)
+
+    axios.get(`https://sfmta-test.herokuapp.com/type-map?id=${e.target.selectedOptions[0].id}`)
+    .then(res => {setLineData(res.data)})
+    .catch(err => {console.log(err)})
   };
   
   //On change handler for the type selection
   const handleTypeSelect = e => {
-    console.log(testData)
-    // const type = e.target.value.toLowerCase()
-    // setSelectedType(e.target.value)
-    
-    //Api calls to retrieve selected type's routes
-    // if(type) {
-    //   props.fetchRoutes(type);
-    //   props.fetchLayouts(type);
-    //   props.fetchNames(type);
-    // }
+    setSelectedType(e.target.value)
+
+    //Set the state of the routes list to the correct array based on type selection
+    typeAndRouteData.type.find((name, index) => {
+      if(name === e.target.value){
+        setRoutesBasedOnType({
+        typeNames: typeAndRouteData.name[index],
+        typeIds: typeAndRouteData.id[index]
+      })
+     }
+   })
   };
   
   //Displaying the route that is selected on the Plotly
@@ -68,26 +86,22 @@ function RouteList(props) {
     
     let traces = []
     
-    props.names.map(route => {
-      //Finding the selected route
-      if (route.route_name === selectedRoute) {
-        route.traces.map(trace => {
-          //Check if it's stop data, and set state if it is
-          if (props.allroutes[trace].mode === "markers") {
-            setStopData({
-              ...stopData,
-              lat: props.allroutes[trace].lat,
-              long: props.allroutes[trace].lon,
-              marker: props.allroutes[trace].marker,
-              mode: props.allroutes[trace].mode,
-              type: props.allroutes[trace].type
-            });
-          }
-          //Take each trace object and add it to the traces array
-          return traces.push(props.allroutes[trace])
-        });
-      }
-    });
+    //Finding the selected route
+      lineData.traces.map(trace => {
+        //Check if it's stop data, and set state if it is
+        if (trace.mode === "markers") {
+          setStopData({
+            ...stopData,
+            lat: trace.lat,
+            long: trace.lon,
+            marker: trace.marker,
+            mode: trace.mode,
+            type: trace.type
+          });
+        }
+        //Take each trace object and add it to the traces array
+        return traces.push(trace)
+      });
     
     //Add the stops state to the end of the traces
     traces.push(stopData)
@@ -98,7 +112,7 @@ function RouteList(props) {
   
   //Grabbing plotly API key
   require("dotenv").config();
-
+  console.log(routeData)
   return (
     <div>
       {props.isFetching ? (
@@ -115,28 +129,23 @@ function RouteList(props) {
             value={selectedType}
           >
             <option name="selectedType">Select a type</option>
-            <option name="selectedType">Bus</option>
-            <option>Rapid</option>
-            <option>Rail</option>
-            <option>StreetCar</option>
-            <option>Express</option>
-            <option>Shuttle</option>
-            <option>Overnight</option>
-            <option>Cablecar</option>
+            {typeAndRouteData.type && 
+            typeAndRouteData.type.map(typeName => (
+              <option>{typeName}</option>))
+            }
           </Input>
 
           <Input
             type="select"
-            value={selectedRoute}
+            value={selectedRoute} //Needs to change
             onChange={handleRouteSelect}
             name="selectedRoute"
           >
-            <option>Select type to see routes</option>
-            {props.names.map(name => (
-              <option value={name.route_name} name="selectedRoute">
-                {name.route_name}
-              </option>
-            ))}
+          <option>Select type to see routes</option>
+            { routesBasedOnType.typeNames.length > 0 && 
+              routesBasedOnType.typeNames.map((routeName, index) => (
+                <option id={routesBasedOnType.typeIds[index]}>{routeName}</option>))
+            }
           </Input>
           <button>Get Data</button>
         </Form>
@@ -147,7 +156,7 @@ function RouteList(props) {
             height: 700,
             mapbox: {
               accesstoken: process.env.REACT_APP_PLOTLY_API_KEY,
-              style: "outdoors",
+              style: "dark",
               zoom: 11.25,
               center: { lat: 37.76, lon: -122.4 }
             },

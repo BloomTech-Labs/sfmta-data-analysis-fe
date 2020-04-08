@@ -36,6 +36,8 @@ import {
         return {
           ...state,
           allroutes: action.payload,
+          layout: action.payload,
+          names: action.payload,
           isFetching: false,
           
         };
