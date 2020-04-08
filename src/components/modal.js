@@ -1,24 +1,25 @@
 import React from 'react';
 import styled from 'styled-components'
-import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap';
+import { NavLink, Modal, ModalBody, ModalFooter } from 'reactstrap';
 
 const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, toggle}) => {
     return (
         <Wrapper>
-            <StyledModal isOpen={modal} size='lg' style={{maxWidth: '800px', width: '80%'}}>
+            <StyledModal isOpen={modal} toggle={toggle} size='lg' style={{maxWidth: '632px', width: '100%'}}>
                 <ImageTextWrapper>
                 <ModalImg src={img} />
                 <StyledModalBody>
-                    <h1>{name}</h1>
-                    <h2>{title}</h2>
+                    <StyledH1>{name}</StyledH1>
+                    <StyledHr/>
+                    <StyledH2>{title}</StyledH2>
                     <p>{bio}</p>
                 </StyledModalBody>
                 </ImageTextWrapper>
-                <ModalFooter>
-                    <Button color="primary" href={github} target='_blank'>Github</Button>{' '}
-                    <Button color="secondary" href={linkedIn} target='_blank'>LinkedIn</Button>
-                    <Button color="danger" onClick={toggle}>Close</Button>
-                </ModalFooter>
+                <StyledModalFooter>
+                    <StyledLink href={github} target='_blank'>Github</StyledLink>{' '}
+                    <StyledLink href={linkedIn} target='_blank'>LinkedIn</StyledLink>
+                    <StyledLink onClick={toggle}><i className="fas fa-times"></i></StyledLink>
+                </StyledModalFooter>
             </StyledModal>
         </Wrapper>
 )}
@@ -30,13 +31,10 @@ const Wrapper = styled.div`
 `
 
 const StyledModal = styled(Modal)`
-    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 `
-
-
 
 const StyledModalBody = styled(ModalBody)`
     color: black;
@@ -44,20 +42,50 @@ const StyledModalBody = styled(ModalBody)`
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: 1px solid blue;
 `
 
 const ImageTextWrapper = styled.div`
     display: flex; 
-
+    background: #636667;
+    border-radius: 15px;
 `
 
 const ModalImg = styled.img`
     margin: 0 auto;
-    height: auto;
-    max-width: 50%;
+    width: 48%;
     border: none;
     display: block;
-    padding: 5px 5px;
-    border-radius: 10px;
+    padding: 15px 15px;
+    border-radius: 15px;
+`
+
+const StyledModalFooter = styled(ModalFooter)`
+    background: #636667;
+    border-radius: 15px;
+    border: none;
+`
+
+const StyledH1 = styled.h1`
+    font-size: 40px;
+    color: #EFD19F;
+    margin-top: 10%;
+`
+
+const StyledHr = styled.hr`
+    border-top: 5px solid rgba(253, 90, 30, 0.95);
+    width: 200px;
+    margin-top: 0;
+`
+
+const StyledH2 = styled.h2`
+    font-size: 32px;
+    color: #EFD19F;
+`
+const StyledLink = styled.a`
+    color: rgba(253, 90, 30, 0.95);
+
+    &:hover {
+        color: #EFD19F;
+        text-decoration: none;
+    }
 `

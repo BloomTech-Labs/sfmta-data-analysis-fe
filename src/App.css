@@ -6,6 +6,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1000px;
+  margin: auto;
 }
 
 a.nav-link {
@@ -47,7 +49,35 @@ a.nav-link:hover  {
   flex-direction: row;
 }
 
-.card-link {
-  color: rgba(253, 90, 30, 0.95);;
+div .modal-content {
+  background: #636667;
+  border: none;
+  border-radius: 15px;
+}
+
+.norway {
+  position: absolute;
+  bottom: 585px;
+  left: 895px;
+  border: 3px solid gray;
+  border-radius: 3px;
+}
+
+i {
+  color: black;
+  font-size: 1.5em;
+}
+
+i:hover {
+  color: rgba(253, 90, 30, 0.95);
+  cursor: pointer;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-attrib {
+  display: none !important;
 }
 
