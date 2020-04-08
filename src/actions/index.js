@@ -9,8 +9,7 @@ export const fetchRoutes = (type) => dispatch => {
     axios
     .get(`https://sfmta-test.herokuapp.com/type-map?type=${type}`)
     .then(res => {
-        console.log("resData",res.data)
-        dispatch({type:FETCH_ALL_ROUTES_SUCCESS, payload: res.data.results})
+        dispatch({type:FETCH_ALL_ROUTES_SUCCESS, payload: res.data.traces})
     })
     .catch(err => {
         dispatch({type: FETCH_ALL_ROUTES_FAILED, payload: err.response})
@@ -26,7 +25,6 @@ export const fetchLayouts = (type) => dispatch => {
     axios
     .get(`https://sfmta-test.herokuapp.com/type-map?type=${type}`)
     .then(res => {
-        console.log("layout", res.data.layout)
         dispatch({type:FETCH_LAYOUTS_SUCCESS, payload: res.data.layout})
     })
     .catch(err => {
@@ -43,7 +41,6 @@ export const fetchNames = (type) => dispatch => {
     axios
     .get(`https://sfmta-test.herokuapp.com/type-map?type=${type}`)
     .then(res => {
-        console.log("route names", res.data.names)
         dispatch({type:FETCH_NAMES_SUCCESS, payload: res.data.names})
     })
     .catch(err => {
@@ -51,8 +48,20 @@ export const fetchNames = (type) => dispatch => {
     })
 }
 
-export const TOGGLE_MODAL = 'TOGGLE_MODAL';
 
-export const toggleModal = data => dispatch => {
-    dispatch({type: TOGGLE_MODAL, payload: data})
+export const FETCH_ROUTESINFO_LOADING = "FETCH_ROUTESINFO_LOADING"
+export const FETCH_ROUTESINFO_SUCCESS = "FETCH_ROUTESINFO_SUCCESS"
+export const FETCH_ROUTESINFO_FAILED = "FETCH_ROUTESINFO_FAILED"
+
+export const fetchRoutesInfo = (props) => dispatch => {
+    dispatch({type: FETCH_ROUTESINFO_LOADING});
+    axios
+    .get(`https://sfmta-test.herokuapp.com/routes-info`)
+    .then(res => {
+        console.log(res.data)
+        dispatch({type: FETCH_ROUTESINFO_SUCCESS, payload: [res.data]})
+    })
+    .catch(err => {
+        dispatch({type: FETCH_ROUTESINFO_FAILED, payload: err.response})
+    })
 }

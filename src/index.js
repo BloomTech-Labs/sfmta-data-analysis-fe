@@ -7,6 +7,9 @@ import logger from 'redux-logger';
 import App from './App';
 import reducer from './reducers/index';
 
+import './index.css';
+
+require('dotenv').config();
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 

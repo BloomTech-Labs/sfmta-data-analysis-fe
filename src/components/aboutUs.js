@@ -4,7 +4,7 @@ import AboutUsMap from './aboutUsMap';
 const AboutUs = props => {
     return (
         <div>
-            About Us page
+            <h2>Click On Dots To Learn More</h2>
             <AboutUsMap/>
         </div>
     )

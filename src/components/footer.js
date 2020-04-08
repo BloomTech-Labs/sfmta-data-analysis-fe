@@ -11,11 +11,10 @@ const MainNav = styled(Navbar)`
     color: #FD5A1E;
 `;
 
-
-
-const NavBar = props => {
+const Footer = props => {
     return (
-      <Wrapper>
+        <div>
+            <Wrapper>
             <MainNav color="#636667" expand="md">
                 <NavbarBrand >SFTMA Data Analysis</NavbarBrand>
                 <Nav className="mr-auto" navbar>
@@ -33,7 +32,8 @@ const NavBar = props => {
           
 
       </Wrapper>
+        </div>
     )
 }
 
-export default NavBar;
+export default Footer;

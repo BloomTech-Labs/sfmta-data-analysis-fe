@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import createPlotlyComponent from "react-plotly.js/factory";
 
 import { connect } from "react-redux";
-import { fetchRoutes } from "../actions/index";
-import Loading from "./Loading";
+import { fetchRoutes, fetchLayouts, fetchNames, fetchRoutesInfo } from "../actions/index";
 
+import Loading from "./Loading";
+import { Input, Form } from "reactstrap";
+
+//Importing Plot.ly react
+var Plotly = require("plotly.js/lib/core");
+Plotly.register([require("plotly.js/lib/scattermapbox")]);
+const Plot = createPlotlyComponent(Plotly);
+
+//Component
 function RouteList(props) {
+
   //Setup state for selecting/submitting the route data
   const [selectedRoute, setSelectedRoute] = useState("");
+  const [selectedType, setSelectedType] = useState("");
+  const [testData, setTestData] = useState([]);
   
   const [routeData, setRouteData] = useState([{
     lat: [],
@@ -23,33 +35,46 @@ function RouteList(props) {
     type: ""
   });
 
+  //Get route data
+  useEffect(() => {
+    props.fetchRoutesInfo()
+    setTestData(props.routesInfo)
+    console.log("?????")
+  }, [testData]);
+  
+  
+  //On change handler for the route selection
   const handleRouteSelect = e => {
     setSelectedRoute(e.target.value);
   };
-
+  
+  //On change handler for the type selection
   const handleTypeSelect = e => {
-    const type = e.target.value.toLowerCase()
+    console.log(testData)
+    // const type = e.target.value.toLowerCase()
+    // setSelectedType(e.target.value)
     
-    if(type) {
-    props.fetchRoutes(type);
-    props.fetchLayouts(type);
-    props.fetchNames(type);
-    }
+    //Api calls to retrieve selected type's routes
+    // if(type) {
+    //   props.fetchRoutes(type);
+    //   props.fetchLayouts(type);
+    //   props.fetchNames(type);
+    // }
   };
-
+  
   //Displaying the route that is selected on the Plotly
   const handleRouteSubmit = e => {
     e.preventDefault();
-
+    
     let traces = []
-
+    
     props.names.map(route => {
       //Finding the selected route
       if (route.route_name === selectedRoute) {
         route.traces.map(trace => {
           //Check if it's stop data, and set state if it is
           if (props.allroutes[trace].mode === "markers") {
-             setStopData({
+            setStopData({
               ...stopData,
               lat: props.allroutes[trace].lat,
               long: props.allroutes[trace].lon,
@@ -63,14 +88,14 @@ function RouteList(props) {
         });
       }
     });
-
+    
     //Add the stops state to the end of the traces
     traces.push(stopData)
-
+    
     //Set route data state to the traces array which is get's displayed on the map
     setRouteData(traces)
   };
-
+  
   //Grabbing plotly API key
   require("dotenv").config();
 
@@ -87,6 +112,7 @@ function RouteList(props) {
             type="select"
             onChange={handleTypeSelect}
             name="selectedType"
+            value={selectedType}
           >
             <option name="selectedType">Select a type</option>
             <option name="selectedType">Bus</option>
@@ -139,12 +165,17 @@ function RouteList(props) {
 const mapStateToProps = state => {
   return {
     allroutes: state.allroutes,
+    layout: state.layout,
+    names: state.names,
+    routesInfo: state.routesInfo,
     error: state.error,
-    isFetching: state.isFetching 
-    }
+    isFetching: state.isFetching
   };
-  
-  export default connect( 
-    mapStateToProps, {fetchRoutes}
-  )(RouteList);
+};
 
+export default connect(mapStateToProps, {
+  fetchRoutes,
+  fetchLayouts,
+  fetchNames, 
+  fetchRoutesInfo
+})(RouteList);
