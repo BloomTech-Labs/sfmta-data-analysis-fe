@@ -111,12 +111,12 @@ i.fas.fa-bus-alt:hover {
   text-align: center;
 }
 
-.sc-AxgMl:hover #some-element {
+.trolley:hover #some-element {
   display: block;
 }
 
-.sc-AxgMl:hover .sc-AxmLO {
-  display:none
+.trolley:hover .border2 {
+  display:none;
 }
 
 #some-element2 {
@@ -124,17 +124,18 @@ i.fas.fa-bus-alt:hover {
   display: none;
   font-size: 15px;
   margin-top: 10px;
-  margin-right: 50px;
+  margin-right: 0;
+  margin-left: 150px;
   text-transform: uppercase;
   height:230px;
   width:100%;
   text-align: center;
 }
 
-.sc-Axmtr:hover #some-element2 {
+.city:hover #some-element2 {
   display: block;
 }
 
-.sc-Axmtr:hover .sc-fzozJi {
+.city:hover .border2 {
   display:none
 }
