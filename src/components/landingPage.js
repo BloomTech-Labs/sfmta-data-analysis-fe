@@ -48,6 +48,20 @@ margin:auto;
 margin-top: 50px;
 // border: 15px solid #FD5A1E;
 `
+const Bracket = styled.div`
+  width: 147px;
+  height: 300px;
+  border-left: 15px solid white;
+  border-top: 15px solid white;
+  border-bottom: 15px solid white;
+`
+const Bracket2 = styled.div`
+  width: 147px;
+  height: 300px;
+  border-right: 15px solid white;
+  border-top: 15px solid white;
+  border-bottom: 15px solid white;
+`
 const Div2 = styled.div`
 display: flex;
  min-width: 398px;
@@ -55,7 +69,8 @@ height: 398px;
 // left: 821px;
 // top: 519px;
 margin: 5%;
-margin-bottom: 300px;
+margin-top: 10%;
+margin-bottom: 20%;
 
 // background-image:url(${trolley});
 `
@@ -80,39 +95,27 @@ left: 160px;
 top: 1083px;
 //opacity: 0.5;
 margin: 5%;
+margin-bottom: 15%;
 `
 
 const Border = styled.div`
   border: 15px solid white;
-  margin-left: -60%;
+  margin-left: -65%;
   margin-top: 10%;
   width: 446px;
   height: 398px;
 `
 const Border2 = styled.div`
   border: 15px solid white;
-  margin-left: -30%;
   margin-top: 10%;
+  margin-left: -45%;
   width: 446px;
   height: 398px;
 `
 const Spacer = styled.div`
   width: 50%;
 `
-const Bracket = styled.div`
-  width: 147px;
-  height: 300px;
-  border-left: 15px solid white;
-  border-top: 15px solid white;
-  border-bottom: 15px solid white;
-`
-const Bracket2 = styled.div`
-  width: 147px;
-  height: 300px;
-  border-right: 15px solid white;
-  border-top: 15px solid white;
-  border-bottom: 15px solid white;
-`
+
 const Head1 = styled.div`
   display: flex;
   flex-direction: column;
@@ -131,7 +134,8 @@ const LandingPage = () => {
       </Head1>
        <Bracket2/>
      </Header>
-    <Div2>
+
+    <Div2 className="trolley">
      <span id="some-element">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
   </span>
@@ -139,19 +143,17 @@ const LandingPage = () => {
       <Spacer> </Spacer>
       <img src={trolley}/> 
        
-      <Border></Border>
+      <Border className="border2"></Border>
    
   
     </Div2>
-    <Div3> 
-    <span id="some-element2">Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</span>
+    <Div3 className="city"> 
+    
       <img src={city} />
-      <Border2/>
-      <Spacer></Spacer> 
+      <Border2 className="border2"/>
+      
+      <span id="some-element2">Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</span>
     </Div3>
-    <Div4>
-   
-    </Div4>
 </section>
     
 )}
