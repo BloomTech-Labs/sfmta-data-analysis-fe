@@ -2,39 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import trolley from '../images/trolley.jpg';
 import city from '../images/city.jpg'
-// const Div = styled.div`
-// position: absolute;
-// width: 147px;
-// height: 372px;
-// left: 376px;
-// top: 257px;
-// right:376px;
-// margin:0;
 
-
-// border: 15px solid #F5F5F5;
-// `
-
-// const H1 = styled.h1`
-// margin:0;
-// width: 308px;
-
-
-// top: 316px;
-
-// font-family: Khula;
-// font-style: normal;
-// font-weight: normal;
-// font-size: 48px;
-// line-height: 77px;
-// /* identical to box height */
-
-
-// color: #FFFFFF;
-
-// /* off white */
-
-// `
 const Header = styled.div`
 display:flex;
 flex-direction:row;
@@ -46,18 +14,16 @@ right:176px;
 top: 157px;
 margin:auto;
 margin-top: 50px;
-// border: 15px solid #FD5A1E;
+
 `
 const Div2 = styled.div`
 display: flex;
- min-width: 398px;
+min-width: 398px;
 height: 398px;
-// left: 821px;
-// top: 519px;
 margin: 5%;
 margin-bottom: 300px;
 
-// background-image:url(${trolley});
+
 `
 const Div4 = styled.div`
 display: flex;
@@ -66,10 +32,10 @@ min-width: 500px;
 height: 398px;
 left: 821px;
 top: 1632px;
-bottom:300px;
+bottom:100px;
 margin: 5%;
 
-//background-image:url(${city});
+
 `
 const Div3 = styled.div`
 display: flex;
@@ -78,7 +44,6 @@ min-width: 500px;
 height: 398px;
 left: 160px;
 top: 1083px;
-//opacity: 0.5;
 margin: 5%;
 `
 
@@ -144,10 +109,10 @@ const LandingPage = () => {
   
     </Div2>
     <Div3> 
-    <span id="some-element2">Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</span>
       <img src={city} />
       <Border2/>
-      <Spacer></Spacer> 
+      <Spacer></Spacer>
+      <span id="some-element2">Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</span>
     </Div3>
     <Div4>
    
