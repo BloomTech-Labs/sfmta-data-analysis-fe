@@ -50,7 +50,7 @@ margin-top: 50px;
 `
 const Div2 = styled.div`
 display: flex;
-min-width: 398px;
+ min-width: 398px;
 height: 398px;
 // left: 821px;
 // top: 519px;
@@ -132,16 +132,26 @@ const LandingPage = () => {
        <Bracket2/>
      </Header>
     <Div2>
-      <Spacer></Spacer>
+     <span id="some-element">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  </span>
+    
+      <Spacer> </Spacer>
       <img src={trolley}/> 
-      <Border />
+       
+      <Border></Border>
+   
+  
     </Div2>
-    <Div3>
+    <Div3> 
+    <span id="some-element2">Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</span>
       <img src={city} />
       <Border2/>
       <Spacer></Spacer> 
     </Div3>
-    <Div4><p>Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</p></Div4>
+    <Div4>
+   
+    </Div4>
 </section>
     
 )}
