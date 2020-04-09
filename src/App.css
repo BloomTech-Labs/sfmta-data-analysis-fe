@@ -73,6 +73,24 @@ i:hover {
   cursor: pointer;
 }
 
+ .ddt {
+  color: rgba(253, 90, 30, 0.95);
+}
+
+.ddt:hover {
+  color: #EFD19F;
+}
+
+
+/* i.fas.fa-bus-alt {
+  color: rgba(253, 90, 30, 0.95);
+  font-size: 1em;
+}
+
+i.fas.fa-bus-alt:hover {
+  color: #EFD19F;
+} */
+
 .mapboxgl-ctrl-logo {
   display: none !important;
 }

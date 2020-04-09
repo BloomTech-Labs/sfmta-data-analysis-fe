@@ -2,39 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import trolley from '../images/trolley.jpg';
 import city from '../images/city.jpg'
-// const Div = styled.div`
-// position: absolute;
-// width: 147px;
-// height: 372px;
-// left: 376px;
-// top: 257px;
-// right:376px;
-// margin:0;
 
-
-// border: 15px solid #F5F5F5;
-// `
-
-// const H1 = styled.h1`
-// margin:0;
-// width: 308px;
-
-
-// top: 316px;
-
-// font-family: Khula;
-// font-style: normal;
-// font-weight: normal;
-// font-size: 48px;
-// line-height: 77px;
-// /* identical to box height */
-
-
-// color: #FFFFFF;
-
-// /* off white */
-
-// `
 const Header = styled.div`
 display:flex;
 flex-direction:row;
@@ -46,7 +14,7 @@ right:176px;
 top: 157px;
 margin:auto;
 margin-top: 50px;
-// border: 15px solid #FD5A1E;
+
 `
 const Bracket = styled.div`
   width: 147px;
@@ -64,15 +32,13 @@ const Bracket2 = styled.div`
 `
 const Div2 = styled.div`
 display: flex;
- min-width: 398px;
+min-width: 398px;
 height: 398px;
-// left: 821px;
-// top: 519px;
 margin: 5%;
 margin-top: 10%;
 margin-bottom: 20%;
 
-// background-image:url(${trolley});
+
 `
 const Div4 = styled.div`
 display: flex;
@@ -81,10 +47,10 @@ min-width: 500px;
 height: 398px;
 left: 821px;
 top: 1632px;
-bottom:300px;
+bottom:100px;
 margin: 5%;
 
-//background-image:url(${city});
+
 `
 const Div3 = styled.div`
 display: flex;
@@ -93,7 +59,6 @@ min-width: 500px;
 height: 398px;
 left: 160px;
 top: 1083px;
-//opacity: 0.5;
 margin: 5%;
 margin-bottom: 15%;
 `
