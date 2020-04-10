@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { NavLink, Modal, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 
 const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, toggle}) => {
     return (

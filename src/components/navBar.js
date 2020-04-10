@@ -15,7 +15,7 @@ const MainNav = styled(Navbar)`
 
 const NavBar = props => {
     return (
-      <Wrapper>
+        <Wrapper>
             <MainNav color="#636667" expand="md">
                 <a className='ddt' href='/'><NavbarBrand><img className='logo' src={logo} alt='logo'/> Data Driven Transit</NavbarBrand></a>
                 <Nav className="mr-auto" navbar>
@@ -30,9 +30,7 @@ const NavBar = props => {
                     </NavItem>
                 </Nav>
             </MainNav>
-          
-
-      </Wrapper>
+        </Wrapper>
     )
 }
 
