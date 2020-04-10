@@ -81,16 +81,6 @@ i:hover {
   color: #EFD19F;
 }
 
-
-/* i.fas.fa-bus-alt {
-  color: rgba(253, 90, 30, 0.95);
-  font-size: 1em;
-}
-
-i.fas.fa-bus-alt:hover {
-  color: #EFD19F;
-} */
-
 .mapboxgl-ctrl-logo {
   display: none !important;
 }
@@ -100,15 +90,14 @@ i.fas.fa-bus-alt:hover {
 }
 
 #some-element {
-  border: 1px solid #ccc;
   display: none;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 10px;
   padding: 5px;
-  text-transform: uppercase;
   height:170px;
   width:100%;
   text-align: center;
+  color: #EFD19F;
 }
 
 .trolley:hover #some-element {
@@ -120,16 +109,15 @@ i.fas.fa-bus-alt:hover {
 }
 
 #some-element2 {
-  border: 1px solid #ccc;
   display: none;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 10px;
   margin-right: 0;
   margin-left: 150px;
-  text-transform: uppercase;
   height:230px;
   width:100%;
   text-align: center;
+  color: #EFD19F;
 }
 
 .city:hover #some-element2 {
