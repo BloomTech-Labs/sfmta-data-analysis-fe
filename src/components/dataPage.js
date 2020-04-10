@@ -196,7 +196,7 @@ function RouteList(props) {
         <Plot
           data={routeData}
           layout={{
-            height: 700,
+            height: 600,
             mapbox: {
               accesstoken: process.env.REACT_APP_PLOTLY_API_KEY,
               style: "dark",
@@ -228,6 +228,9 @@ const mapStateToProps = state => {
 const StyledButton = styled(Button)`
   color: black;
   background-color: #FFC72C;
+  width: 100px;
+  height: 38px;
+  margin-top: 3%;
 
   &:hover{
     background-color: #deaf2f;

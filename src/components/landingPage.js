@@ -32,18 +32,21 @@ const Bracket2 = styled.div`
 const Div2 = styled.div`
   display: flex;
   min-width: 398px;
-  height: 398px;
+  height: 500px;
   margin:  10% 5% 25%;
 `
 const Div3 = styled.div`
   display: flex;
   flex-direction: reverse;
   min-width: 500px;
-  height: 398px;
+  height: 500px;
   left: 160px;
   top: 1083px;
   margin: 15% 5% 15%;
 `
+
+//height : 446 
+// width: 398
 
 const Border = styled.div`
   border: 15px solid white;
@@ -67,7 +70,7 @@ const Border2 = styled.div`
   align-items: flex-end;
 `
 const Spacer = styled.div`
-  width: 50%;
+  width: 44.5%;
 `
 
 const Head1 = styled.div`
@@ -82,10 +85,19 @@ const StyledH1 = styled.h1`
   text-align: center;
 `
 
+const StyledSection = styled.section`
+  width: 892px
+`
+
+const StyledImg = styled.img`
+height : 446px,
+width: 398px
+`
+
 
 const LandingPage = () => {
   return (
-    <section>
+    <StyledSection>
       <Header>
         <Bracket/>
         <Head1><h1>PROBLEM</h1>
@@ -108,13 +120,13 @@ const LandingPage = () => {
       </Div2>
     
       <Div3 className="city" > 
-        <img src={city} />
+        <div><StyledImg src={city} /></div>
         <Border2 className="border2">
           <StyledH1>Analysis</StyledH1>
         </Border2>
         <span id="some-element2">We've analyzed the root cause of bunches and gaps on the bus and rail lines so that policies and procedures can be implemented to reduce or prevent them. Our statistics and analysis will allow desicion makers to make system wide improvements.</span>
       </Div3>
-    </section>  
+    </StyledSection>  
 )}
 
 export default LandingPage
