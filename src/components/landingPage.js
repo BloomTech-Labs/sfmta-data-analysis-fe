@@ -4,17 +4,16 @@ import trolley from '../images/trolley.jpg';
 import city from '../images/city.jpg'
 
 const Header = styled.div`
-display:flex;
-flex-direction:row;
-justify-content:center;
-text-align:center;
-max-width: 500px;
-height: auto;
-right:176px;
-top: 157px;
-margin:auto;
-margin-top: 50px;
-
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  text-align:center;
+  max-width: 500px;
+  height: auto;
+  right:176px;
+  top: 157px;
+  margin:auto;
+  margin-top: 50px;
 `
 const Bracket = styled.div`
   width: 147px;
@@ -31,19 +30,19 @@ const Bracket2 = styled.div`
   border-bottom: 15px solid white;
 `
 const Div2 = styled.div`
-display: flex;
-min-width: 398px;
-height: 398px;
-margin:  10% 5% 25%;
+  display: flex;
+  min-width: 398px;
+  height: 398px;
+  margin:  10% 5% 25%;
 `
 const Div3 = styled.div`
-display: flex;
-flex-direction: reverse;
-min-width: 500px;
-height: 398px;
-left: 160px;
-top: 1083px;
-margin: 0 5% 15%;
+  display: flex;
+  flex-direction: reverse;
+  min-width: 500px;
+  height: 398px;
+  left: 160px;
+  top: 1083px;
+  margin: 15% 5% 15%;
 `
 
 const Border = styled.div`
@@ -56,6 +55,7 @@ const Border = styled.div`
   justify-content: center;
   align-items: flex-end;
 `
+
 const Border2 = styled.div`
   border: 15px solid white;
   margin-top: 10%;
@@ -86,40 +86,35 @@ const StyledH1 = styled.h1`
 const LandingPage = () => {
   return (
     <section>
-    <Header>
-      <Bracket/>
-      <Head1><h1>PROBLEM</h1>
-       <p style={{color:"#EFD19F"}}>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
-      </Head1>
+      <Header>
+        <Bracket/>
+        <Head1><h1>PROBLEM</h1>
+          <p style={{color:"#EFD19F"}}>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
+        </Head1>
        <Bracket2/>
-     </Header>
+      </Header>
 
-    <Div2 className="trolley">
-     <span id="some-element">
-    We have created a publically available database showing historical data on the bus and rail systems. By providing real time analysis of travel times from major corridors, informed decisions to improve service can be made.
-  </span>
+      <Div2 className="trolley">
+        <span id="some-element">
+          We have created a publically available database showing historical data on the bus and rail systems. By providing real time analysis of travel times from major corridors, informed decisions to improve service can be made.
+        </span>
+        <Spacer> </Spacer>
+        <div className="pic">
+        <img src={trolley}/> 
+        </div>
+        <Border className="border2">
+          <StyledH1>Our Solution</StyledH1>
+        </Border>
+      </Div2>
     
-      <Spacer> </Spacer>
-      <img  src={trolley}/> 
-       
-      <Border className="border2">
-        <StyledH1>Our Solution</StyledH1>
-      </Border>
-   
-  
-    </Div2>
-    
-    <Div3 className="city" > 
-    
-      <img src={city} />
-      <Border2 className="border2">
-        <StyledH1>Analysis</StyledH1>
-      </Border2>
-      
-      <span id="some-element2">We've analyzed the root cause of bunches and gaps on the bus and rail lines so that policies and procedures can be implemented to reduce or prevent them. Our statistics and analysis will allow desicion makers to make system wide improvements.</span>
-    </Div3>
-</section>
-    
+      <Div3 className="city" > 
+        <img src={city} />
+        <Border2 className="border2">
+          <StyledH1>Analysis</StyledH1>
+        </Border2>
+        <span id="some-element2">We've analyzed the root cause of bunches and gaps on the bus and rail lines so that policies and procedures can be implemented to reduce or prevent them. Our statistics and analysis will allow desicion makers to make system wide improvements.</span>
+      </Div3>
+    </section>  
 )}
 
 export default LandingPage
