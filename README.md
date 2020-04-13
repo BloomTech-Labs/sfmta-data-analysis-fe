@@ -43,11 +43,9 @@
 
 ### 4️⃣ Key Features
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+- Have a publically available database of historical data on bus and rail cars.
+- Near real time analysis of travel times from major travel corridors.
+- Analysis of bunching and gapping on bus and rail lines.
 
 ## 1️⃣ Tech Stack
 
@@ -55,27 +53,16 @@
     React, plotly
 
 #### _Front end framework goes here_
-
+React
 🚫 Why did you choose this framework?
 
-- point one
-- point two
-- point three
-- point four
+- Easy to create a new app with pre-installed dependencies with Create React App.
+- Able to use React compatible libraries for styling and functionality.
+- Easy to use
 
 🚫List the rest of the front end features and libraries in the same format as the framework above.
 
-#### Front end deployed to `🚫insert service here`
-
-#### [Back end](🚫link to back end repo here) built using:
-
-#### 🚫 back end framework goes here
-
-- point one
-- point two
-- point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
+#### Front end deployed to AWS
 
 # APIs
 
@@ -93,15 +80,7 @@ In order for the app to function correctly, the user must set up their own envir
 
 🚫These are just examples, replace them with the specifics for your app
 
-    *  REACT_APP_PLOTLY_API_KEY = pk.eyJ1IjoicGFuZHVoaCIsImEiOiJjanpiaG53bTgwMTQwM25sbmZhcGp6cGJqIn0.Cp4ld9nKsu7zE4-YbSeeQg
-   
-    *  REACT_APP_databaseURL - in the Firebase dashboard
-    *  REACT_APP_projectID - in the Firebase dashboard
-    *  REACT_APP_storageBucket - in the Firebase dashboard
-    *  REACT_APP_messagingSenderId - in the Firebase dashboard
-    *  REACT_APP_stripe_API - this is your public Stripe API key, generated in the Stripe dashboard
-    *  
-    *  
+    *  REACT_APP_PLOTLY_API_KEY = pk.eyJ1IjoicGFuZHVoaCIsImEiOiJjanpiaG53bTgwMTQwM25sbmZhcGp6cGJqIn0.Cp4ld9nKsu7zE4-YbSeeQg 
 
 # 5️⃣ Content Licenses
 
@@ -109,11 +88,21 @@ In order for the app to function correctly, the user must set up their own envir
 
 | Image Filename | Source / Creator | License                                                                      |
 | -------------- | ---------------- | ---------------------------------------------------------------------------- |
-| doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
-| rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
+| favicon.ico    | Favicon.io      | [Favicon](https://favicon.io/) |
+| apple-touch-icon.png      | Favicon.io      | [Favicon](https://favicon.io/)                             |
+| logo.png    | Icons8         | [Icons8](https://icons8.com/license)                                     |
 | trolley.jpg    | Unsplash         | [Unsplash](https://unsplash.com/license)                                     |
 | city.jpg       | Unsplash         | [Unsplash](https://unsplash.com/license)                                     |
 | cody.jpg       | Cody Holman      | Creative Commons                                                            |
+| agustin.jpg       | Agustin Vargas      | Creative Commons                                                            |
+| connor.jpg       | Connor Angelis     | Creative Commons                                                            |
+| daniel.jpg       | Daniel Aguilar     | Creative Commons                                                            |
+| erik.jpg       | Erik Sandoval      | Creative Commons                                                            |
+| jonathan.jpg       | Jonathan Allison      | Creative Commons                                                            |
+| jordan.jpg       | Jordan Ireland      | Creative Commons                                                            |
+| justin.jpg       | Justin Menendez      | Creative Commons                                                            |
+| mathias.jpg       | Mathias Skreden      | Creative Commons                                                            |
+| michelle.jpg       | Michelle Sirimanivong      | Creative Commons                                                            |
 
 # 4️⃣ Testing
 
@@ -122,16 +111,12 @@ In order for the app to function correctly, the user must set up their own envir
 # 4️⃣ Installation Instructions
 
 Install dependencies with npm install
-Run server with npm start
 
 ## Other Scripts
 
-🚫replace these examples with your own
-
-    * typecheck - runs the TypeScript compiler
-    * build - creates a build of the application
-    * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+    * start - starts the production server after dependencies are installed
+    * test - runs tests in **tests** directory
+    * eject - copy the configuration files and dependencies into the project so you have full control over them
 
 # Contributing
 
@@ -172,4 +157,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](🚫*link to your backend readme here*) for details on the backend of our project.
+See Data Science Documentation (https://github.com/Lambda-School-Labs/sfmta-data-analysis-ds) for details on the backend of our project.

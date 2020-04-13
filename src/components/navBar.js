@@ -9,6 +9,8 @@ const Wrapper = styled.div`
     
 const MainNav = styled(Navbar)`    
     color: #FD5A1E;
+    display: flex;
+    align-items: center;
 `;
 
 
