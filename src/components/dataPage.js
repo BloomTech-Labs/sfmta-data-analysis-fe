@@ -190,7 +190,7 @@ function RouteList(props) {
             }
           </Input>
           {inputValidationState.routeValidation && <div style={{color: "red"}}>Please Enter a Type</div>}
-          <StyledButton color="#FFC72C">Get Data</StyledButton>
+          <StyledButton color="#FFC72C">Show Route</StyledButton>
         </Form>
 
         <Plot
@@ -228,7 +228,7 @@ const mapStateToProps = state => {
 const StyledButton = styled(Button)`
   color: black;
   background-color: #FFC72C;
-  width: 100px;
+  width: 150px;
   height: 38px;
   margin-top: 3%;
 

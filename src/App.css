@@ -136,5 +136,7 @@ form {
 
 select.form-control {
   width: 40%;
-  margin: 3% 1% 4%;
+  margin: 3% 2% 4% 0%;
 }
+
+/* Media Queries */
