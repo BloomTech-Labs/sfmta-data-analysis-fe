@@ -200,8 +200,8 @@ function RouteList(props) {
             mapbox: {
               accesstoken: process.env.REACT_APP_PLOTLY_API_KEY,
               style: "dark",
-              zoom: 11.25,
-              center: { lat: 37.76, lon: -122.4 }
+              center: { lat: 37.748, lon: -122.4 },
+              zoom: 11.25
             },
             margin: { b: 0, l: 0, r: 0, t: 0 },
             showlegend: false,

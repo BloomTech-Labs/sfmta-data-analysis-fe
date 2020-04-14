@@ -112,7 +112,7 @@ const LandingPage = () => {
         </span>
         <Spacer> </Spacer>
         <div className="pic">
-        <img src={trolley}/> 
+        <img src={trolley} alt='trolley'/> 
         </div>
         <Border className="border2">
           <StyledH1>Our Solution</StyledH1>
@@ -120,7 +120,7 @@ const LandingPage = () => {
       </Div2>
     
       <Div3 className="city" > 
-        <div><StyledImg src={city} /></div>
+        <div><StyledImg src={city} alt='city' /></div>
         <Border2 className="border2">
           <StyledH1>Analysis</StyledH1>
         </Border2>
