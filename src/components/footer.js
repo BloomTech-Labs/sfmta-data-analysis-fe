@@ -5,6 +5,8 @@ import logo from '../images/logo.png';
 
 const Wrapper = styled.div`
     width: 100%;
+    position: sticky;
+    bottom: 0;
 `;
     
 const MainNav = styled(Navbar)`    
