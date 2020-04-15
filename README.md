@@ -96,7 +96,6 @@ In order for the app to function correctly, the user must set up their own envir
 | cody.jpg       | Cody Holman      | Creative Commons                                                            |
 | agustin.jpg       | Agustin Vargas      | Creative Commons                                                            |
 | connor.jpg       | Connor Angelis     | Creative Commons                                                            |
-| daniel.jpg       | Daniel Aguilar     | Creative Commons                                                            |
 | erik.jpg       | Erik Sandoval      | Creative Commons                                                            |
 | jonathan.jpg       | Jonathan Allison      | Creative Commons                                                            |
 | jordan.jpg       | Jordan Ireland      | Creative Commons                                                            |

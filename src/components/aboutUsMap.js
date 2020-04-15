@@ -36,8 +36,8 @@ const AboutUsMap = props => {
             
             <Plot
              data={[{
-                "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 34.0522, 33.895847, 58.410460],
-                "lon": [-112.6, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.7, -118, 8.726921],
+                "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 34.0522, 58.410460],
+                "lon": [-112.6, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.2437, 8.726921],
                 "customdata": ["Michelle Sirimanivong", "Jonathan Allison", "Connor Angelis", "Cody Holman", 'Erik Sandoval', 'Jordan Ireland', 'Justin Menendez', 'Agustin Vargas', 'Daniel Aguilar', 'Mathias Skreden'],
                 "hovertemplate": '<b>Name:</b> %{customdata} <extra></extra>',
                 "mode": "markers",
