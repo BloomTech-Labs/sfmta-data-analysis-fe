@@ -103,7 +103,17 @@ test('show route button is rendering', () => {
   queryByText('Show Route')
 })
 
+test('select type is rendering', () => {
+  const {queryByText} = render(<RouteList />)
 
+  queryByText('Select a type')
+})
+
+test('select route is rendering', () => {
+  const {queryByText} = render(<RouteList />)
+
+  queryByText('Select type to see routes')
+})
 // about us page tests
 
 
