@@ -1,7 +1,6 @@
 import agustin from '../images/agustin.jpg';
 import cody from '../images/cody.jpg';
 import connor from '../images/connor.jpg';
-import daniel from '../images/daniel.jpg';
 import erik from '../images/erik.jpg';
 import jonathan from '../images/jonathan.jpg';
 import jordan from '../images/jordan.jpg';
@@ -39,15 +38,6 @@ const profileData = [
     },
     {
         id: 4,
-        name: 'Daniel Aguilar',
-        title: 'Data Scientist',
-        bio: 'Bio will go here.',
-        img: daniel,
-        github: 'https://github.com/aguilargallardo',
-        linkedIn: 'https://www.linkedin.com/in/daniel-aguilar-053377177/'
-    },
-    {
-        id: 5,
         name: 'Erik Sandoval',
         title: 'Web Developer & Team Lead',
         bio: 'Bio will go here.',
@@ -56,7 +46,7 @@ const profileData = [
         linkedIn: ''
     },
     {
-        id: 6,
+        id: 5,
         name: 'Jonathan Allison',
         title: 'Web Developer',
         bio: 'Jonathan is a Web Developer from North Carolina and proud father of four daughters and loves his five grandchildren.',
@@ -65,7 +55,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/'
     },
     {
-        id: 7,
+        id: 6,
         name: 'Jordan Ireland',
         title: 'Data Scientist',
         bio: 'Bio will go here.',
@@ -74,7 +64,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/'
     },
     {
-        id: 8,
+        id: 7,
         name: 'Justin Menendez',
         title: 'UX Designer',
         bio: 'Bio will go here.',
@@ -83,7 +73,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/justinmenendez/'
     },
     {
-        id: 9,
+        id: 8,
         name: 'Mathias Skreden',
         title: 'Data Scientist',
         bio: 'Bio will go here.',
@@ -92,7 +82,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/skredenmathias/'
     },
     {
-        id: 10,
+        id: 9,
         name: 'Michelle Sirimanivong',
         title: 'Web Developer',
         bio: 'Michelle is a web developer from Arizona. In her free time, she enjoys spending time with her husband and her 3 dogs.',

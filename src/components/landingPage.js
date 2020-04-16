@@ -4,17 +4,16 @@ import trolley from '../images/trolley.jpg';
 import city from '../images/city.jpg'
 
 const Header = styled.div`
-display:flex;
-flex-direction:row;
-justify-content:center;
-text-align:center;
-max-width: 500px;
-height: auto;
-right:176px;
-top: 157px;
-margin:auto;
-margin-top: 50px;
-
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  text-align:center;
+  max-width: 500px;
+  height: auto;
+  right:176px;
+  top: 157px;
+  margin:auto;
+  margin-top: 50px;
 `
 const Bracket = styled.div`
   width: 147px;
@@ -31,37 +30,23 @@ const Bracket2 = styled.div`
   border-bottom: 15px solid white;
 `
 const Div2 = styled.div`
-display: flex;
-min-width: 398px;
-height: 398px;
-margin: 5%;
-margin-top: 10%;
-margin-bottom: 20%;
-
-
-`
-const Div4 = styled.div`
-display: flex;
-flex-direction: reverse;
-min-width: 500px;
-height: 398px;
-left: 821px;
-top: 1632px;
-bottom:100px;
-margin: 5%;
-
-
+  display: flex;
+  min-width: 398px;
+  height: 500px;
+  margin:  10% 5% 25%;
 `
 const Div3 = styled.div`
-display: flex;
-flex-direction: reverse;
-min-width: 500px;
-height: 398px;
-left: 160px;
-top: 1083px;
-margin: 5%;
-margin-bottom: 15%;
+  display: flex;
+  flex-direction: reverse;
+  min-width: 500px;
+  height: 500px;
+  left: 160px;
+  top: 1083px;
+  margin: 15% 5% 15%;
 `
+
+//height : 446 
+// width: 398
 
 const Border = styled.div`
   border: 15px solid white;
@@ -69,16 +54,23 @@ const Border = styled.div`
   margin-top: 10%;
   width: 446px;
   height: 398px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 `
+
 const Border2 = styled.div`
   border: 15px solid white;
   margin-top: 10%;
   margin-left: -45%;
   width: 446px;
   height: 398px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 `
 const Spacer = styled.div`
-  width: 50%;
+  width: 44.5%;
 `
 
 const Head1 = styled.div`
@@ -88,39 +80,53 @@ const Head1 = styled.div`
   width: 400px;
 `
 
+const StyledH1 = styled.h1`
+  text-transform: uppercase;
+  text-align: center;
+`
+
+const StyledSection = styled.section`
+  width: 892px
+`
+
+const StyledImg = styled.img`
+height : 446px,
+width: 398px
+`
+
 
 const LandingPage = () => {
   return (
-    <section>
-    <Header>
-      <Bracket/>
-      <Head1><h1>Problem</h1>
-       <p style={{color:"#EFD19F"}}>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
-      </Head1>
+    <StyledSection>
+      <Header>
+        <Bracket/>
+        <Head1><h1>PROBLEM</h1>
+          <p style={{color:"#EFD19F"}}>There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.</p>
+        </Head1>
        <Bracket2/>
-     </Header>
+      </Header>
 
-    <Div2 className="trolley">
-     <span id="some-element">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-  </span>
+      <Div2 className="trolley">
+        <span id="some-element">
+          We have created a publically available database showing historical data on the bus and rail systems. By providing real time analysis of travel times from major corridors, informed decisions to improve service can be made.
+        </span>
+        <Spacer> </Spacer>
+        <div className="pic">
+        <img src={trolley} alt='trolley'/> 
+        </div>
+        <Border className="border2">
+          <StyledH1>Our Solution</StyledH1>
+        </Border>
+      </Div2>
     
-      <Spacer> </Spacer>
-      <img src={trolley}/> 
-       
-      <Border className="border2"></Border>
-   
-  
-    </Div2>
-    <Div3 className="city"> 
-    
-      <img src={city} />
-      <Border2 className="border2"/>
-      
-      <span id="some-element2">Consequat aute sit Lorem officia cillum et ullamco. Pariatur qui occaecat pariatur dolor eiusmod consectetur nisi nisi adipisicing duis sunt. Deserunt ea incididunt duis quis occaecat quis elit laboris consectetur ex proident nisi in. Do excepteur enim elit pariatur nostrud qui enim et laboris voluptate.</span>
-    </Div3>
-</section>
-    
+      <Div3 className="city" > 
+        <div><StyledImg src={city} alt='city' /></div>
+        <Border2 className="border2">
+          <StyledH1>Analysis</StyledH1>
+        </Border2>
+        <span id="some-element2">We've analyzed the root cause of bunches and gaps on the bus and rail lines so that policies and procedures can be implemented to reduce or prevent them. Our statistics and analysis will allow desicion makers to make system wide improvements.</span>
+      </Div3>
+    </StyledSection>  
 )}
 
 export default LandingPage

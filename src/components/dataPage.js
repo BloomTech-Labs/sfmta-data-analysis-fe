@@ -193,21 +193,18 @@ function RouteList(props) {
             }
           </Input>
           {inputValidationState.routeValidation && <div style={{color: "red"}}>Please Enter a Type</div>}
-          <ButtonDiv>
           <StyledButton type="submit">Get Data</StyledButton>
-          </ButtonDiv>
         </StyledForm>
-
         <PlotWrapper>
         <Plot
           data={routeData}
           layout={{
-            height: 700,
+            height: 600,
             mapbox: {
               accesstoken: process.env.REACT_APP_PLOTLY_API_KEY,
               style: "dark",
-              zoom: 11.35,
-              center: { lat: 37.76, lon: -122.435 }
+              center: { lat: 37.748, lon: -122.4 },
+              zoom: 11.25
             },
             margin: { b: 0, l: 0, r: 0, t: 0 },
             showlegend: false,

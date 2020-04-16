@@ -9,13 +9,15 @@ const Wrapper = styled.div`
     
 const MainNav = styled(Navbar)`    
     color: #FD5A1E;
+    display: flex;
+    align-items: center;
 `;
 
 
 
 const NavBar = props => {
     return (
-      <Wrapper>
+        <Wrapper>
             <MainNav color="#636667" expand="md">
                 <a className='ddt' href='/'><NavbarBrand><img className='logo' src={logo} alt='logo'/> Data Driven Transit</NavbarBrand></a>
                 <Nav className="mr-auto" navbar>
@@ -30,9 +32,7 @@ const NavBar = props => {
                     </NavItem>
                 </Nav>
             </MainNav>
-          
-
-      </Wrapper>
+        </Wrapper>
     )
 }
 
