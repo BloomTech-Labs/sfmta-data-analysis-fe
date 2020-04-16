@@ -3,7 +3,7 @@ import axios from 'axios'
 import createPlotlyComponent from "react-plotly.js/factory";
 
 import { connect } from "react-redux";
-import { fetchRoutes, fetchLayouts, fetchNames, fetchRoutesInfo } from "../actions/index";
+import { fetchRoutesInfo, fetchTypeAndRoute } from "../actions/index";
 
 import Loading from "./Loading";
 import { Input, Form, Button } from "reactstrap";
@@ -27,7 +27,6 @@ const RouteList = (props) => {
   const [selectedRoute, setSelectedRoute] = useState("");
   
   //State for Plotly map
-  const [lineData, setLineData] = useState({})
   const [routeData, setRouteData] = useState([{
     lat: [],
     lon: [],
@@ -43,28 +42,30 @@ const RouteList = (props) => {
     type: ""
   });
     
-  //Gets the routes and type data for the dropdowns
+  //State to hold the type/route data
   const [typeAndRouteData, setTypeAndRouteData] = useState({})
+  //Gets the routes and type data for the dropdowns
   useEffect(() => {
-    axios.get('https://sfmta-test.herokuapp.com/routes-info')
-    .then(res => {setTypeAndRouteData(res.data)})
-    .catch(err => {console.log(err)})
+    props.fetchTypeAndRoute()
+    .then(res => {
+      setTypeAndRouteData(res)
+    })
   }, []);
   
-
+  //State to hold the ID of the selected route
+  const [routeID, setRouteID] = useState("") 
   //On change handler for the route selection
   const handleRouteSelect = e => {
     setSelectedRoute(e.target.value)
 
-    axios.get(`https://sfmta-test.herokuapp.com/type-map?id=${e.target.selectedOptions[0].id}`)
-    .then(res => {setLineData(res.data)})
-    .catch(err => {console.log(err)})
+    let routeId = e.target.selectedOptions[0].id
+    setRouteID(routeId)
   };
   
   //On change handler for the type selection
   const handleTypeSelect = e => {
     setSelectedType(e.target.value)
-
+    
     //Set the state of the routes list to the correct array based on type selection
     typeAndRouteData.type.find((name, index) => {
       if(name === e.target.value){
@@ -73,13 +74,18 @@ const RouteList = (props) => {
    })
   };
   
-  const [inputValidationState, setInputValidationState] = useState({typeValidation: false, routeValidation: false})
+  //Validation State
+  const [inputValidationState, setInputValidationState] = useState({
+    typeValidation: false,
+    routeValidation: false
+  })
 
   //Displaying the route that is selected on the Plotly
   const handleRouteSubmit = e => {
     e.preventDefault();
-    let traces = []
 
+    let traceData = []
+    
     //Simple validation for type/route. In order: (Neither selected, only type selected, only route selected, both selected) <-- This is to reset state if everything passes
     if(!selectedType && !selectedRoute){
       setInputValidationState({typeValidation: true, routeValidation: true})
@@ -97,24 +103,37 @@ const RouteList = (props) => {
     }
 
     //Reset Validation
-    setInputValidationState({typeValidation: false,routeValidation: false})
+    setInputValidationState({
+      typeValidation: false,
+      routeValidation: false
+    })
+
+    props.fetchRoutesInfo(routeID)
+    .then(res => {
+        if(!res){return}
+        res.traces.map(trace => {
+          //Check if it's stop data, and set state if it is
+          if (trace.mode === "markers") {
+            setStopData({
+              ...stopData,
+              lat: trace.lat,
+              long: trace.lon,
+              marker: trace.marker,
+              mode: trace.mode,
+              type: trace.type
+            });
+          }
+          //Take each trace object and add it to the traces array
+          return traceData.push(trace)
+        });
       
-    //Finding the selected route
-      if(lineData.traces === undefined){return}
-      lineData.traces.map(trace => {
-        //Check if it's stop data, and set state if it is
-        if (trace.mode === "markers") {
-          setStopData({...stopData, lat: trace.lat, long: trace.lon, marker: trace.marker, mode: trace.mode, type: trace.type});
-        }
-        //Take each trace object and add it to the traces array
-        return traces.push(trace)
-      });
-    
-    //Add the stops state to the end of the traces
-    traces.push(stopData)
-    
-    //Set route data state to the traces array which is get's displayed on the map
-    setRouteData(traces) 
+      //Add the stops state to the end of the traces
+      traceData.push(stopData)
+      
+      //Set route data state to the traces array which is get's displayed on the map
+      setRouteData(traceData) 
+    })
+    .catch(err => console.log(err))
   };
 
   return (
@@ -133,7 +152,7 @@ const RouteList = (props) => {
           {routesBasedOnType.typeNames.length > 0 && <option>Select a route!</option>}
             { routesBasedOnType.typeNames.length > 0 && 
               routesBasedOnType.typeNames.map((routeName, index) => (
-                <option id={routesBasedOnType.typeIds[index]}>{routeName}</option>))
+                <option key={routeName} id={routesBasedOnType.typeIds[index]}>{routeName}</option>))
             }
           </Input>
           {inputValidationState.routeValidation && <div style={{color: "red"}}>Please Enter a Type</div>}
@@ -144,6 +163,12 @@ const RouteList = (props) => {
           data={routeData}
           layout={{
             height: 600,
+            mapbox: {
+              accesstoken: process.env.REACT_APP_PLOTLY_API_KEY,
+              style: "dark",
+              center: { lat: 37.746, lon: -122.45 },
+              zoom: 11.25
+            },
             mapbox: {accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", center: { lat: 37.748, lon: -122.4 }, zoom: 11.25},
             margin: { b: 0, l: 0, r: 0, t: 0 },
             showlegend: false,
@@ -158,10 +183,8 @@ const RouteList = (props) => {
 
 const mapStateToProps = state => {
   return {
-    allroutes: state.allroutes,
-    layout: state.layout,
-    names: state.names,
     routesInfo: state.routesInfo,
+    typeAndRouteInfo: state.typeAndRouteInfo,
     error: state.error,
     isFetching: state.isFetching
   };
@@ -179,9 +202,6 @@ const StyledButton = styled(Button)`
   }
 `
 
-export default connect(mapStateToProps, {
-  fetchRoutes,
-  fetchLayouts,
-  fetchNames, 
-  fetchRoutesInfo
+export default connect(mapStateToProps, { 
+  fetchRoutesInfo, fetchTypeAndRoute
 })(RouteList);
