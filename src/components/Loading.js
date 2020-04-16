@@ -1,20 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { TweenMax } from "gsap";
 import styled from "styled-components";
-
 //styled-components
 const WaitText = styled.h3`
   color: white;
   font-size: 1.2rem;
   text-align: center;
 `;
-
 const Loader = () => {
   const first = useRef(null);
   const second = useRef(null);
   const third = useRef(null);
   const fourth = useRef(null);
-
   useEffect(() => {
     TweenMax.fromTo(
       [first.current, third.current],
@@ -29,7 +26,6 @@ const Loader = () => {
       { y: -20, yoyo: true, repeat: -1 }
     );
   }, []);
-
   return (
     <div className="loader-container">
       <svg viewBox="0 0 150 33.2" width="180" height="150">
@@ -42,5 +38,4 @@ const Loader = () => {
     </div>
   );
 };
-
 export default Loader;
