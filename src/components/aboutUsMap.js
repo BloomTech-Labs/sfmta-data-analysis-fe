@@ -47,22 +47,13 @@ const AboutUsMap = props => {
              layout={{
                 "width": 1100,
                 "height": 575,
-                "mapbox": {
-                    "accesstoken": process.env.REACT_APP_PLOTLY_API_KEY,
-                    "style": "dark",
-                    "zoom": 3,
-                    "center": {"lat": 37.945318626818434, "lon": -90.85080973073082}
-                },
+                "mapbox": {"accesstoken": process.env.REACT_APP_PLOTLY_API_KEY, "style": "dark", "zoom": 3, "center": {"lat": 37.945318626818434, "lon": -90.85080973073082}},
                 "margin": { "b": 0, "l": 0, "r": 0, "t": 0 },
                 "showlegend": false,
                 "dragmode": "lasso",
                 "hovermode": "closest"
              }}
-             config={{
-                "displayModeBar": false,
-                "responsive": true,
-                "scrollZoom": false
-             }}
+             config={{"displayModeBar": false, "responsive": true, "scrollZoom": false}}
              onClick={(data) => {showModal(data)}}
             />
             <Plot className='norway'
@@ -78,22 +69,13 @@ const AboutUsMap = props => {
              layout={{
                 "width": 200,
                 "height": 225,
-                "mapbox": {
-                    "accesstoken": process.env.REACT_APP_PLOTLY_API_KEY,
-                    "style": "dark",
-                    "zoom": 3,
-                    "center": {"lat": 58.410460, "lon": 8.726921}
-                },
+                "mapbox": {"accesstoken": process.env.REACT_APP_PLOTLY_API_KEY, "style": "dark", "zoom": 3, "center": {"lat": 58.410460, "lon": 8.726921}},
                 "margin": { "b": 0, "l": 0, "r": 0, "t": 0 },
                 "showlegend": false,
                 "dragmode": "lasso",
                 "hovermode": "closest"
              }}
-             config={{
-                "displayModeBar": false,
-                "responsive": true,
-                "scrollZoom": false,
-             }}
+             config={{"displayModeBar": false, "responsive": true, "scrollZoom": false}}
              onClick={(data) => {showModal(data)}}
             />
         </div>

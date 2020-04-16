@@ -16,18 +16,8 @@ const Loader = () => {
   const fourth = useRef(null);
 
   useEffect(() => {
-    TweenMax.fromTo(
-      [first.current, third.current],
-      0.5,
-      { y: -20 },
-      { y: 0, yoyo: true, repeat: -1 }
-    );
-    TweenMax.fromTo(
-      [second.current, fourth.current],
-      0.5,
-      { y: 0 },
-      { y: -20, yoyo: true, repeat: -1 }
-    );
+    TweenMax.fromTo([first.current, third.current], 0.5, { y: -20 }, { y: 0, yoyo: true, repeat: -1 });
+    TweenMax.fromTo([second.current, fourth.current], 0.5, { y: 0 }, { y: -20, yoyo: true, repeat: -1 });
   }, []);
 
   return (

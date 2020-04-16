@@ -74,19 +74,19 @@ test('logo renders in footer', () => {
   getByAltText(/logo/i);
 })
 
-test('Home link renders in nav bar', () => {
+test('Home link renders in footer', () => {
   const {getByText} = render(<Footer />)
 
   getByText(/home/i);
 })
 
-test('Data link renders in nav bar', () => {
+test('Data link renders in footer', () => {
   const {getByText} = render(<Footer />)
 
   getByText('Data');
 })
 
-test('About us link renders in nav bar', () => {
+test('About us link renders in footer', () => {
   const {getByText} = render(<Footer />)
 
   getByText(/about/i);

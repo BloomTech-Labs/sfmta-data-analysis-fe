@@ -13,8 +13,6 @@ const MainNav = styled(Navbar)`
     align-items: center;
 `;
 
-
-
 const NavBar = props => {
     return (
         <Wrapper>

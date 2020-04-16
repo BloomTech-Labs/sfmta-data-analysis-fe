@@ -22,11 +22,7 @@ import {
           isFetching: true,
         }
       case FETCH_ROUTESINFO_SUCCESS:
-        return {
-          ...state,
-          routesInfo: action.payload,
-          isFetching: false
-        };
+        return {...state, routesInfo: action.payload, isFetching: false};
       case FETCH_ROUTESINFO_FAILED:
         return {
           ...state,

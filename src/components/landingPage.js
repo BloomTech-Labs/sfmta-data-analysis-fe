@@ -107,23 +107,15 @@ const LandingPage = () => {
       </Header>
 
       <Div2 className="trolley">
-        <span id="some-element">
-          We have created a publically available database showing historical data on the bus and rail systems. By providing real time analysis of travel times from major corridors, informed decisions to improve service can be made.
-        </span>
+        <span id="some-element">We have created a publically available database showing historical data on the bus and rail systems. By providing real time analysis of travel times from major corridors, informed decisions to improve service can be made.</span>
         <Spacer> </Spacer>
-        <div className="pic">
-        <img src={trolley} alt='trolley'/> 
-        </div>
-        <Border className="border2">
-          <StyledH1>Our Solution</StyledH1>
-        </Border>
+        <div className="pic"><img src={trolley} alt='trolley'/> </div>
+        <Border className="border2"><StyledH1>Our Solution</StyledH1></Border>
       </Div2>
     
       <Div3 className="city" > 
         <div><StyledImg src={city} alt='city' /></div>
-        <Border2 className="border2">
-          <StyledH1>Analysis</StyledH1>
-        </Border2>
+        <Border2 className="border2"><StyledH1>Analysis</StyledH1></Border2>
         <span id="some-element2">We've analyzed the root cause of bunches and gaps on the bus and rail lines so that policies and procedures can be implemented to reduce or prevent them. Our statistics and analysis will allow desicion makers to make system wide improvements.</span>
       </Div3>
     </StyledSection>  
