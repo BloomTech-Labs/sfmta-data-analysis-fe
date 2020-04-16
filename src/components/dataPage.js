@@ -53,11 +53,16 @@ const RouteList = (props) => {
   
 
   //On change handler for the route selection
+
+
   const handleRouteSelect = e => {
     setSelectedRoute(e.target.value)
-
+    let routeId = e.target.selectedOptions[0].id
     axios.get(`https://sfmta-test.herokuapp.com/type-map?id=${e.target.selectedOptions[0].id}`)
-    .then(res => {setLineData(res.data)})
+    .then(res => {setLineData({
+      data: res.data,
+      route_id: routeId
+    })})
     .catch(err => {console.log(err)})
   };
   
@@ -100,8 +105,8 @@ const RouteList = (props) => {
     setInputValidationState({typeValidation: false,routeValidation: false})
       
     //Finding the selected route
-      if(lineData.traces === undefined){return}
-      lineData.traces.map(trace => {
+      if(lineData.data.traces === undefined){return}
+      lineData.data.traces.map(trace => {
         //Check if it's stop data, and set state if it is
         if (trace.mode === "markers") {
           setStopData({...stopData, lat: trace.lat, long: trace.lon, marker: trace.marker, mode: trace.mode, type: trace.type});
@@ -137,9 +142,9 @@ const RouteList = (props) => {
             }
           </Input>
           {inputValidationState.routeValidation && <div style={{color: "red"}}>Please Enter a Type</div>}
-          <StyledButton color="#FFC72C">Show Route</StyledButton>
-        </Form>
-
+          <StyledButton type="submit">Get Data</StyledButton>
+        </StyledForm>
+        <PlotWrapper>
         <Plot
           data={routeData}
           layout={{
@@ -147,10 +152,11 @@ const RouteList = (props) => {
             mapbox: {accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", center: { lat: 37.748, lon: -122.4 }, zoom: 11.25},
             margin: { b: 0, l: 0, r: 0, t: 0 },
             showlegend: false,
-            width: 1000
+            width: 750
           }}
         />
-      </div>
+        </PlotWrapper>
+      </Wrapper>
       )}
     </div>
   );
@@ -167,16 +173,45 @@ const mapStateToProps = state => {
   };
 };
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
+
+const StyledForm = styled(Form)`
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 0 1%;
+`
+
 const StyledButton = styled(Button)`
   color: black;
   background-color: #FFC72C;
-  width: 150px;
-  height: 38px;
-  margin-top: 3%;
+  margin-right: 5%;
 
   &:hover{
     background-color: #deaf2f;
   }
+
+  &:active{
+    background-color: #deaf2f !important;
+  }
+
+  &:focus{
+    background-color: #deaf2f;
+  }
+`
+
+const PlotWrapper = styled.div`
+  display: flex; 
+  justify-content: center;
+  margin: 0.5% 0;
+`
+
+const ButtonDiv = styled.div`
+  display: flex;
+  margin: 2.5% 0;
 `
 
 export default connect(mapStateToProps, {

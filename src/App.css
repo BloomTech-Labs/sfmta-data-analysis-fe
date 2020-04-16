@@ -11,6 +11,10 @@ html {
   margin: auto;
 }
 
+.dataPage {
+  width: 1400px;
+}
+
 a.nav-link {
   color: white;
 }
