@@ -1,8 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import createPlotlyComponent from "react-plotly.js/factory";
-import Plotly from 'plotly.js/lib/core';
-import scattermap from 'plotly.js/lib/scattermapbox';
+import { render, getByTestId } from '@testing-library/react';
 
 import App from './App';
 import LandingPage from './components/landingPage';
@@ -10,6 +7,10 @@ import RouteList from './components/dataPage';
 import AboutUs from './components/aboutUs';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
+import ModalCard from './components/modal';
+
+jest.mock('./components/dataPage');
+jest.mock('./components/aboutUs');
 
 // app tests
 test('renders app without crashing', () => {
@@ -38,8 +39,82 @@ test('Nav renders without crashing', () => {
   render(<NavBar />)
 })
 
+test('logo renders in nav bar', () => {
+  const {getByAltText} = render(<NavBar />)
+
+  getByAltText(/logo/i);
+})
+
+test('Home link renders in nav bar', () => {
+  const {getByText} = render(<NavBar />)
+
+  getByText(/home/i);
+})
+
+test('Data link renders in nav bar', () => {
+  const {getByText} = render(<NavBar />)
+
+  getByText('Data');
+})
+
+test('About us link renders in nav bar', () => {
+  const {getByText} = render(<NavBar />)
+
+  getByText(/about/i);
+})
+
 // footer tests
 test('Footer renders without crashing', () => {
   render(<Footer />)
 })
+
+test('logo renders in footer', () => {
+  const {getByAltText} = render(<Footer />)
+
+  getByAltText(/logo/i);
+})
+
+test('Home link renders in nav bar', () => {
+  const {getByText} = render(<Footer />)
+
+  getByText(/home/i);
+})
+
+test('Data link renders in nav bar', () => {
+  const {getByText} = render(<Footer />)
+
+  getByText('Data');
+})
+
+test('About us link renders in nav bar', () => {
+  const {getByText} = render(<Footer />)
+
+  getByText(/about/i);
+})
+
+// data page tests
+test('data page is rendering', () => {
+  render(<RouteList />)
+})
+
+test('show route button is rendering', () => {
+  const {queryByText} = render(<RouteList />)
+
+  queryByText('Show Route')
+})
+
+test('select type is rendering', () => {
+  const {queryByText} = render(<RouteList />)
+
+  queryByText('Select a type')
+})
+
+test('select route is rendering', () => {
+  const {queryByText} = render(<RouteList />)
+
+  queryByText('Select type to see routes')
+})
+// about us page tests
+
+
 

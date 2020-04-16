@@ -7,7 +7,7 @@ const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, t
         <Wrapper>
             <StyledModal isOpen={modal} toggle={toggle} size='lg' style={{maxWidth: '632px', width: '100%'}}>
                 <ImageTextWrapper>
-                <ModalImg src={img} />
+                <ModalImg src={img} alt='profile pic'/>
                 <StyledModalBody>
                     <StyledH1>{name}</StyledH1>
                     <StyledHr/>
