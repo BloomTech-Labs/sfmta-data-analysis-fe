@@ -15,7 +15,7 @@ Plotly.register([require("plotly.js/lib/scattermapbox")]);
 const Plot = createPlotlyComponent(Plotly);
 
 //Component
-function RouteList(props) {
+const RouteList = (props) => {
 
   //State for OnChange when a type is selected
   const [selectedType, setSelectedType] = useState("");
