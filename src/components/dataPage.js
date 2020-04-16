@@ -58,11 +58,16 @@ function RouteList(props) {
   
 
   //On change handler for the route selection
+
+
   const handleRouteSelect = e => {
     setSelectedRoute(e.target.value)
-
+    let routeId = e.target.selectedOptions[0].id
     axios.get(`https://sfmta-test.herokuapp.com/type-map?id=${e.target.selectedOptions[0].id}`)
-    .then(res => {setLineData(res.data)})
+    .then(res => {setLineData({
+      data: res.data,
+      route_id: routeId
+    })})
     .catch(err => {console.log(err)})
   };
   
@@ -93,7 +98,6 @@ function RouteList(props) {
 
     //Simple validation for type/route. In order: (Neither selected, only type selected, only route selected, both selected) <-- This is to reset state if everything passes
     if(!selectedType && !selectedRoute){
-      console.log('Selected Neither')
       setInputValidationState({
         typeValidation: true,
         routeValidation: true
@@ -102,7 +106,6 @@ function RouteList(props) {
     }
 
     if(!selectedType){
-      console.log('didnt select type')
     setInputValidationState({
       typeValidation: true,
       routeValidation: false
@@ -111,7 +114,6 @@ function RouteList(props) {
     }
 
     if(!selectedRoute){ 
-      console.log('didnt select route')
       setInputValidationState({
       typeValidation: false,
       routeValidation: true
@@ -126,8 +128,8 @@ function RouteList(props) {
     })
 
     //Finding the selected route
-      if(lineData.traces === undefined){return}
-      lineData.traces.map(trace => {
+      if(lineData.data.traces === undefined){return}
+      lineData.data.traces.map(trace => {
         //Check if it's stop data, and set state if it is
         if (trace.mode === "markers") {
           setStopData({
@@ -154,14 +156,15 @@ function RouteList(props) {
   require("dotenv").config();
 
   return (
-    <div>
+    <div className="dataPage">
       {props.isFetching ? (
         <Loading />
       ) : (
-      <div>
+      <Wrapper>
         {props.error && <div>{props.error.message}</div>}
 
-        <Form onSubmit={handleRouteSubmit}>
+        <StyledForm onSubmit={handleRouteSubmit}>
+          <h1>Data Analysis</h1>
           <Input
             type="select"
             onChange={handleTypeSelect}
@@ -190,9 +193,12 @@ function RouteList(props) {
             }
           </Input>
           {inputValidationState.routeValidation && <div style={{color: "red"}}>Please Enter a Type</div>}
-          <StyledButton color="#FFC72C">Get Data</StyledButton>
-        </Form>
+          <ButtonDiv>
+          <StyledButton type="submit">Get Data</StyledButton>
+          </ButtonDiv>
+        </StyledForm>
 
+        <PlotWrapper>
         <Plot
           data={routeData}
           layout={{
@@ -200,15 +206,16 @@ function RouteList(props) {
             mapbox: {
               accesstoken: process.env.REACT_APP_PLOTLY_API_KEY,
               style: "dark",
-              zoom: 11.25,
-              center: { lat: 37.76, lon: -122.4 }
+              zoom: 11.35,
+              center: { lat: 37.76, lon: -122.435 }
             },
             margin: { b: 0, l: 0, r: 0, t: 0 },
             showlegend: false,
-            width: 1000
+            width: 750
           }}
         />
-      </div>
+        </PlotWrapper>
+      </Wrapper>
       )}
     </div>
   );
@@ -225,13 +232,45 @@ const mapStateToProps = state => {
   };
 };
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
+
+const StyledForm = styled(Form)`
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 0 1%;
+`
+
 const StyledButton = styled(Button)`
   color: black;
   background-color: #FFC72C;
+  margin-right: 5%;
 
   &:hover{
     background-color: #deaf2f;
   }
+
+  &:active{
+    background-color: #deaf2f !important;
+  }
+
+  &:focus{
+    background-color: #deaf2f;
+  }
+`
+
+const PlotWrapper = styled.div`
+  display: flex; 
+  justify-content: center;
+  margin: 0.5% 0;
+`
+
+const ButtonDiv = styled.div`
+  display: flex;
+  margin: 2.5% 0;
 `
 
 export default connect(mapStateToProps, {
