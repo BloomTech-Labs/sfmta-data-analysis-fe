@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { Modal, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter, NavLink } from 'reactstrap';
 
 const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, toggle}) => {
     return (
@@ -18,7 +18,7 @@ const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, t
                 <StyledModalFooter>
                     <StyledLink href={github} target='_blank'>Github</StyledLink>{' '}
                     <StyledLink href={linkedIn} target='_blank'>LinkedIn</StyledLink>
-                    <StyledLink onClick={toggle}><i className="fas fa-times"></i></StyledLink>
+                    <NavLink onClick={toggle}><i className="fas fa-times"></i></NavLink>
                 </StyledModalFooter>
             </StyledModal>
         </Wrapper>
