@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components'
-import { NavLink, Modal, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 
 const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, toggle}) => {
     return (
         <Wrapper>
             <StyledModal isOpen={modal} toggle={toggle} size='lg' style={{maxWidth: '632px', width: '100%'}}>
                 <ImageTextWrapper>
-                <ModalImg src={img} />
+                <ModalImg src={img} alt='profile pic'/>
                 <StyledModalBody>
                     <StyledH1>{name}</StyledH1>
                     <StyledHr/>

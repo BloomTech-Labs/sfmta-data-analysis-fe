@@ -1,16 +1,9 @@
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.
-
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
-
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
-
 #SFTMA Data Analysis
 
 1️⃣ You can find the deployed project at https://master.d3j9ctmbednoov.amplifyapp.com/
 
 ## 4️⃣ Contributors
 
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
 
 |                                                     [Cody Holman](https://github.com/cholman)                                                      |                                                    [Connor Angelis](https://github.com/KonstadinosAngelis)                                                    |                                                   [Jonathan Allison](https://github.com/qb1968)                                                   |                                                 [Michelle Sirimanivong](https://github.com/MicheSi)                                                  |                                                    [Erik Sandoval](https://github.com/erik-sandoval)                                                     |
 | :------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -21,15 +14,12 @@
 <br>
 <br>
 
-🚫 4️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
-
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 ![Typescript](https://img.shields.io/npm/types/typescript.svg?style=flat)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](netlify link goes in these parenthesis)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
 
 ## Project Overview
 
@@ -39,15 +29,12 @@
 
 1️⃣ [UX Design files](https://www.figma.com/file/hiuVPSUPr2WiyDfFFdx1g3/SFMTA-Data-Analysis%2C-Justin?node-id=179%3A0)
 
-🚫 There is no publically available source of historical SFMTA bus and rail locations so that citizens, oversight committee members, and SFMTA staff can figure out what causes service distruptions.
 
 ### 4️⃣ Key Features
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+- Have a publically available database of historical data on bus and rail cars.
+- Near real time analysis of travel times from major travel corridors.
+- Analysis of bunching and gapping on bus and rail lines.
 
 ## 1️⃣ Tech Stack
 
@@ -55,27 +42,14 @@
     React, plotly
 
 #### _Front end framework goes here_
+React
 
-🚫 Why did you choose this framework?
+- Easy to create a new app with pre-installed dependencies with Create React App.
+- Able to use React compatible libraries for styling and functionality.
+- Easy to use
 
-- point one
-- point two
-- point three
-- point four
 
-🚫List the rest of the front end features and libraries in the same format as the framework above.
-
-#### Front end deployed to `🚫insert service here`
-
-#### [Back end](🚫link to back end repo here) built using:
-
-#### 🚫 back end framework goes here
-
-- point one
-- point two
-- point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
+#### Front end deployed to AWS
 
 # APIs
 
@@ -91,47 +65,42 @@ Flask App API that returns data on route id, route name and type of route.
 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
-🚫These are just examples, replace them with the specifics for your app
 
-    *  REACT_APP_PLOTLY_API_KEY = pk.eyJ1IjoicGFuZHVoaCIsImEiOiJjanpiaG53bTgwMTQwM25sbmZhcGp6cGJqIn0.Cp4ld9nKsu7zE4-YbSeeQg
-   
-    *  REACT_APP_databaseURL - in the Firebase dashboard
-    *  REACT_APP_projectID - in the Firebase dashboard
-    *  REACT_APP_storageBucket - in the Firebase dashboard
-    *  REACT_APP_messagingSenderId - in the Firebase dashboard
-    *  REACT_APP_stripe_API - this is your public Stripe API key, generated in the Stripe dashboard
-    *  
-    *  
+    *  REACT_APP_PLOTLY_API_KEY = pk.eyJ1IjoicGFuZHVoaCIsImEiOiJjanpiaG53bTgwMTQwM25sbmZhcGp6cGJqIn0.Cp4ld9nKsu7zE4-YbSeeQg 
 
 # 5️⃣ Content Licenses
 
-🚫For all content - images, icons, etc, use this table to document permission of use. Remove the two placeholders and add you content to this table
 
 | Image Filename | Source / Creator | License                                                                      |
 | -------------- | ---------------- | ---------------------------------------------------------------------------- |
-| doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
-| rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
+| favicon.ico    | Favicon.io      | [Favicon](https://favicon.io/) |
+| apple-touch-icon.png      | Favicon.io      | [Favicon](https://favicon.io/)                             |
+| logo.png    | Icons8         | [Icons8](https://icons8.com/license)                                     |
 | trolley.jpg    | Unsplash         | [Unsplash](https://unsplash.com/license)                                     |
 | city.jpg       | Unsplash         | [Unsplash](https://unsplash.com/license)                                     |
 | cody.jpg       | Cody Holman      | Creative Commons                                                            |
+| agustin.jpg       | Agustin Vargas      | Creative Commons                                                            |
+| connor.jpg       | Connor Angelis     | Creative Commons                                                            |
+| erik.jpg       | Erik Sandoval      | Creative Commons                                                            |
+| jonathan.jpg       | Jonathan Allison      | Creative Commons                                                            |
+| jordan.jpg       | Jordan Ireland      | Creative Commons                                                            |
+| justin.jpg       | Justin Menendez      | Creative Commons                                                            |
+| mathias.jpg       | Mathias Skreden      | Creative Commons                                                            |
+| michelle.jpg       | Michelle Sirimanivong      | Creative Commons                                                            |
 
 # 4️⃣ Testing
 
-🚫Document what you used for testing and why
+Jest and react testing library
 
 # 4️⃣ Installation Instructions
 
 Install dependencies with npm install
-Run server with npm start
 
 ## Other Scripts
 
-🚫replace these examples with your own
-
-    * typecheck - runs the TypeScript compiler
-    * build - creates a build of the application
-    * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+    * start - starts the production server after dependencies are installed
+    * test - runs tests in **tests** directory
+    * eject - copy the configuration files and dependencies into the project so you have full control over them
 
 # Contributing
 
@@ -172,4 +141,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](🚫*link to your backend readme here*) for details on the backend of our project.
+See Data Science Documentation (https://github.com/Lambda-School-Labs/sfmta-data-analysis-ds) for details on the backend of our project.

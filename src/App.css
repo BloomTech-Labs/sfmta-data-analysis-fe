@@ -7,7 +7,12 @@ html {
   flex-direction: column;
   align-items: center;
   max-width: 1000px;
+  width: 100%;
   margin: auto;
+}
+
+.dataPage {
+  width: 1400px;
 }
 
 a.nav-link {
@@ -73,6 +78,14 @@ i:hover {
   cursor: pointer;
 }
 
+ .ddt {
+  color: rgba(253, 90, 30, 0.95);
+}
+
+.ddt:hover {
+  color: #EFD19F;
+}
+
 .mapboxgl-ctrl-logo {
   display: none !important;
 }
@@ -82,41 +95,52 @@ i:hover {
 }
 
 #some-element {
-  border: 1px solid #ccc;
   display: none;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 10px;
   padding: 5px;
-  text-transform: uppercase;
   height:170px;
   width:100%;
   text-align: center;
+  color: #EFD19F;
 }
 
-.sc-AxgMl:hover #some-element {
+.trolley:hover #some-element {
   display: block;
 }
 
-.sc-AxgMl:hover .sc-AxmLO {
-  display:none
+.trolley:hover .border2 {
+  display:none;
 }
 
 #some-element2 {
-  border: 1px solid #ccc;
   display: none;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 10px;
-  margin-right: 50px;
-  text-transform: uppercase;
+  margin-right: 0;
+  margin-left: 150px;
   height:230px;
   width:100%;
   text-align: center;
+  color: #EFD19F;
 }
 
-.sc-Axmtr:hover #some-element2 {
+.city:hover #some-element2 {
   display: block;
 }
 
-.sc-Axmtr:hover .sc-fzozJi {
+.city:hover .border2 {
   display:none
 }
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+select.form-control {
+  width: 40%;
+  margin: 3% 2% 4% 0%;
+}
+
+/* Media Queries */
