@@ -5,7 +5,7 @@ import {
     FETCH_TYPEROUTE_LOADING,
     FETCH_TYPEROUTE_SUCCESS,
     FETCH_TYPEROUTE_FAILED
-  } from "../actions/index.js";
+  } from "../actions/index.jsx";
   
   const initialState = {
     routesInfo: {},

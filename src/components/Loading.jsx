@@ -1,13 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { TweenMax } from "gsap";
-import styled from "styled-components";
+import {WaitText} from "../style";
 
-//styled-components
-const WaitText = styled.h3`
-  color: white;
-  font-size: 1.2rem;
-  text-align: center;
-`;
+
 
 const Loader = () => {
   const first = useRef(null);
