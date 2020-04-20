@@ -1,13 +1,11 @@
 import React from 'react';
-import { render, getByTestId } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import App from './App';
 import LandingPage from './components/landingPage';
 import RouteList from './components/dataPage';
-import AboutUs from './components/aboutUs';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
-import ModalCard from './components/modal';
 
 jest.mock('./components/dataPage');
 jest.mock('./components/aboutUs');
@@ -48,7 +46,7 @@ test('logo renders in nav bar', () => {
 test('Home link renders in nav bar', () => {
   const {getByText} = render(<NavBar />)
 
-  getByText(/home/i);
+  getByText('Home');
 })
 
 test('Data link renders in nav bar', () => {
@@ -60,7 +58,7 @@ test('Data link renders in nav bar', () => {
 test('About us link renders in nav bar', () => {
   const {getByText} = render(<NavBar />)
 
-  getByText(/about/i);
+  getByText('About Us');
 })
 
 // footer tests
@@ -114,7 +112,6 @@ test('select route is rendering', () => {
 
   queryByText('Select type to see routes')
 })
-// about us page tests
 
 
 
