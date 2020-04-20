@@ -139,35 +139,50 @@ const handleRealTime = e => {
   console.log('e', e.target.value)
   e.preventDefault();
 
-  let traceRealTime = []
-
   props.fetchRealTime(routeID)
     .then(res => {
-        if(!res){return}
-        res.traces.map(trace => {
-          //Check if it's stop data, and set state if it is
-          if (trace.mode === "markers") {
-            setStopData({
-              ...stopData,
-              lat: trace.lat,
-              long: trace.lon,
-              marker: trace.marker,
-              mode: trace.mode,
-              type: trace.type
-            });
-          }
+      console.log('response', res)
+      console.log('route data', routeData)
+
+      let traceRealTime = {
+        lat: res.vehicles.lat,
+        lon: res.vehicles.lng,
+        marker: {color: "blue"},
+        mode: "markers",
+        type: "scattermapbox"
+      }
+      console.log(traceRealTime)
+      setRouteData({
+        ...routeData,
+        traceRealTime
+      })
+        // if(!res){return}
+        // res.traces.map(trace => {
+        //   //Check if it's stop data, and set state if it is
+        //   if (trace.mode === "markers") {
+        //     setStopData({
+        //       ...stopData,
+        //       lat: trace.lat,
+        //       long: trace.lon,
+        //       marker: trace.marker,
+        //       mode: trace.mode,
+        //       type: trace.type
+        //     });
+          })
           //Take each trace object and add it to the traces array
-          return traceRealTime.push(trace)
-        });
+    //       return traceRealTime.push(trace)
+    //     });
       
-      //Add the stops state to the end of the traces
-      traceRealTime.push(stopData)
+    //   //Add the stops state to the end of the traces
+    //   traceRealTime.push(stopData)
       
-      //Set route data state to the traces array which is get's displayed on the map
-      setRouteData(traceRealTime) 
-    })
+    //   //Set route data state to the traces array which is get's displayed on the map
+    //   setRouteData(traceRealTime) 
+    // })
     .catch(err => console.log(err))
 }
+
+console.log('route data', routeData)
 
   return (
     <div>
