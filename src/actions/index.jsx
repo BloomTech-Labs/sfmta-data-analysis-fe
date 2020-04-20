@@ -42,8 +42,9 @@ export const fetchTypeAndRoute = (props) => dispatch => {
 export const fetchRealTime = (realTime) => dispatch => {
     dispatch({type: FETCH_REALTIME_LOADING})
     return axios
-    .get(`https://sfmta-test.herokuapp.com/real-time?${realTime}`)
+    .get(`https://sfmta-test.herokuapp.com/real-time?id=${realTime}`)
     .then(res => {
+        console.log("realtime", realTime)
         dispatch({type: FETCH_REALTIME_SUCCESS, payload: res.data})
         console.log('real time', res.data)
         return res.data
