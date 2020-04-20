@@ -14,10 +14,13 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/data" component={DataPage} />
-        <Route path='/aboutus' component={AboutUs} />
-        <Footer/>
+          <div className="content">
+            <Route exact path="/" component={LandingPage} />
+            <Route path="/data" component={DataPage} />
+            <Route path='/aboutus' component={AboutUs} />
+          </div>
+          <Footer/>
+        
       </Router>
     </div>
   );
