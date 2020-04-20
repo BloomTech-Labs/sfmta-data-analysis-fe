@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutUsMap from './aboutUsMap';
-import styled from 'styled-components';
 import { UncontrolledAlert } from 'reactstrap';
+import {StyledH2} from '../style'
 
 const AboutUs = props => {
     return (
@@ -15,8 +15,6 @@ const AboutUs = props => {
     )
 }
 
-const StyledH2 = styled.h2`
-    text-align: center;
-`
+
 
 export default AboutUs;

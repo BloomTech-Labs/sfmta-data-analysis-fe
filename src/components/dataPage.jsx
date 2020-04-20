@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios'
 import createPlotlyComponent from "react-plotly.js/factory";
 
 import { connect } from "react-redux";
 import { fetchRoutesInfo, fetchTypeAndRoute } from "../actions/index";
 
 import Loading from "./Loading";
-import { Input, Form, Button } from "reactstrap";
-import styled from "styled-components";
+import { Input, Form} from "reactstrap";
+import {StyledButton} from "../style";
 
 //Importing Plot.ly react
 var Plotly = require("plotly.js/lib/core");
@@ -190,17 +189,7 @@ const mapStateToProps = state => {
   };
 };
 
-const StyledButton = styled(Button)`
-  color: black;
-  background-color: #FFC72C;
-  width: 150px;
-  height: 38px;
-  margin-top: 3%;
 
-  &:hover{
-    background-color: #deaf2f;
-  }
-`
 
 export default connect(mapStateToProps, { 
   fetchRoutesInfo, fetchTypeAndRoute

@@ -1,17 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import logo from '../images/logo.png';
 
-const Wrapper = styled.div`
-    width: 100%;
-`;
-    
-const MainNav = styled(Navbar)`    
-    color: #FD5A1E;
-    display: flex;
-    align-items: center;
-`;
+import {  NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import logo from '../images/logo.png';
+import { MainNav, Wrapper} from '../style';
+
+
 
 const NavBar = props => {
     return (
