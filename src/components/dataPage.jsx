@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import createPlotlyComponent from "react-plotly.js/factory";
 
 import { connect } from "react-redux";
-import { fetchRoutesInfo, fetchTypeAndRoute } from "../actions/index";
+import { fetchRoutesInfo, fetchTypeAndRoute, fetchRealTime } from "../actions/index";
 
 import Loading from "./Loading";
 import { Input, Form} from "reactstrap";
@@ -134,6 +134,40 @@ const RouteList = (props) => {
     })
     .catch(err => console.log(err))
   };
+// Displays Real Time data
+const handleRealTime = e => {
+  console.log('e', e.target.value)
+  e.preventDefault();
+
+  let traceRealTime = []
+
+  props.fetchRealTime(routeID)
+    .then(res => {
+        if(!res){return}
+        res.traces.map(trace => {
+          //Check if it's stop data, and set state if it is
+          if (trace.mode === "markers") {
+            setStopData({
+              ...stopData,
+              lat: trace.lat,
+              long: trace.lon,
+              marker: trace.marker,
+              mode: trace.mode,
+              type: trace.type
+            });
+          }
+          //Take each trace object and add it to the traces array
+          return traceRealTime.push(trace)
+        });
+      
+      //Add the stops state to the end of the traces
+      traceRealTime.push(stopData)
+      
+      //Set route data state to the traces array which is get's displayed on the map
+      setRouteData(traceRealTime) 
+    })
+    .catch(err => console.log(err))
+}
 
   return (
     <div>
@@ -155,19 +189,14 @@ const RouteList = (props) => {
             }
           </Input>
           {inputValidationState.routeValidation && <div style={{color: "red"}}>Please Enter a Type</div>}
-          <StyledButton color="#FFC72C">Show Route</StyledButton>
+          <StyledButton color="#FFC72C" type='submit'>Show Route</StyledButton>
+          <StyledButton color="#FFC72C" onClick={handleRealTime}>Go Live</StyledButton>
         </Form>
 
         <Plot
           data={routeData}
           layout={{
             height: 600,
-            mapbox: {
-              accesstoken: process.env.REACT_APP_PLOTLY_API_KEY,
-              style: "dark",
-              center: { lat: 37.746, lon: -122.45 },
-              zoom: 11.25
-            },
             mapbox: {accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", center: { lat: 37.748, lon: -122.4 }, zoom: 11.25},
             margin: { b: 0, l: 0, r: 0, t: 0 },
             showlegend: false,
@@ -184,6 +213,7 @@ const mapStateToProps = state => {
   return {
     routesInfo: state.routesInfo,
     typeAndRouteInfo: state.typeAndRouteInfo,
+    realTimeData: state.realTimeData,
     error: state.error,
     isFetching: state.isFetching
   };
@@ -192,5 +222,5 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps, { 
-  fetchRoutesInfo, fetchTypeAndRoute
+  fetchRoutesInfo, fetchTypeAndRoute, fetchRealTime
 })(RouteList);
