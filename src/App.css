@@ -7,8 +7,12 @@ html {
   flex-direction: column;
   align-items: center;
   max-width: 1000px;
+  min-height: 100vh;
   width: 100%;
   margin: auto;
+}
+.content {
+  flex: 1;
 }
 
 .dataPage {
