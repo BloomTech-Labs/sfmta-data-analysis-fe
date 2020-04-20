@@ -15,7 +15,7 @@ function App() {
       <Router>
         <NavBar />
         <Route exact path="/" component={LandingPage} />
-        <Route path = "/data" component={DataPage} />
+        <Route path="/data" component={DataPage} />
         <Route path='/aboutus' component={AboutUs} />
         <Footer/>
       </Router>
