@@ -67,7 +67,7 @@ const profileData = [
         id: 7,
         name: 'Justin Menendez',
         title: 'UX Designer',
-        bio: 'Bio will go here.',
+        bio: 'Like if Andre 3000 were a bohemian mystic.  Helped with Design and Creative Thinking.  Do the Good.',
         img: justin,
         github: '',
         linkedIn: 'https://www.linkedin.com/in/justinmenendez/'
