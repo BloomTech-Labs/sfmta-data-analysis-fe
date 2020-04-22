@@ -21,7 +21,7 @@ const RouteList = (props) => {
   const [selectedType, setSelectedType] = useState("");
   const [mapState, setMapState] = useState({
     zoom: 11.25,
-    center: {lat: 37.748, lon: -122.4},
+    center: {lat: 37.742, lon: -122.438},
     bearing: -0,
     pitch: 0
   })
