@@ -8,7 +8,6 @@ export const FETCH_TYPEROUTE_LOADING = "FETCH_TYPEROUTE_LOADING"
 export const FETCH_TYPEROUTE_SUCCESS = "FETCH_TYPEROUTE_SUCCESS"
 export const FETCH_TYPEROUTE_FAILED = "FETCH_TYPEROUTE_FAILED"
 
-export const FETCH_REALTIME_LOADING = "FETCH_REALTIME_LOADING"
 export const FETCH_REALTIME_SUCCESS = "FETCH_REALTIME_SUCCESS"
 export const FETCH_REALTIME_FAILED = "FETCH_REALTIME_FAILED"
 
@@ -40,7 +39,6 @@ export const fetchTypeAndRoute = (props) => dispatch => {
 }
 
 export const fetchRealTime = (realTime) => dispatch => {
-    dispatch({type: FETCH_REALTIME_LOADING})
     return axios
     .get(`https://sfmta-test.herokuapp.com/real-time?id=${realTime}`)
     .then(res => {

@@ -5,7 +5,6 @@ import {
     FETCH_TYPEROUTE_LOADING,
     FETCH_TYPEROUTE_SUCCESS,
     FETCH_TYPEROUTE_FAILED,
-    FETCH_REALTIME_LOADING,
     FETCH_REALTIME_SUCCESS,
     FETCH_REALTIME_FAILED
   } from "../actions/index.jsx";
@@ -32,8 +31,6 @@ import {
         return {...state, typeAndRouteInfo: action.payload, isFetching: false}
       case FETCH_TYPEROUTE_FAILED:
         return {...state, isFetching: false, error: action.payload}
-      case FETCH_REALTIME_LOADING:
-        return {...state, isFetching: true}
       case FETCH_REALTIME_SUCCESS:
         return {...state, realTimeData: action.payload, isFetching: false}
       case FETCH_REALTIME_FAILED:
