@@ -85,7 +85,7 @@ const profileData = [
         id: 9,
         name: 'Michelle Sirimanivong',
         title: 'Web Developer',
-        bio: 'Michelle is a web developer from Arizona. In her free time, she enjoys spending time with her husband and her 3 dogs.',
+        bio: 'Michelle is a full-stack web developer from Arizona. In her free time, she enjoys baking, playing video games and spending time with her husband and her 3 dogs.',
         img: michelle,
         github: 'https://github.com/MicheSi',
         linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'
