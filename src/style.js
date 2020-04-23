@@ -5,18 +5,18 @@ import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 
 // Nav Styles
 export const Wrapper = styled.div`
-    width: 100%;
+  width: 100%;
 `;
     
 export const MainNav = styled(Navbar)`    
-    color: #FD5A1E;
-    display: flex;
-    align-items: center;
+  color: #FD5A1E;
+  display: flex;
+  align-items: center;
 `;
 
 // About Us Styles
 export const StyledH2 = styled.h2`
-    text-align: center;
+  text-align: center;
 `
 
 // Data Page Styles
@@ -128,73 +128,73 @@ export const StyledSection = styled.section`
 `
 
 export const StyledImg = styled.img`
-height : 446px,
-width: 398px
+  height : 446px,
+  width: 398px
 `
 // Modal Styles
 export const Wrapper1 = styled.div`
-    width: 100%;
+  width: 100%;
 `
 
 export const StyledModal = styled(Modal)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const StyledModalBody = styled(ModalBody)`
-    color: black;
-    text-align:center;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+  color: black;
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 `
 
 export const ImageTextWrapper = styled.div`
-    display: flex; 
-    background: #636667;
-    border-radius: 15px;
+  display: flex; 
+  background: #636667;
+  border-radius: 15px;
 `
 
 export const ModalImg = styled.img`
-    margin: 0 auto;
-    width: 48%;
-    border: none;
-    display: block;
-    padding: 15px 15px;
-    border-radius: 15px;
+  margin: 0 auto;
+  width: 48%;
+  border: none;
+  display: block;
+  padding: 15px 15px;
+  border-radius: 15px;
 `
 
 export const StyledModalFooter = styled(ModalFooter)`
-    background: #636667;
-    border-radius: 15px;
-    border: none;
+  background: #636667;
+  border-radius: 15px;
+  border: none;
 `
 
 export const StyledH10 = styled.h1`
-    font-size: 40px;
-    color: #EFD19F;
-    margin-top: 10%;
+  font-size: 40px;
+  color: #EFD19F;
+  margin-top: 10%;
 `
 
 export const StyledHr = styled.hr`
-    border-top: 5px solid rgba(253, 90, 30, 0.95);
-    width: 200px;
-    margin-top: 0;
+  border-top: 5px solid rgba(253, 90, 30, 0.95);
+  width: 200px;
+  margin-top: 0;
 `
 
 export const StyledH20 = styled.h2`
-    font-size: 32px;
-    color: #EFD19F;
+  font-size: 32px;
+  color: #EFD19F;
 `
 
 export const StyledLink = styled.a`
-    color: rgba(253, 90, 30, 0.95);
+  color: rgba(253, 90, 30, 0.95);
 
-    &:hover {
-        color: #EFD19F;
-        text-decoration: none;
-    }
+  &:hover {
+    color: #EFD19F;
+    text-decoration: none;
+  }
 `
 
 export const StyledP = styled.p`
