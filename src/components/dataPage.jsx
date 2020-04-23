@@ -46,14 +46,10 @@ const RouteList = (props) => {
   //Gets the routes and type data for the dropdowns
   useEffect(() => {
     props.fetchTypeAndRoute()
-      .then(res => {
-        setTypeAndRouteData(res)
-      })
+      .then(res => {setTypeAndRouteData(res)})
   }, []);
 
-  useInterval(() => {
-    props.fetchRealTime(routeID)
-  }, 30000);
+  useInterval(() => {props.fetchRealTime(routeID)}, 30000);
 
   //State to hold the ID of the selected route
   const [routeID, setRouteID] = useState("")
@@ -107,12 +103,25 @@ const RouteList = (props) => {
         //Fetch realtime data
         props.fetchRealTime(routeID)
           .then(res => {
+            console.log('dir array', res.vehicles.dir)
+            let heading = []
+
+            res.vehicles.dir.map(dir => {
+              if(dir && dir.includes("_I_")){
+                heading.push("Inbound")
+              } else if (dir && dir.includes("_O_")) {
+                heading.push("Outbound")
+              } else {
+              heading.push("No Heading")
+            }})
+
+            console.log("heading", heading)
             let traceRealTime = {
-              hovertemplate: "<b>Vehicle ID: </b> %{customdata} <extra></extra>",
+              hovertemplate: "<b>Vehicle ID: </b> %{customdata} <b>Direction: </b> %{text} <extra></extra>",
               lat: res.vehicles.lat,
               lon: res.vehicles.lng,
               customdata: res.vehicles.vid,
-              text: res.vehicles.dir,
+              text: heading,
               marker: { color: "green", size: "12", symbol: "marker" },
               mode: "markers",
               type: "scattermapbox"
@@ -149,13 +158,8 @@ const RouteList = (props) => {
 
         <Plot
           data={routeData}
-          layout={{
-            height: 600,
-            width: 1000,
-            mapbox: { 
-            accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", 
-            center:mapState.center, zoom: mapState.zoom, bearing: mapState.bearing, pitch: mapState.pitch 
-          },
+          layout={{height: 600, width: 1000,
+            mapbox: { accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", center:mapState.center, zoom: mapState.zoom, bearing: mapState.bearing, pitch: mapState.pitch },
             margin: { b: 0, l: 0, r: 0, t: 0 },
             showlegend: false,
           }}
