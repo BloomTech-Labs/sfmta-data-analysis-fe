@@ -49,7 +49,7 @@ const profileData = [
         id: 5,
         name: 'Jonathan Allison',
         title: 'Web Developer',
-        bio: 'Jonathan is a Web Developer from North Carolina and proud father of four daughters and loves his five grandchildren.',
+        bio: 'Jonathan is a Web Developer from North Carolina and proud husband, father, and grandfather. Not afraid to still chase my dreams.',
         img: jonathan,
         github: 'https://github.com/qb1968',
         linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/'
