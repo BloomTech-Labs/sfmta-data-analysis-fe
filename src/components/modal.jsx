@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'reactstrap';
-import {Wrapper1,StyledModal,StyledModalBody,ImageTextWrapper,ModalImg,StyledModalFooter,StyledH10,StyledHr,StyledH20,StyledLink} from '../style';
+import {Wrapper1,StyledModal,StyledModalBody,ImageTextWrapper,ModalImg,StyledModalFooter,StyledH10,StyledHr,StyledH20,StyledLink, StyledP} from '../style';
 const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, toggle}) => {
     return (
         <Wrapper1>
@@ -11,7 +11,7 @@ const ModalCard = ({student: {name, title, img, bio, github, linkedIn}, modal, t
                     <StyledH10>{name}</StyledH10>
                     <StyledHr/>
                     <StyledH20>{title}</StyledH20>
-                    <p>{bio}</p>
+                    <StyledP>{bio}</StyledP>
                 </StyledModalBody>
                 </ImageTextWrapper>
                 <StyledModalFooter>

@@ -13,7 +13,7 @@ const profileData = [
         id: 1,
         name: 'Agustin Vargas',
         title: 'Data Scientist',
-        bio: 'Bio will go here.',
+        bio: 'An aspiring data scientist, with a background in scientific research and higher education administration; intuitive by nature and optimistic by habit.  My role in this project was to work with the DS team to gain insight into the traffic patterns of vehicles within the San Francisco public transit system.',
         img: agustin,
         github: 'https://github.com/avdata',
         linkedIn: 'http://linkedin.com/in/vargasstem'
