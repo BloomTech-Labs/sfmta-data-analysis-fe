@@ -107,8 +107,9 @@ const RouteList = (props) => {
         //Fetch realtime data
         props.fetchRealTime(routeID)
           .then(res => {
+            console.log(res.vehicles.dir)
             let traceRealTime = {
-              hovertemplate: "<b>Vehicle ID: </b> %{customdata} <extra></extra>",
+              hovertemplate: "<b>Vehicle ID: </b> %{customdata} <b>Direction: </b>%{text} <extra></extra>",
               lat: res.vehicles.lat,
               lon: res.vehicles.lng,
               customdata: res.vehicles.vid,
@@ -117,7 +118,22 @@ const RouteList = (props) => {
               mode: "markers",
               type: "scattermapbox"
             }
-            setRouteData(routeData => [...routeData, traceRealTime])
+            res.vehicles.dir.map(dir => {
+              if (dir !== null && dir.includes("_I_")){
+                return traceRealTime = {
+                  ...traceRealTime,
+                  hovertemplate: "<b>Vehicle ID: </b> %{customdata} <b>Direction: </b>Inbound <extra></extra>"
+                }
+                // setRouteData(routeData => [...routeData, traceRealTime])
+              } else if (dir !== null && dir.includes("_O_")){
+                console.log('else', dir)
+                return traceRealTime = {
+                  ...traceRealTime,
+                  hovertemplate: "<b>Vehicle ID: </b> %{customdata} <b>Direction: </b>Outbound <extra></extra>",
+                }
+              }
+              setRouteData(routeData => [...routeData, traceRealTime])
+            })
           })
           .catch(err => console.log(err))
       })
