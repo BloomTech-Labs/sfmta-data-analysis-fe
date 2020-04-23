@@ -3,6 +3,7 @@ import {Navbar} from 'reactstrap';
 import { Button } from "reactstrap";
 import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 
+// Nav Styles
 export const Wrapper = styled.div`
     width: 100%;
 `;
@@ -13,10 +14,12 @@ export const MainNav = styled(Navbar)`
     align-items: center;
 `;
 
+// About Us Styles
 export const StyledH2 = styled.h2`
     text-align: center;
 `
 
+// Data Page Styles
 export const StyledButton = styled(Button)`
   color: black;
   background-color: #FFC72C;
@@ -28,6 +31,8 @@ export const StyledButton = styled(Button)`
     background-color: #deaf2f;
   }
 `
+
+// Landing Page Styles
 export const WaitText = styled.h3`
   color: white;
   font-size: 1.2rem;
@@ -46,6 +51,7 @@ export const Header = styled.div`
   margin:auto;
   margin-top: 50px;
 `
+
 export const Bracket = styled.div`
   width: 147px;
   height: 300px;
@@ -53,6 +59,7 @@ export const Bracket = styled.div`
   border-top: 15px solid white;
   border-bottom: 15px solid white;
 `
+
 export const Bracket2 = styled.div`
   width: 147px;
   height: 300px;
@@ -60,12 +67,14 @@ export const Bracket2 = styled.div`
   border-top: 15px solid white;
   border-bottom: 15px solid white;
 `
+
 export const Div2 = styled.div`
   display: flex;
   min-width: 398px;
   height: 500px;
   margin:  10% 5% 25%;
 `
+
 export const Div3 = styled.div`
   display: flex;
   flex-direction: reverse;
@@ -97,6 +106,7 @@ export const Border2 = styled.div`
   justify-content: center;
   align-items: flex-end;
 `
+
 export const Spacer = styled.div`
   width: 44.5%;
 `
@@ -121,7 +131,7 @@ export const StyledImg = styled.img`
 height : 446px,
 width: 398px
 `
-
+// Modal Styles
 export const Wrapper1 = styled.div`
     width: 100%;
 `
@@ -177,6 +187,7 @@ export const StyledH20 = styled.h2`
     font-size: 32px;
     color: #EFD19F;
 `
+
 export const StyledLink = styled.a`
     color: rgba(253, 90, 30, 0.95);
 
@@ -184,4 +195,8 @@ export const StyledLink = styled.a`
         color: #EFD19F;
         text-decoration: none;
     }
+`
+
+export const StyledP = styled.p`
+  margin: 0 6% 0 2%;
 `
