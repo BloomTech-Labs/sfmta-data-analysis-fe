@@ -31,7 +31,7 @@ const profileData = [
         id: 3,
         name: 'Connor Angelis',
         title: 'Web Developer',
-        bio: 'Bio will go here.',
+        bio: 'A growing front-end developer, with a short lifetime of always working with computers and technology. A nerd at heart and constantly working to dig myself a home in the software industry. My role in this project was working with the Plotly React API to bring a visualization of the San Francisco metro system to life.',
         img: connor,
         github: 'https://github.com/KonstadinosAngelis',
         linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/'
