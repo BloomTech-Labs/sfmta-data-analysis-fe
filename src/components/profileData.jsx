@@ -40,7 +40,7 @@ const profileData = [
         id: 4,
         name: 'Erik Sandoval',
         title: 'Web Developer & Team Lead',
-        bio: 'Bio will go here.',
+        bio: 'Nintendo and Hardware enthusiast, specializes in making and fixing own mistakes.',
         img: erik,
         github: 'https://github.com/erik-sandoval',
         linkedIn: ''
@@ -58,7 +58,7 @@ const profileData = [
         id: 6,
         name: 'Jordan Ireland',
         title: 'Data Scientist',
-        bio: 'Bio will go here.',
+        bio: 'Data Scientist by day and game developer by night. I have been programming for over 10 years and have a background in medicine and optics. I worked on creating the API that would be called to get the front end information and to support the rest of the Data Science team.',
         img: jordan,
         github: 'https://github.com/Jordan-Ireland',
         linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/'
