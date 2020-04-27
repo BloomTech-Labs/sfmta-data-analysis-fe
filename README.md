@@ -62,7 +62,7 @@ Flask App API that returns data on route id, route name and type of route.
 
 ## 3️⃣ https://sfmta-test.herokuapp.com/real-time?id=${realTime}
 
-Flask App API that returns real time data with vechicle ID and vehicle direction for each vechicle on a speficied route.
+Flask App API that returns real time data with vehicle ID and vehicle direction for each vehicle on a speficied route.
 
 # 3️⃣ Environment Variables
 
