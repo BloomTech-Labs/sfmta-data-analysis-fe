@@ -1,6 +1,7 @@
 #SFTMA Data Analysis
 
-1️⃣ You can find the deployed project at https://master.d3j9ctmbednoov.amplifyapp.com/
+1️⃣ You can find the deployed project at https://master.d3j9ctmbednoov.amplifyapp.com/<br>
+You can find the staging server at https://staging.d3j9ctmbednoov.amplifyapp.com/
 
 ## 4️⃣ Contributors
 
