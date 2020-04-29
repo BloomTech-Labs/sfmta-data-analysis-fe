@@ -22,7 +22,7 @@ const profileData = [
         id: 2,
         name: 'Cody Holman',
         title: 'Web Developer',
-        bio: 'Bio will go here.',
+        bio: 'Hobbyist tech nerd turned pro. A full stack web developer with a never ending desire to improve.',
         img: cody,
         github: 'https://github.com/cholman',
         linkedIn: 'https://www.linkedin.com/in/cody-holman'
