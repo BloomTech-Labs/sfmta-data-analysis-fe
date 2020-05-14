@@ -8,6 +8,7 @@ import Loading from "./Loading";
 import { Input, Form, UncontrolledAlert } from "reactstrap";
 import { StyledButton } from "../style";
 
+
 //Importing Plot.ly react
 var Plotly = require("plotly.js/lib/core");
 Plotly.register([require("plotly.js/lib/scattermapbox")]);
@@ -21,18 +22,18 @@ const RouteList = (props) => {
   const [selectedType, setSelectedType] = useState("");
   const [mapState, setMapState] = useState({
     zoom: 11.25,
-    center: {lat: 37.742, lon: -122.438},
+    center: { lat: 37.742, lon: -122.438 },//centers the map on san francisco
     bearing: -0,
     pitch: 0
   })
 
-  //State for the list of routes that get displayed when type is selected
+  //State for the list of routes that get displayed when type is selected (type of transit gets chosen in a drop down form)
   const [routesBasedOnType, setRoutesBasedOnType] = useState({ typeNames: [], typeIds: [] });
 
-  //State for the specific route that get's selected
+  //State for the specific route that get's selected (transit routes get chosen in a drop down form)
   const [selectedRoute, setSelectedRoute] = useState("");
 
-  //State for Plotly map
+  //State for Plotly map (will be updated with the current route which is being pulled from the flask app)
   const [routeData, setRouteData] = useState([{
     lat: [],
     lon: [],
@@ -41,17 +42,17 @@ const RouteList = (props) => {
     type: "scattermapbox"
   }]);
 
-  //State to hold the type/route data
+  //State to hold the type/route data 
   const [typeAndRouteData, setTypeAndRouteData] = useState({})
-  //Gets the routes and type data for the dropdowns
+  //Gets the routes and type data for the dropdowns (initial get request to the flask app action) unsure why theres a 30 second timer
   useEffect(() => {
     props.fetchTypeAndRoute()
-      .then(res => {setTypeAndRouteData(res)})
+      .then(res => { setTypeAndRouteData(res) })
   }, []);
 
-  useInterval(() => {props.fetchRealTime(routeID)}, 30000);
+  useInterval(() => { props.fetchRealTime(routeID) }, 30000);
 
-  //State to hold the ID of the selected route
+  //State to hold the ID of the selected route 
   const [routeID, setRouteID] = useState("")
   //On change handler for the route selection
   const handleRouteSelect = e => {
@@ -65,7 +66,7 @@ const RouteList = (props) => {
   const handleTypeSelect = e => {
     setSelectedType(e.target.value)
 
-    //Set the state of the routes list to the correct array based on type selection
+    //Set the state of the routes list to the correct array of routes based on type selection
     typeAndRouteData.type.find((name, index) => {
       if (name === e.target.value) {
         setRoutesBasedOnType({ typeNames: typeAndRouteData.name[index], typeIds: typeAndRouteData.id[index] })
@@ -80,7 +81,7 @@ const RouteList = (props) => {
   const handleRouteSubmit = e => {
     e.preventDefault();
 
-    let traceData = []
+    let traceData = [] //todo find out exactly what trace data is suppose do to (try to break it or change it in a noticeable way)
 
     //Simple validation for type/route. 
     if (!selectedType && !selectedRoute || !selectedType || !selectedRoute) {
@@ -91,6 +92,7 @@ const RouteList = (props) => {
     //Reset Validation
     setInputValidationState(false)
 
+    //uses the selected route id to grab the coordinates of the stops
     props.fetchRoutesInfo(routeID)
       .then(res => {
         res.traces.map(trace => {
@@ -107,13 +109,14 @@ const RouteList = (props) => {
             let heading = []
 
             res.vehicles.dir.map(dir => {
-              if(dir && dir.includes("_I_")){
+              if (dir && dir.includes("_I_")) {
                 heading.push("Inbound")
               } else if (dir && dir.includes("_O_")) {
                 heading.push("Outbound")
               } else {
-              heading.push("No Heading")
-            }})
+                heading.push("No Heading")
+              }
+            })
 
             console.log("heading", heading)
             let traceRealTime = {
@@ -158,8 +161,9 @@ const RouteList = (props) => {
 
         <Plot
           data={routeData}
-          layout={{height: 600, width: 1000,
-            mapbox: { accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", center:mapState.center, zoom: mapState.zoom, bearing: mapState.bearing, pitch: mapState.pitch },
+          layout={{
+            height: 600, width: 1000,
+            mapbox: { accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", center: mapState.center, zoom: mapState.zoom, bearing: mapState.bearing, pitch: mapState.pitch },
             margin: { b: 0, l: 0, r: 0, t: 0 },
             showlegend: false,
           }}
