@@ -95,8 +95,9 @@ const RouteList = (props) => {
     //uses the selected route id to grab the coordinates of the stops
     props.fetchRoutesInfo(routeID)
       .then(res => {
+        //the trace array is the line shown to depict a route
         res.traces.map(trace => {
-          //Take each trace object and add it to the traces array
+          //Take each trace object and add it to the traces array 
           return traceData.push(trace)
         });
         //Set route data state to the traces array which is get's displayed on the map
@@ -117,6 +118,7 @@ const RouteList = (props) => {
                 heading.push("No Heading")
               }
             })
+            //tries to create a real time view of the current position of the vehicle way over complicated will be easier using an array
 
             console.log("heading", heading)
             let traceRealTime = {
@@ -136,11 +138,14 @@ const RouteList = (props) => {
       .catch(err => console.log(err))
   };
   console.log(mapState)
+  console.log('trace data what is it', routeData)
   return (
     <div>
       {props.isFetching ? (<Loading />) : (<div>{props.error && <div>{props.error.message}</div>}
+        {/* sets the error message to show up but only works before the drop down is used */}
         {inputValidationState && <UncontrolledAlert color="warning">Please Select both a route and a type</UncontrolledAlert>}
 
+        {/* form to display the types and the routes based on type */}
         <Form onSubmit={handleRouteSubmit}>
           <Input type="select" onChange={handleTypeSelect} name="selectedType" value={selectedType}>
             <option name="selectedType">Select a type</option>
@@ -155,10 +160,10 @@ const RouteList = (props) => {
                 <option key={routeName} id={routesBasedOnType.typeIds[index]}>{routeName}</option>))
             }
           </Input>
-
+          {/* a button :D */}
           <StyledButton color="#FFC72C" type='submit'>Show Route</StyledButton>
         </Form>
-
+        {/* the map being rendered on the website */}
         <Plot
           data={routeData}
           layout={{
@@ -197,7 +202,7 @@ const useInterval = (callback, delay) => {
       return () => clearInterval(id);
     }
   }, [delay]);
-}
+}// refreshes the page at a set interval to allow the plotly map to be interactive using use effects to re render the map repeatedly
 
 const mapStateToProps = state => {
   return {
