@@ -8,7 +8,7 @@ import JustinK from '../images/JustinK.jpg';
 import Isaac from '../images/Isaac.jpg';
 import Jonathan from '../images/Jonathan.png';
 import Ramses from '../images/Ramses.jpg';
-import Mary from '../images/Ramses.jpg';
+import Mary from '../images/Mary.jpg';
 import cody from '../images/cody.jpg';
 import connor from '../images/connor.jpg';
 import erik from '../images/erik.jpg';
@@ -97,7 +97,7 @@ const profileData = [
         title: 'Data Scientist',
         bio: 'bio here',
         img: Ramses,
-        github: '',
+        github: 'github.com/cedro-gasque',
         linkedIn: ''
     },
     {
@@ -106,8 +106,7 @@ const profileData = [
         title: 'UX Designer',
         bio: 'bio here',
         img: Mary,
-        github: '',
-        linkedIn: ''
+        linkedIn: 'https://www.linkedin.com/in/mstreletska/'
     },
     {
         id: 11,

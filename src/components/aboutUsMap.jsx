@@ -36,9 +36,9 @@ const AboutUsMap = props => {
             
             <Plot
              data={[{
-                "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 34.0522, 58.410460],
-                "lon": [-112.6, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.2437, 8.726921],
-                "customdata": ["Michelle Sirimanivong", "Jonathan Allison", "Connor Angelis", "Cody Holman", 'Erik Sandoval', 'Jordan Ireland', 'Justin Menendez', 'Agustin Vargas', 'Daniel Aguilar', 'Mathias Skreden'],
+                "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 34.0522, 58.410460, 38.627003, 28.538336, 45.512794, 34.052235, 35.012880, 40.440624, 47.494032, 40.232983, 42.361145, 45.633331],
+                "lon": [-112.6, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.2437, 8.726921, -90.199402, -81.379234, -122.679565, -118.243683, -120.291439, -79.995888, -122.181941, -111.51277, -71.057083, -122.599998],
+                "customdata": ["Michelle Sirimanivong", "Jonathan Allison", "Connor Angelis", "Cody Holman", 'Erik Sandoval', 'Jordan Ireland', 'Justin Menendez', 'Agustin Vargas', 'Daniel Aguilar', 'Kevin Phillips', 'Nick Migel', 'Justin Russell', 'Bairon Paz', 'Justin Kuenzinger', 'Isaac Grove', 'Jonathan Duke', 'Austin Robinson', 'Mary Streletska', 'Ramses Gasque' ],
                 "hovertemplate": '<b>Name:</b> %{customdata} <extra></extra>',
                 "mode": "markers",
                 "type": "scattermapbox",
