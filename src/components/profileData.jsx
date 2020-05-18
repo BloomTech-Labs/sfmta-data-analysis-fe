@@ -23,7 +23,7 @@ const profileData = [
         id: 1,
         name: 'Kevin Phillips',
         title: 'Full Stack Web Developer',
-        bio: 'bio here',
+        bio: 'Kevin is a fullstack web developer with a passion for learning to code, animals, and riding motorcycles',
         img: Kevin,
         github: 'https://github.com/kphillips001/',
         linkedIn: 'https://www.linkedin.com/in/kevin-n-phillips/'
@@ -32,7 +32,7 @@ const profileData = [
         id: 2,
         name: 'Nick Migel',
         title: 'Full Stack Web Developer',
-        bio: 'bio here',
+        bio: 'Nick loves the warm FL weather and loves to code. It is his current passion',
         img: Nick,
         github: 'https://github.com/rivercrow25',
         linkedIn: 'https://www.linkedin.com/in/nick-migel-67b4831a2/'
