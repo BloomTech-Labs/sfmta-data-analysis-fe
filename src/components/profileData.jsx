@@ -110,6 +110,15 @@ const profileData = [
     },
     {
         id: 11,
+        name: 'Agustin Vargas',
+        title: 'Data Scientist',
+        bio: 'An aspiring data scientist, with a background in scientific research and higher education administration; intuitive by nature and optimistic by habit.  My role in this project was to work with the DS team to gain insight into the traffic patterns of vehicles within the San Francisco public transit system.',
+        img: agustin,
+        github: 'https://github.com/avdata',
+        linkedIn: 'http://linkedin.com/in/vargasstem'
+    },
+    {
+        id: 12,
         name: 'Cody Holman',
         title: 'Web Developer',
         bio: 'Hobbyist tech nerd turned pro. A full stack web developer with a never ending desire to improve.',
@@ -118,7 +127,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/cody-holman'
     },
     {
-        id: 12,
+        id: 13,
         name: 'Connor Angelis',
         title: 'Web Developer',
         bio: 'A growing front-end developer, with a short lifetime of always working with computers and technology. A nerd at heart and constantly working to dig myself a home in the software industry. My role in this project was working with the Plotly React API to bring a visualization of the San Francisco metro system to life.',
@@ -127,7 +136,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/'
     },
     {
-        id: 13,
+        id: 14,
         name: 'Erik Sandoval',
         title: 'Web Developer & Team Lead',
         bio: 'Nintendo and Hardware enthusiast, specializes in making and fixing own mistakes.',
@@ -136,7 +145,7 @@ const profileData = [
         linkedIn: ''
     },
     {
-        id: 14,
+        id: 15,
         name: 'Jonathan Allison',
         title: 'Web Developer',
         bio: 'Jonathan is a Web Developer from North Carolina and proud husband, father, and grandfather. Not afraid to still chase my dreams.',
@@ -145,7 +154,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/'
     },
     {
-        id: 15,
+        id: 16,
         name: 'Jordan Ireland',
         title: 'Data Scientist',
         bio: 'Data Scientist by day and game developer by night. I have been programming for over 10 years and have a background in medicine and optics. I worked on creating the API that would be called to get the front end information and to support the rest of the Data Science team.',
@@ -154,7 +163,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/'
     },
     {
-        id: 16,
+        id: 17,
         name: 'Justin Menendez',
         title: 'UX Designer',
         bio: 'Like if Andre 3000 were a bohemian mystic.  Helped with Design and Creative Thinking.  Do the Good.',
@@ -163,7 +172,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/justinmenendez/'
     },
     {
-        id: 17,
+        id: 18,
         name: 'Mathias Skreden',
         title: 'Data Scientist',
         bio: 'Bio will go here.',
@@ -172,7 +181,7 @@ const profileData = [
         linkedIn: 'https://www.linkedin.com/in/skredenmathias/'
     },
     {
-        id: 18,
+        id: 19,
         name: 'Michelle Sirimanivong',
         title: 'Web Developer',
         bio: 'Michelle is a full-stack web developer from Arizona. In her free time, she enjoys baking, playing video games and spending time with her husband and her 3 dogs.',
@@ -180,15 +189,7 @@ const profileData = [
         github: 'https://github.com/MicheSi',
         linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'
     },
-    {
-        id: 19,
-        name: 'Agustin Vargas',
-        title: 'Data Scientist',
-        bio: 'An aspiring data scientist, with a background in scientific research and higher education administration; intuitive by nature and optimistic by habit.  My role in this project was to work with the DS team to gain insight into the traffic patterns of vehicles within the San Francisco public transit system.',
-        img: agustin,
-        github: 'https://github.com/avdata',
-        linkedIn: 'http://linkedin.com/in/vargasstem'
-    },
+    
 ]
 
 export default profileData;
