@@ -87,6 +87,7 @@ const profileData = [
         id: 9,
         name: 'Michelle Sirimanivong',
         title: 'Web Developer',
+        img: michelle,
         github: 'https://github.com/MicheSi',
         linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'
     },
@@ -153,22 +154,22 @@ const profileData = [
         img: AustinR,
         github: 'https://github.com/austiezr',
         linkedIn: 'https://www.linkedin.com/in/austin-ziech-robinson/'
-   },
-   {
-    id: 18,
-    name: 'Mary Streletska',
-    title: 'UX Designer',
-    img: Mary,
-    linkedIn: 'https://www.linkedin.com/in/mstreletska/'
-},
-{
-    id: 19,
-    name: 'Ramses Gasque',
-    title: 'Data Scientist',
-    img: Ramses,
-    github: 'github.com/cedro-gasque',
-    linkedIn: ''
-},
+    },
+    {
+        id: 18,
+        name: 'Mary Streletska',
+        title: 'UX Designer',
+        img: Mary,
+        linkedIn: 'https://www.linkedin.com/in/mstreletska/'
+    },
+    {
+        id: 19,
+        name: 'Ramses Gasque',
+        title: 'Data Scientist',
+        img: Ramses,
+        github: 'github.com/cedro-gasque',
+        linkedIn: ''
+    },
 ]
 
 export default profileData;
