@@ -1,4 +1,14 @@
+import Kevin from '../images/Kevin.jpg';
+import Nick from '../images/Nick.jpg';
+import Bairon from '../images/Bairon.jpg';
+import JustinR from '../images/JustinR.jpg';
+import AustinR from '../images/AustinR.jpg';
 import agustin from '../images/agustin.jpg';
+import JustinK from '../images/JustinK.jpg';
+import Isaac from '../images/Isaac.jpg';
+import Jonathan from '../images/Jonathan.png';
+import Ramses from '../images/Ramses.jpg';
+import Mary from '../images/Mary.jpg';
 import cody from '../images/cody.jpg';
 import connor from '../images/connor.jpg';
 import erik from '../images/erik.jpg';
@@ -89,7 +99,96 @@ const profileData = [
         img: michelle,
         github: 'https://github.com/MicheSi',
         linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'
-    }
+    },
+    {
+        id: 10,
+        name: 'Kevin Phillips',
+        title: 'Full Stack Web Developer',
+        bio: 'Kevin is a fullstack web developer with a passion for learning to code, animals, and riding motorcycles',
+        img: Kevin,
+        github: 'https://github.com/kphillips001/',
+        linkedIn: 'https://www.linkedin.com/in/kevin-n-phillips/'
+    },
+    {
+        id: 11,
+        name: 'Nick Migel',
+        title: 'Full Stack Web Developer',
+        bio: 'Nick loves the warm FL weather and loves to code. It is his current passion',
+        img: Nick,
+        github: 'https://github.com/rivercrow25',
+        linkedIn: 'https://www.linkedin.com/in/nick-migel-67b4831a2/'
+    },
+    {
+        id: 12,
+        name: 'Justin Russell',
+        title: 'Full Stack Web Developer',
+        bio: 'bio here',
+        img: JustinR,
+        github: 'https://github.com/justinruss24',
+        linkedIn: 'https://www.linkedin.com/in/justinrussell-web/'
+    },
+    {
+        id: 13,
+        name: 'Bairon Paz',
+        title: 'Full Stack Web Developer',
+        bio: 'bio here',
+        img: Bairon,
+        github: 'https://github.com/MrR3set',
+        linkedIn: 'https://www.linkedin.com/in/byronpaz'
+    },
+    {
+        id: 14,
+        name: 'Justin Kuenzinger',
+        title: 'Full Stack Web Developer',
+        bio: 'bio here',
+        img: JustinK,
+        github: 'https://github.com/jkuenzinger',
+        linkedIn: 'https://www.linkedin.com/in/justin-kuenzinger-2a8a2b1a0/'
+    },
+    {
+        id: 15,
+        name: 'Isaac Grove',
+        title: 'Data Scientist',
+        bio: 'bio here',
+        img: Isaac,
+        github: 'https://github.com/isaacgrove',
+        linkedIn: 'https://www.linkedin.com/in/isaac-grove-01300b177/'
+    },
+    {
+        id: 16,
+        name: 'Jonathan Duke',
+        title: 'Data Scientist',
+        bio: 'bio here',
+        img: Jonathan,
+        github: 'https://github.com/jonDuke',
+        linkedIn: 'https://www.linkedin.com/in/jonduke90/'
+    },
+    {
+        id: 17,
+        name: 'Austin Robinson',
+        title: 'Data Scientist',
+        bio: 'bio here',
+        img: AustinR,
+        github: 'https://github.com/austiezr',
+        linkedIn: 'https://www.linkedin.com/in/austin-ziech-robinson/'
+   },
+   {
+    id: 18,
+    name: 'Mary Streletska',
+    title: 'UX Designer',
+    bio: 'bio here',
+    img: Mary,
+    linkedIn: 'https://www.linkedin.com/in/mstreletska/'
+},
+{
+    id: 19,
+    name: 'Ramses Gasque',
+    title: 'Data Scientist',
+    bio: 'bio here',
+    img: Ramses,
+    github: 'github.com/cedro-gasque',
+    linkedIn: ''
+},
 ]
 
 export default profileData;
