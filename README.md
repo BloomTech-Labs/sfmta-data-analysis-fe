@@ -23,18 +23,19 @@ You can find the staging server at https://staging.d3j9ctmbednoov.amplifyapp.com
 
 ## Project Overview
 
-1️⃣ [Trello Board](https://trello.com/b/0X0QTiP4/labs22-sftma-data-analysis)
+1️⃣ [Trello Board](https://trello.com/b/vA57CtqN/labs24-sftma)
 
 1️⃣ [Product Canvas](https://www.notion.so/964c1cde8a35484eb17eafc048b9dc72?v=e7b8584f2c204b6d8d3ff917203effd1)
 
-1️⃣ [UX Design files](https://www.figma.com/file/hiuVPSUPr2WiyDfFFdx1g3/SFMTA-Data-Analysis%2C-Justin?node-id=179%3A0)
+1️⃣ [UX Design files](https://www.figma.com/file/dchT2REZlKgVR8uhBxjBAk/SFMTA%2C-Mary)
 
 
 ### 4️⃣ Key Features
 
-- Have a publically available database of historical data on bus and rail cars.
-- Near real time analysis of travel times from major travel corridors.
+- Have a publically available database of historical data on SFMT vehicles.
 - Analysis of bunching and gapping on bus and rail lines.
+- Generate daily reports for each type of transit system, and reports for specific routes.
+
 
 ## 1️⃣ Tech Stack
 
