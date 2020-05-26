@@ -11,23 +11,23 @@ jest.mock('./components/dataPage');
 jest.mock('./components/aboutUs');
 
 // app tests
-test('renders app without crashing', () => {
-  render(<App />);
-});
+// test('renders app without crashing', () => {
+//   render(<App />)
+// });
 
 // landing page tests
 test('Landing Page renders without crashing', () => {
-  render(<LandingPage/>)
+  render(<LandingPage />)
 })
 
 test('trolley image is rendering', () => {
-  const {getByAltText} = render(<LandingPage />)
+  const { getByAltText } = render(<LandingPage />)
 
   getByAltText(/trolley/i);
 })
 
 test('city image renders on landing page', () => {
-  const {getByAltText} = render(<LandingPage />)
+  const { getByAltText } = render(<LandingPage />)
 
   getByAltText(/city/i);
 })
@@ -38,25 +38,25 @@ test('Nav renders without crashing', () => {
 })
 
 test('logo renders in nav bar', () => {
-  const {getByAltText} = render(<NavBar />)
+  const { getByAltText } = render(<NavBar />)
 
   getByAltText(/logo/i);
 })
 
 test('Home link renders in nav bar', () => {
-  const {getByText} = render(<NavBar />)
+  const { getByText } = render(<NavBar />)
 
   getByText('Home');
 })
 
 test('Data link renders in nav bar', () => {
-  const {getByText} = render(<NavBar />)
+  const { getByText } = render(<NavBar />)
 
   getByText('Data');
 })
 
 test('About us link renders in nav bar', () => {
-  const {getByText} = render(<NavBar />)
+  const { getByText } = render(<NavBar />)
 
   getByText('About Us');
 })
@@ -67,25 +67,25 @@ test('Footer renders without crashing', () => {
 })
 
 test('logo renders in footer', () => {
-  const {getByAltText} = render(<Footer />)
+  const { getByAltText } = render(<Footer />)
 
   getByAltText(/logo/i);
 })
 
 test('Home link renders in footer', () => {
-  const {getByText} = render(<Footer />)
+  const { getByText } = render(<Footer />)
 
   getByText(/home/i);
 })
 
 test('Data link renders in footer', () => {
-  const {getByText} = render(<Footer />)
+  const { getByText } = render(<Footer />)
 
   getByText('Data');
 })
 
 test('About us link renders in footer', () => {
-  const {getByText} = render(<Footer />)
+  const { getByText } = render(<Footer />)
 
   getByText(/about/i);
 })
@@ -96,19 +96,19 @@ test('data page is rendering', () => {
 })
 
 test('show route button is rendering', () => {
-  const {queryByText} = render(<RouteList />)
+  const { queryByText } = render(<RouteList />)
 
   queryByText('Show Route')
 })
 
 test('select type is rendering', () => {
-  const {queryByText} = render(<RouteList />)
+  const { queryByText } = render(<RouteList />)
 
   queryByText('Select a type')
 })
 
 test('select route is rendering', () => {
-  const {queryByText} = render(<RouteList />)
+  const { queryByText } = render(<RouteList />)
 
   queryByText('Select type to see routes')
 })
