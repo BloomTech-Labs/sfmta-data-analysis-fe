@@ -6,6 +6,16 @@ You can find the staging server at https://staging.d3j9ctmbednoov.amplifyapp.com
 ## 4️⃣ Contributors
 
 
+|                                                     [Justin Kuenzinger](https://github.com/jkuenzinger)                                                      |                                                    [Nick Migel](https://github.com/rivercrow25)                                                    |                                                   [Bairon Paz](https://github.com/MrR3set)                                                   |                                                 [Justin Russell](https://github.com/justinruss24)                                                  |                                                    [Kevin Phillips](https://github.com/kphillips001)                                                     |
+| :------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://ca.slack-edge.com/ESZCHB482-W012BRRG5AA-e730d80a7055-512" width = "200" />](https://github.com/jkuenzinger) | [<img src="https://ca.slack-edge.com/ESZCHB482-W0138D8MXLG-a9e330fe46d7-512" width = "200" />](https://github.com/rivercrow25) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012QNWFRK6-e93ab32f2bf0-512" width = "200" />](https://github.com/MrR3set) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012BRS096J-d11769beb842-512" width = "200" />](https://github.com/justinruss24) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012BRR0CGN-8224856d043c-512" width = "200" />](https://github.com/kphillips001) |
+|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/jkuenzinger)                                |                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/rivercrow25)                                      |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/MrR3set)                          |                                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/justinruss24)                                  |                                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/kphillips001)                                   |
+|                   [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/justin-kuenzinger-2a8a2b1a0/)                    |                         [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/nick-migel-67b4831a2/ )                         |                   [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/byronpaz/)                   |                    [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/justinrussell-web/)                     |                      [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/kevin-n-phillips)                       |
+
+<br>
+<br>
+
+
 |                                                     [Cody Holman](https://github.com/cholman)                                                      |                                                    [Connor Angelis](https://github.com/KonstadinosAngelis)                                                    |                                                   [Jonathan Allison](https://github.com/qb1968)                                                   |                                                 [Michelle Sirimanivong](https://github.com/MicheSi)                                                  |                                                    [Erik Sandoval](https://github.com/erik-sandoval)                                                     |
 | :------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [<img src="https://ca.slack-edge.com/T4JUEB3ME-UP7JGJEH1-78bffb2d8c94-512" width = "200" />](https://github.com/cholman) | [<img src="https://ca.slack-edge.com/T4JUEB3ME-UPCKFA2QH-bbfef33c1387-512" width = "200" />](https://github.com/KonstadinosAngelis) | [<img src="https://ca.slack-edge.com/T4JUEB3ME-UP4KTQJ5R-e0e3d1eb775e-512" width = "200" />](https://github.com/qb1968) | [<img src="https://ca.slack-edge.com/T4JUEB3ME-UNM5RT3SA-61edda117b14-512" width = "200" />](https://github.com/MicheSi) | [<img src="https://ca.slack-edge.com/T4JUEB3ME-UGGNMSD35-6cd45ead3911-512" width = "200" />](https://github.com/erik-sandoval) |
@@ -21,20 +31,23 @@ You can find the staging server at https://staging.d3j9ctmbednoov.amplifyapp.com
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 
+
+
 ## Project Overview
 
-1️⃣ [Trello Board](https://trello.com/b/0X0QTiP4/labs22-sftma-data-analysis)
+1️⃣ [Trello Board](https://trello.com/b/vA57CtqN/labs24-sftma)
 
 1️⃣ [Product Canvas](https://www.notion.so/964c1cde8a35484eb17eafc048b9dc72?v=e7b8584f2c204b6d8d3ff917203effd1)
 
-1️⃣ [UX Design files](https://www.figma.com/file/hiuVPSUPr2WiyDfFFdx1g3/SFMTA-Data-Analysis%2C-Justin?node-id=179%3A0)
+1️⃣ [UX Design files](https://www.figma.com/file/dchT2REZlKgVR8uhBxjBAk/SFMTA%2C-Mary)
 
 
 ### 4️⃣ Key Features
 
-- Have a publically available database of historical data on bus and rail cars.
-- Near real time analysis of travel times from major travel corridors.
+- Have a publically available database of historical data on SFMT vehicles.
 - Analysis of bunching and gapping on bus and rail lines.
+- Generate daily reports for each type of transit system, and reports for specific routes.
+
 
 ## 1️⃣ Tech Stack
 
