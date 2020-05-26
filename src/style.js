@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
 export const MainNav = styled(Navbar)`    
   color: #FD5A1E;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 `;
 
