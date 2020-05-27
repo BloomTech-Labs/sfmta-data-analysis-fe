@@ -1,27 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import createPlotlyComponent from "react-plotly.js/factory";
 
 //Importing Plot.ly react
-var Plotly = require("plotly.js/lib/core");
+const Plotly = require("plotly.js/lib/core");
 Plotly.register([require("plotly.js/lib/scattermapbox")]);
 const Plot = createPlotlyComponent(Plotly);
 
-function Map() {
+//Component
+const Map = () => {
+
+  //Centers the map on San Francisco
   const [mapState, setMapState] = useState({
-    type: 'scattermapbox',
-    center: { lat: 37.742, lon: -122.438 },
     zoom: 11.25,
-    mode: 'markers',
-    marker: {
-      size: 14
-    },
-    bearing: 0,
+    center: { lat: 37.742, lon: -122.438 },
+    bearing: -0,
     pitch: 0
-  });
+  })
+
+  const [routeData, setRouteData] = useState([{
+    lat: [],
+    lon: [],
+    marker: { "color": "blue" },
+    mode: "lines",
+    type: "scattermapbox"
+  }]);
 
   return (
     <div>
-      <Plot
+      {/* the map being rendered on the website */}
+        <Plot
+          data={routeData}
           layout={{
             height: 600, width: 1000,
             mapbox: { accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", center: mapState.center, zoom: mapState.zoom, bearing: mapState.bearing, pitch: mapState.pitch },
@@ -36,9 +44,8 @@ function Map() {
           })}
           scrollZoom={true}
         />
-    </div>
-  )
-}
-
-
+      </div>
+      )}
+ 
 export default Map;
+

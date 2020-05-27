@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import Map from './components/map.jsx';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
-import LandingPage from './components/landingPage';
+//import LandingPage from './components/landingPage';
 import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
 import Dashboard from './components/Dashboard/Dashboard'
@@ -17,7 +18,7 @@ function App() {
         <NavBar />
         <div className="content">
           <Route exact path="/" component={Dashboard} />
-          <Route path="/data" component={DataPage} />
+          <Route path="/data" component={Map} />
           <Route path='/aboutus' component={AboutUs} />
         </div>
         <Footer />
