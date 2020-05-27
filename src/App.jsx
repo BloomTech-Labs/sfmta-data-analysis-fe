@@ -8,19 +8,20 @@ import Footer from './components/footer';
 import LandingPage from './components/landingPage';
 import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
+import Dashboard from './components/Dashboard/Dashboard'
 
 function App() {
   return (
     <div className="App">
       <Router>
         <NavBar />
-          <div className="content">
-            <Route exact path="/" component={LandingPage} />
-            <Route path="/data" component={DataPage} />
-            <Route path='/aboutus' component={AboutUs} />
-          </div>
-          <Footer/>
-        
+        <div className="content">
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/data" component={DataPage} />
+          <Route path='/aboutus' component={AboutUs} />
+        </div>
+        <Footer />
+
       </Router>
     </div>
   );

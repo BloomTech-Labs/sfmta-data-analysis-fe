@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {  NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import logo from '../images/logo.png';
-import { MainNav, Wrapper} from '../style';
+import { MainNav, Wrapper } from '../style';
 
 
 
@@ -10,7 +10,7 @@ const NavBar = props => {
     return (
         <Wrapper>
             <MainNav color="#636667" expand="md">
-                <a className='ddt' href='/'><NavbarBrand><img className='logo' src={logo} alt='logo'/> Data Driven Transit</NavbarBrand></a>
+                <NavItem className='ddt' href='/'><NavbarBrand><img className='logo' src={logo} alt='logo' /> Data Driven Transit</NavbarBrand></NavItem>
                 <Nav className="mr-auto" navbar>
                     <NavItem>
                         <NavLink href="/">Home</NavLink>

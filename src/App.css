@@ -147,4 +147,22 @@ select.form-control {
   margin: 3% 2% 4% 0%;
 }
 
+/* Right Panel Styles */
+
+.box1 {
+  height: 4px;
+  width: 5px;
+  color: white;
+}
+.box2 {
+  height: 4px;
+  width: 5px;
+  color: orange;
+}
+.box3 {
+  height: 4px;
+  width: 5px;
+  color: yellow;
+}
+
 /* Media Queries */
