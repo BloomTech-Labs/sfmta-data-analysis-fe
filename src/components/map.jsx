@@ -8,9 +8,10 @@ const Plot = createPlotlyComponent(Plotly);
 
 function Map() {
   const [mapState, setMapState] = useState({
-    type: 'scatterbox',
+    type: 'scattermapbox',
     center: { lat: 37.742, lon: -122.438 },
     zoom: 11.25,
+    mode: 'markers',
     marker: {
       size: 14
     },
