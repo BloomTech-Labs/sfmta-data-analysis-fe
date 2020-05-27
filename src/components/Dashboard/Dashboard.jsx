@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import TransitRow from './TransitRow'
+import TransitRow from './TransitRow';
+import Map from './Map';
 
-import { connect } from 'react-redux'
-import { fetchTypeAndRoute } from '../../actions/index'
+import { connect } from 'react-redux';
+import { fetchTypeAndRoute } from '../../actions/index';
+
 
 const Dashboard = (props) => {
     const [transit, setTransit] = useState()
@@ -19,6 +21,7 @@ const Dashboard = (props) => {
             {transit && transit.type.map(type => {
                 return <TransitRow type={type} />
             })}
+            <Map />
         </>
     )
 }
