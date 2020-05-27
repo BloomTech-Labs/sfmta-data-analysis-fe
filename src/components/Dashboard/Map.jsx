@@ -11,15 +11,16 @@ const Map = () => {
 
 //Centers the map on San Francisco
 const [mapState, setMapState] = useState({
-  zoom: 11,
+  lat: [],
+  lon: [],
   center: { lat: 37.742, lon: -122.438 },
+  zoom: 11,
   bearing: 0,
-  pitch: 0
+  pitch: 0,
+  type: "scattermapbox"
 })
 
 const [zoom, setZoom] = useState([{
-  lat: [],
-  lon: [],
   type: "scattermapbox"
 }]);
 
