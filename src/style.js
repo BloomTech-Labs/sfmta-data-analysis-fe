@@ -209,14 +209,16 @@ export const MetricFoot = styled.div`
   justify-content: space-between;
   align-items: center;
   border: 1px solid red;
+  fonst-size: .5rem;
 `
 
 export const ScoreCard = styled.div `
   display: flex;
   flex-direction: column;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   align-items: center;
+  justify-content: space-between;
   border: 1px solid white;
 `
 export const CardTitle = styled.div `

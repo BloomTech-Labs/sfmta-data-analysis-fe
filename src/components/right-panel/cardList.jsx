@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Scorecard } from "./scorecard";
-import { connect } from "react-redux";
+import React from 'react';
+import { FullScorecard } from "./scorecardFull";
 
 export const RightCardList = () => {
-    
+
     return (
-        <Scorecard />
+        <FullScorecard />
     )
 }

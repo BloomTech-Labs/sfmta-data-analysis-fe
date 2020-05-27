@@ -16,13 +16,16 @@ const Dashboard = (props) => {
     }, [])
     console.log(transit)
     return (
-        <>
-            {transit && transit.type.map(type => {
-                return <TransitRow type={type} />
-            })}
-            <RightCardList />
-        </>
-    )
+      <>
+        {transit &&
+          transit.type.map((type) => {
+            return <TransitRow type={type} />;
+          })}
+          <div>
+              <RightCardList />
+          </div>
+      </>
+    );
 }
 
 const mapStateToProps = state => {

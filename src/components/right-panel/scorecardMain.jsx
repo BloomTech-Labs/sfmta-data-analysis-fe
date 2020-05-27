@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
+import { CardTitle, CardContent } from "../../style.js";
 import { RightFooter } from "./scorecardFooter";
-import { ScoreCard, CardTitle, CardContent } from ".../style.js";
+import { ScoreCard } from "../../style.js";
 
 const mock = [
   {
@@ -24,24 +25,24 @@ const mock = [
   }
 ];
 
-export const Scorecard = (props) => {
+export const MainScore = () => {
     
 
     return (
-      <ScoreCard>
+      <>
         {mock.map((scores) => {
-            <div>
+          return (
+            <ScoreCard>
               <CardTitle>
                 <h4>{scores.type}</h4>
               </CardTitle>
               <CardContent>
                 <h2>{scores.score}%</h2>
-                <p>{scores.bunches}</p>
-                <p>{scores.gaps}</p>
               </CardContent>
-            </div>
+              <RightFooter />
+            </ScoreCard>
+          )
         })}
-        <RightFooter />
-      </ScoreCard>
+      </>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import { MetricFoot } from ".../style.js";
-import ".../App.css";
+import { MetricFoot } from "../../style.js";
+import "../../App.css";
 
 export const RightFooter = () => {
     return (
