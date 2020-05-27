@@ -147,16 +147,21 @@ select.form-control {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 10% 0.5rem;
+  padding: 0.2rem 0 0.5rem;
   background-color: #272727;
+}
+.navigation .subnav:last-child{
+  justify-content: left;
+  align-items: center;
 }
 
 .navigation .subnav a{
-  color: white;
+  color: white;  
+  font-size: 24px;
 }
 
 .navigation .subnav a:last-child{
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .navigation .subnav a:hover{
@@ -185,9 +190,31 @@ select.form-control {
 }
 
 .navigation .subnav:last-child{
-  padding: 0 10%;
+  padding: 0 0%;
   background-color: #1F1F1F;
 }
 .navigation .subnav:last-child li{
   padding: 1rem;
+}
+
+/** Footer **/
+.footer{
+  position: sticky;
+  width: 100%;
+  background-color: #1F1F1F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem;
+}
+.footer p{
+  /* text-align: center; */
+  font-size: 10px;
+  color: white;
+  margin-top: 0.5rem;
+  opacity: 40%;
+}
+
+.footer, .navigation{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }

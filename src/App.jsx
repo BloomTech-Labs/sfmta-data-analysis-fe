@@ -19,8 +19,7 @@ function App() {
             <Route path="/data" component={DataPage} />
             <Route path='/aboutus' component={AboutUs} />
           </div>
-          {/* <Footer/> */}
-        
+          <Footer/>
       </Router>
     </div>
   );

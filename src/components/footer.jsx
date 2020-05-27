@@ -3,8 +3,8 @@ import NavBar from './navBar';
 
 const Footer = props => {
     return (
-        <div>
-            <NavBar />
+        <div className="footer">
+            <p>© 2020 Data Driven Transit, All Rights Reserved</p>
         </div>
     )
 }
