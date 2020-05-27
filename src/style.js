@@ -9,12 +9,13 @@ export const Wrapper = styled.div`
 `;
     
 export const MainNav = styled(Navbar)`    
-  color: #FD5A1E;
+  color: #FF6D37;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-items: center;
   padding: 0;
+  width: 100%;
 `;
 
 // About Us Styles
