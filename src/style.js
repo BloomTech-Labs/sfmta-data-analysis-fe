@@ -12,7 +12,9 @@ export const MainNav = styled(Navbar)`
   color: #FD5A1E;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  justify-items: center;
+  padding: 0;
 `;
 
 // About Us Styles

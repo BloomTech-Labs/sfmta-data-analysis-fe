@@ -19,14 +19,6 @@ html {
   width: 1400px;
 }
 
-a.nav-link {
-  color: white;
-}
-
-a.nav-link:hover  {
-   color: #FD5A1E;
-}
-
 .profileDiv {
   color: black;
   width: 600px;
@@ -151,23 +143,72 @@ select.form-control {
 /** Navigation styling **/
 
 .navigation{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   width: 100%;
-  padding: 0!important;
 }
+
 .navigation .subnav{
   width: 100%;
-  padding: 0.2rem 10%;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  padding: 0.2rem 10% 0.5rem;
   background-color: #272727;
 }
+
+.navigation .subnav a{
+  color: white;
+  padding: 1rem;
+}
+
+.navigation .subnav a:hover{
+  color: #FD5A1E;
+}
+
+.navigation .subnav a.active{
+  color: #FD5A1E;
+}
+
+.navigation .ddt a {
+  /* Logo text styling */
+  color: #FD5A1E; 
+}
+.navigation .subnav li{
+  position: relative;
+}
+.navigation .subnav li a.active::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: red;
+}
+
+
 .navigation .subnav:last-child{
+  padding: 0 10%;
   background-color: #1F1F1F;
 }
+.navigation .subnav:last-child li{
+  /* border: 1px solid blue; */
+  padding: 1rem;
+}
+
+/* 
+
+
+.navigation .subnav a.active:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FD5A1E;
+}
+
+.navigation .subnav:last-child{
+  background-color: #1F1F1F;
+} */
 
 
 /* Media Queries */
