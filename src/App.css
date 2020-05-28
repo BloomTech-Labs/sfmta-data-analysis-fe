@@ -6,7 +6,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1000px;
+  max-width: 100%;
   min-height: 100vh;
   width: 100%;
   margin: auto;
@@ -17,14 +17,6 @@ html {
 
 .dataPage {
   width: 1400px;
-}
-
-a.nav-link {
-  color: white;
-}
-
-a.nav-link:hover  {
-   color: #FD5A1E;
 }
 
 .profileDiv {
@@ -147,4 +139,82 @@ select.form-control {
   margin: 3% 2% 4% 0%;
 }
 
-/* Media Queries */
+
+/** Navigation styling **/
+
+
+.navigation .subnav{
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0 0.5rem;
+  background-color: #272727;
+}
+.navigation .subnav:last-child{
+  justify-content: left;
+  align-items: center;
+}
+
+.navigation .subnav a{
+  color: white;  
+  font-size: 24px;
+}
+
+.navigation .subnav a:last-child{
+  padding: 0.5rem;
+}
+
+.navigation .subnav a:hover{
+  color: #FF6D37;
+}
+
+.navigation .subnav a.active{
+  color: #FF6D37;
+}
+
+.navigation .ddt a {
+  /* Logo text styling */
+  color: #FF6D37; 
+}
+.navigation .subnav li{
+  position: relative;
+}
+.navigation .subnav li a.active::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #FF6D37;
+}
+
+.navigation .subnav:last-child{
+  padding: 0 0%;
+  background-color: #1F1F1F;
+}
+.navigation .subnav:last-child li{
+  padding: 1rem;
+}
+
+/** Footer **/
+.footer{
+  position: sticky;
+  width: 100%;
+  background-color: #1F1F1F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem;
+}
+.footer p{
+  /* text-align: center; */
+  font-size: 10px;
+  color: white;
+  margin-top: 0.5rem;
+  opacity: 40%;
+}
+
+.footer, .navigation{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
