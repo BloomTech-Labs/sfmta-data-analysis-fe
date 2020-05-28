@@ -20,7 +20,6 @@ function App() {
             <Route path='/aboutus' component={AboutUs} />
           </div>
           <Footer/>
-        
       </Router>
     </div>
   );
