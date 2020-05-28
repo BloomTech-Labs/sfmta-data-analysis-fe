@@ -3,7 +3,7 @@ import React from 'react';
 import {  NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { NavLink } from "react-router-dom";
 import logo from '../images/logo.png';
-import { MainNav, Wrapper} from '../style';
+import { MainNav, Wrapper } from '../style';
 
 
 
