@@ -152,17 +152,17 @@ select.form-control {
 .box1 {
   height: 4px;
   width: 5px;
-  color: white;
+  background-color: white;
 }
 .box2 {
   height: 4px;
   width: 5px;
-  color: orange;
+  background-color: orange;
 }
 .box3 {
   height: 4px;
   width: 5px;
-  color: yellow;
+  background-color: yellow;
 }
 
 /* Media Queries */

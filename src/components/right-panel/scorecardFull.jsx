@@ -9,3 +9,7 @@ export const FullScorecard = () => {
         <MainScore />
     );
 }
+
+// Title for donut chart
+// verticalAlign: "center",
+// 		dockInsidePlotArea: true

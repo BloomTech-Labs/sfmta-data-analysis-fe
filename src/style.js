@@ -205,7 +205,7 @@ export const MetricFoot = styled.div`
   display: flex;
   flex-direction: row;
   height: 20px;
-  width: 90%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   border: 1px solid red;
@@ -218,8 +218,9 @@ export const ScoreCard = styled.div `
   height: 150px;
   width: 150px;
   align-items: center;
-  justify-content: space-between;
+
   border: 1px solid white;
+  margin: 2%;
 `
 export const CardTitle = styled.div `
   display: flex;
