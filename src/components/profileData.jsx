@@ -167,7 +167,7 @@ const profileData = [
         name: 'Ramses Gasque',
         title: 'Data Scientist',
         img: Ramses,
-        github: 'github.com/cedro-gasque',
+        github: 'https://github.com/cedro-gasque',
         linkedIn: ''
     },
 ]

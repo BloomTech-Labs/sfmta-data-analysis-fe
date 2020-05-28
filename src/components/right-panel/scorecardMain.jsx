@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { CardTitle, CardContent } from "../../style.js";
+import "../../App.css";
 import { ScoreCard } from "../../style.js";
 import {
   ChartDonut,
@@ -22,19 +23,20 @@ export const MainScore = () => {
   return (
     <div style={{ height: "230px", width: "350px" }}>
       <ChartDonut
+        className="donut"
         ariaDesc="Average number of pets"
         ariaTitle="Donut chart example"
         constrainToVisibleArea={true}
         data={[
-          { x: "Bunches", y: 40, color: "white" },
-          { x: "Gaps", y: 15, color: "white" },
-          { x: "Crowding", y: 25, color: "white" },
+          { x: "Bunches", y: 40 },
+          { x: "Gaps", y: 15 },
+          { x: "Crowding", y: 25 },
         ]}
         labels={({ datum }) => `${datum.x}: ${datum.y}%`}
         legendData={[
-          { name: "Bunches: 40", color: "white" },
-          { name: "Gaps: 15", color: "white" },
-          { name: "Crowding: 25", color: "white" },
+          { name: "Bunches: 40" },
+          { name: "Gaps: 15" },
+          { name: "Crowding: 25" },
         ]}
         legendOrientation="vertical"
         legendPosition="right"
