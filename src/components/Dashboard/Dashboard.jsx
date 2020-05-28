@@ -3,14 +3,14 @@ import Map from './Map';
 
 import { connect } from 'react-redux';
 import { fetchTypeAndRoute } from '../../actions/index';
-import { FullScorecard } from '../right-panel/scorecardFull';
+import { RightPanel } from '../right-panel/rightPanel';
 
 
 const Dashboard = () => {
     return (
         <>
             <Map />
-            <FullScorecard />
+            <RightPanel />
         </>
     )
 }
