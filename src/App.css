@@ -241,3 +241,7 @@ select.form-control {
 .footer, .navigation{
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+.right-panel{
+  border: 1px solid red;
+}
