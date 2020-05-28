@@ -36,9 +36,9 @@ const AboutUsMap = props => {
             
             <Plot
              data={[{
-                "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 34.0522, 58.410460, 38.627003, 28.538336, 45.523064, 34.052235, 35.0428, 40.440624,  47.8209301, 40.3916, 42.3601, 45.633331],
-                "lon": [-112.6, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.2437, 8.726921, -90.19789, -81.379234, -122.676483, -118.243683, -120.476, -79.995888, -122.3151313, -111.8508, -71.0589, -122.599998],
-                "customdata": ["Michelle Sirimanivong", "Jonathan Allison", "Connor Angelis", "Cody Holman", 'Erik Sandoval', 'Jordan Ireland', 'Justin Menendez', 'Agustin Vargas', 'Daniel Aguilar', 'Kevin Phillips', 'Nick Migel', 'Justin Russell', 'Bairon Paz', 'Justin Kuenzinger', 'Isaac Grove', 'Jonathan Duke', 'Austin Robinson', 'Mary Streletska', 'Ramses Gasque'],
+                "lat": [33.633322, 36.12870, 45.443604, 32.624580, 33.748975, 33.557465, 30.458172, 34.0522, 58.410460, 38.627003, 28.538336, 45.523064, 34.052235, 35.0428, 40.440624,  47.8209301, 40.3916, 42.3601, 45.633331, 27.964157],
+                "lon": [-112.6, -79.40860, -122.840082, -85.449071, -116.958139, -111.899536, -84.216021, -118.2437, 8.726921, -90.19789, -81.379234, -122.676483, -118.243683, -120.476, -79.995888, -122.3151313, -111.8508, -71.0589, -122.599998, -82.452606],
+                "customdata": ["Michelle Sirimanivong", "Jonathan Allison", "Connor Angelis", "Cody Holman", 'Erik Sandoval', 'Jordan Ireland', 'Justin Menendez', 'Agustin Vargas', 'Daniel Aguilar', 'Kevin Phillips', 'Nick Migel', 'Justin Russell', 'Bairon Paz', 'Justin Kuenzinger', 'Isaac Grove', 'Jonathan Duke', 'Austin Robinson', 'Mary Streletska', 'Ramses Gasque', 'Kyle Porter'],
                 "hovertemplate": '<b>Name:</b> %{customdata} <extra></extra>',
                 "mode": "markers",
                 "type": "scattermapbox",
