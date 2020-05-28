@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import Calendar from "react-calendar";
 import './calendarStyles.css';
 
-const axios = require('axios')
 
 const SfmtaCalendar = () => {
 const [date, setDate] = useState(new Date());
