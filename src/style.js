@@ -30,8 +30,7 @@ export const StyledButton = styled(Button)`
   width: 150px;
   height: 38px;
   margin-top: 3%;
-
-  &:hover{
+   &:hover{
     background-color: #deaf2f;
   }
 `

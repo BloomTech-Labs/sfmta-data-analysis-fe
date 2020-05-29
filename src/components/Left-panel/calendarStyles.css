@@ -1,7 +1,8 @@
+/* need to change the page for responsiveness */
 .react-calendar {
     width: 280px;
     background: grey;
-    border: 2px solid #00A493;
+    border:  0.125rem solid #00A493;
     color: #00A493;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
@@ -36,12 +37,12 @@
     cursor: pointer;
   }
   .react-calendar__navigation {
-    height: 44px;
+    height: 2.7rem;
     margin-bottom: 1em;
   }
   /* This controls the top monthly navigation */
   .react-calendar__navigation button {
-    min-width: 44px;
+    min-width: 2.7rem;
     background: grey;
   }
   /* This controls the hover and focus for the top monthly navigation */
@@ -81,7 +82,7 @@
   /* This is the color for days of previous or future months that appear on the calendar */
   .react-calendar__month-view__days__day--neighboringMonth {
     color: #9DB1B1;
-  }
+  } 
   .react-calendar__year-view .react-calendar__tile,
   .react-calendar__decade-view .react-calendar__tile,
   .react-calendar__century-view .react-calendar__tile {
