@@ -27,7 +27,7 @@ export const ScoreCardChart = () => {
       dataPoints: [
         { y: 45, name: "Bunches", color:"#40FFCE" },
         { y: 15, name: "Crowding", color:"#FBD03F"},
-        { y: 20, name: "Gaps", color:"#FF6D37"},
+        { y: 20, name: "Gap", color:"#FF6D37"},
         { y: 20, name:"", showInLegend: false, indexLabelLineThickness: 0, indexLabel: " ", color:"#1f1f1f"},
       ],
     }],
