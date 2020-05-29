@@ -10,8 +10,6 @@ const Dashboard = () => {
     return (
         <>
             <Map />
-            <SfmtaCalendar />
-            <RightPanel />
         </>
     )
 }
