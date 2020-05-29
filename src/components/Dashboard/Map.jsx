@@ -30,8 +30,8 @@ const [zoom, setZoom] = useState([{
         <Plot
           data={zoom}
           layout={{
-            autosize: true,
-            //height: 600, width: 1000,
+            // autosize: true,
+            height: 600, width: 1000,
             mapbox: 
               { accesstoken: process.env.REACT_APP_PLOTLY_API_KEY, style: "dark", 
               center: mapState.center, 
