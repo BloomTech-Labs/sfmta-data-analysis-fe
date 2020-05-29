@@ -244,4 +244,15 @@ select.form-control {
 
 .right-panel{
   border: 1px solid red;
+
+}
+
+.right-panel .score-card{
+  border: 1px solid blue;
+  text-align: center;
+
+}
+
+.right-panel .score-card{
+
 }

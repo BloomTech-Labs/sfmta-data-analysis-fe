@@ -7,8 +7,16 @@ export const RightPanel = () => {
     
     return (
         <div className="right-panel">
-            <ScoreCardChart></ScoreCardChart>
-            <ScoreCardChart></ScoreCardChart>
+            <div className="score-card">
+                <h1>Bus</h1>
+                <ScoreCardChart/>
+                <h1>Rail</h1>
+                <ScoreCardChart/>
+                <h1>Streetcar</h1>
+                <ScoreCardChart/>
+                <h1>Express</h1>
+                <ScoreCardChart/>
+            </div>
         </div>
     );
 }

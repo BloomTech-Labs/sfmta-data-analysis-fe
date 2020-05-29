@@ -25,11 +25,11 @@ export const ScoreCardChart = () => {
       toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
       indexLabel: "{name} - #percent%",
       dataPoints: [
-        { y: 45, name: "Bunches" },
-        { y: 15, name: "Crowding" },
-        { y: 20, name: "Gaps" },
+        { y: 45, name: "Bunches", color:"#40FFCE" },
+        { y: 15, name: "Crowding", color:"#FBD03F"},
+        { y: 20, name: "Gaps", color:"#FF6D37"},
         { y: 20, name:"", showInLegend: false, indexLabelLineThickness: 0, indexLabel: " ", color:"#1f1f1f"},
-      ]
+      ],
     }],
       options: {
           responsive: true,
