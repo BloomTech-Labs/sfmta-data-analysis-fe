@@ -8,7 +8,7 @@ import { fetchTypeAndRoute } from '../../actions/index';
 const Dashboard = () => {
     return (
         <>
-            <Map />
+        <Map />
         </>
     )
 }
