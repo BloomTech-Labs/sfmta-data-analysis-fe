@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { connect } from "react-redux";
+import React from 'react';
 import {ScoreCardChart } from "./scorecardChart";
 
 
@@ -10,12 +9,12 @@ export const RightPanel = () => {
             <div className="score-card">
                 <h1>Bus</h1>
                 <ScoreCardChart/>
-                <h1>Rail</h1>
+                {/* <h1>Rail</h1>
                 <ScoreCardChart/>
                 <h1>Streetcar</h1>
                 <ScoreCardChart/>
                 <h1>Express</h1>
-                <ScoreCardChart/>
+                <ScoreCardChart/> */}
             </div>
         </div>
     );
