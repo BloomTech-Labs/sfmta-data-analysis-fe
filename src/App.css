@@ -251,6 +251,7 @@ select.form-control {
   justify-content: left;
 }
 
+<<<<<<< HEAD
 
 .left-panel{
   display:flex;
@@ -285,4 +286,8 @@ select.form-control {
 .leftsidemetricsgaps{
   margin-top:8%;
   color: #40FFCE;
+=======
+canvas{
+  max-width: 100%;
+>>>>>>> a70a4c764fe25bc6d503ba5917c3f3863bd2de89
 }
