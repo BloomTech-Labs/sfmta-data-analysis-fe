@@ -3,15 +3,15 @@ import Map from './Map';
 import { connect } from 'react-redux';
 import { fetchTypeAndRoute } from '../../actions/index';
 import { RightPanel } from '../right-panel/rightPanel';
-import  LeftPanel  from '../left-panel/leftPanel';
+import LeftPanel from '../Left-panel/leftPanel';
 
 
 const Dashboard = () => {
     return (
         <div className='dashboard'>
-            <LeftPanel/>
-            <Map/>
-            <RightPanel/>
+            <LeftPanel />
+            <Map />
+            <RightPanel />
         </div>
     )
 }
