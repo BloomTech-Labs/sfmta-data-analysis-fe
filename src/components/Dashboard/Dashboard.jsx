@@ -8,11 +8,11 @@ import SfmtaCalendar from "../Left-panel/calendar";
 
 const Dashboard = () => {
     return (
-        <>
-            <Map />
+        <div className='dashboard'>
             <SfmtaCalendar />
+            <Map />
             <RightPanel />
-        </>
+        </div>
     )
 }
 

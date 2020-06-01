@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
 }
-
+/* 
 .App {
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ html {
   min-height: 100vh;
   width: 100%;
   margin: auto;
-}
+} */
 .content {
   flex: 1;
 }
@@ -244,15 +244,9 @@ select.form-control {
 
 .right-panel{
   border: 1px solid red;
-
 }
 
-.right-panel .score-card{
-  border: 1px solid blue;
-  text-align: center;
-
-}
-
-.right-panel .score-card{
-
+.dashboard {
+  display: flex;
+  justify-content: left;
 }
