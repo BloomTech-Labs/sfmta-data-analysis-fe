@@ -250,3 +250,7 @@ select.form-control {
   display: flex;
   justify-content: left;
 }
+
+canvas{
+  max-width: 100%;
+}
