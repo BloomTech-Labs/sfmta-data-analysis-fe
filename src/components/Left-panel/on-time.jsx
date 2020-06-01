@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import '../../App.css';
 
 function OntimeCard(){
         return(
-        <div>
+        <div className="leftsideMetrics">
             <h2>On Time %</h2>
         </div>
        

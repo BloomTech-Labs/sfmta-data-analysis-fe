@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import '../../App.css';
 
 function BunchesCard(){
         return(
-        <div>
+        <div className="leftsideMetrics">
             <h2>Bunches</h2>
         </div>
        

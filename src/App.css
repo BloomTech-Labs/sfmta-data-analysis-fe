@@ -250,3 +250,22 @@ select.form-control {
   display: flex;
   justify-content: left;
 }
+
+
+.left-panel{
+  display:flex;
+  width: 17.5rem;
+  height: 54.9375rem;
+}
+
+.leftsideMetrics{
+  display: flex;
+  flex-direction: column;
+  height: 14.0625rem;
+  width: 17.5rem;
+  margin-top:1%;
+  align-items: center;
+  border: 1px solid #00A493;
+  background-color:grey;
+  color:white;
+}

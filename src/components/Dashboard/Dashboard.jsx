@@ -3,15 +3,15 @@ import Map from './Map';
 import { connect } from 'react-redux';
 import { fetchTypeAndRoute } from '../../actions/index';
 import { RightPanel } from '../right-panel/rightPanel';
-import SfmtaCalendar from "../Left-panel/calendar";
+import {leftPanel}  from '../left-panel/leftPanel';
 
 
 const Dashboard = () => {
     return (
         <div className='dashboard'>
-            <SfmtaCalendar />
-            <Map />
-            <RightPanel />
+            <leftPanel/>
+            <Map/>
+            <RightPanel/>
         </div>
     )
 }

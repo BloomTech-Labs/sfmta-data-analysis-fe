@@ -1,8 +1,10 @@
 import React from 'react'
+import '../../App.css';
+
 
 function GapsCard(){
         return(
-        <div>
+        <div className="leftsideMetrics">
             <h2>Gaps</h2>
         </div>
        
