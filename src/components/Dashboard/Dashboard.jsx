@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Map from './Map';
-
 import { connect } from 'react-redux';
 import { fetchTypeAndRoute } from '../../actions/index';
+import { RightPanel } from '../right-panel/rightPanel';
+import SfmtaCalendar from "../Left-panel/calendar";
 
 
 const Dashboard = () => {
     return (
-        <>
-        <Map />
-        </>
+        <div className='dashboard'>
+            <SfmtaCalendar />
+            <Map />
+            <RightPanel />
+        </div>
     )
 }
 

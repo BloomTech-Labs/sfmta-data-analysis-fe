@@ -30,8 +30,7 @@ export const StyledButton = styled(Button)`
   width: 150px;
   height: 38px;
   margin-top: 3%;
-
-  &:hover{
+   &:hover{
     background-color: #deaf2f;
   }
 `
@@ -203,4 +202,41 @@ export const StyledLink = styled.a`
 
 export const StyledP = styled.p`
   margin: 0 6% 0 2%;
+`
+// Right Side Component Styles
+export const MetricFoot = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  fonst-size: .5rem;
+`
+
+export const ScoreCard = styled.div `
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 150px;
+  align-items: center;
+
+  border: 1px solid white;
+  margin: 2%;
+`
+export const CardTitle = styled.div `
+  display: flex;
+  width: 50%;
+  height: 20px;
+  justify-content: start;
+  border: 1px solid yellow;
+`
+export const CardContent = styled.div `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  border: 1px solid white;
 `

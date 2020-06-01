@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
 }
-
+/* 
 .App {
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ html {
   min-height: 100vh;
   width: 100%;
   margin: auto;
-}
+} */
 .content {
   flex: 1;
 }
@@ -139,6 +139,29 @@ select.form-control {
   margin: 3% 2% 4% 0%;
 }
 
+/* Right Panel Styles */
+
+.box1 {
+  height: 4px;
+  width: 5px;
+  background-color: white;
+}
+.box2 {
+  height: 4px;
+  width: 5px;
+  background-color: orange;
+}
+.box3 {
+  height: 4px;
+  width: 5px;
+  background-color: yellow;
+}
+
+.donut {
+  color: white !important;
+}
+
+/* Media Queries */
 
 /** Navigation styling **/
 
@@ -217,4 +240,17 @@ select.form-control {
 
 .footer, .navigation{
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.right-panel{
+  border: 1px solid red;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: left;
+}
+
+canvas{
+  max-width: 100%;
 }
