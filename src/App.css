@@ -254,6 +254,7 @@ select.form-control {
 
 .left-panel{
   display:flex;
+  flex-direction: column;
   width: 17.5rem;
   height: 54.9375rem;
 }
@@ -268,4 +269,20 @@ select.form-control {
   border: 1px solid #00A493;
   background-color:grey;
   color:white;
+}
+
+.leftsideTitles{
+  margin-top:5%;
+}
+.leftsidemetricsbunches{
+  margin-top:8%;
+  color: #FBD03F;
+}
+.leftsidemetricsontime{
+  margin-top:8%;
+  color: #FF6D37;
+}
+.leftsidemetricsgaps{
+  margin-top:8%;
+  color: #40FFCE;
 }

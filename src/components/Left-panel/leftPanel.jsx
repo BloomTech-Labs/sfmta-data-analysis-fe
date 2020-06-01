@@ -1,18 +1,18 @@
 import React  from 'react';
-import SfmtaCalendar  from "./calendar.jsx";
-import BunchesCard from "./bunches.jsx";
-import GapsCard from "./bunches.jsx";
-import OntimeCard from "./on-time.jsx";
+import SfmtaCalendar  from "./calendar";
+import BunchesCard from "./bunches";
+import GapsCard from "./gaps";
+import OntimeCard from "./on-time";
 
  const LeftPanel = () => {
     
     return (
-        <div className="left-panel">
+    <div className="left-panel">
        <SfmtaCalendar/>
        <BunchesCard/>
        <GapsCard/>
        <OntimeCard/>
-        </div>
+    </div>
     );
 }
 export default LeftPanel;

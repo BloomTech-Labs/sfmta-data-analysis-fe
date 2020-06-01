@@ -4,7 +4,8 @@ import '../../App.css';
 function BunchesCard(){
         return(
         <div className="leftsideMetrics">
-            <h2>Bunches</h2>
+            <h2 className="leftsideTitles">BUNCHES</h2>
+            <h1 className="leftsidemetricsbunches">Coming Soon!</h1>
         </div>
        
     )
