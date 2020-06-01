@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from './node_modules/react';
-import { connect } from "./node_modules/react-redux";
-import {SfmtaCalendar } from "./calendar.jsx";
-import {BunchesCard} from "./bunches.jsx";
-import {GapsCard} from "./bunches.jsx";
-import {OntimeCard} from "./on-timejsx";
+import React  from 'react';
+import SfmtaCalendar  from "./calendar.jsx";
+import BunchesCard from "./bunches.jsx";
+import GapsCard from "./bunches.jsx";
+import OntimeCard from "./on-time.jsx";
 
- const leftPanel = () => {
+ const LeftPanel = () => {
     
     return (
         <div className="left-panel">
@@ -16,5 +15,5 @@ import {OntimeCard} from "./on-timejsx";
         </div>
     );
 }
-export default leftPanel;
+export default LeftPanel;
 
