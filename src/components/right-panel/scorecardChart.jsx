@@ -12,26 +12,26 @@ export const ScoreCardChart = () => {
         data = {{
           datasets: [
             {
-              data: [80, 20], backgroundColor:["#FBD03F","black"], borderWidth:0
+              data: [80, 20], backgroundColor:["#FBD03F","#232323"], borderWidth:0, weight:0.5
             },
             {
-              data: [50, 50], backgroundColor:["#FF6D37","black"], borderWidth:0
+              data: [50, 50], backgroundColor:["#FF6D37","#232323"], borderWidth:0, weight:0.5, 
             },
             {
-              data: [20, 80], backgroundColor:["#40FFCE","black"], borderWidth:0
+              data: [20, 80], backgroundColor:["#40FFCE","#232323"], borderWidth:0, weight:0.5, 
             },
             
         ],
-        // These labels appear in the legend and in the tooltips when hovering different arcs
-        // labels: [
-        //     'Bunches',
-        //     'Gaps',
-        //     'Crowding'
-        // ], 
         }}
 
         options = {{
             cutoutPercentage:65,
+            tooltips:true,
+            // title:{
+            //   display:true,
+            //   text:"80%",
+            //   position:"chartArea"
+            // }
         }}
       />
     </>
