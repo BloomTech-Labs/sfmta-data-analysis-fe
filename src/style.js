@@ -223,18 +223,13 @@ export const ScoreCard = styled.div`
   align-items: center;
   border: 1px solid white;
   margin: 2%;`
-// export const CardTitle = styled.div `
-//   display: flex;
-//   width: 50%;
-//   height: 20px;
-//   justify-content: start;
-//   border: 1px solid yellow;
-// `
-// export const CardContent = styled.div `
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   flex-direction: column;
-//   border: 1px solid white;
-// `
+
+export const Footer = styled.div `
+  display: flex;
+  flex-direction: row;
+  height: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1%;
+`

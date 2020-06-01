@@ -141,20 +141,29 @@ select.form-control {
 
 /* Right Panel Styles */
 
-.box1 {
-  height: 4px;
-  width: 5px;
-  background-color: white;
+#box1 {
+  height: 1rem;
+  width: 1.8rem;
+  background-color: #FFD034;
+  margin: 3px;
+  pointer-events: none;
 }
-.box2 {
-  height: 4px;
-  width: 5px;
-  background-color: orange;
+#box2 {
+  height: 1rem;
+  width: 1.8rem;
+  background-color: #FF6D37;
+  margin: 3px;
+  pointer-events: none;
 }
-.box3 {
-  height: 4px;
-  width: 5px;
-  background-color: yellow;
+#box3 {
+  height: 1rem;
+  width: 1.8rem;
+  background-color: #40FFC3;
+  margin: 3px;
+  pointer-events: none;
+}
+.legend {
+  font-size: .7rem;
 }
 
 .donut {
