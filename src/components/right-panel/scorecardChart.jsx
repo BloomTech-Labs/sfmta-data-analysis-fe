@@ -59,8 +59,8 @@ export const ScoreCardChart = () => {
 
 
   return (
-    <ScoreCard>
+    <div>
       <CanvasJSChart options={options} />
-    </ScoreCard>
+    </div>
   );
 }
