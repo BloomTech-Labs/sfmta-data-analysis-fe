@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import '../../App.css';
 
 function OntimeCard(){
         return(
-        <div>
-            <h2>On Time %</h2>
+        <div className="leftsideMetrics">
+            <h2 className="leftsideTitles">ON TIME %</h2>
+            <h1 className="leftsidemetricsontime">Coming Soon!</h1>
         </div>
        
     )

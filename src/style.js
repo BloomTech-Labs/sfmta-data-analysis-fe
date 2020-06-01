@@ -221,7 +221,6 @@ export const ScoreCard = styled.div `
   height: 150px;
   width: 150px;
   align-items: center;
-
   border: 1px solid white;
   margin: 2%;
 `
@@ -240,3 +239,6 @@ export const CardContent = styled.div `
   flex-direction: column;
   border: 1px solid white;
 `
+
+//LEFT SIDE PANEL STYLES
+
