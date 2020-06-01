@@ -9,7 +9,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
-    "gsap": "^3.2.6",
+    "gsap": "^3.3.0",
     "plotly.js": "^1.52.3",
     "react": "^16.13.1",
     "react-calendar": "^3.1.0",
@@ -22,8 +22,7 @@
     "reactstrap": "^8.4.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "styled-components": "^5.0.1"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
