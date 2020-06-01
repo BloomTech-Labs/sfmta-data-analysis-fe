@@ -251,43 +251,6 @@ select.form-control {
   justify-content: left;
 }
 
-<<<<<<< HEAD
-
-.left-panel{
-  display:flex;
-  flex-direction: column;
-  width: 17.5rem;
-  height: 54.9375rem;
-}
-
-.leftsideMetrics{
-  display: flex;
-  flex-direction: column;
-  height: 14.0625rem;
-  width: 17.5rem;
-  margin-top:1%;
-  align-items: center;
-  border: 1px solid #00A493;
-  background-color:grey;
-  color:white;
-}
-
-.leftsideTitles{
-  margin-top:5%;
-}
-.leftsidemetricsbunches{
-  margin-top:8%;
-  color: #FBD03F;
-}
-.leftsidemetricsontime{
-  margin-top:8%;
-  color: #FF6D37;
-}
-.leftsidemetricsgaps{
-  margin-top:8%;
-  color: #40FFCE;
-=======
-canvas{
+.canvas{
   max-width: 100%;
->>>>>>> a70a4c764fe25bc6d503ba5917c3f3863bd2de89
 }
