@@ -1,28 +1,39 @@
 import React from "react";
 import { Doughnut, defaults } from "react-chartjs-2";
 
-
 export const ScoreCardChart = () => {
+<<<<<<< HEAD
 
   
 
+=======
+>>>>>>> 39300f0a0d229aa96a020692f974842e027048dd
   return (
     <>
       <Doughnut
-        data = {{
+        data={{
           datasets: [
             {
-              data: [80, 20], backgroundColor:["#FBD03F","#232323"], borderWidth:0, weight:0.5
+              data: [80, 20],
+              backgroundColor: ["#FBD03F", "#232323"],
+              borderWidth: 0,
+              weight: 0.5,
             },
             {
-              data: [50, 50], backgroundColor:["#FF6D37","#232323"], borderWidth:0, weight:0.5, 
+              data: [50, 50],
+              backgroundColor: ["#FF6D37", "#232323"],
+              borderWidth: 0,
+              weight: 0.5,
             },
             {
-              data: [20, 80], backgroundColor:["#40FFCE","#232323"], borderWidth:0, weight:0.5, 
+              data: [20, 80],
+              backgroundColor: ["#40FFCE", "#232323"],
+              borderWidth: 0,
+              weight: 0.5,
             },
-            
-        ],
+          ],
         }}
+<<<<<<< HEAD
 
         options = {{
             cutoutPercentage:65,
@@ -51,10 +62,18 @@ export const ScoreCardChart = () => {
             ctx.fillText(text, textX, textY);
             ctx.save();
           }
+=======
+        options={{
+          cutoutPercentage: 65,
+          tooltips: true,
+          // title:{
+          //   display:true,
+          //   text:"80%",
+          //   position:"chartArea"
+          // }
+>>>>>>> 39300f0a0d229aa96a020692f974842e027048dd
         }}
       />
     </>
   );
-}
-
-
+};
