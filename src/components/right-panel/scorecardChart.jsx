@@ -2,6 +2,9 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 
 export const ScoreCardChart = () => {
+
+  
+
   return (
     <>
       <Doughnut
@@ -28,16 +31,32 @@ export const ScoreCardChart = () => {
           ],
         }}
 
-        options={{
-          cutoutPercentage: 65,
-          tooltips: true,
-          title:{
-            display:true,
-            text:"80%",
-            position: "top",
-            padding: 0,
-            fontSize: 20,
-            fontColor: "white"
+        options = {{
+            cutoutPercentage:65,
+            tooltips:{
+              enabled:false
+            },
+        }}
+
+
+        plugins ={{
+          beforeDraw: function(chart) {
+            var width = chart.chart.width,
+                height = chart.chart.height,
+                ctx = chart.chart.ctx;
+            
+            ctx.restore();
+            var fontSize = (height / 90).toFixed(2);
+            ctx.font = fontSize + "em sans-serif";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "white"
+        
+            var text = "80%",
+                textX = Math.round((width - ctx.measureText(text).width) / 2),
+                textY = height / 2;
+        
+            ctx.fillText(text, textX, textY);
+            ctx.save();
           }
         }}
       />

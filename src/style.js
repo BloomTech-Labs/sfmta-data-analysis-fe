@@ -227,9 +227,11 @@ export const ScoreCard = styled.div`
 export const Footer = styled.div `
   display: flex;
   flex-direction: row;
-  height: 2.4rem;
+  width: 100%;
+  height: 2.6rem;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 1%;
+  margin-bottom: 1%
 `
