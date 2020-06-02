@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScoreCardChart } from "./scorecardChart";
-
+import { ScoreFooter } from "./scoreFooter";
 
 export const RightPanel = () => {
     
@@ -15,6 +15,7 @@ export const RightPanel = () => {
                 <ScoreCardChart/>
                 <h1>Express</h1>
                 <ScoreCardChart/> */}
+                <ScoreFooter className="footer"/>
             </div>
         </div>
     );

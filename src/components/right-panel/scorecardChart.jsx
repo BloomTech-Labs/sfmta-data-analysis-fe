@@ -1,10 +1,5 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import { ScoreFooter } from "./scoreFooter"
-
-// var CanvasJS = CanvasJSReact.CanvasJS;
-// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-
 
 
 export const ScoreCardChart = () => {
@@ -37,7 +32,6 @@ export const ScoreCardChart = () => {
             // }
         }}
       />
-      <ScoreFooter />
     </>
   );
 }
