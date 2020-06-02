@@ -1,40 +1,45 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import { ScoreFooter } from "./scoreFooter"
-
-// var CanvasJS = CanvasJSReact.CanvasJS;
-// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-
-
+import { ScoreFooter } from "./scoreFooter";
 
 export const ScoreCardChart = () => {
 
   return (
     <>
       <Doughnut
-        data = {{
+        data={{
           datasets: [
             {
-              data: [80, 20], backgroundColor:["#FBD03F","black"], borderWidth:0
+              data: [80, 20],
+              backgroundColor: ["#FBD03F", "black"],
+              borderWidth: 0,
             },
             {
-              data: [50, 50], backgroundColor:["#FF6D37","black"], borderWidth:0
+              data: [50, 50],
+              backgroundColor: ["#FF6D37", "black"],
+              borderWidth: 0,
             },
             {
-              data: [20, 80], backgroundColor:["#40FFCE","black"], borderWidth:0
+              data: [20, 80],
+              backgroundColor: ["#40FFCE", "black"],
+              borderWidth: 0,
             },
-            
-        ],
-        // These labels appear in the legend and in the tooltips when hovering different arcs
-        // labels: [
-        //     'Bunches',
-        //     'Gaps',
-        //     'Crowding'
-        // ], 
-        }}
+          ],
 
-        options = {{
-            cutoutPercentage:65,
+          // These labels appear in the legend and in the tooltips when hovering different arcs
+          // labels: [
+          //     'Bunches',
+          //     'Gaps',
+          //     'Crowding'
+          // ],
+        }}
+        options={{
+          cutoutPercentage: 65,
+          centerText: {
+            display: true,
+            text: "80%",
+            font-color: "white"
+          },
         }}
       />
       <ScoreFooter />
