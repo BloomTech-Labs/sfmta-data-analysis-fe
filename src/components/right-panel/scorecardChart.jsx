@@ -27,14 +27,18 @@ export const ScoreCardChart = () => {
             },
           ],
         }}
+
         options={{
           cutoutPercentage: 65,
           tooltips: true,
-          // title:{
-          //   display:true,
-          //   text:"80%",
-          //   position:"chartArea"
-          // }
+          title:{
+            display:true,
+            text:"80%",
+            position: "top",
+            padding: 0,
+            fontSize: 20,
+            fontColor: "white"
+          }
         }}
       />
     </>
