@@ -165,6 +165,10 @@ select.form-control {
 .legend {
   font-size: .7rem;
 }
+.legend button{
+  border: none;
+  border-radius: 20%;
+}
 
 .donut {
   color: white !important;

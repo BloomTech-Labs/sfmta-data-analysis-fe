@@ -6,10 +6,10 @@ export const ScoreFooter = () => {
 
     return (
         <>
-        <Footer>
-            <p className="legend"><button id="box1"></button> Bunches: #### </p>
-            <p className="legend"><button id="box2"></button> Gaps: #### </p>
-            <p className="legend"><button id="box3"></button> Crowding: #### </p>
+        <Footer className="card-footer">
+            <p className="legend"><button id="box1"></button> Bunches: 75% </p>
+            <p className="legend"><button id="box2"></button> Gaps: 12% </p>
+            <p className="legend"><button id="box3"></button> Crowding: 100% </p>
         </Footer>
         </>
     )
