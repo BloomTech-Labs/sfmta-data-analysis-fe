@@ -13,7 +13,7 @@ const Dashboard = () => {
             <LeftPanel />
             <Map />
             <RightPanel />
-            <LineChart />
+            
         </div>
     )
 }
