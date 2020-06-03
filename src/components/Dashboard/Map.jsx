@@ -15,6 +15,7 @@ function Map() {
     <div>
       <ReactMapGL
         {...viewport}
+        maxZoom={13}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
         onViewportChange={viewport => {
