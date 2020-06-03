@@ -10,8 +10,14 @@ export const LineChart = () => {
           {
             data: [70, 30, 20, 10, 85],
             backgroundColor: ["#FBD03F", "#232323"],
-            borderColor: '#3333ff',
-            fill: true,
+            borderColor: '#00FFFF',
+            fill: false
+          },
+          {
+            data: [50, 10, 90, 5, 65],
+            backgroundColor: ["#FBD03F", "#232323"],
+            borderColor: '#FF4500',
+            fill: false,
           }
         ]
       }}
