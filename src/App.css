@@ -312,4 +312,5 @@ canvas{
 
 .line-chart {
   display: flex;
-}
+  height: 10vh;
+ }

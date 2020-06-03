@@ -21,6 +21,12 @@ export const LineChart = () => {
           }
         ]
       }}
+
+     options={{
+         responsive: true,
+         aspectRatio: 1,
+         maintainAspectRatio: false
+      }}
     />
     </div>
   )
