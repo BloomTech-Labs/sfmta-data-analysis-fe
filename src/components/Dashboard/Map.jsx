@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactMapGL from 'react-map-gl';
-import { LineChart }from '../line-chart/line-chart'
+import { LineChart } from '../line-chart/line-chart';
 
 function Map() {
   const [viewport, setViewPort] = useState({
