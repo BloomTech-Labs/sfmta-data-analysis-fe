@@ -309,3 +309,7 @@ canvas{
   margin-bottom: 2%;
   padding-bottom: 2%;
 }
+
+.line-chart {
+  display: flex;
+}

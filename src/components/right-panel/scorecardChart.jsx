@@ -3,8 +3,6 @@ import { Doughnut } from "react-chartjs-2";
 
 export const ScoreCardChart = () => {
 
-  
-
   return (
     <>
       <Doughnut
@@ -37,7 +35,6 @@ export const ScoreCardChart = () => {
               enabled:false
             },
         }}
-
 
         plugins ={{
           beforeDraw: function(chart) {
