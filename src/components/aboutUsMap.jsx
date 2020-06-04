@@ -7,13 +7,15 @@ function AboutUs() {
       longitude: -96.24,
       width: '59.1vw',
       height: '61vh',
-      zoom: 3.7
+      
     });
 
 return (
 <div>
  <ReactMapGL
    {...viewport}
+    minZoom={3.7}
+    maxZoom={3.7}
     mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
     mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
     onViewportChange={viewport => {
@@ -21,6 +23,6 @@ return (
      }}
     />
 </div>
-    )
+  )
 }
 export default AboutUs
