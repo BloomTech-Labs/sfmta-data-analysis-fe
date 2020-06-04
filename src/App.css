@@ -314,3 +314,9 @@ canvas{
 .line-chart {
   display: flex;
 }
+
+.aboutus-map {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactMapGL from 'react-map-gl';
+import ReactMapGL, { Marker } from 'react-map-gl';
 
 function AboutUs() {
     const [viewport, setViewPort] = useState({
@@ -7,11 +7,10 @@ function AboutUs() {
       longitude: -96.24,
       width: '59.1vw',
       height: '61vh',
-      
     });
 
 return (
-<div>
+<div className="aboutus-map">
  <ReactMapGL
    {...viewport}
     minZoom={3.7}
