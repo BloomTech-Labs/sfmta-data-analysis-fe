@@ -145,21 +145,21 @@ select.form-control {
   height: 1rem;
   width: 1.8rem;
   background-color: #FFD034;
-  margin: 3px;
+  margin: 0px 3px;
   pointer-events: none;
 }
 #box2 {
   height: 1rem;
   width: 1.8rem;
   background-color: #FF6D37;
-  margin: 3px;
+  margin: 0px 3px;
   pointer-events: none;
 }
 #box3 {
   height: 1rem;
   width: 1.8rem;
   background-color: #40FFC3;
-  margin: 3px;
+  margin: 0px 3px;
   pointer-events: none;
 }
 .legend {
@@ -255,6 +255,16 @@ select.form-control {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+.right-panel{
+  display:flex;
+  flex-direction: column;
+  width: 17.5rem;
+  height: 54.9375rem;
+}
+
+>>>>>>> 03b7a7323eb3e7f8ee1e5946238fafee76ef947d
 .dashboard {
   display: flex;
   justify-content: left;
@@ -298,6 +308,7 @@ select.form-control {
 canvas{
   max-width: 100%;
 }
+<<<<<<< HEAD
 
 .right-panel .score-card{
   text-align: center;
@@ -312,3 +323,14 @@ canvas{
   padding: 0 0.5rem;
   border: none;
 }
+=======
+.score-card {
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  height: 15rem;
+}
+
+.line-chart {
+  display: flex;
+}
+>>>>>>> 03b7a7323eb3e7f8ee1e5946238fafee76ef947d
