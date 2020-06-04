@@ -3,7 +3,7 @@
     width: 17.5rem;
     background: grey;
     border:  0.125rem solid #00A493;
-    color: #00A493;
+    text-decoration: #00A493;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
   }
@@ -38,12 +38,15 @@
   }
   .react-calendar__navigation {
     height: 2.7rem;
-    margin-bottom: 1em;
+    
   }
   /* This controls the top monthly navigation */
   .react-calendar__navigation button {
     min-width: 2.7rem;
     background: grey;
+    text-decoration: bold;
+    color: white;
+    
   }
   /* This controls the hover and focus for the top monthly navigation */
   .react-calendar__navigation button:enabled:hover,
@@ -51,7 +54,7 @@
     background-color: #9DB1B1;
   }
   .react-calendar__navigation button[disabled] {
-    background-color: #f0f0f0;
+    background-color: #9DB1B1;
   }
   .react-calendar__month-view__weekdays {
     text-align: center;
@@ -60,6 +63,10 @@
     font-size: 0.75em;
     color: #40FFCE;
   }
+  /* abbr{
+    color: #40FFCE;
+  } */
+
   /* display non put here to hide the weekday titles form the calendar */
   .react-calendar__month-view__weekdays__weekday {
     display:none;
@@ -74,14 +81,19 @@
     justify-content: center;
     font-size: 0.75em;
     padding: calc(0.75em / 0.75) calc(0.5em / 0.75);
+    color:#40FFCE;
   }
   /* this will control the weekend numbers colors */
-  .react-calendar__month-view__days__day--weekend {
+  /* .react-calendar__month-view__days__day--weekend {
     color: #272727;
-  }
+  } */
   /* This is the color for days of previous or future months that appear on the calendar */
+
+  .react-calendar__month-view__days__day {
+    color: #40FFCE;
+  } 
   .react-calendar__month-view__days__day--neighboringMonth {
-    color: #9DB1B1;
+    color: black;
   } 
   .react-calendar__year-view .react-calendar__tile,
   .react-calendar__decade-view .react-calendar__tile,

@@ -215,30 +215,23 @@ export const MetricFoot = styled.div`
   fonst-size: .5rem;
 `
 
-export const ScoreCard = styled.div `
+export const ScoreCard = styled.div`
   display: flex;
   flex-direction: column;
-  height: 150px;
-  width: 150px;
+  height: 10rem;
+  width: 10rem;
   align-items: center;
   border: 1px solid white;
-  margin: 2%;
-`
-export const CardTitle = styled.div `
+  margin: 2%;`
+
+export const Footer = styled.div `
   display: flex;
-  width: 50%;
-  height: 20px;
-  justify-content: start;
-  border: 1px solid yellow;
-`
-export const CardContent = styled.div `
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   width: 100%;
-  flex-direction: column;
-  border: 1px solid white;
+  height: 2.6rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1%;
+  margin-bottom: 1%
 `
-
-//LEFT SIDE PANEL STYLES
-
