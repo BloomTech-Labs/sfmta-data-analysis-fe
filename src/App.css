@@ -255,36 +255,47 @@ select.form-control {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
 .right-panel{
   display:flex;
   flex-direction: column;
-  width: 17.5rem;
-  height: 54.9375rem;
+  width: 20%;
+  height: 100%;
 }
 
-.dashboard {
-  display: flex;
-  justify-content: left;
+.central-panel{
+  display:flex;
+  flex-direction: column;
+  width: 60%;
 }
-
 
 .left-panel{
   display:flex;
   flex-direction: column;
-  width: 17.5rem;
-  height: 54.9375rem;
+  width: 20%;
+  height: auto;
 }
 
 .leftsideMetrics{
   display: flex;
   flex-direction: column;
   height: 14.0625rem;
-  width: 17.5rem;
+  width: 100%;
   margin-top:1%;
   align-items: center;
   border: 1px solid #00A493;
   background-color:grey;
   color:white;
+}
+
+.react-calendar{
+  width: 100%!important;
 }
 
 .leftsideTitles{
@@ -306,11 +317,12 @@ canvas{
   max-width: 100%;
 }
 .score-card {
-  margin-bottom: 2%;
-  padding-bottom: 2%;
-  height: 15rem;
+  text-align: center;
+  width: 100%;
 }
 
 .line-chart {
   display: flex;
+  width: 100%;
+  height: 20vh;
 }
