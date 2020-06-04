@@ -88,11 +88,12 @@
     color: #272727;
   } */
   /* This is the color for days of previous or future months that appear on the calendar */
-  .react-calendar__month-view__days__day--neighboringMonth {
-    color: grey;
-  } 
+
   .react-calendar__month-view__days__day {
     color: #40FFCE;
+  } 
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: black;
   } 
   .react-calendar__year-view .react-calendar__tile,
   .react-calendar__decade-view .react-calendar__tile,
