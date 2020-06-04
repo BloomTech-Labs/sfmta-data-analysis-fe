@@ -8,7 +8,6 @@ function Map() {
     longitude: -122.438,
     width: '59.1vw',
     height: '61vh',
-    zoom: 11
   });
 
   return (
@@ -16,6 +15,7 @@ function Map() {
       <ReactMapGL
         {...viewport}
         maxZoom={13}
+        minZoom={11}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
         onViewportChange={viewport => {
