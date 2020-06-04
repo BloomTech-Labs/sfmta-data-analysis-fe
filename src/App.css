@@ -255,10 +255,6 @@ select.form-control {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.right-panel{
-  border: 1px solid red;
-}
-
 .dashboard {
   display: flex;
   justify-content: left;
@@ -301,4 +297,18 @@ select.form-control {
 }
 canvas{
   max-width: 100%;
+}
+
+.right-panel .score-card{
+  text-align: center;
+  padding: 0.2rem 0.1rem;
+  background-color: #333333;
+  position: relative;
+}
+
+.right-panel .score-card .card-footer{
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+  border: none;
 }
