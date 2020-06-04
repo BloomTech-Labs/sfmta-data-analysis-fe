@@ -7,7 +7,7 @@ function AboutUs() {
       longitude: -96.24,
       width: '59.1vw',
       height: '61vh',
-      zoom: 3.7
+      zoom: 3.5
     });
 
 return (
