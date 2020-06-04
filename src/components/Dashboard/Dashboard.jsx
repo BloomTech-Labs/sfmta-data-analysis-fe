@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchTypeAndRoute } from '../../actions/index';
 import { RightPanel } from '../right-panel/rightPanel';
 import LeftPanel from '../Left-panel/leftPanel';
+import { LineChart } from '../line-chart/line-chart';
 
 
 const Dashboard = () => {
@@ -12,6 +13,7 @@ const Dashboard = () => {
             <LeftPanel />
             <Map />
             <RightPanel />
+            
         </div>
     )
 }

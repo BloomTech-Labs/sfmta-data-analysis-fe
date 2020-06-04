@@ -310,3 +310,7 @@ canvas{
   padding-bottom: 2%;
   height: 15rem;
 }
+
+.line-chart {
+  display: flex;
+}
