@@ -1,0 +1,115 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -90.1994, 38.627 ]
+      },
+      "properties": {
+        "name": "Kevin Phillips",
+   		"role": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -81.3792, 28.5383 ]
+      },
+      "properties": {
+        "name": "Nick Miguel",
+   		"role": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.6750, 45.5051 ]
+      },
+      "properties": {
+        "name": "Justin Russell",
+	    "gender": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -118.2437, 34.0522 ]
+      },
+      "properties": {
+        "name": "Bairon Paz",
+	    "gender": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -120.4760, 35.0428 ]
+      },
+      "properties": {
+        "name": "Justin Kuenzinger",
+	    "gender": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -79.9959, 40.4406 ]
+      },
+      "properties": {
+        "name": "Isaac Grove",
+	    "gender": "Data Scientist"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.3151, 47.8209 ]
+      },
+      "properties": {
+        "name": "Jonathan Duke",
+	    "gender": "Data Scientist"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -111.8508, 40.3916 ]
+      },
+      "properties": {
+        "name": "Austin Robinson",
+	    "gender": "Data Scientist"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -71.0589, 42.3601 ]
+      },
+      "properties": {
+        "name": "Mary Streletska",
+	    "gender": "UX Designer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.6761, 45.6257 ]
+      },
+      "properties": {
+        "name": "Ramses Gasque",
+	    "gender": "Data Scientist"
+      }
+    }
+  ]
+}
