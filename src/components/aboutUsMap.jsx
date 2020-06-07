@@ -1,12 +1,10 @@
 import React, { useState, useRef } from 'react';
 import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
-import * as parkData from './data/developer-data.json'
+import * as devData from './data/developer-data.json'
 
 function AboutUs() {
   // setup map of US based on central coorindate points 
     const [viewport, setViewPort] = useState({
-      // latitude: 45.4211,
-      // longitude: -75.6903,
       latitude: 37.71,
       longitude: -96.24,
       width: '70vw',
@@ -28,11 +26,11 @@ return (
      }}
      ref={mapRef}
     >
-      {parkData.features.map((park) => (
+      {devData.features.map((dev) => (
         <Marker 
-          key={park.properties.PARK_ID} 
-          latitude={park.geometry.coordinates[1]}
-          longitude={park.geometry.coordinates[0]}
+          key={dev.geometry.coordinates} 
+          latitude={dev.geometry.coordinates[1]}
+          longitude={dev.geometry.coordinates[0]}
           >
           <div>MARKER</div>
         </Marker>
