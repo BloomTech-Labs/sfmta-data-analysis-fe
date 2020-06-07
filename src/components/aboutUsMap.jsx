@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
-import * as parkData from './data/skateboard-parks.json'
+import * as parkData from './data/developer-data.json'
 
 function AboutUs() {
   // setup map of US based on central coorindate points 
@@ -9,8 +9,6 @@ function AboutUs() {
       // longitude: -75.6903,
       latitude: 37.71,
       longitude: -96.24,
-      width: '100vw',
-      height: '100vh',
       width: '70vw',
       height: '65vh',
     });
