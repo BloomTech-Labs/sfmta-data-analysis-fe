@@ -10,8 +10,12 @@ import Footer from './components/footer';
 import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
 import Dashboard from './components/Dashboard/Dashboard'
+import { connect } from 'react-redux'
+import { getType } from './actions/index.jsx'
 
-function App() {
+function App(props) {
+  props.getType()
+
   return (
     <div className="App">
       <Router>
@@ -27,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, { getType })(App)
