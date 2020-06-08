@@ -126,7 +126,11 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+<<<<<<< HEAD
         "coordinates": [ -82.4572, 27.9506 ]
+=======
+        "coordinates": [ -0, 0 ]
+>>>>>>> 4868732c9706f9c08ac0fafef8982977a5657b88
       },
       "properties": {
         "name": "Testing",
