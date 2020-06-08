@@ -1,17 +1,16 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
 import * as devData from './data/developer-data.json'
 
 function AboutUs() {
   // setup map of US based on central coorindate points 
-    const [viewport, setViewPort] = useState({
-      latitude: 37.71,
-      longitude: -96.24,
-      width: '70vw',
-      height: '65vh',
-    });
-    const mapRef = useRef();
-
+  const [viewport, setViewPort] = useState({
+    latitude: 37.71,
+    longitude: -96.24,
+    width: '70vw',
+    height: '65vh',
+  });
+    
 const [selectedDev, setSelectedDev] = useState(null);
 
 return (
@@ -26,7 +25,7 @@ return (
     onViewportChange={viewport => {
     setViewPort(viewport);
      }}
-     ref={mapRef}
+     
     >
     {devData.features.map(dev => (
         //places marker on the map
@@ -37,7 +36,7 @@ return (
           >
           <button 
             className="marker-btn"
-            onmouseover={(e) => {
+            onClick={e => {
               e.preventDefault();
               setSelectedDev(dev)
             }}
@@ -56,14 +55,15 @@ return (
             }}
           >
             <div>
-              dev
+              <h2>{selectedDev.properties.name}</h2>
+              <h4>{selectedDev.properties.role}</h4>
             </div>
           </Popup>
         ) : null} 
 
     </ReactMapGL>
 </div>
-
-  )
+  );
 }
+
 export default AboutUs
