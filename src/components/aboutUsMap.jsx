@@ -67,5 +67,4 @@ return (
 </div>
   );
 }
-
 export default AboutUs

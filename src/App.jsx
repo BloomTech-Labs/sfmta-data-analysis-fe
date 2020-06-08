@@ -10,8 +10,13 @@ import Footer from './components/footer';
 import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
 import Dashboard from './components/Dashboard/Dashboard'
+import { connect } from 'react-redux'
+import { getType, sendType, getCoordinates } from './actions/index.jsx'
 
-function App() {
+function App(props) {
+  props.getType()
+  props.sendType({ route_type: "Bus" })
+  props.getCoordinates(1)
   return (
     <div className="App">
       <Router>
@@ -27,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, { getType, sendType, getCoordinates })(App)
