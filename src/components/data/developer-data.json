@@ -121,6 +121,17 @@
         "name": "Kyle Porter",
 	      "role": "Labs 24 - Team Lead"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -82.4572, 27.9506 ]
+      },
+      "properties": {
+        "name": "Testing",
+	      "role": "Testing"
+      }
     }
   ]
 }
