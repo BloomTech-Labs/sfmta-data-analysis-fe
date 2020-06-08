@@ -54,8 +54,8 @@ return (
               setSelectedDev(null);
             }}
           >
-            <div>
-              <h2>{selectedDev.properties.name}</h2>
+            <div className="popup-text">
+              <h2>{selectedDev.properties.name}</h2> 
               <h4>{selectedDev.properties.role}</h4>
             </div>
           </Popup>
