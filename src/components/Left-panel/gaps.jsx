@@ -1,12 +1,12 @@
 import React from 'react'
-import '../../App.css';
+// import '../../App.css';
 
 
 function GapsCard(){
         return(
-        <div className="leftsideMetrics">
-            <h2 className="leftsideTitles">GAPS</h2>
-            <h1 className="leftsidemetricsgaps">Coming soon!</h1>
+        <div className="metrics">
+            <h2 className="title">GAPS</h2>
+            <h1 className="content">Coming soon!</h1>
         </div>
        
     )
