@@ -12,6 +12,8 @@ function AboutUs() {
     });
     const mapRef = useRef();
 
+const [selectedDev, setSelectedDev] = useState(null);
+
 return (
 <div className="aboutus-map">
  <ReactMapGL
@@ -26,17 +28,42 @@ return (
      }}
      ref={mapRef}
     >
-      {devData.features.map(dev => (
+    {devData.features.map(dev => (
+        //places marker on the map
         <Marker 
           key={dev.geometry.coordinates} 
           latitude={dev.geometry.coordinates[1]}
           longitude={dev.geometry.coordinates[0]}
           >
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <button 
+            className="marker-btn"
+            onmouseover={(e) => {
+              e.preventDefault();
+              setSelectedDev(dev)
+            }}
+            >
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </button>
         </Marker>
       ))}
+
+      {selectedDev ? (
+          <Popup
+            latitude={selectedDev.geometry.coordinates[1]}
+            longitude={selectedDev.geometry.coordinates[0]}
+            onClose={() => {
+              setSelectedDev(null);
+            }}
+          >
+            <div>
+              dev
+            </div>
+          </Popup>
+        ) : null} 
+
     </ReactMapGL>
 </div>
+
   )
 }
 export default AboutUs

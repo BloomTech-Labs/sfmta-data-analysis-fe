@@ -11,7 +11,7 @@ const onChange =  date => {
 }
  
 return(
-<div>
+<div className="metrics">
  <Calendar calendarType="ISO 8601" onChange={onChange} value={date}/>
 </div>
   );

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import ReactMapGL from 'react-map-gl';
-import { LineChart } from '../line-chart/line-chart';
 
 function Map() {
   const [viewport, setViewPort] = useState({
     latitude: 37.742,
     longitude: -122.438,
-    width: '59.1vw',
-    height: '61vh',
+    width: '100%',
+    height: '50vh',
   });
 
   return (
@@ -22,7 +21,7 @@ function Map() {
           setViewPort(viewport);
         }}
       />
-      <LineChart />
+      
     </div>
   );
 }

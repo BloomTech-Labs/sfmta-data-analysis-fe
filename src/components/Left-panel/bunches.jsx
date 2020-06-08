@@ -1,11 +1,10 @@
 import React from 'react';
-import '../../App.css';
 
 function BunchesCard(){
         return(
-        <div className="leftsideMetrics">
-            <h2 className="leftsideTitles">BUNCHES</h2>
-            <h1 className="leftsidemetricsbunches">Coming Soon!</h1>
+        <div className="metrics">
+            <h2 className="title">BUNCHES</h2>
+            <h1 className="content">Coming Soon!</h1>
         </div>
        
     )
