@@ -1,10 +1,12 @@
 import { SET_TRANSIT_TYPE } from '../actions/index.jsx'
 import { GET_ROUTE } from '../actions/index.jsx'
+import { GET_COORDINATES } from '../actions/index.jsx'
 
 const initialState = {
   type: {
     transit_type: [],
     routes: [],
+    coordinates: [],
     features: [
       {
         type: '',
@@ -30,6 +32,13 @@ const reducer = (state = initialState, action) => {
       return {
         ...state, type: {
           ...state.type, routes: [...state.type.routes, action.payload]
+        }
+      }
+
+    case GET_COORDINATES:
+      return {
+        ...state, type: {
+          ...state.type, coordinates: [...state.type.coordinates, action.payload]
         }
       }
     default:

@@ -11,7 +11,6 @@ export const GET_COORDINATES = "GET_COORDINATES";
 export const getType = () => dispatch => {
     axios.get("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/type")
         .then(res => {
-            console.log(res.data);
             dispatch({ type: SET_TRANSIT_TYPE, payload: res.data })
         })
         .catch(error => {
@@ -22,7 +21,6 @@ export const getType = () => dispatch => {
 export const sendType = param => dispatch => {
     axios.post("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route", param)
         .then(res => {
-            console.log(res);
             dispatch({ type: GET_ROUTE })
         })
         .catch(error => {
