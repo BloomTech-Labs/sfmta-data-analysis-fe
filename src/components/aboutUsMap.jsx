@@ -18,7 +18,7 @@ return (
    {...viewport}
     //fixes the map to still position
     minZoom={3.7}
-    maxZoom={3.7}
+    maxZoom={4.1}
     mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
     mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
     onViewportChange={viewport => {
@@ -32,7 +32,7 @@ return (
           latitude={dev.geometry.coordinates[1]}
           longitude={dev.geometry.coordinates[0]}
           >
-          <div>MARKER</div>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
         </Marker>
       ))}
     </ReactMapGL>

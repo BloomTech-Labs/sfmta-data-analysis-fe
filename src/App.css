@@ -320,3 +320,7 @@ canvas{
   display: flex;
   justify-content: center;
 }
+
+.fa {
+  color: #FF8333  !important;
+}
