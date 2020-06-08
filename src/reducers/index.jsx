@@ -2,6 +2,7 @@ import { SET_TRANSIT_TYPE } from '../actions/index.jsx'
 
 const initialState = {
   type: {
+    transit_type: [],
     features: [
       {
         type: '',
