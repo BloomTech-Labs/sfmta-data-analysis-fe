@@ -159,14 +159,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-<<<<<<< HEAD
         "coordinates": [
           -82.4572,
           27.9506
         ]
-=======
-        "coordinates": [ -0, 0 ]
->>>>>>> a2391588e91361b4f6c459371a3f6cedd00e2a55
       },
       "properties": {
         "name": "Testing",
