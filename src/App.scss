@@ -1,16 +1,16 @@
 html {
   box-sizing: border-box;
 }
-/* 
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100%;
-  min-height: 100vh;
-  width: 100%;
-  margin: auto;
-} */
+
+// .App {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   max-width: 100%;
+//   min-height: 100vh;
+//   width: 100%;
+//   margin: auto;
+// } 
 .content {
   flex: 1;
 }
@@ -189,6 +189,7 @@ select.form-control {
 
 .footer{
   position: sticky;
+
   width: 100%;
   background-color: #1F1F1F;
   display: flex;
@@ -288,5 +289,14 @@ select.form-control {
   .content{
     margin-top:8%;
     color: #FBD03F;
+  }
+}
+
+.about-us{
+  .map{
+    div{
+      // margin: 0 auto;
+      // width: 100%!important;
+    }
   }
 }

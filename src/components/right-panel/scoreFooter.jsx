@@ -1,6 +1,5 @@
 import React from "react";
 import { Footer } from "../../style.js";
-// import "../../App.css";
 
 export const ScoreFooter = () => {
 
