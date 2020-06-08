@@ -19,7 +19,11 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_TRANSIT_TYPE:
-      return state
+      return {
+        ...state, type: {
+          ...state.type, transit_type: [...state.type.transit_type, action.payload]
+        }
+      }
     default:
       return state;
   }
