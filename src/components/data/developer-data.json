@@ -20,7 +20,7 @@
       },
       "properties": {
         "name": "Nick Miguel",
-   		"role": "Full Stack Web Developer"
+   		  "role": "Full Stack Web Developer"
       }
     },
     {
@@ -31,7 +31,7 @@
       },
       "properties": {
         "name": "Justin Russell",
-	    "gender": "Full Stack Web Developer"
+	      "role": "Full Stack Web Developer"
       }
     },
     {
@@ -42,7 +42,7 @@
       },
       "properties": {
         "name": "Bairon Paz",
-	    "gender": "Full Stack Web Developer"
+	      "role": "Full Stack Web Developer"
       }
     },
     {
@@ -53,7 +53,7 @@
       },
       "properties": {
         "name": "Justin Kuenzinger",
-	    "gender": "Full Stack Web Developer"
+	      "role": "Full Stack Web Developer"
       }
     },
     {
@@ -64,7 +64,7 @@
       },
       "properties": {
         "name": "Isaac Grove",
-	    "gender": "Data Scientist"
+	      "role": "Data Scientist"
       }
     },
     {
@@ -75,7 +75,7 @@
       },
       "properties": {
         "name": "Jonathan Duke",
-	    "gender": "Data Scientist"
+	      "role": "Data Scientist"
       }
     },
     {
@@ -86,7 +86,7 @@
       },
       "properties": {
         "name": "Austin Robinson",
-	    "gender": "Data Scientist"
+	      "role": "Data Scientist"
       }
     },
     {
@@ -97,7 +97,7 @@
       },
       "properties": {
         "name": "Mary Streletska",
-	    "gender": "UX Designer"
+	      "role": "UX Designer"
       }
     },
     {
@@ -108,7 +108,7 @@
       },
       "properties": {
         "name": "Ramses Gasque",
-	    "gender": "Data Scientist"
+	      "role": "Data Scientist"
       }
     }
   ]

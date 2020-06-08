@@ -26,7 +26,7 @@ return (
      }}
      ref={mapRef}
     >
-      {devData.features.map((dev) => (
+      {devData.features.map(dev => (
         <Marker 
           key={dev.geometry.coordinates} 
           latitude={dev.geometry.coordinates[1]}
