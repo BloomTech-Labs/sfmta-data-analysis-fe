@@ -3,6 +3,7 @@ import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
 import * as devData from './data/developer-data.json'
 
 function AboutUs() {
+
   // setup map of US based on central coorindate points 
   const [viewport, setViewPort] = useState({
     latitude: 37.71,
@@ -12,6 +13,27 @@ function AboutUs() {
   });
     
 const [selectedDev, setSelectedDev] = useState(null);
+
+
+  return (
+    <div className="map">
+      <ReactMapGL
+        {...viewport}
+          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+          mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
+          onViewportChange={viewport => {
+          setViewPort(viewport);
+          }}
+      />
+    </div>
+
+    const [viewport, setViewPort] = useState({
+      latitude: 37.71,
+      longitude: -96.24,
+      width: '59.1vw',
+      height: '61vh',
+    });
+
 
 return (
 <div className="aboutus-map">
@@ -63,6 +85,7 @@ return (
 
     </ReactMapGL>
 </div>
+
   );
 }
 
