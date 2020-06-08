@@ -8,16 +8,10 @@ export const RightPanel = () => {
     
     return (
       <div className="right-panel">
-        <div className="score-card">
+        <div className="score-card metrics">
           <h3>Overall Health</h3>
           <ScoreCardChart />
-          {/* <h1>Rail</h1>
-                <ScoreCardChart/>
-                <h1>Streetcar</h1>
-                <ScoreCardChart/>
-                <h1>Express</h1>
-                <ScoreCardChart/> */}
-          <ScoreFooter className="footer" />
+          <ScoreFooter className="footer"/>
         </div>
         <OnTimePercent />
         <Coverage />

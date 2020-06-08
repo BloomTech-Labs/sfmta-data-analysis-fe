@@ -9,7 +9,20 @@ function AboutUs() {
       longitude: -96.24,
       width: '70vw',
       height: '65vh',
-    });
+    })
+
+  // return (
+  //   <div className="map">
+  //     <ReactMapGL
+  //       {...viewport}
+  //         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+  //         mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
+  //         onViewportChange={viewport => {
+  //         setViewPort(viewport);
+  //         }}
+  //     />
+  //   </div>
+  //   });
     const mapRef = useRef();
 
 return (

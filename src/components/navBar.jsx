@@ -12,13 +12,13 @@ const NavBar = props => {
     return (
         <Wrapper>
             <MainNav color="#636667" expand="md" className="navigation">
-                <Nav className="mr-auto subnav" navbar>
+                <Nav className="mr-auto navigation" navbar>
                     <a className='ddt' href='/'><NavbarBrand><img className='logo' src={logo} alt='logo'/> Data Driven Transit</NavbarBrand></a>
                     <NavItem>
                         <NavLink to="/aboutus">About us</NavLink>
                     </NavItem>
                 </Nav>
-                <Nav className="mr-auto subnav" navbar>
+                <Nav className="mr-auto navigation" navbar>
                     <NavItem>
                         <NavLink exact to="/">All</NavLink>
                     </NavItem>
