@@ -11,11 +11,11 @@ import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
 import Dashboard from './components/Dashboard/Dashboard'
 import { connect } from 'react-redux'
-import { getType } from './actions/index.jsx'
+import { getType, sendType } from './actions/index.jsx'
 
 function App(props) {
   props.getType()
-
+  props.sendType({ route_type: "Bus" })
   return (
     <div className="App">
       <Router>
@@ -31,4 +31,4 @@ function App(props) {
   );
 }
 
-export default connect(null, { getType })(App)
+export default connect(null, { getType, sendType })(App)

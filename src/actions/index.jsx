@@ -19,12 +19,12 @@ export const getType = () => dispatch => {
 }
 
 export const sendType = param => dispatch => {
-    axios.post("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/type", param)
+    axios.post("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route", param)
         .then(res => {
             console.log(res);
             dispatch({ type: GET_ROUTE })
         })
         .catch(error => {
-            console.log(error, "cant send data")
+            console.log(error.message, "cant send data")
         })
 }

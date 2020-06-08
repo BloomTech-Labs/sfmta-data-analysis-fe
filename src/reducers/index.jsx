@@ -1,4 +1,5 @@
 import { SET_TRANSIT_TYPE } from '../actions/index.jsx'
+import { GET_ROUTE } from '../actions/index.jsx'
 
 const initialState = {
   type: {
@@ -24,6 +25,8 @@ const reducer = (state = initialState, action) => {
           ...state.type, transit_type: [...state.type.transit_type, action.payload]
         }
       }
+    case GET_ROUTE:
+      return state
     default:
       return state;
   }
