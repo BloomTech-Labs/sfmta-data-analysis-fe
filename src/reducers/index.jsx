@@ -1,8 +1,10 @@
 import { SET_TRANSIT_TYPE } from '../actions/index.jsx'
+import { GET_ROUTE } from '../actions/index.jsx'
 
 const initialState = {
   type: {
     transit_type: [],
+    routes: [],
     features: [
       {
         type: '',
@@ -22,6 +24,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state, type: {
           ...state.type, transit_type: [...state.type.transit_type, action.payload]
+        }
+      }
+    case GET_ROUTE:
+      return {
+        ...state, type: {
+          ...state.type, routes: [...state.type.routes, action.payload]
         }
       }
     default:

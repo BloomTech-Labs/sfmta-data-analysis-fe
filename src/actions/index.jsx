@@ -26,7 +26,7 @@ export const sendType = param => dispatch => {
             dispatch({ type: GET_ROUTE })
         })
         .catch(error => {
-            console.log(error, "cant send data")
+            console.log(error.message, "cant send data")
         })
 }
 
