@@ -293,10 +293,30 @@ select.form-control {
 }
 
 .about-us{
+
+  .aboutus-map {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
   .map{
     div{
       // margin: 0 auto;
       // width: 100%!important;
     }
   }
+
+  .fa {
+    color: #FF8333;
+  }
+  .marker-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .popup-text {
+    color: black;
+  }
+
 }

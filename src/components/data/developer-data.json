@@ -1,0 +1,137 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -90.1994, 38.627 ]
+      },
+      "properties": {
+        "name": "Kevin Phillips",
+   		  "role": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -81.3792, 28.5383 ]
+      },
+      "properties": {
+        "name": "Nick Migel",
+   		  "role": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.6750, 45.5051 ]
+      },
+      "properties": {
+        "name": "Justin Russell",
+	      "role": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -118.2437, 34.0522 ]
+      },
+      "properties": {
+        "name": "Bairon Paz",
+	      "role": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -120.4760, 35.0428 ]
+      },
+      "properties": {
+        "name": "Justin Kuenzinger",
+	      "role": "Full Stack Web Developer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -79.9959, 40.4406 ]
+      },
+      "properties": {
+        "name": "Isaac Grove",
+	      "role": "Data Scientist"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.3151, 47.8209 ]
+      },
+      "properties": {
+        "name": "Jonathan Duke",
+	      "role": "Data Scientist"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -111.8508, 40.3916 ]
+      },
+      "properties": {
+        "name": "Austin Robinson",
+	      "role": "Data Scientist"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -71.0589, 42.3601 ]
+      },
+      "properties": {
+        "name": "Mary Streletska",
+	      "role": "UX Designer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.6761, 45.6257 ]
+      },
+      "properties": {
+        "name": "Ramses Gasque",
+	      "role": "Data Scientist"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -82.4572, 27.9506 ]
+      },
+      "properties": {
+        "name": "Kyle Porter",
+	      "role": "Labs 24 - Team Lead"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -0, 0 ]
+      },
+      "properties": {
+        "name": "Testing",
+	      "role": "Testing"
+      }
+    }
+  ]
+}
