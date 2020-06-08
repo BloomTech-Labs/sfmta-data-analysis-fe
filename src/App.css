@@ -255,8 +255,6 @@ select.form-control {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 .right-panel{
   display:flex;
   flex-direction: column;
@@ -264,7 +262,6 @@ select.form-control {
   height: 54.9375rem;
 }
 
->>>>>>> 03b7a7323eb3e7f8ee1e5946238fafee76ef947d
 .dashboard {
   display: flex;
   justify-content: left;
@@ -308,22 +305,6 @@ select.form-control {
 canvas{
   max-width: 100%;
 }
-<<<<<<< HEAD
-
-.right-panel .score-card{
-  text-align: center;
-  padding: 0.2rem 0.1rem;
-  background-color: #333333;
-  position: relative;
-}
-
-.right-panel .score-card .card-footer{
-  text-align: center;
-  margin-top: 0.5rem;
-  padding: 0 0.5rem;
-  border: none;
-}
-=======
 .score-card {
   margin-bottom: 2%;
   padding-bottom: 2%;
@@ -333,4 +314,3 @@ canvas{
 .line-chart {
   display: flex;
 }
->>>>>>> 03b7a7323eb3e7f8ee1e5946238fafee76ef947d

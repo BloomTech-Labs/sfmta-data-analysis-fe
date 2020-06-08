@@ -10,7 +10,7 @@ export const LineChart = () => {
             {
               data: [70, 30, 20, 10, 85],
               label: '% gapped',
-              backgroundColor: ["#FBD03F", "#232323"],
+              backgroundColor: ["#FBD03F", "#40FFCE"],
               borderColor: '#00FFFF',
               fill: false
             },
