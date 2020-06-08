@@ -1,0 +1,302 @@
+html {
+  box-sizing: border-box;
+}
+
+// .App {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   max-width: 100%;
+//   min-height: 100vh;
+//   width: 100%;
+//   margin: auto;
+// } 
+.content {
+  flex: 1;
+}
+
+.dataPage {
+  width: 1400px;
+}
+
+.profileDiv {
+  color: black;
+  width: 600px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #636667;
+}
+
+.card img {
+  width: 40%;
+  border: 1px solid #27251F;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+}
+
+.linksDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+div .modal-content {
+  background: #636667;
+  border: none;
+  border-radius: 15px;
+}
+
+.norway {
+  position: absolute;
+  bottom: 585px;
+  left: 895px;
+  border: 3px solid gray;
+  border-radius: 3px;
+}
+
+i {
+  color: black;
+  font-size: 1.5em;
+}
+
+i:hover {
+  color: rgba(253, 90, 30, 0.95);
+  cursor: pointer;
+}
+
+ .ddt {
+  color: rgba(253, 90, 30, 0.95);
+}
+
+.ddt:hover {
+  color: #EFD19F;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-attrib {
+  display: none !important;
+}
+
+#some-element {
+  display: none;
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 5px;
+  height:170px;
+  width:100%;
+  text-align: center;
+  color: #EFD19F;
+}
+
+.trolley:hover #some-element {
+  display: block;
+}
+
+.trolley:hover .border2 {
+  display:none;
+}
+
+#some-element2 {
+  display: none;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-right: 0;
+  margin-left: 150px;
+  height:230px;
+  width:100%;
+  text-align: center;
+  color: #EFD19F;
+}
+
+.city:hover #some-element2 {
+  display: block;
+}
+
+.city:hover .border2 {
+  display:none
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+select.form-control {
+  width: 40%;
+  margin: 3% 2% 4% 0%;
+}
+
+
+/** Labs 24 styling **/
+.navigation{
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0 0.5rem;
+  background-color: #272727;
+  a{
+    color: white;  
+    font-size: 24px;
+    &:last-child{
+      padding: 0.5rem;
+    }
+    &:hover{
+      color: #FF6D37;
+    }
+    &.active{
+      color: #FF6D37;
+    }
+  }
+  &:last-child{
+    justify-content: left;
+    align-items: center;
+    padding: 0 0%;
+    background-color: #1F1F1F; 
+    li{
+      padding: 1rem;
+    }
+  }
+  .ddt a {
+    /* Logo text styling */
+    color: #FF6D37; 
+  }
+  li{
+    position: relative;
+    a.active::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #FF6D37;
+      }
+  }
+}
+
+.footer{
+  position: sticky;
+
+  width: 100%;
+  background-color: #1F1F1F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p{
+    font-size: 0.8rem;
+    color: white;
+    margin-top: 0.5rem;
+    opacity: 40%;
+  }
+  .navigation{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.dashboard {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.left-panel{
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+    height: auto;
+    .react-calendar{
+      width: 100%!important;
+      height: 100%;
+      border: none;
+    }
+}
+
+.central-panel{
+  display:flex;
+  flex-direction: column;
+  width: 60%;
+  .line-chart {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+  }
+}
+
+.right-panel{
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    .score-card {
+      padding: 0.5rem 0;
+      .card-footer{
+        padding-top: 0.75rem;
+        border: none;
+        display: flex;
+        justify-content: space-around;
+        p{
+          font-size: 1rem;
+        }
+        button{
+          height: 1rem;
+          width: 1.8rem;
+          pointer-events: none;
+          border: none;
+          border-radius: 20%;
+        }
+        .box1{
+          background-color: #FFD034;
+        }
+        .box2{
+          background-color: #FF6D37;
+        }
+        .box3{
+          background-color: #40FFC3;
+        }
+      }
+    }
+}
+
+.metrics{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 18rem;
+  width: 100%;
+  margin-top:1%;
+  align-items: center;
+  border: 1px solid #00A493;
+  background-color:grey;
+  color:white;
+
+  .title{
+    margin-top:5%;
+  }
+  .content{
+    margin-top:8%;
+    color: #FBD03F;
+  }
+}
+
+.about-us{
+  .map{
+    div{
+      // margin: 0 auto;
+      // width: 100%!important;
+    }
+  }
+}

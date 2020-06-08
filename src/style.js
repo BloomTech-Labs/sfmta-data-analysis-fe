@@ -9,9 +9,13 @@ export const Wrapper = styled.div`
 `;
     
 export const MainNav = styled(Navbar)`    
-  color: #FD5A1E;
+  color: #FF6D37;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+  padding: 0;
+  width: 100%;
 `;
 
 // About Us Styles
@@ -26,8 +30,7 @@ export const StyledButton = styled(Button)`
   width: 150px;
   height: 38px;
   margin-top: 3%;
-
-  &:hover{
+   &:hover{
     background-color: #deaf2f;
   }
 `
@@ -199,4 +202,36 @@ export const StyledLink = styled.a`
 
 export const StyledP = styled.p`
   margin: 0 6% 0 2%;
+`
+// Right Side Component Styles
+export const MetricFoot = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  fonst-size: .5rem;
+`
+
+export const ScoreCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  width: 10rem;
+  align-items: center;
+  border: 1px solid white;
+  margin: 2%;`
+
+export const Footer = styled.div `
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 2.6rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1%;
+  margin-bottom: 1%
 `

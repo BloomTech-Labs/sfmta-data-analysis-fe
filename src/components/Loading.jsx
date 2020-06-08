@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { TweenMax } from "gsap";
 import {WaitText} from "../style";
 
-
-
 const Loader = () => {
   const first = useRef(null);
   const second = useRef(null);
