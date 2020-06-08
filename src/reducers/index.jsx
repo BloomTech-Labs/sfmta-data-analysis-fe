@@ -4,6 +4,7 @@ import { GET_ROUTE } from '../actions/index.jsx'
 const initialState = {
   type: {
     transit_type: [],
+    routes: [],
     features: [
       {
         type: '',
@@ -26,7 +27,11 @@ const reducer = (state = initialState, action) => {
         }
       }
     case GET_ROUTE:
-      return state
+      return {
+        ...state, type: {
+          ...state.type, routes: [...state.type.routes, action.payload]
+        }
+      }
     default:
       return state;
   }
