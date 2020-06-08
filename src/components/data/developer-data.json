@@ -19,7 +19,11 @@
         "coordinates": [ -81.3792, 28.5383 ]
       },
       "properties": {
+<<<<<<< HEAD
         "name": "Nick Miguel",
+=======
+        "name": "Nick Migel",
+>>>>>>> 0f505709f16dc23a4d64b90cfb48f67ceee323b7
    		  "role": "Full Stack Web Developer"
       }
     },
