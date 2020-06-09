@@ -1,5 +1,8 @@
 html {
   box-sizing: border-box;
+  body {
+    background-color: #1f1f1f;
+  }
 }
 
 // .App {
@@ -254,13 +257,22 @@ select.form-control {
     flex-direction: column;
     width: 20%;
     height: 100%;
+    .otp{
+      background-image: linear-gradient(180deg, rgba(255, 150, 64, 0.061) 2.29%, rgba(255, 166, 64, 0.055) 20.47%, rgba(51, 51, 51, 0.041) 105.71%);
+    }
+    .cov{
+      background-image:   linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
+    }
     .score-card {
       padding: 0.5rem 0;
+      
+      background-image:  linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
       .card-footer{
         padding-top: 0.75rem;
         border: none;
         display: flex;
         justify-content: space-around;
+        
         p{
           font-size: 1rem;
         }
@@ -293,7 +305,7 @@ select.form-control {
   margin-top:1%;
   align-items: center;
   border: 1px solid #00A493;
-  background-color:grey;
+  background-color: #1f1f1f;
   color:white;
 
   .title{

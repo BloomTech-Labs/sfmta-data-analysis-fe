@@ -1,8 +1,8 @@
 import React from "react";
 
-function OnTimePercent () {
+function OnTimePercent() {
   return (
-    <div className="metrics">
+    <div className="metrics otp">
       <h2 className="title">On Time %</h2>
       <h1 className="content">####</h1>
     </div>
