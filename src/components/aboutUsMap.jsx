@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
 import * as devData from './data/developer-data.json';
-import * as prevData from './data/labs22dev-data.json';
 
 function AboutUs() {
   // setup map of US based on central coorindate points 
@@ -19,7 +18,7 @@ return (
 <div className="aboutus-map">
  <ReactMapGL
    {...viewport}
-    //fixes the map to still position
+    //zooms the map
     minZoom={3.7}
     maxZoom={6.5}
     mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
