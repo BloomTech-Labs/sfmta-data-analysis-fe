@@ -21,7 +21,7 @@ return (
    {...viewport}
     //fixes the map to still position
     minZoom={3.7}
-    maxZoom={6.0}
+    maxZoom={6.5}
     mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
     mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
     onViewportChange={viewport => {
