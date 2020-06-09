@@ -1,53 +1,40 @@
 import axios from 'axios'
 
-export const FETCH_ROUTESINFO_LOADING = "FETCH_ROUTESINFO_LOADING"
-export const FETCH_ROUTESINFO_SUCCESS = "FETCH_ROUTESINFO_SUCCESS"
-export const FETCH_ROUTESINFO_FAILED = "FETCH_ROUTESINFO_FAILED"
+// http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/
 
-export const FETCH_TYPEROUTE_LOADING = "FETCH_TYPEROUTE_LOADING"
-export const FETCH_TYPEROUTE_SUCCESS = "FETCH_TYPEROUTE_SUCCESS"
-export const FETCH_TYPEROUTE_FAILED = "FETCH_TYPEROUTE_FAILED"
+export const SET_DATE = "SET_DATE";
+export const SET_TRANSIT_TYPE = "SET_TRANSIT_TYPE";
+export const GET_ROUTE = "GET_ROUTE";
+export const GET_COORDINATES = "GET_COORDINATES";
 
-export const FETCH_REALTIME_SUCCESS = "FETCH_REALTIME_SUCCESS"
-export const FETCH_REALTIME_FAILED = "FETCH_REALTIME_FAILED"
 
-export const fetchRoutesInfo = (routeID) => dispatch => {
-    dispatch({ type: FETCH_ROUTESINFO_LOADING })
-    return axios
-        .get(`https://sfmta-test.herokuapp.com/type-map?id=${routeID}`)//gets plotly data for specific routes?
+export const getType = () => dispatch => {
+    axios.get("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/type")
         .then(res => {
-            dispatch({ type: FETCH_ROUTESINFO_SUCCESS, payload: res.data })
-            return res.data
+            dispatch({ type: SET_TRANSIT_TYPE, payload: res.data })
         })
-        .catch(err => {
-            dispatch({ type: FETCH_ROUTESINFO_FAILED, payload: err.response })
+        .catch(error => {
+            console.log(error, "cant get data");
         })
 }
 
-export const fetchTypeAndRoute = (props) => dispatch => {
-    dispatch({ type: FETCH_TYPEROUTE_LOADING })
-    return axios
-        .get(`https://sfmta-test.herokuapp.com/routes-info`)//gets the list of transit types
+export const sendType = param => dispatch => {
+    axios.post("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route", param)
         .then(res => {
-            dispatch({ type: FETCH_TYPEROUTE_SUCCESS, payload: res.data })
-            return res.data
+            dispatch({ type: GET_ROUTE })
         })
-        .catch(err => {
-            dispatch({ type: FETCH_TYPEROUTE_FAILED, payload: err.response })
+        .catch(error => {
+            console.log(error.message, "cant send data")
         })
-
 }
 
-export const fetchRealTime = (realTime) => dispatch => {
-    return axios
-        .get(`https://sfmta-test.herokuapp.com/real-time?id=${realTime}`)//gets current position of the bus not currently used
+export const getCoordinates = id => dispatch => {
+    axios.get(`http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route/${id}`)
         .then(res => {
-            console.log("realtime", realTime)
-            dispatch({ type: FETCH_REALTIME_SUCCESS, payload: res.data })
-            console.log('real time', res.data)
-            return res.data
+            console.log(res);
+            dispatch({ type: GET_COORDINATES })
         })
-        .catch(err => {
-            dispatch({ type: FETCH_REALTIME_FAILED, payload: err.response })
+        .catch(error => {
+            console.log(error, "couldnt get coord")
         })
 }
