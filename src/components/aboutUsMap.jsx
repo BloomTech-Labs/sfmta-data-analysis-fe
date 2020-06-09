@@ -9,7 +9,7 @@ function AboutUs() {
     latitude: 37.71,
     longitude: -96.24,
     width: '70vw',
-    height: '65vh',
+    height: '73vh',
   });
   const mapRef = useRef();
     

@@ -7,7 +7,6 @@ const AboutUs = props => {
     return (
         <div className="about-us">
             <StyledH2>Our Team</StyledH2>
-            
             <AboutUsMap/>
         </div>
     )
