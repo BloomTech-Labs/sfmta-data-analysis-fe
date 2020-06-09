@@ -45,7 +45,7 @@
   .react-calendar__navigation button {
     min-width: 2.7rem;
     background: #171717;
-    background-image:linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.144) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
+    background-image:linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
     text-decoration: bold;
     color: white;
     
@@ -92,7 +92,7 @@
   /* This is the color for days of previous or future months that appear on the calendar */
 
   .react-calendar__month-view__days__day {
-    color: #ffffff;
+    color: #40FFCE;
   } 
   .react-calendar__month-view__days__day--neighboringMonth {
     color: black;
