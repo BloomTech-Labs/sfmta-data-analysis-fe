@@ -19,7 +19,7 @@ export const LineChart = () => {
               label: '# bunches',
               backgroundColor: ["#FF6D37", "#232323"],
               borderColor: '#FF4500',
-              fill: false,
+              fill: false
             }
           ]
         }}

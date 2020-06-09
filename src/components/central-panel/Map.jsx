@@ -10,7 +10,7 @@ function Map() {
   });
 
   return (
-    <div>
+    <div className="map">
       <ReactMapGL
         {...viewport}
         maxZoom={13}
@@ -19,6 +19,10 @@ function Map() {
         mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
         onViewportChange={viewport => {
           setViewPort(viewport);
+        }}
+
+        options={{
+         trackResize: true
         }}
       />
       
