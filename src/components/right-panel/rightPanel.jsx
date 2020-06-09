@@ -11,7 +11,6 @@ export const RightPanel = () => {
       <div className="score-card metrics">
         <h3>Overall Health</h3>
         <ScoreCardChart />
-        <ScoreFooter className="footer" />
       </div>
       <OnTimePercent />
       <Coverage />
