@@ -6,7 +6,7 @@ function Map() {
     latitude: 37.742,
     longitude: -122.438,
     width: '100%',
-    height: '50vh',
+    height: '76vh',
   });
 
   return (
