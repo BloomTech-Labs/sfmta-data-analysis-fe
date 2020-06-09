@@ -12,7 +12,8 @@
       },
       "properties": {
         "name": "Kevin Phillips",
-        "role": "Full Stack Web Developer"
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs24"
       }
     },
     {
@@ -26,7 +27,8 @@
       },
       "properties": {
         "name": "Nick Migel",
-        "role": "Full Stack Web Developer"
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs24"
       }
     },
     {
@@ -40,7 +42,8 @@
       },
       "properties": {
         "name": "Justin Russell",
-        "role": "Full Stack Web Developer"
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs24"
       }
     },
     {
@@ -54,7 +57,8 @@
       },
       "properties": {
         "name": "Bairon Paz",
-        "role": "Full Stack Web Developer"
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs24"
       }
     },
     {
@@ -68,7 +72,8 @@
       },
       "properties": {
         "name": "Justin Kuenzinger",
-        "role": "Full Stack Web Developer"
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs24"
       }
     },
     {
@@ -82,7 +87,8 @@
       },
       "properties": {
         "name": "Isaac Grove",
-        "role": "Data Scientist"
+        "role": "Data Scientist",
+        "cohort": "Labs24"
       }
     },
     {
@@ -96,7 +102,8 @@
       },
       "properties": {
         "name": "Jonathan Duke",
-        "role": "Data Scientist"
+        "role": "Data Scientist",
+        "cohort": "Labs24"
       }
     },
     {
@@ -110,7 +117,8 @@
       },
       "properties": {
         "name": "Austin Robinson",
-        "role": "Data Scientist"
+        "role": "Data Scientist",
+        "cohort": "Labs24"
       }
     },
     {
@@ -124,7 +132,8 @@
       },
       "properties": {
         "name": "Mary Streletska",
-        "role": "UX Designer"
+        "role": "UX Designer",
+        "cohort": "Labs24"
       }
     },
     {
@@ -138,7 +147,8 @@
       },
       "properties": {
         "name": "Ramses Gasque",
-        "role": "Data Scientist"
+        "role": "Data Scientist",
+        "cohort": "Labs24"
       }
     },
     {
@@ -152,7 +162,67 @@
       },
       "properties": {
         "name": "Kyle Porter",
-        "role": "Labs 24 - Team Lead"
+        "role": "Labs 24 - Team Lead",
+        "cohort": "Labs24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3679,
+          33.6292
+        ]
+      },
+      "properties": {
+        "name": "Michelle Sirimanivong",
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs22"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.2807,
+          30.4383
+        ]
+      },
+      "properties": {
+        "name": "Justin Menendez",
+        "role": "UX Designer",
+        "cohort": "Labs22"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.2384,
+          33.4982
+        ]
+      },
+      "properties": {
+        "name": "Jordan Ireland",
+        "role": "Data Scientist",
+        "cohort": "Labs22"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2442, 36.0999
+        ]
+      },
+      "properties": {
+        "name": "Jonathan Allison",
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs22"
       }
     },
     {
@@ -165,9 +235,56 @@
         ]
       },
       "properties": {
-        "name": "Testing",
-        "role": "Testing"
+        "name": "Erik Sandoval",
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs22"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8014,
+          45.4889
+        ]
+      },
+      "properties": {
+        "name": "Connor Angelis",
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs22"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.4808,
+          32.6099
+        ]
+      },
+      "properties": {
+        "name": "Cody Holman",
+        "role": "Full Stack Web Developer",
+        "cohort": "Labs22"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.6615,
+          34.1367
+        ]
+      },
+      "properties": {
+        "name": "Agustin Vargas",
+        "role": "Data Scientist",
+        "cohort": "Labs22"
       }
     }
   ]
 }
+

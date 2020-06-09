@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
-import * as devData from './data/developer-data.json'
+import * as devData from './data/developer-data.json';
 
 function AboutUs() {
   // setup map of US based on central coorindate points 
@@ -8,7 +8,7 @@ function AboutUs() {
     latitude: 37.71,
     longitude: -96.24,
     width: '70vw',
-    height: '65vh',
+    height: '73vh',
   });
   const mapRef = useRef();
     
@@ -18,9 +18,9 @@ return (
 <div className="aboutus-map">
  <ReactMapGL
    {...viewport}
-    //fixes the map to still position
+    //zooms the map
     minZoom={3.7}
-    maxZoom={6.0}
+    maxZoom={6.5}
     mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
     mapStyle='mapbox://styles/sfmtalambda/ckasm81dc3oml1jlls8kbz5mc'
     onViewportChange={viewport => {
