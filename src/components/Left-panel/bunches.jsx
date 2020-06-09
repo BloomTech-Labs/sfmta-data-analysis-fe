@@ -2,9 +2,9 @@ import React from 'react';
 
 function BunchesCard(){
         return(
-        <div className="metrics">
+        <div className="metricsbunches">
             <h2 className="title">BUNCHES</h2>
-            <h1 className="content">Coming Soon!</h1>
+            <h1 className="contentbunches">#####</h1>
         </div>
        
     )

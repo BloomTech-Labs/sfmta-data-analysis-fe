@@ -232,6 +232,7 @@ select.form-control {
 .left-panel{
     display:flex;
     flex-direction: column;
+    justify-content:space-between;
     width: 20%;
     height: auto;
     .react-calendar{
@@ -300,7 +301,7 @@ select.form-control {
   display: flex;
   flex-direction: column;
   height: auto;
-  min-height: 18rem;
+  min-height: 14.81rem;
   width: 100%;
   margin-top:1%;
   align-items: center;
@@ -309,13 +310,61 @@ select.form-control {
   color:white;
 
   .title{
-    margin-top:5%;
+    margin-top:15%;
+    font-size:2.5rem;
   }
   .content{
-    margin-top:8%;
+    margin-top:4%;
     color: #FBD03F;
   }
 }
+
+.metricsbunches{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 14.81rem;
+  width: 100%;
+  margin-top:1%;
+  align-items: center;
+  border: 1px solid #00A493;
+  background-color: #1f1f1f;
+  background-image: linear-gradient(180deg, rgba(251, 207, 63, 0.116) 6.12%, rgba(255, 200, 20, 0.02) 52.11%, rgba(51, 51, 51, 0.055) 96.22%);
+  color:#ffffff;
+
+  .title{
+    margin-top:15%;
+    font-size:2.5rem;
+  }
+  .contentbunches{
+    margin-top:4%;
+    color: #FBD03F;
+  }
+}
+
+.metricsgaps{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 14.81rem;
+  width: 100%;
+  margin-top:1%;
+  align-items: center;
+  border: 1px solid #00A493;
+  background-color: #1f1f1f;
+  background-image: linear-gradient(180deg, rgba(255, 150, 64, 0.061) 2.29%, rgba(255, 166, 64, 0.055) 20.47%, rgba(51, 51, 51, 0.041) 105.71%);
+  color:#ffffff;
+
+  .title{
+    margin-top:15%;
+    font-size:2.5rem;
+  }
+  .contentgaps{
+    margin-top:4%;
+    color: #FBD03F;
+  }
+}
+
 
 .about-us{
 
