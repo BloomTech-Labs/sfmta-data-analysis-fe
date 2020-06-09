@@ -229,10 +229,11 @@ select.form-control {
   display:flex;
   flex-direction: column;
   width: 60%;
+  
   .line-chart {
     display: flex;
-    width: 100%;
-    height: 20vh;
+    // width: 100%;
+    height: 10vh;
   }
 }
 
@@ -319,7 +320,4 @@ select.form-control {
   }
 }
 
-// .line-chart{
-//   display: flex;
-//   height: 10vh;
-// }
+ 

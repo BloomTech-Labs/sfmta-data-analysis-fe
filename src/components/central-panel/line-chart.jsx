@@ -17,7 +17,7 @@ export const LineChart = () => {
             {
               data: [50, 10, 90, 5, 65],
               label: '# bunches',
-              backgroundColor: ["#FBD03F", "#232323"],
+              backgroundColor: ["#FF6D37", "#232323"],
               borderColor: '#FF4500',
               fill: false,
             }
