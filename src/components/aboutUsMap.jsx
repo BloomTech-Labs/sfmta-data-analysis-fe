@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
-import * as devData from './data/developer-data.json'
+import * as devData from './data/developer-data.json';
+import * as prevData from './data/labs22dev-data.json';
 
 function AboutUs() {
   // setup map of US based on central coorindate points 
