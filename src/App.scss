@@ -145,7 +145,7 @@ select.form-control {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 0 0.5rem;
+  padding: 0.2rem 1rem;
   background-color: #272727;
   a{
     color: white;  
@@ -160,19 +160,6 @@ select.form-control {
       color: #FF6D37;
     }
   }
-  &:last-child{
-    justify-content: left;
-    align-items: center;
-    padding: 0 0%;
-    background-color: #1F1F1F; 
-    li{
-      padding: 1rem;
-    }
-  }
-  .ddt a {
-    /* Logo text styling */
-    color: #FF6D37; 
-  }
   li{
     position: relative;
     a.active::after{
@@ -184,6 +171,10 @@ select.form-control {
         width: 100%;
         background-color: #FF6D37;
       }
+  }
+  .ddt a {
+    /* Logo text styling */
+    color: #FF6D37; 
   }
 }
 
@@ -211,6 +202,28 @@ select.form-control {
   height: auto;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  .navigation{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    background-color: #1f1f1f;
+    padding: 0.5rem 1rem;
+    li{
+      list-style: none;
+      position: relative;
+      margin-left: 1rem;
+      a.active::after{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: #FF6D37;
+        }
+    }
+  }
 }
 
 .left-panel{
