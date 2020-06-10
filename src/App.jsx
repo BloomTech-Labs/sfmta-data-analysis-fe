@@ -23,8 +23,9 @@ function App(props) {
         <NavBar />
         <div className="content">
           <Route exact path="/" component={Dashboard} />
+          <Route exact path="/:id" component={Dashboard} />
           <Route path="/data" component={Map} />
-          <Route path='/aboutus' component={AboutUs} />
+          <Route path='/info/aboutus' component={AboutUs} />
         </div>
         <Footer />
       </Router>

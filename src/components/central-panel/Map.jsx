@@ -6,11 +6,11 @@ function Map() {
     latitude: 37.742,
     longitude: -122.438,
     width: '100%',
-    height: '50vh',
+    height: '63vh',
   });
 
   return (
-    <div>
+    <div className="map">
       <ReactMapGL
         {...viewport}
         maxZoom={13}
@@ -20,8 +20,12 @@ function Map() {
         onViewportChange={viewport => {
           setViewPort(viewport);
         }}
+
+        options={{
+          trackResize: true
+        }}
       />
-      
+
     </div>
   );
 }

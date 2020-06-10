@@ -1,5 +1,8 @@
 html {
   box-sizing: border-box;
+  body {
+    background-color: #1f1f1f;
+  }
 }
 
 // .App {
@@ -143,9 +146,10 @@ select.form-control {
 /** Labs 24 styling **/
 .navigation{
   width: 100%;
+  height: 4.5rem;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 0 0.5rem;
+  padding: 0.2rem 1rem;
   background-color: #272727;
   a{
     color: white;  
@@ -160,19 +164,6 @@ select.form-control {
       color: #FF6D37;
     }
   }
-  &:last-child{
-    justify-content: left;
-    align-items: center;
-    padding: 0 0%;
-    background-color: #1F1F1F; 
-    li{
-      padding: 1rem;
-    }
-  }
-  .ddt a {
-    /* Logo text styling */
-    color: #FF6D37; 
-  }
   li{
     position: relative;
     a.active::after{
@@ -185,12 +176,17 @@ select.form-control {
         background-color: #FF6D37;
       }
   }
+  .ddt a {
+    /* Logo text styling */
+    color: #FF6D37; 
+  }
 }
 
 .footer{
   position: sticky;
 
   width: 100%;
+  height: 3rem;
   background-color: #1F1F1F;
   display: flex;
   align-items: center;
@@ -211,13 +207,34 @@ select.form-control {
   height: auto;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  .navigation{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    background-color: #272727;
+    padding: 0.5rem 1rem;
+    li{
+      list-style: none;
+      position: relative;
+      margin-left: 1rem;
+      a.active::after{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: #FF6D37;
+        }
+    }
+  }
 }
 
 .left-panel{
     display:flex;
     flex-direction: column;
     width: 20%;
-    height: auto;
     .react-calendar{
       width: 100%!important;
       height: 100%;
@@ -229,25 +246,41 @@ select.form-control {
   display:flex;
   flex-direction: column;
   width: 60%;
+  
+  .map {
+    display: flex;
+  }
+
   .line-chart {
     display: flex;
-    width: 100%;
-    height: 20vh;
+    // width: 100%;
+    height: 10vh;
+    margin-top: 5%;
   }
 }
 
 .right-panel{
-    display:flex;
-    flex-direction: column;
-    width: 20%;
-    height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+  width: 20%;
+  // height: auto;
+    .otp{
+      background-image: linear-gradient(180deg, rgba(255, 150, 64, 0.116) 2.29%, rgba(255, 166, 64, 0.075) 20.47%, rgba(51, 51, 51, 0.041) 105.71%);
+    }
+    .cov{
+      background-image:   linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
+    }
     .score-card {
       padding: 0.5rem 0;
+      
+      background-image:  linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
       .card-footer{
         padding-top: 0.75rem;
         border: none;
         display: flex;
         justify-content: space-around;
+        
         p{
           font-size: 1rem;
         }
@@ -275,22 +308,69 @@ select.form-control {
   display: flex;
   flex-direction: column;
   height: auto;
-  min-height: 18rem;
+  min-height: 14.81rem;
   width: 100%;
-  margin-top:1%;
+  margin-bottom: 3.25rem;
+
   align-items: center;
   border: 1px solid #00A493;
-  background-color:grey;
+  background-color: #1f1f1f;
   color:white;
 
   .title{
-    margin-top:5%;
+    margin-top:15%;
+    font-size:2.5rem;
   }
   .content{
-    margin-top:8%;
+    margin-top:4%;
     color: #FBD03F;
   }
 }
+
+.metricsbunches{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 14.81rem;
+  width: 100%;
+  align-items: center;
+  border: 1px solid #00A493;
+  background-color: #1f1f1f;
+  background-image: linear-gradient(180deg, rgba(251, 207, 63, 0.116) 6.12%, rgba(255, 200, 20, 0.02) 52.11%, rgba(51, 51, 51, 0.055) 96.22%);
+  color:#ffffff;
+
+  .title{
+    margin-top:15%;
+    font-size:2.5rem;
+  }
+  .contentbunches{
+    margin-top:4%;
+    color: #FBD03F;
+  }
+}
+
+.metricsgaps{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 14.81rem;
+  width: 100%;
+  align-items: center;
+  border: 1px solid #00A493;
+  background-color: #1f1f1f;
+  background-image: linear-gradient(180deg, rgba(255, 150, 64, 0.061) 2.29%, rgba(255, 166, 64, 0.055) 20.47%, rgba(51, 51, 51, 0.041) 105.71%);
+  color:#ffffff;
+
+  .title{
+    margin-top:15%;
+    font-size:2.5rem;
+  }
+  .contentgaps{
+    margin-top:4%;
+    color: #FF6D37;
+  }
+}
+
 
 .about-us{
 
@@ -301,11 +381,9 @@ select.form-control {
   }
 
   .map{
-    div{
-      // margin: 0 auto;
-      // width: 100%!important;
-    }
+    
   }
+
   .fa {
     color: #FF8333;
   }
@@ -319,7 +397,4 @@ select.form-control {
   }
 }
 
-// .line-chart{
-//   display: flex;
-//   height: 10vh;
-// }
+ 
