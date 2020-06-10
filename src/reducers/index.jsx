@@ -3,19 +3,16 @@ import { GET_ROUTE } from '../actions/index.jsx'
 import { GET_COORDINATES } from '../actions/index.jsx'
 
 const initialState = {
-  type: {
-    transit_type: [],
-    routes: [],
-    coordinates: [],
-    features: [
-      {
-        type: '',
-        geometry: {
-          type: '',
-          coordinates: []
-        }
-      }
-    ]
+  transit_type: [],
+  routes: [],
+  coordinates: [],
+  active: {
+    route_type: '',
+    date: '',
+    num_bunches: 0,
+    num_gaps: 0,
+    on_time: 0,
+    coverage: 0
   },
   isLoading: false
 };
