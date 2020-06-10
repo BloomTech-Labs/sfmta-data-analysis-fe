@@ -6,6 +6,7 @@ export const SET_DATE = "SET_DATE";
 export const SET_TRANSIT_TYPE = "SET_TRANSIT_TYPE";
 export const GET_ROUTE = "GET_ROUTE";
 export const GET_COORDINATES = "GET_COORDINATES";
+export const GET_REPORTS = "GET_REPORTS";
 
 
 export const getType = () => dispatch => {
@@ -36,5 +37,16 @@ export const getCoordinates = id => dispatch => {
         })
         .catch(error => {
             console.log(error, "couldnt get coord")
+        })
+}
+
+export const getReport = () => dispatch => {
+    axios.get('http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report')
+        .then(res => {
+            console.log(res);
+            dispatch({ type: GET_REPORTS})
+        })
+        .catch(error => {
+            console.log(error, "couldn't get report")
         })
 }
