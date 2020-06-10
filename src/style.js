@@ -6,6 +6,7 @@ import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 // Nav Styles
 export const Wrapper = styled.div`
   width: 100%;
+  // margin-bottom: 3%;
 `;
     
 export const MainNav = styled(Navbar)`    
