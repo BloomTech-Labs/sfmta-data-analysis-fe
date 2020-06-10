@@ -25,10 +25,7 @@ function Map() {
           trackResize: true
         }}
       />
-<<<<<<< HEAD
 
-=======
->>>>>>> cc9eb1c069e9e16d7f269c081dbca7dc4a5ca610
     </div>
   );
 }
