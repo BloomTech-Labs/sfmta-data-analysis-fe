@@ -1,6 +1,7 @@
 import { SET_TRANSIT_TYPE } from '../actions/index.jsx'
 import { GET_ROUTE } from '../actions/index.jsx'
 import { GET_COORDINATES } from '../actions/index.jsx'
+import { GET_REPORTS } from '../actions/index.jsx' 
 
 const initialState = {
   transit_type: [],
@@ -34,6 +35,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state, coordinates: [...state.coordinates, action.payload]
       }
+
+    case GET_REPORTS:
+      return {
+        state
+      }  
+
     default:
       return state;
   }
