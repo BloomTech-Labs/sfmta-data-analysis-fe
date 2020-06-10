@@ -6,7 +6,7 @@ function Map() {
     latitude: 37.742,
     longitude: -122.438,
     width: '100%',
-    height: '62vh',
+    height: '63vh',
   });
 
   return (
@@ -22,7 +22,7 @@ function Map() {
         }}
 
         options={{
-         trackResize: true
+          trackResize: true
         }}
       />
     </div>
