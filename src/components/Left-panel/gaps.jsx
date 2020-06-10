@@ -12,10 +12,9 @@ function GapsCard(props){
 }
 
 const mapStateToProps = state =>{
-    console.log(state);
     return{
         gaps:state.report.num_gaps
     }
 }
 
-export default connect(mapStateToProps)(GapsCard);
+export default connect(mapStateToProps,{})(GapsCard);
