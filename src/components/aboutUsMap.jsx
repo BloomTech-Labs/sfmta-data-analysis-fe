@@ -47,8 +47,9 @@ return (
           </button>
         </Marker>
       ))}
-
+      
       {selectedDev ? (
+          //places popup above marker
           <Popup
             latitude={selectedDev.geometry.coordinates[1]}
             longitude={selectedDev.geometry.coordinates[0]}
@@ -67,4 +68,5 @@ return (
 </div>
   );
 }
+
 export default AboutUs
