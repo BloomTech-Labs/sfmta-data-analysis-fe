@@ -1,14 +1,16 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2'
+import { connect } from 'react-redux';
 
-export const LineChart = () => {
+function LineChart(props){
+  console.log(props)
   return (
     <div className="line-chart">
       <Line 
         data={{
           datasets: [
             {
-              data: [70, 30, 20, 10, 85],
+              data: {props.line_chart.gaps},
               label: '% gapped',
               backgroundColor: ["#FBD03F", "#40FFCE"],
               borderColor: '#00FFFF',
@@ -33,3 +35,13 @@ export const LineChart = () => {
     </div>
   )
 };
+
+const mapStateToProps = state =>{
+  console.log(state);
+  return{
+      line_chart: state.report.line_chart
+  }
+}
+
+export default connect(mapStateToProps,{})(LineChart);
+

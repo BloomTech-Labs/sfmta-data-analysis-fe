@@ -1,6 +1,6 @@
 import React  from 'react';
 import Map from "./Map";
-import { LineChart } from './line-chart';
+import LineChart from './line-chart';
 
 
  const CentralPanel = () => {
