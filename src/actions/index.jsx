@@ -22,7 +22,7 @@ export const getType = () => dispatch => {
 export const sendType = param => dispatch => {
     axios.post("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route", param)
         .then(res => {
-            dispatch({ type: GET_ROUTE })
+            dispatch({ type: GET_ROUTE, payload:res.data })
         })
         .catch(error => {
             console.log(error.message, "cant send data")
@@ -33,7 +33,7 @@ export const getCoordinates = id => dispatch => {
     axios.get(`http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route/${id}`)
         .then(res => {
             console.log(res);
-            dispatch({ type: GET_COORDINATES })
+            dispatch({ type: GET_COORDINATES, payload:res.data })
         })
         .catch(error => {
             console.log(error, "couldnt get coord")
@@ -44,7 +44,7 @@ export const getReport = () => dispatch => {
     axios.get('http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report')
         .then(res => {
             console.log(res);
-            dispatch({ type: GET_REPORTS})
+            dispatch({ type: GET_REPORTS, payload:res.data})
         })
         .catch(error => {
             console.log(error, "couldn't get report")
