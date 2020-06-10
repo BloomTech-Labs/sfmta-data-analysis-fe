@@ -3,12 +3,11 @@ import { Line } from 'react-chartjs-2'
 import {connect} from "react-redux"
 
 function LineChart(props){
-  console.log("linechart state",props.line_chart?props.line_chart.gaps:null)
   return (
     <div className="line-chart">
       <Line 
         data={{
-          labels: props.line_chart?props.line_chart.times:null,
+          labels: props.line_chart?props.line_chart.times:null, //This is done to wait for the props.linechart to be retrived
           datasets: [
             {
               data: props.line_chart?props.line_chart.gaps:null,
@@ -34,7 +33,7 @@ function LineChart(props){
           scales:{
             yAxes:[{
               ticks:{
-                max:150,
+                max:props.line_chart?getMaxYValue(props.line_chart.gaps,props.line_chart.bunches):0,
                 stepSize:50
               }
             }]
@@ -45,6 +44,10 @@ function LineChart(props){
     </div>
   )
 };
+
+function getMaxYValue(gaps,bunches){
+  return Math.max(...gaps,...bunches);
+}
 
 const mapStateToProps = state =>{
   return{
