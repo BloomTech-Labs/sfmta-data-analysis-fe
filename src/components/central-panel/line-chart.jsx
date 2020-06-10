@@ -3,11 +3,12 @@ import { Line } from 'react-chartjs-2'
 import {connect} from "react-redux"
 
 function LineChart(props){
+  console.log("linechart state",props.line_chart?props.line_chart.gaps:null)
   return (
     <div className="line-chart">
       <Line 
         data={{
-          labels: props.line_chart?props.line_chart.times:null, //This is done to wait for the props.linechart to be retrived
+          labels: props.line_chart?props.line_chart.times:null,
           datasets: [
             {
               data: props.line_chart?props.line_chart.gaps:null,

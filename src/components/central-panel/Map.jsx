@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import ReactMapGL from 'react-map-gl';
 
 function Map() {
@@ -8,6 +8,7 @@ function Map() {
     width: '100%',
     height: '63vh',
   });
+  const mapRef=useRef();
 
   return (
     <div className="map">
@@ -20,6 +21,7 @@ function Map() {
         onViewportChange={viewport => {
           setViewPort(viewport);
         }}
+        ref={mapRef}
 
         options={{
           trackResize: true
