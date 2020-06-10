@@ -1,13 +1,21 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
-function GapsCard(){
+function GapsCard(props){
         return(
         <div className="metricsgaps">
             <h2 className="title">GAPS</h2>
-            <h1 className="contentgaps">#######</h1>
+            <h1 className="contentgaps">{props.gaps}</h1>
         </div>
        
     )
 }
 
-export default GapsCard;
+const mapStateToProps = state =>{
+    console.log(state);
+    return{
+        gaps:state.report.num_gaps
+    }
+}
+
+export default connect(mapStateToProps)(GapsCard);
