@@ -17,8 +17,7 @@ function App(props) {
   props.getType()
   props.sendType({ route_type: "Bus" })
   props.getCoordinates(1)
-  props.getReport();
-
+  props.getReport()
   return (
     <div className="App">
       <Router>
