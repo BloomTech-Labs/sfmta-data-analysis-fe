@@ -1,22 +1,13 @@
 import { SET_TRANSIT_TYPE } from '../actions/index.jsx'
 import { GET_ROUTE } from '../actions/index.jsx'
 import { GET_COORDINATES } from '../actions/index.jsx'
-import { GET_REPORTS } from '../actions/index.jsx' 
+import { GET_REPORTS } from '../actions/index.jsx'
 
 const initialState = {
   transit_type: [],
   routes: [],
   coordinates: [],
-  active: {
-    route_type: '',
-    date: '',
-    num_bunches: 0,
-    num_gaps: 0,
-    on_time: 0,
-    coverage: 0,
-    bunches_array: [],
-    gaps_array: [],
-  },
+  report: {},
   isLoading: false
 };
 
@@ -38,8 +29,8 @@ const reducer = (state = initialState, action) => {
 
     case GET_REPORTS:
       return {
-        state
-      }  
+        ...state, report: action.payload
+      }
 
     default:
       return state;

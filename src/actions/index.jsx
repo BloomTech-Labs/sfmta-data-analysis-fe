@@ -43,8 +43,8 @@ export const getCoordinates = id => dispatch => {
 export const getReport = () => dispatch => {
     axios.get('http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report')
         .then(res => {
-            console.log(res);
-            dispatch({ type: GET_REPORTS})
+            console.log(res, 'get report res');
+            dispatch({ type: GET_REPORTS, payload: res.data })
         })
         .catch(error => {
             console.log(error, "couldn't get report")
