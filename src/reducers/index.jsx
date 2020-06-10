@@ -1,21 +1,21 @@
 import { SET_TRANSIT_TYPE } from '../actions/index.jsx'
 import { GET_ROUTE } from '../actions/index.jsx'
 import { GET_COORDINATES } from '../actions/index.jsx'
+import { GET_REPORTS } from '../actions/index.jsx' 
 
 const initialState = {
-  type: {
-    transit_type: [],
-    routes: [],
-    coordinates: [],
-    features: [
-      {
-        type: '',
-        geometry: {
-          type: '',
-          coordinates: []
-        }
-      }
-    ]
+  transit_type: [],
+  routes: [],
+  coordinates: [],
+  active: {
+    route_type: '',
+    date: '',
+    num_bunches: 0,
+    num_gaps: 0,
+    on_time: 0,
+    coverage: 0,
+    bunches_array: [],
+    gaps_array: [],
   },
   isLoading: false
 };
@@ -24,23 +24,23 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_TRANSIT_TYPE:
       return {
-        ...state, type: {
-          ...state.type, transit_type: [...state.type.transit_type, action.payload]
-        }
+        ...state, transit_type: [...state.type.transit_type, action.payload]
       }
     case GET_ROUTE:
       return {
-        ...state, type: {
-          ...state.type, routes: [...state.type.routes, action.payload]
-        }
+        ...state, routes: [...state.type.routes, action.payload]
       }
 
     case GET_COORDINATES:
       return {
-        ...state, type: {
-          ...state.type, coordinates: [...state.type.coordinates, action.payload]
-        }
+        ...state, coordinates: [...state.type.coordinates, action.payload]
       }
+
+    case GET_REPORTS:
+      return {
+        state
+      }  
+
     default:
       return state;
   }
