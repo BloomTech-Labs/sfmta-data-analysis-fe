@@ -1,12 +1,12 @@
 import React from 'react';
 
-function BunchesCard(){
-        return(
-        <div className="metricsbunches">
+function BunchesCard() {
+    return (
+        <div className="metricsbunches metrics">
             <h2 className="title">BUNCHES</h2>
             <h1 className="contentbunches">#####</h1>
         </div>
-       
+
     )
 }
 

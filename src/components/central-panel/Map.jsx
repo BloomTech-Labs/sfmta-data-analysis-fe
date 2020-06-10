@@ -25,7 +25,6 @@ function Map() {
          trackResize: true
         }}
       />
-      
     </div>
   );
 }
