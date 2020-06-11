@@ -20,13 +20,5 @@ return(
 export default SfmtaCalendar;
 
 
-// const axios = require('axios')
-// useEffect(()=> {
-//     console.log(date)
-//     axios.post('http://datadrivebackend-env.eba-hamsdfmd.us-west-2.elasticbeanstalk.com/date', date.toISOString())
-// .then((res) => {
-//     console.log(res)
-// }
-// )
-// }, [date])
+
 
