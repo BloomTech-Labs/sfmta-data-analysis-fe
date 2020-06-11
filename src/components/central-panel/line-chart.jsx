@@ -36,6 +36,11 @@ function LineChart(props){
   )
 };
 
+
+function getMaxYValue(gaps,bunches){
+  return Math.max(...gaps,...bunches);
+}
+
 const mapStateToProps = state =>{
   console.log(state);
   return{
