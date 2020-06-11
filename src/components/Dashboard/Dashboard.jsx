@@ -17,11 +17,4 @@ const Dashboard = () => {
     )
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         typeAndRouteInfo: state.typeAndRouteInfo,
-//         isFetching: state.isFetching
-//     }
-// }
-
 export default connect(null, {})(Dashboard)

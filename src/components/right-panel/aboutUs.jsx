@@ -7,9 +7,6 @@ const AboutUs = props => {
     return (
         <div>
             <StyledH2>Our Team</StyledH2>
-            <UncontrolledAlert color='warning'>
-                Click an orange marker to learn more about the team!
-            </UncontrolledAlert>
             <AboutUsMap/>
         </div>
     )
