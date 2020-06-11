@@ -36,7 +36,7 @@ const reducer = (state = initialState, action) => {
 
     case GET_ROUTEREPORT:
       return{
-        state
+        ...state, report: action.payload
       } 
     
 

@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { NavLink, useParams } from "react-router-dom";
 import { NavItem } from 'reactstrap';
-import  {routeSubmit} from '../../utilities/utilities.jsx'
+import { getRoutereport } from '../../actions/index.jsx';
+import { connect } from 'react-redux';
 
 
-const DashboardNav = () => {
+const DashboardNav = (props) => {
     //set up usetate here and usepparams to capture bus
     const [ type , setType] = useState({
         route_type: 'All'
@@ -14,38 +15,54 @@ const DashboardNav = () => {
     const {id} = useParams()
     
     console.log(id)
+    
    
-    return (
+const handleChange = (id, cb) => {
+    cb(id||'All')
+}
+const handleSubmit = () => {
+    props.getRoutereport(type)
+}
+
+useEffect(() => {
+    handleSubmit()
+}, [type])
+
+   
+    
+     return (
+     
     <nav className="navigation">
+            {console.log('this rerenderd')}
         <NavItem>
             <NavLink exact to="/">All</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/Bus" onClick={() => routeSubmit(id, setType)}>Bus</NavLink>
+            <NavLink to="/Bus" onClick={() => handleChange(id, setType)}>Bus</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/Rail" onClick={() => routeSubmit(id, setType)}>Rail</NavLink>
+            <NavLink to="/Rail" onClick={() => handleChange(id, setType)}>Rail</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/Streetcar" onClick={() => routeSubmit(id, setType)}>Streetcar</NavLink>
+            <NavLink to="/Streetcar" onClick={() => handleChange(id, setType)}>Streetcar</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/Express" onClick={() => routeSubmit(id, setType)}>Express</NavLink>
+            <NavLink to="/Express" onClick={() => handleChange(id, setType)}>Express</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/Cablecar" onClick={() => routeSubmit(id, setType)}>Cable Car</NavLink>
+            <NavLink to="/Cablecar" onClick={() => handleChange(id, setType)}>Cable Car</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/Shuttle" onClick={() => routeSubmit(id, setType)}>Shuttle</NavLink>
+            <NavLink to="/Shuttle" onClick={() => handleChange(id, setType)}>Shuttle</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/Overnight" onClick={() => routeSubmit(id, setType)}>Overnight</NavLink>
+            <NavLink to="/Overnight" onClick={() => handleChange(id, setType)}>Overnight</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/Rapid" onClick={() => routeSubmit(id, setType)}>Rapid </NavLink>
+            <NavLink to="/Rapid" onClick={() => handleChange(id, setType)}>Rapid </NavLink>
         </NavItem>
     </nav>
     )
 }
 
-export default DashboardNav;
+export default connect(null, {getRoutereport})(DashboardNav);
