@@ -252,10 +252,12 @@ select.form-control {
   }
 
   .line-chart {
+    height: 18.8vh;
     display: flex;
-    // width: 100%;
-    height: 10vh;
     margin-top: 5%;
+    canvas{
+      height: 100%!important;
+    }
   }
 }
 

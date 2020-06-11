@@ -1,23 +1,24 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2'
-import { connect } from 'react-redux';
+import {connect} from "react-redux"
 
 function LineChart(props){
-  console.log(props)
+  console.log("linechart state",props.line_chart?props.line_chart.gaps:null)
   return (
     <div className="line-chart">
       <Line 
         data={{
+          labels: props.line_chart?props.line_chart.times:null,
           datasets: [
             {
-              data: {props.line_chart.gaps},
-              label: '% gapped',
+              data: props.line_chart?props.line_chart.gaps:null,
+              label: '# gapped',
               backgroundColor: ["#FBD03F", "#40FFCE"],
               borderColor: '#00FFFF',
-              fill: false
+              fill: false,
             },
             {
-              data: [50, 10, 90, 5, 65],
+              data: props.line_chart?props.line_chart.bunches:null,
               label: '# bunches',
               backgroundColor: ["#FF6D37", "#232323"],
               borderColor: '#FF4500',
@@ -29,24 +30,30 @@ function LineChart(props){
       options={{
           responsive: true,
           aspectRatio: 1,
-          maintainAspectRatio: false
+          maintainAspectRatio: false,
+          scales:{
+            yAxes:[{
+              ticks:{
+                max:props.line_chart?getMaxYValue(props.line_chart.gaps,props.line_chart.bunches):0,
+                stepSize:50
+              }
+            }]
+          }
+          
         }}
       />
     </div>
   )
 };
 
-
 function getMaxYValue(gaps,bunches){
   return Math.max(...gaps,...bunches);
 }
 
 const mapStateToProps = state =>{
-  console.log(state);
   return{
-      line_chart: state.report.line_chart
+      line_chart : state.report.line_chart
   }
 }
 
 export default connect(mapStateToProps,{})(LineChart);
-

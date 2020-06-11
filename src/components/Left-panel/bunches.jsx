@@ -12,7 +12,6 @@ function BunchesCard(props) {
 }
 
 const mapStateToProps = state => {
-    console.log("state state",state.report.num_bunches);
     return{
         bunches: state.report.num_bunches
     }
