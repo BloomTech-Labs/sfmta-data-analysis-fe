@@ -11,7 +11,7 @@ import OntimeCard from "./on-time";
        <SfmtaCalendar/>
        <BunchesCard/>
        <GapsCard/>
-       <OntimeCard/> 
+       {/* <OntimeCard/>  */}
     </div>
     );
 }
