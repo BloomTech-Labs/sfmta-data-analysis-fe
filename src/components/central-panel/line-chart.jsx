@@ -12,7 +12,7 @@ function LineChart(props){
           datasets: [
             {
               data: props.line_chart?props.line_chart.gaps:null,
-              label: '% gapped',
+              label: '# gapped',
               backgroundColor: ["#FBD03F", "#40FFCE"],
               borderColor: '#00FFFF',
               fill: false,

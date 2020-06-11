@@ -1,37 +1,48 @@
-import React from 'react';
-import { NavLink } from "react-router-dom";
+import React, {useState} from 'react';
+import { NavLink, useParams } from "react-router-dom";
 import { NavItem } from 'reactstrap';
+import  {routeSubmit} from '../../utilities/utilities.jsx'
 
 
 const DashboardNav = () => {
+    //set up usetate here and usepparams to capture bus
+    const [ type , setType] = useState({
+        route_type: 'All'
+    });
+    console.log(useParams())
+
+    const {id} = useParams()
+    
+    console.log(id)
+   
     return (
     <nav className="navigation">
         <NavItem>
             <NavLink exact to="/">All</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/bus">Bus</NavLink>
+            <NavLink to="/Bus" onClick={() => routeSubmit(id, setType)}>Bus</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/rail">Rail</NavLink>
+            <NavLink to="/Rail" onClick={() => routeSubmit(id, setType)}>Rail</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/streetcar">Streetcar</NavLink>
+            <NavLink to="/Streetcar" onClick={() => routeSubmit(id, setType)}>Streetcar</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/express">Express</NavLink>
+            <NavLink to="/Express" onClick={() => routeSubmit(id, setType)}>Express</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/cablecar">Cable Car</NavLink>
+            <NavLink to="/Cablecar" onClick={() => routeSubmit(id, setType)}>Cable Car</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/shuttle">Shuttle</NavLink>
+            <NavLink to="/Shuttle" onClick={() => routeSubmit(id, setType)}>Shuttle</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/overnight">Overnight</NavLink>
+            <NavLink to="/Overnight" onClick={() => routeSubmit(id, setType)}>Overnight</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to="/rapid">Rapid</NavLink>
+            <NavLink to="/Rapid" onClick={() => routeSubmit(id, setType)}>Rapid </NavLink>
         </NavItem>
     </nav>
     )
