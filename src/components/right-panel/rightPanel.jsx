@@ -9,8 +9,7 @@ export const RightPanel = () => {
   return (
     <div className="right-panel">
       <div className="score-card metrics">
-        <h3>Overall Health</h3>
-        <ScoreCardChart />
+       <ScoreCardChart />
       </div>
       <OnTimePercent />
       <Coverage />

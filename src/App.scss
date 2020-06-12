@@ -268,15 +268,18 @@ select.form-control {
   width: 20%;
   // height: auto;
     .otp{
-      background-image: linear-gradient(180deg, rgba(255, 150, 64, 0.116) 2.29%, rgba(255, 166, 64, 0.075) 20.47%, rgba(51, 51, 51, 0.041) 105.71%);
+      background: #333333;
+      // background-image: linear-gradient(180deg, rgba(255, 150, 64, 0.116) 2.29%, rgba(255, 166, 64, 0.075) 20.47%, rgba(51, 51, 51, 0.041) 105.71%);
     }
     .cov{
-      background-image:   linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
+      background: #333333;
+      // background-image:   linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
     }
     .score-card {
+      background: #333333;
       padding: 0.5rem 0;
       
-      background-image:  linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
+      // background-image:  linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
       .card-footer{
         padding-top: 0.75rem;
         border: none;
@@ -313,10 +316,8 @@ select.form-control {
   min-height: 14.81rem;
   width: 100%;
   margin-bottom: 3.25rem;
-
-  align-items: center;
-  border: 1px solid #00A493;
-  background-color: #1f1f1f;
+ align-items: center;
+  background-color: #333333;
   color:white;
 
   .title{
@@ -325,7 +326,13 @@ select.form-control {
   }
   .content{
     margin-top:4%;
-    color: #FBD03F;
+    color: #40FFCE;
+  }
+  .contentontime{
+    color: #FFD034;
+  }
+  .contenthealth{
+    color: #FF6D37;
   }
 }
 
@@ -336,9 +343,7 @@ select.form-control {
   min-height: 14.81rem;
   width: 100%;
   align-items: center;
-  border: 1px solid #00A493;
-  background-color: #1f1f1f;
-  background-image: linear-gradient(180deg, rgba(251, 207, 63, 0.116) 6.12%, rgba(255, 200, 20, 0.02) 52.11%, rgba(51, 51, 51, 0.055) 96.22%);
+  background-color: #333333;
   color:#ffffff;
 
   .title{
@@ -347,7 +352,7 @@ select.form-control {
   }
   .contentbunches{
     margin-top:4%;
-    color: #FBD03F;
+    color: #FF6D37;
   }
 }
 
@@ -358,9 +363,7 @@ select.form-control {
   min-height: 14.81rem;
   width: 100%;
   align-items: center;
-  border: 1px solid #00A493;
-  background-color: #1f1f1f;
-  background-image: linear-gradient(180deg, rgba(255, 150, 64, 0.061) 2.29%, rgba(255, 166, 64, 0.055) 20.47%, rgba(51, 51, 51, 0.041) 105.71%);
+  background-color: #333333;
   color:#ffffff;
 
   .title{
@@ -369,7 +372,7 @@ select.form-control {
   }
   .contentgaps{
     margin-top:4%;
-    color: #FF6D37;
+    color: #40FFCE;
   }
 }
 
