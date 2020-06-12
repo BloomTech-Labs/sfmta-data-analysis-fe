@@ -277,7 +277,7 @@ select.form-control {
     }
     .score-card {
       background: #333333;
-      padding: 0.5rem 0;
+     
       
       // background-image:  linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%);
       .card-footer{
@@ -322,16 +322,19 @@ select.form-control {
 
   .title{
     margin-top:15%;
-    font-size:2.5rem;
+    font-size:3.125rem;
   }
   .content{
+    font-size:4rem;
     margin-top:4%;
     color: #40FFCE;
   }
   .contentontime{
+    font-size:4rem;
     color: #FFD034;
   }
   .contenthealth{
+    font-size:4rem;
     color: #FF6D37;
   }
 }
@@ -348,10 +351,11 @@ select.form-control {
 
   .title{
     margin-top:15%;
-    font-size:2.5rem;
+    font-size:3.125rem;
   }
   .contentbunches{
     margin-top:4%;
+    font-size:4rem;
     color: #FF6D37;
   }
 }
@@ -368,10 +372,11 @@ select.form-control {
 
   .title{
     margin-top:15%;
-    font-size:2.5rem;
+    font-size:3.125rem;
   }
   .contentgaps{
     margin-top:4%;
+    font-size:4rem;
     color: #40FFCE;
   }
 }

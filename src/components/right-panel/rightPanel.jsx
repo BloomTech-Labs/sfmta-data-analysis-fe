@@ -8,7 +8,7 @@ export const RightPanel = () => {
 
   return (
     <div className="right-panel">
-      <div className="score-card metrics">
+      <div >
        <ScoreCardChart />
       </div>
       <OnTimePercent />
