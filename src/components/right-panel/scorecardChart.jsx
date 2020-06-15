@@ -16,4 +16,5 @@ const mapStateToProps = state => {
     report: state.report
   }
 }
+
 export default connect(mapStateToProps, {})(ScoreCardChart)
