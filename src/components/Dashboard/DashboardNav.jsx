@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useParams } from "react-router-dom";
 import { NavItem } from 'reactstrap';
-import { getRoutereport } from '../../actions/index.jsx';
+import { getReport } from '../../actions/index.jsx';
 import { connect } from 'react-redux';
 
 
@@ -13,7 +13,7 @@ const DashboardNav = (props) => {
     const { id } = useParams()
 
     const handleSubmit = () => {
-        props.getRoutereport({ route_type: id || 'All' })
+        props.getReport({ route_type: id || 'All' })
     }
 
     useEffect(() => {
@@ -57,4 +57,4 @@ const DashboardNav = (props) => {
     )
 }
 
-export default connect(null, { getRoutereport })(DashboardNav);
+export default connect(null, { getReport })(DashboardNav);
