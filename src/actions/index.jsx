@@ -11,7 +11,7 @@ export const GET_ROUTEREPORT = "GET_ROUTEREPORT";
 
 
 export const getType = () => dispatch => {
-    axios.get("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/type")
+    axios.get("//datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/type")
         .then(res => {
             dispatch({ type: SET_TRANSIT_TYPE, payload: res.data })
         })
@@ -21,7 +21,7 @@ export const getType = () => dispatch => {
 }
 
 export const sendType = param => dispatch => {
-    axios.post("http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route", param)
+    axios.post("//datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route", param)
         .then(res => {
             dispatch({ type: GET_ROUTE, payload: res.data })
         })
@@ -31,7 +31,7 @@ export const sendType = param => dispatch => {
 }
 
 export const getCoordinates = id => dispatch => {
-    axios.get(`http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route/${id}`)
+    axios.get(`//datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/route/${id}`)
         .then(res => {
             console.log(res);
             dispatch({ type: GET_COORDINATES, payload: res.data })
@@ -42,7 +42,7 @@ export const getCoordinates = id => dispatch => {
 }
 
 export const getReport = (rid) => dispatch => {
-    axios.get('http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report', rid)
+    axios.get('//datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report', rid)
         .then(res => {
             console.log(res, 'get report res');
             dispatch({ type: GET_REPORTS, payload: res.data })
@@ -53,7 +53,7 @@ export const getReport = (rid) => dispatch => {
 }
 
 export const getRoutereport = (param) => dispatch => {
-    axios.post('http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report/type', param)
+    axios.post('//datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report/type', param)
         .then(res => {
             console.log(res, 'get route report');
             dispatch({ type: GET_ROUTEREPORT, payload: res.data })
