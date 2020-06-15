@@ -1,19 +1,16 @@
 import React from "react";
 import { connect } from 'react-redux'
 
-export const ScoreCardChart = ({ report }) => {
+export const ScoreCardChart = (props) => {
 
-// console.log('this is now props', report.data.overall_health)
+  console.log('This is scorecard', props)
   return (
     <>
-      {report && <>
-      <h1>{report.data.overall_health}</h1>
-      </>
-      }
-     {/* <h1>{props.report.overall_health} </h1> */}
+     <h1>80%</h1>
     </>
   );
 };
+
 const mapStateToProps = state => {
   return {
     report: state.report
