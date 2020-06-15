@@ -10,11 +10,8 @@ const DashboardNav = (props) => {
     const [type, setType] = useState({
         route_type: 'All'
     });
-    console.log(useParams())
 
     const { id } = useParams()
-
-    console.log(id)
 
     const handleSubmit = () => {
         props.getRoutereport({ route_type: id || 'All' })

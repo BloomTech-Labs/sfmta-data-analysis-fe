@@ -9,19 +9,12 @@ import DashboardNav from './DashboardNav';
 const Dashboard = () => {
     return (
         <div className='dashboard'>
-            <DashboardNav/>
+            <DashboardNav />
             <LeftPanel />
             <CentralPanel />
             <RightPanel />
         </div>
     )
 }
-
-// const mapStateToProps = state => {
-//     return {
-//         typeAndRouteInfo: state.typeAndRouteInfo,
-//         isFetching: state.isFetching
-//     }
-// }
 
 export default connect(null, {})(Dashboard)
