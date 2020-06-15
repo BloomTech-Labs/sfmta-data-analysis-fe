@@ -11,7 +11,7 @@ const LeftPanel = () => {
          <SfmtaCalendar />
          <BunchesCard />
          <GapsCard />
-         {/* <OntimeCard /> */}
+         {/* <OntimeCard/>  */}
       </div>
    );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from 'react-redux'
 
 function OnTimePercent(props) {
+
   return (
     <div className="metrics otp">
       <h2 className="title">On Time %</h2>
