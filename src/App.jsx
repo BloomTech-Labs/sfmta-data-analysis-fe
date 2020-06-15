@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Map from './components/central-panel/Map.jsx';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
-//import LandingPage from './components/landingPage';
 import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
 import Dashboard from './components/Dashboard/Dashboard'

@@ -4,9 +4,10 @@ import { connect } from 'react-redux'
 export const ScoreCardChart = () => {
 
   return (
-    <>
-     <h1>80%</h1>
-    </>
+    <div className='metrics'>
+      <h2 className='title'>Health</h2>
+     <h1 className='contenthealth'>80%</h1>
+     </div>
   );
 };
 
