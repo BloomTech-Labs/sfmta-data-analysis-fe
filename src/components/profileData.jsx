@@ -112,6 +112,7 @@ const profileData = [
         id: 1,
         name: 'Agustin Vargas',
         title: 'Data Scientist',
+        cohort: 'Labs22',
         img: agustin,
         github: 'https://github.com/avdata',
         linkedIn: 'http://linkedin.com/in/vargasstem'
@@ -120,6 +121,7 @@ const profileData = [
         id: 2,
         name: 'Cody Holman',
         title: 'Web Developer',
+        cohort: 'Labs22',
         img: cody,
         github: 'https://github.com/cholman',
         linkedIn: 'https://www.linkedin.com/in/cody-holman'
@@ -128,6 +130,7 @@ const profileData = [
         id: 3,
         name: 'Connor Angelis',
         title: 'Web Developer',
+        cohort: 'Labs22',
         img: connor,
         github: 'https://github.com/KonstadinosAngelis',
         linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/'
@@ -136,6 +139,7 @@ const profileData = [
         id: 4,
         name: 'Erik Sandoval',
         title: 'Web Developer & Team Lead',
+        cohort: 'Labs22',
         img: erik,
         github: 'https://github.com/erik-sandoval',
         linkedIn: ''
@@ -144,6 +148,7 @@ const profileData = [
         id: 5,
         name: 'Jonathan Allison',
         title: 'Web Developer',
+        cohort: 'Labs22',
         img: jonathan,
         github: 'https://github.com/qb1968',
         linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/'
@@ -152,6 +157,7 @@ const profileData = [
         id: 6,
         name: 'Jordan Ireland',
         title: 'Data Scientist',
+        cohort: 'Labs22',
         img: jordan,
         github: 'https://github.com/Jordan-Ireland',
         linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/'
@@ -160,6 +166,7 @@ const profileData = [
         id: 7,
         name: 'Justin Menendez',
         title: 'UX Designer',
+        cohort: 'Labs22',
         img: justin,
         github: '',
         linkedIn: 'https://www.linkedin.com/in/justinmenendez/'
@@ -168,6 +175,7 @@ const profileData = [
         id: 8,
         name: 'Mathias Skreden',
         title: 'Data Scientist',
+        cohort: 'Labs22',
         img: mathias,
         github: 'https://github.com/skredenmathias/',
         linkedIn: 'https://www.linkedin.com/in/skredenmathias/'
@@ -176,6 +184,7 @@ const profileData = [
         id: 9,
         name: 'Michelle Sirimanivong',
         title: 'Web Developer',
+        cohort: 'Labs22',
         img: michelle,
         github: 'https://github.com/MicheSi',
         linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'
