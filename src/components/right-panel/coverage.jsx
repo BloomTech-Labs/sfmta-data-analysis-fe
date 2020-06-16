@@ -5,7 +5,7 @@ function Coverage(props) {
   return (
     <div className="metrics cov">
       <h2 className="title">Coverage</h2>
-      <h1 className="content">{props.report.coverage}%</h1>
+      <h1 className="content">{props.coverage}%</h1>
     </div>
   );
 }
@@ -13,7 +13,7 @@ function Coverage(props) {
 
 const mapStateToProps = state => {
   return {
-    report: state.report
+    coverage: state.report.coverage
   }
 }
 export default connect(mapStateToProps, {})(Coverage)
