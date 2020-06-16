@@ -5,10 +5,9 @@ const AboutCard = () => {
   return(
     <div>
       {profileData.map(Card => {
-      
       return (
-      <div>
-        <img src={Card.img} />
+      <div className="Dev-Card">
+        <img src={Card.img} alt = "developer profile"/>
         <h5>{Card.name}</h5>
         <h5>{Card.title}</h5>
         <h5>{Card.github}</h5>
