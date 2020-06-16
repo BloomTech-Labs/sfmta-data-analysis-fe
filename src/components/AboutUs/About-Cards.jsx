@@ -13,8 +13,8 @@ const AboutCard = () => {
           <img src={Card.img} alt="{Card.name} picture" />
           <h5>{Card.name}</h5>
           <h5>{Card.title}</h5>
+          <p>{Card.location}</p>
           <p>{Card.cohort}</p>
-          <p>{Card.loctation}</p>
           <p>{Card.bio}</p>
           <div>
             <ul>

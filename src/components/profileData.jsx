@@ -50,7 +50,7 @@ const profileData = [
         img: JustinR,
         github: 'https://github.com/justinruss24',
         linkedIn: 'https://www.linkedin.com/in/justinrussell-web/',
-        location: '',
+        location: 'Portland, OR',
         bio: ''
     },
     {
@@ -61,7 +61,7 @@ const profileData = [
         img: Bairon,
         github: 'https://github.com/MrR3set',
         linkedIn: 'https://www.linkedin.com/in/byronpaz',
-        location: 'Los Angelos, California',
+        location: 'Los Angelos, CA',
         bio: 'Bairon is a full Stack Web Developer at lambda. He attended 2 years of Software engineering in college. Can Speak Spanish and English.'
     },
     {
@@ -148,7 +148,8 @@ const profileData = [
         cohort: 'Labs22',
         img: agustin,
         github: 'https://github.com/avdata',
-        linkedIn: 'http://linkedin.com/in/vargasstem'
+        linkedIn: 'http://linkedin.com/in/vargasstem',
+        location: 'Calabasas, California'
     },
     {
         id: 2,
@@ -157,7 +158,8 @@ const profileData = [
         cohort: 'Labs22',
         img: cody,
         github: 'https://github.com/cholman',
-        linkedIn: 'https://www.linkedin.com/in/cody-holman'
+        linkedIn: 'https://www.linkedin.com/in/cody-holman',
+        location: 'Auburn, Alabama'
     },
     {
         id: 3,
@@ -166,7 +168,8 @@ const profileData = [
         cohort: 'Labs22',
         img: connor,
         github: 'https://github.com/KonstadinosAngelis',
-        linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/'
+        linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/',
+        location: 'Beaverton, Oregon'
     },
     {
         id: 4,
@@ -175,7 +178,8 @@ const profileData = [
         cohort: 'Labs22',
         img: erik,
         github: 'https://github.com/erik-sandoval',
-        linkedIn: ''
+        linkedIn: 'https://www.linkedin.com/in/erikfsandoval/',
+        location: 'Hemet, California'
     },
     {
         id: 5,
@@ -184,7 +188,8 @@ const profileData = [
         cohort: 'Labs22',
         img: jonathan,
         github: 'https://github.com/qb1968',
-        linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/'
+        linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/',
+        location: 'Winston-Salem, North Carolina'
     },
     {
         id: 6,
@@ -193,7 +198,8 @@ const profileData = [
         cohort: 'Labs22',
         img: jordan,
         github: 'https://github.com/Jordan-Ireland',
-        linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/'
+        linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/',
+        location: 'Phoenix, Arizona'
     },
     {
         id: 7,
@@ -202,7 +208,8 @@ const profileData = [
         cohort: 'Labs22',
         img: justin,
         github: '',
-        linkedIn: 'https://www.linkedin.com/in/justinmenendez/'
+        linkedIn: 'https://www.linkedin.com/in/justinmenendez/',
+        location: 'Tallahassee, Florida'
     },
     {
         id: 8,
@@ -211,7 +218,8 @@ const profileData = [
         cohort: 'Labs22',
         img: mathias,
         github: 'https://github.com/skredenmathias/',
-        linkedIn: 'https://www.linkedin.com/in/skredenmathias/'
+        linkedIn: 'https://www.linkedin.com/in/skredenmathias/',
+        location: 'Aust-Agder, Norway'
     },
     {
         id: 9,
@@ -220,7 +228,8 @@ const profileData = [
         cohort: 'Labs22',
         img: michelle,
         github: 'https://github.com/MicheSi',
-        linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'
+        linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/',
+        location: 'Surprise, AZ'
     },
     
 ]

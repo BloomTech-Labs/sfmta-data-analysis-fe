@@ -230,7 +230,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0, 0
+          -116.9720, 
+          33.7475
         ]
       },
       "properties": {
