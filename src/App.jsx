@@ -6,8 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Map from './components/central-panel/Map.jsx';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
-import DataPage from './components/dataPage';
-import AboutUs from './components/aboutUs';
+import AboutUs from './components/AboutUs/aboutUs';
 import Dashboard from './components/Dashboard/Dashboard'
 import { connect } from 'react-redux'
 import { getType, sendType, getCoordinates, getReport, getRoutereport } from './actions/index.jsx'

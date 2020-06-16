@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from 'react-redux'
 
-export const ScoreCardChart = () => {
+export const ScoreCardChart = (props) => {
 
+  console.log('This is scorecard', props)
   return (
     <div className='metrics'>
       <h2 className='title'>Health</h2>
@@ -16,4 +17,5 @@ const mapStateToProps = state => {
     report: state.report
   }
 }
+
 export default connect(mapStateToProps, {})(ScoreCardChart)
