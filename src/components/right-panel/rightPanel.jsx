@@ -1,6 +1,5 @@
 import React from 'react';
-import { ScoreCardChart } from "./overallHealth";
-import { ScoreFooter } from "./scoreFooter";
+import ScoreCardChart from "./overallHealth";
 import OnTimePercent from "./onTime"
 import Coverage from "./coverage"
 
