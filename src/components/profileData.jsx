@@ -94,7 +94,7 @@ const profileData = [
         img: Jonathan,
         github: 'https://github.com/jonDuke',
         linkedIn: 'https://www.linkedin.com/in/jonduke90/',
-        location: '',
+        location: 'Lynnwood, Washington',
         bio: ''
     },
     {
