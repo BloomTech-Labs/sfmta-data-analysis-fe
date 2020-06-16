@@ -5,9 +5,10 @@ export const ScoreCardChart = (props) => {
 
   console.log('This is scorecard', props)
   return (
-    <>
-     <h1>80%</h1>
-    </>
+    <div className='metrics'>
+      <h2 className='title'>Health</h2>
+     <h1 className='contenthealth'>80%</h1>
+     </div>
   );
 };
 
