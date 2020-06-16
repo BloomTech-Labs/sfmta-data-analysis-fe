@@ -6,7 +6,7 @@ import CentralPanel from '../central-panel/centralPanel';
 import DashboardNav from './DashboardNav';
 
 
-const Dashboard = () => {
+export const Dashboard = () => {
     return (
         <div className='dashboard'>
             <DashboardNav />

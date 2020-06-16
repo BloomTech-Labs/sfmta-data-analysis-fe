@@ -5,7 +5,7 @@ import GapsCard from "./gaps";
 import OntimeCard from "./on-time";
 
 
- const LeftPanel = () => {
+ export const LeftPanel = () => {
     
     return (
     <div className="left-panel">

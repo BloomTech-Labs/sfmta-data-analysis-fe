@@ -7,7 +7,7 @@ const SfmtaCalendar = () => {
 const [date, setDate] = useState(new Date());
 const onChange =  date => {
   setDate(date)
-
+console.log('this is the date', date)
 }
  
 return(

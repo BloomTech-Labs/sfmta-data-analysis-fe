@@ -1,28 +1,26 @@
 import React from 'react';
-import { render, getByAltText } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
-import App from './App.jsx';
+import  {App} from './App.jsx';
 
-import DashboardNav from './components/Dashboard/DashboardNav';
-import Dashboard from './components/Dashboard/Dashboard';
+import { DashboardNav } from './components/Dashboard/DashboardNav';
+import { Dashboard }from './components/Dashboard/Dashboard';
 import Footer from './components/footer';
-import Bunches from './components/Left-panel/bunches';
-import Gaps from './components/Left-panel/gaps';
-import Coverage from './components/right-panel/coverage';
-import Ontime from './components/right-panel/onTime';
-
-
-jest.mock('./App');
-jest.mock('./components/aboutUs');
-jest.mock('./components/Dashboard/Dashboard')
-jest.mock('./components/Dashboard/DashboardNav')
-jest.mock('./components/Left-panel/bunches')
-jest.mock('./components/Left-panel/gaps')
-jest.mock('./components/right-panel/coverage')
-jest.mock('./components/right-panel/onTime')
+import {BunchesCard} from './components/Left-panel/bunches';
+import {GapsCard} from './components/Left-panel/gaps';
+import {Coverage} from './components/right-panel/coverage';
+import {OnTimePercent} from './components/right-panel/onTime';
+import {LeftPanel} from './components/Left-panel/leftPanel'
 
 
 
+// jest.mock('./App');
+
+
+
+// test('left panel rendering', () => {
+//   render(<LeftPanel />)
+// })
 
 // need to figure out how to test calendar
 
@@ -30,11 +28,6 @@ jest.mock('./components/right-panel/onTime')
 test('renders app without crashing', () => {
   render(<App />)
 });
-//header tests
-test('header is rendering', () => {
- render(<navBar/>)
-
-})
 
 test('Dashboard tests renders without crashing', () => {
   render(<Dashboard />)
@@ -56,28 +49,40 @@ test('copyright text appears in footer', () => {
 })
 
 // left side components rendering
+test('left panel component rendering', () => {
+  render(<LeftPanel/>)
+})
 
 test('Bunches component renders without crashing', () => {
-  render(<Bunches />)
+  render(<BunchesCard />)
   
 })
 
-test('Gaps component renders without crashing', () => {
-  render(<Gaps />)
+test('tests bunches title', () => {
+  const { getByText } = render(<BunchesCard bunches={50} />);
+  const bunches = getByText('BUNCHES');
+  expect(bunches).toBeInTheDocument();
 })
 
-// test('calendar component renders without crashing', () => {
-//   render(<SfmtaCalendar/>)
-// })
+test('Gaps component renders without crashing', () => {
+  render(<GapsCard />)
+})
+
+test('tests gaps title', () => {
+  const { getByText } = render(<GapsCard  gaps={50} />);
+  const gaps = getByText('GAPS');
+  expect(gaps).toBeInTheDocument();
+})
+
 
 
 // right side components rendering
 test('Coverage component renders without crashing', () => {
-  render(<Coverage />)
+  render(<Coverage/>)
 })
 
 test('Ontime component renders without crashing', () => {
-  render(<Ontime />)
+  render(<OnTimePercent/>)
 })
 
 

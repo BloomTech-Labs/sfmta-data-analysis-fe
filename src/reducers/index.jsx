@@ -5,7 +5,7 @@ import { GET_REPORTS } from '../actions/index.jsx'
 import { GET_ROUTEREPORT } from '../actions/index.jsx'
 
 
-const initialState = {
+export const initialState = {
   transit_type: [],
   routes: [],
   coordinates: [],

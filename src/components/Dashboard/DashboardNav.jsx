@@ -5,7 +5,7 @@ import { getReport } from '../../actions/index.jsx';
 import { connect } from 'react-redux';
 
 
-const DashboardNav = (props) => {
+export const DashboardNav = (props) => {
     //set up usetate here and usepparams to capture bus
     const [type, setType] = useState({
         route_type: 'All'

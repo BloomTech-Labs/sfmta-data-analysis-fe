@@ -13,7 +13,7 @@ import Dashboard from './components/Dashboard/Dashboard'
 import { connect } from 'react-redux'
 import { getType, sendType, getCoordinates, getReport } from './actions/index.jsx'
 
-function App(props) {
+export function App(props) {
   props.getType()
   props.sendType({ route_type: "Bus" })
   props.getCoordinates(1)

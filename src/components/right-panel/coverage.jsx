@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-function Coverage(props) {
+export function Coverage(props) {
   return (
     <div className="metrics cov">
       <h2 className="title">Coverage</h2>
