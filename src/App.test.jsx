@@ -2,33 +2,26 @@ import React from 'react';
 import { render, getByAltText } from '@testing-library/react';
 
 import App from './App.jsx';
-import navBar from './components/navBar';
+
 import DashboardNav from './components/Dashboard/DashboardNav';
 import Dashboard from './components/Dashboard/Dashboard';
 import Footer from './components/footer';
 import Bunches from './components/Left-panel/bunches';
 import Gaps from './components/Left-panel/gaps';
-// import SfmtaCalendar from './components/Left-panel/calendar';
 import Coverage from './components/right-panel/coverage';
 import Ontime from './components/right-panel/onTime';
-import Overallhealth from './components/right-panel/scorecardChart';
-// import Linechart from './components/central-panel/line-chart';
-// import Map from './components/central-panel/Map';
-import Centralpanel from './components/central-panel/centralPanel';
+
 
 jest.mock('./App');
 jest.mock('./components/aboutUs');
 jest.mock('./components/Dashboard/Dashboard')
 jest.mock('./components/Dashboard/DashboardNav')
-// jest.mock('./components/Left-panel/calendar')
 jest.mock('./components/Left-panel/bunches')
 jest.mock('./components/Left-panel/gaps')
 jest.mock('./components/right-panel/coverage')
 jest.mock('./components/right-panel/onTime')
-jest.mock('./components/right-panel/overallHealth')
-jest.mock('./components/central-panel/centralPanel')
-// jest.mock('./components/central-panel/line-chart')
-// jest.mock('./components/central-panel/Map')
+
+
 
 
 // need to figure out how to test calendar
@@ -90,9 +83,6 @@ test('Ontime component renders without crashing', () => {
   render(<Ontime />)
 })
 
-test('OverallHealth component renders without crashing', () => {
-  render(<Overallhealth />)
-})
 
 
 
