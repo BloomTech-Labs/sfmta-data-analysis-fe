@@ -51,7 +51,7 @@ const profileData = [
         github: 'https://github.com/justinruss24',
         linkedIn: 'https://www.linkedin.com/in/justinrussell-web/',
         location: 'Portland, OR',
-        bio: ''
+        bio: 'Justin Russell is a Full stack web developer on track to endorsement at Lambda School. As a former collegiate athlete, his love for competition and sport spread to the golf course. When Justin isn’t at his computer, he is out walking 18 holes somewhere enjoying the time outside.'
     },
     {
         id: 13,
