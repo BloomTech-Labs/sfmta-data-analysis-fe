@@ -11,13 +11,11 @@ import DataPage from './components/dataPage';
 import AboutUs from './components/aboutUs';
 import Dashboard from './components/Dashboard/Dashboard'
 import { connect } from 'react-redux'
-import { getType, sendType, getCoordinates, getReport } from './actions/index.jsx'
+import { getType, sendType, getCoordinates, getReport, getRouteList } from './actions/index.jsx'
 
 function App(props) {
-  props.getType()
-  props.sendType({ route_type: "Bus" })
-  props.getCoordinates(1)
   props.getReport()
+  props.getRouteList({ date: '2020-06-01', route_type: 'Bus' })
   return (
     <div className="App">
       <Router>
@@ -34,4 +32,4 @@ function App(props) {
   );
 }
 
-export default connect(null, { getType, sendType, getCoordinates, getReport })(App)
+export default connect(null, { getType, sendType, getCoordinates, getReport, getRouteList })(App)

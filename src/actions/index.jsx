@@ -8,6 +8,7 @@ export const GET_ROUTE = "GET_ROUTE";
 export const GET_COORDINATES = "GET_COORDINATES";
 export const GET_REPORTS = "GET_REPORTS";
 export const GET_ROUTEREPORT = "GET_ROUTEREPORT";
+export const GET_ROUTE_LIST = "GET_ROUTE_LIST"
 
 
 export const getType = () => dispatch => {
@@ -57,5 +58,15 @@ export const getRoutereport = (param) => dispatch => {
         })
         .catch(error => {
             console.log(error, "couldn't get route type report")
+        })
+}
+
+export const getRouteList = params => dispatch => {
+    axios.post('https://be.datadriventransit.org/api/route-report', params)
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(err => {
+            console.log(err)
         })
 }
