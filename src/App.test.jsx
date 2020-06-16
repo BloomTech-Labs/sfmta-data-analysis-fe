@@ -126,15 +126,6 @@ test('copyright text appears in footer', () => {
 
 
 
-// test('Line chart component renders without crashing', () => {
-//   render(<Linechart/>)
-// })
-
-// test('Map component renders without crashing', () => {
-//   render(<Map/>)
-// })
-
-
 
 
 
