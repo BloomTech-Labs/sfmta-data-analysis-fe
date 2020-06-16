@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
-import * as devData from './data/developer-data.json';
+import * as devData from '../data/developer-data.json';
 
 function AboutUs() {
   // setup map of US based on central coorindate points 
@@ -43,7 +43,7 @@ return (
               setSelectedDev(dev)
             }}
             >
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <i className="fa fa-map-marker" aria-hidden="true"></i>
           </button>
         </Marker>
       ))}

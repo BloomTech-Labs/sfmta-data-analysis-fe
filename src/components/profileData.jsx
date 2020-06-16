@@ -23,6 +23,7 @@ const profileData = [
         id: 10,
         name: 'Kevin Phillips',
         title: 'Full Stack Web Developer',
+        cohort: 'Labs24',
         img: Kevin,
         github: 'https://github.com/kphillips001/',
         linkedIn: 'https://www.linkedin.com/in/kevin-n-phillips/'
@@ -31,6 +32,7 @@ const profileData = [
         id: 11,
         name: 'Nick Migel',
         title: 'Full Stack Web Developer',
+        cohort: 'Labs24',
         img: Nick,
         github: 'https://github.com/rivercrow25',
         linkedIn: 'https://www.linkedin.com/in/nick-migel-67b4831a2/'
@@ -39,6 +41,7 @@ const profileData = [
         id: 12,
         name: 'Justin Russell',
         title: 'Full Stack Web Developer',
+        cohort: 'Labs24',
         img: JustinR,
         github: 'https://github.com/justinruss24',
         linkedIn: 'https://www.linkedin.com/in/justinrussell-web/'
@@ -47,6 +50,7 @@ const profileData = [
         id: 13,
         name: 'Bairon Paz',
         title: 'Full Stack Web Developer',
+        cohort: 'Labs24',
         img: Bairon,
         github: 'https://github.com/MrR3set',
         linkedIn: 'https://www.linkedin.com/in/byronpaz'
@@ -55,6 +59,7 @@ const profileData = [
         id: 14,
         name: 'Justin Kuenzinger',
         title: 'Full Stack Web Developer',
+        cohort: 'Labs24',
         img: JustinK,
         github: 'https://github.com/jkuenzinger',
         linkedIn: 'https://www.linkedin.com/in/justin-kuenzinger-2a8a2b1a0/'
@@ -63,6 +68,7 @@ const profileData = [
         id: 15,
         name: 'Isaac Grove',
         title: 'Data Scientist',
+        cohort: 'Labs24',
         img: Isaac,
         github: 'https://github.com/isaacgrove',
         linkedIn: 'https://www.linkedin.com/in/isaac-grove-01300b177/'
@@ -71,6 +77,7 @@ const profileData = [
         id: 16,
         name: 'Jonathan Duke',
         title: 'Data Scientist',
+        cohort: 'Labs24',
         img: Jonathan,
         github: 'https://github.com/jonDuke',
         linkedIn: 'https://www.linkedin.com/in/jonduke90/'
@@ -79,6 +86,7 @@ const profileData = [
         id: 17,
         name: 'Austin Robinson',
         title: 'Data Scientist',
+        cohort: 'Labs24',
         img: AustinR,
         github: 'https://github.com/austiezr',
         linkedIn: 'https://www.linkedin.com/in/austin-ziech-robinson/'
@@ -87,6 +95,7 @@ const profileData = [
         id: 18,
         name: 'Mary Streletska',
         title: 'UX Designer',
+        cohort: 'Labs24',
         img: Mary,
         linkedIn: 'https://www.linkedin.com/in/mstreletska/'
     },
@@ -94,6 +103,7 @@ const profileData = [
         id: 19,
         name: 'Ramses Gasque',
         title: 'Data Scientist',
+        cohort: 'Labs24',
         img: Ramses,
         github: 'https://github.com/cedro-gasque',
         linkedIn: ''
