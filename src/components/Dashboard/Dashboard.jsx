@@ -9,7 +9,7 @@ import DashboardNav from './DashboardNav';
 const Dashboard = () => {
     return (
         <div className='dashboard'>
-            <DashboardNav/>
+            <DashboardNav />
             <LeftPanel />
             <CentralPanel />
             <RightPanel />
