@@ -1,57 +1,17 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import  {App} from './App.jsx';
 
-import { DashboardNav } from './components/Dashboard/DashboardNav';
-import { Dashboard }from './components/Dashboard/Dashboard';
+
 import Footer from './components/footer';
 import {BunchesCard} from './components/Left-panel/bunches';
 import {GapsCard} from './components/Left-panel/gaps';
 import {Coverage} from './components/right-panel/coverage';
 import {OnTimePercent} from './components/right-panel/onTime';
-import {LeftPanel} from './components/Left-panel/leftPanel'
+import {ScoreCardChart} from './components/right-panel/overallHealth'
 
-
-
-// jest.mock('./App');
-
-
-
-// test('left panel rendering', () => {
-//   render(<LeftPanel />)
-// })
-
-// need to figure out how to test calendar
-
-//test for app
-test('renders app without crashing', () => {
-  render(<App />)
-});
-
-test('Dashboard tests renders without crashing', () => {
-  render(<Dashboard />)
-})
-
-test('Dashboard nav component renders without crashing', () => {
-  render(<DashboardNav/>)
-})
-
-//footer tests
-
-test('Footer component renders without crashing', () => {
-  render(<Footer />)
-})
-test('copyright text appears in footer', () => {
-  const { getByText } = render(<Footer />)
-
-  getByText(/ All Rights Reserved/i);
-})
 
 // left side components rendering
-test('left panel component rendering', () => {
-  render(<LeftPanel/>)
-})
 
 test('Bunches component renders without crashing', () => {
   render(<BunchesCard />)
@@ -59,6 +19,12 @@ test('Bunches component renders without crashing', () => {
 })
 
 test('tests bunches title', () => {
+  const { getByText } = render(<BunchesCard  />);
+  const bunches = getByText('BUNCHES');
+  expect(bunches).toBeInTheDocument();
+})
+
+test('tests bunches metric', () => {
   const { getByText } = render(<BunchesCard bunches={50} />);
   const bunches = getByText('BUNCHES');
   expect(bunches).toBeInTheDocument();
@@ -69,8 +35,14 @@ test('Gaps component renders without crashing', () => {
 })
 
 test('tests gaps title', () => {
-  const { getByText } = render(<GapsCard  gaps={50} />);
+  const { getByText } = render(<GapsCard   />);
   const gaps = getByText('GAPS');
+  expect(gaps).toBeInTheDocument();
+})
+
+test('tests gaps metric', () => {
+  const { getByText } = render(<GapsCard  gaps={50} />);
+  const gaps = getByText('50');
   expect(gaps).toBeInTheDocument();
 })
 
@@ -81,8 +53,62 @@ test('Coverage component renders without crashing', () => {
   render(<Coverage/>)
 })
 
+test('tests coverage title', () => {
+  const { getByText } = render(<Coverage  />);
+  const coverage = getByText('Coverage');
+  expect(coverage).toBeInTheDocument();
+})
+
+test('tests coverage metric', () => {
+  const { getByText } = render(<Coverage coverage={50} />);
+  const coverage = getByText('50%');
+  expect(coverage).toBeInTheDocument();
+})
+
+
 test('Ontime component renders without crashing', () => {
   render(<OnTimePercent/>)
+})
+
+test('tests on time title', () => {
+  const { getByText } = render(<OnTimePercent  />);
+  const ontime = getByText('On Time %');
+  expect(ontime).toBeInTheDocument();
+})
+
+test('tests on time metric', () => {
+  const { getByText } = render(<OnTimePercent on_time_percentage={50} />);
+  const on_time_percentage = getByText('50%');
+  expect(on_time_percentage).toBeInTheDocument();
+})
+
+test('overall health component renders without crashing', () => {
+  render(<ScoreCardChart/>)
+})
+
+test('tests overall health title', () => {
+  const { getByText } = render(<ScoreCardChart  />);
+  const overall_health = getByText('Health');
+  expect(overall_health).toBeInTheDocument();
+})
+
+test('tests overall health title', () => {
+  const { getByText } = render(<ScoreCardChart overall_health={50}  />);
+  const overall_health = getByText('50%');
+  expect(overall_health).toBeInTheDocument();
+})
+
+
+
+//footer tests
+
+test('Footer component renders without crashing', () => {
+  render(<Footer />)
+})
+test('copyright text appears in footer', () => {
+  const { getByText } = render(<Footer />)
+
+  getByText(/ All Rights Reserved/i);
 })
 
 
