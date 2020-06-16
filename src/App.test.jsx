@@ -1,117 +1,200 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, getByAltText } from '@testing-library/react';
 
-import App from './App';
-import LandingPage from './components/landingPage';
-import RouteList from './components/dataPage';
-import NavBar from './components/navBar';
+import App from './App.jsx';
+import navBar from './components/navBar';
+import DashboardNav from './components/Dashboard/DashboardNav';
+import Dashboard from './components/Dashboard/Dashboard';
 import Footer from './components/footer';
+import Bunches from './components/Left-panel/bunches';
+import Gaps from './components/Left-panel/gaps';
+// import SfmtaCalendar from './components/Left-panel/calendar';
+import Coverage from './components/right-panel/coverage';
+import Ontime from './components/right-panel/onTime';
+import Overallhealth from './components/right-panel/scorecardChart';
+// import Linechart from './components/central-panel/line-chart';
+// import Map from './components/central-panel/Map';
+import Centralpanel from './components/central-panel/centralPanel';
 
-jest.mock('./components/dataPage');
+jest.mock('./App');
 jest.mock('./components/aboutUs');
+jest.mock('./components/Dashboard/Dashboard')
+jest.mock('./components/Dashboard/DashboardNav')
+// jest.mock('./components/Left-panel/calendar')
+jest.mock('./components/Left-panel/bunches')
+jest.mock('./components/Left-panel/gaps')
+jest.mock('./components/right-panel/coverage')
+jest.mock('./components/right-panel/onTime')
+jest.mock('./components/right-panel/overallHealth')
+jest.mock('./components/central-panel/centralPanel')
+// jest.mock('./components/central-panel/line-chart')
+// jest.mock('./components/central-panel/Map')
 
-// app tests
-// test('renders app without crashing', () => {
-//   render(<App />)
-// });
 
-// landing page tests
-test('Landing Page renders without crashing', () => {
-  render(<LandingPage />)
+// need to figure out how to test calendar
+
+//test for app
+test('renders app without crashing', () => {
+  render(<App />)
+});
+//header tests
+test('header is rendering', () => {
+ render(<navBar/>)
+
 })
 
-test('trolley image is rendering', () => {
-  const { getByAltText } = render(<LandingPage />)
-
-  getByAltText(/trolley/i);
+test('Dashboard tests renders without crashing', () => {
+  render(<Dashboard />)
 })
 
-test('city image renders on landing page', () => {
-  const { getByAltText } = render(<LandingPage />)
-
-  getByAltText(/city/i);
+test('Dashboard nav component renders without crashing', () => {
+  render(<DashboardNav/>)
 })
 
-// nav tests
-test('Nav renders without crashing', () => {
-  render(<NavBar />)
-})
+//footer tests
 
-test('logo renders in nav bar', () => {
-  const { getByAltText } = render(<NavBar />)
-
-  getByAltText(/logo/i);
-})
-
-test('Home link renders in nav bar', () => {
-  const { getByText } = render(<NavBar />)
-
-  getByText('Home');
-})
-
-test('Data link renders in nav bar', () => {
-  const { getByText } = render(<NavBar />)
-
-  getByText('Data');
-})
-
-test('About us link renders in nav bar', () => {
-  const { getByText } = render(<NavBar />)
-
-  getByText('About Us');
-})
-
-// footer tests
-test('Footer renders without crashing', () => {
+test('Footer component renders without crashing', () => {
   render(<Footer />)
 })
-
-test('logo renders in footer', () => {
-  const { getByAltText } = render(<Footer />)
-
-  getByAltText(/logo/i);
-})
-
-test('Home link renders in footer', () => {
+test('copyright text appears in footer', () => {
   const { getByText } = render(<Footer />)
 
-  getByText(/home/i);
+  getByText(/ All Rights Reserved/i);
 })
 
-test('Data link renders in footer', () => {
-  const { getByText } = render(<Footer />)
+// left side components rendering
 
-  getByText('Data');
+test('Bunches component renders without crashing', () => {
+  render(<Bunches />)
+})
+// test('Bunches title appears in card', () => {
+//   const { getByText } = render(<Bunches />)
+
+//   getByText(/BUNCHES/i);
+// })
+test('Gaps component renders without crashing', () => {
+  render(<Gaps />)
 })
 
-test('About us link renders in footer', () => {
-  const { getByText } = render(<Footer />)
+// test('calendar component renders without crashing', () => {
+//   render(<SfmtaCalendar/>)
+// })
 
-  getByText(/about/i);
+
+// right side components rendering
+test('Coverage component renders without crashing', () => {
+  render(<Coverage />)
 })
 
-// data page tests
-test('data page is rendering', () => {
-  render(<RouteList />)
+test('Ontime component renders without crashing', () => {
+  render(<Ontime />)
 })
 
-test('show route button is rendering', () => {
-  const { queryByText } = render(<RouteList />)
-
-  queryByText('Show Route')
+test('OverallHealth component renders without crashing', () => {
+  render(<Overallhealth />)
 })
 
-test('select type is rendering', () => {
-  const { queryByText } = render(<RouteList />)
 
-  queryByText('Select a type')
-})
 
-test('select route is rendering', () => {
-  const { queryByText } = render(<RouteList />)
+// test('Line chart component renders without crashing', () => {
+//   render(<Linechart/>)
+// })
 
-  queryByText('Select type to see routes')
-})
+// test('Map component renders without crashing', () => {
+//   render(<Map/>)
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// test('trolley image is rendering', () => {
+//   const { getByAltText } = render(<LandingPage />)
+
+//   getByAltText(/trolley/i);
+// })
+
+// test('city image renders on landing page', () => {
+//   const { getByAltText } = render(<LandingPage />)
+
+//   getByAltText(/city/i);
+// })
+
+// nav tests
+
+
+
+// test('Home link renders in nav bar', () => {
+//   const { getByText } = render(<NavBar />)
+
+//   getByText('Home');
+// })
+
+// test('Data link renders in nav bar', () => {
+//   const { getByText } = render(<NavBar />)
+
+//   getByText('Data');
+// })
+
+// test('About us link renders in nav bar', () => {
+//   const { getByText } = render(<NavBar />)
+
+//   getByText('About Us');
+// })
+
+// // footer tests
+
+// test('logo renders in footer', () => {
+//   const { getByAltText } = render(<Footer />)
+
+//   getByAltText(/logo/i);
+// })
+
+// test('Home link renders in footer', () => {
+//   const { getByText } = render(<Footer />)
+
+//   getByText(/home/i);
+// })
+
+// test('Data link renders in footer', () => {
+//   const { getByText } = render(<Footer />)
+
+//   getByText('Data');
+// })
+
+
+
+// // data page tests
+// test('data page is rendering', () => {
+//   render(<RouteList />)
+// })
+
+// test('show route button is rendering', () => {
+//   const { queryByText } = render(<RouteList />)
+
+//   queryByText('Show Route')
+// })
+
+// test('select type is rendering', () => {
+//   const { queryByText } = render(<RouteList />)
+
+//   queryByText('Select a type')
+// })
+
+// test('select route is rendering', () => {
+//   const { queryByText } = render(<RouteList />)
+
+//   queryByText('Select type to see routes')
+// })
 
 
 
