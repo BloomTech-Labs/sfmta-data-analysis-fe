@@ -246,7 +246,7 @@ export const CardList = styled.div`
 export const ProfileCard = styled.div`
          display: flex;
          align-items: center;
-         margin: 2%;
+         margin: 1%;
          flex-direction: column;
          img {
            height: 20vh;
@@ -256,15 +256,17 @@ export const ProfileCard = styled.div`
          div {
            display: flex;
            flex-direction: row;
-           justify-content: space-between;
-           align-items: center;
-           border: 1px solid yellow;
+           padding: 2%;
            ul {
              display: flex;
              flex-direction: row;
-             justify-content: space-between;
+             align-items: left;
+             justify-content: space-evenly;
+             width: 40%;
+             li {
+               margin: 3%;
+             }
            }
          }
          width: 25%;
-         padding: 2%;
        `;
