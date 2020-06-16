@@ -14,6 +14,8 @@ const AboutCard = () => {
           <h5>{Card.name}</h5>
           <h5>{Card.title}</h5>
           <p>{Card.cohort}</p>
+          <p>{Card.loctation}</p>
+          <p>{Card.bio}</p>
           <div>
             <ul>
               <li>
