@@ -20,87 +20,6 @@ import michelle from '../images/michelle.jpg';
 
 const profileData = [
     {
-        id: 1,
-        name: 'Agustin Vargas',
-        title: 'Data Scientist',
-        cohort: 'Labs22',
-        img: agustin,
-        github: 'https://github.com/avdata',
-        linkedIn: 'http://linkedin.com/in/vargasstem'
-    },
-    {
-        id: 2,
-        name: 'Cody Holman',
-        title: 'Web Developer',
-        cohort: 'Labs22',
-        img: cody,
-        github: 'https://github.com/cholman',
-        linkedIn: 'https://www.linkedin.com/in/cody-holman'
-    },
-    {
-        id: 3,
-        name: 'Connor Angelis',
-        title: 'Web Developer',
-        cohort: 'Labs22',
-        img: connor,
-        github: 'https://github.com/KonstadinosAngelis',
-        linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/'
-    },
-    {
-        id: 4,
-        name: 'Erik Sandoval',
-        title: 'Web Developer & Team Lead',
-        cohort: 'Labs22',
-        img: erik,
-        github: 'https://github.com/erik-sandoval',
-        linkedIn: ''
-    },
-    {
-        id: 5,
-        name: 'Jonathan Allison',
-        title: 'Web Developer',
-        cohort: 'Labs22',
-        img: jonathan,
-        github: 'https://github.com/qb1968',
-        linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/'
-    },
-    {
-        id: 6,
-        name: 'Jordan Ireland',
-        title: 'Data Scientist',
-        cohort: 'Labs22',
-        img: jordan,
-        github: 'https://github.com/Jordan-Ireland',
-        linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/'
-    },
-    {
-        id: 7,
-        name: 'Justin Menendez',
-        title: 'UX Designer',
-        cohort: 'Labs22',
-        img: justin,
-        github: '',
-        linkedIn: 'https://www.linkedin.com/in/justinmenendez/'
-    },
-    {
-        id: 8,
-        name: 'Mathias Skreden',
-        title: 'Data Scientist',
-        cohort: 'Labs22',
-        img: mathias,
-        github: 'https://github.com/skredenmathias/',
-        linkedIn: 'https://www.linkedin.com/in/skredenmathias/'
-    },
-    {
-        id: 9,
-        name: 'Michelle Sirimanivong',
-        title: 'Web Developer',
-        cohort: 'Labs22',
-        img: michelle,
-        github: 'https://github.com/MicheSi',
-        linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'
-    },
-    {
         id: 10,
         name: 'Kevin Phillips',
         title: 'Full Stack Web Developer',
@@ -189,6 +108,79 @@ const profileData = [
         github: 'https://github.com/cedro-gasque',
         linkedIn: ''
     },
+    {
+        id: 1,
+        name: 'Agustin Vargas',
+        title: 'Data Scientist',
+        img: agustin,
+        github: 'https://github.com/avdata',
+        linkedIn: 'http://linkedin.com/in/vargasstem'
+    },
+    {
+        id: 2,
+        name: 'Cody Holman',
+        title: 'Web Developer',
+        img: cody,
+        github: 'https://github.com/cholman',
+        linkedIn: 'https://www.linkedin.com/in/cody-holman'
+    },
+    {
+        id: 3,
+        name: 'Connor Angelis',
+        title: 'Web Developer',
+        img: connor,
+        github: 'https://github.com/KonstadinosAngelis',
+        linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/'
+    },
+    {
+        id: 4,
+        name: 'Erik Sandoval',
+        title: 'Web Developer & Team Lead',
+        img: erik,
+        github: 'https://github.com/erik-sandoval',
+        linkedIn: ''
+    },
+    {
+        id: 5,
+        name: 'Jonathan Allison',
+        title: 'Web Developer',
+        img: jonathan,
+        github: 'https://github.com/qb1968',
+        linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/'
+    },
+    {
+        id: 6,
+        name: 'Jordan Ireland',
+        title: 'Data Scientist',
+        img: jordan,
+        github: 'https://github.com/Jordan-Ireland',
+        linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/'
+    },
+    {
+        id: 7,
+        name: 'Justin Menendez',
+        title: 'UX Designer',
+        img: justin,
+        github: '',
+        linkedIn: 'https://www.linkedin.com/in/justinmenendez/'
+    },
+    {
+        id: 8,
+        name: 'Mathias Skreden',
+        title: 'Data Scientist',
+        img: mathias,
+        github: 'https://github.com/skredenmathias/',
+        linkedIn: 'https://www.linkedin.com/in/skredenmathias/'
+    },
+    {
+        id: 9,
+        name: 'Michelle Sirimanivong',
+        title: 'Web Developer',
+        img: michelle,
+        github: 'https://github.com/MicheSi',
+        linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/'
+    },
+    
 ]
 
 export default profileData;
