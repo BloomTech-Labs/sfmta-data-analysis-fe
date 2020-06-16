@@ -235,3 +235,36 @@ export const Footer = styled.div `
   padding: 1%;
   margin-bottom: 1%
 `
+export const CardList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+`;
+
+export const ProfileCard = styled.div`
+         display: flex;
+         align-items: center;
+         margin: 2%;
+         flex-direction: column;
+         img {
+           height: 20vh;
+           width: 10vw;
+           border-radius: 5%;
+         }
+         div {
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           align-items: center;
+           border: 1px solid yellow;
+           ul {
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+           }
+         }
+         width: 25%;
+         padding: 2%;
+       `;
