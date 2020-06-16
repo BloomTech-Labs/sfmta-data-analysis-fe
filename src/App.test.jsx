@@ -59,12 +59,9 @@ test('copyright text appears in footer', () => {
 
 test('Bunches component renders without crashing', () => {
   render(<Bunches />)
+  
 })
-// test('Bunches title appears in card', () => {
-//   const { getByText } = render(<Bunches />)
 
-//   getByText(/BUNCHES/i);
-// })
 test('Gaps component renders without crashing', () => {
   render(<Gaps />)
 })
