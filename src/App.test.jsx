@@ -124,7 +124,6 @@ test('Ontime component renders without crashing', () => {
 // nav tests
 
 
-
 // test('Home link renders in nav bar', () => {
 //   const { getByText } = render(<NavBar />)
 
@@ -162,7 +161,6 @@ test('Ontime component renders without crashing', () => {
 
 //   getByText('Data');
 // })
-
 
 
 // // data page tests

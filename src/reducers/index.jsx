@@ -3,6 +3,7 @@ import { GET_ROUTE } from '../actions/index.jsx'
 import { GET_COORDINATES } from '../actions/index.jsx'
 import { GET_REPORTS } from '../actions/index.jsx'
 import { GET_ROUTEREPORT } from '../actions/index.jsx'
+import { GET_DATE } from "../actions/index.jsx";
 
 
 export const initialState = {
@@ -10,7 +11,7 @@ export const initialState = {
   routes: [],
   coordinates: [],
   report: {},
-  isLoading: false
+  isLoading: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -38,7 +39,10 @@ const reducer = (state = initialState, action) => {
       return{
         ...state, report: action.payload
       } 
-    
+    case GET_DATE:
+      return{
+        ...state, report: action.payload
+      }
 
     default:
       return state;
