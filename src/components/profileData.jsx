@@ -149,7 +149,8 @@ const profileData = [
         img: agustin,
         github: 'https://github.com/avdata',
         linkedIn: 'http://linkedin.com/in/vargasstem',
-        location: 'Calabasas, California'
+        location: 'Calabasas, California',
+        bio: 'An aspiring data scientist, with a background in scientific research and higher education administration; intuitive by nature and optimistic by habit.  My role in this project was to work with the DS team to gain insight into the traffic patterns of vehicles within the San Francisco public transit system.'
     },
     {
         id: 2,
@@ -159,7 +160,8 @@ const profileData = [
         img: cody,
         github: 'https://github.com/cholman',
         linkedIn: 'https://www.linkedin.com/in/cody-holman',
-        location: 'Auburn, Alabama'
+        location: 'Auburn, Alabama',
+        bio: 'Hobbyist tech nerd turned pro. A full stack web developer with a never ending desire to improve.'
     },
     {
         id: 3,
@@ -169,7 +171,8 @@ const profileData = [
         img: connor,
         github: 'https://github.com/KonstadinosAngelis',
         linkedIn: 'https://www.linkedin.com/in/konstadinos-a-a8a641199/',
-        location: 'Beaverton, Oregon'
+        location: 'Beaverton, Oregon',
+        bio: 'A growing front-end developer, with a short lifetime of always working with computers and technology. A nerd at heart and constantly working to dig myself a home in the software industry. My role in this project was working with the Plotly React API to bring a visualization of the San Francisco metro system to life.'
     },
     {
         id: 4,
@@ -179,7 +182,8 @@ const profileData = [
         img: erik,
         github: 'https://github.com/erik-sandoval',
         linkedIn: 'https://www.linkedin.com/in/erikfsandoval/',
-        location: 'Hemet, California'
+        location: 'Hemet, California',
+        bio: 'Nintendo and Hardware enthusiast, specializes in making and fixing own mistakes.'
     },
     {
         id: 5,
@@ -189,7 +193,8 @@ const profileData = [
         img: jonathan,
         github: 'https://github.com/qb1968',
         linkedIn: 'https://www.linkedin.com/in/jonathan-allison-1a4136196/',
-        location: 'Winston-Salem, North Carolina'
+        location: 'Winston-Salem, North Carolina',
+        bio: 'Jonathan is a Web Developer from North Carolina and proud husband, father, and grandfather. Not afraid to still chase my dreams.'
     },
     {
         id: 6,
@@ -199,7 +204,8 @@ const profileData = [
         img: jordan,
         github: 'https://github.com/Jordan-Ireland',
         linkedIn: 'https://www.linkedin.com/in/jordan-b-ireland/',
-        location: 'Phoenix, Arizona'
+        location: 'Phoenix, Arizona',
+        bio: 'Data Scientist by day and game developer by night. I have been programming for over 10 years and have a background in medicine and optics. I worked on creating the API that would be called to get the front end information and to support the rest of the Data Science team.'
     },
     {
         id: 7,
@@ -209,7 +215,8 @@ const profileData = [
         img: justin,
         github: '',
         linkedIn: 'https://www.linkedin.com/in/justinmenendez/',
-        location: 'Tallahassee, Florida'
+        location: 'Tallahassee, Florida',
+        bio: 'Like if Andre 3000 were a bohemian mystic.  Helped with Design and Creative Thinking.  Do the Good.'
     },
     {
         id: 8,
@@ -229,7 +236,8 @@ const profileData = [
         img: michelle,
         github: 'https://github.com/MicheSi',
         linkedIn: 'https://www.linkedin.com/in/michellesirimanivong/',
-        location: 'Surprise, AZ'
+        location: 'Surprise, AZ',
+        bio: 'Michelle is a full-stack web developer from Arizona. In her free time, she enjoys baking, playing video games and spending time with her husband and her 3 dogs.'
     },
     
 ]
