@@ -29,7 +29,7 @@ const profileData = [
         github: 'https://github.com/kphillips001/',
         linkedIn: 'https://www.linkedin.com/in/kevin-n-phillips/',
         location: 'Saint Louis, MO',
-        bio: 'Kevin has a background in financial/brokerage management as well as supply chain management. He has recently expanded his early-on interest of creating websites/applications to becoming a full time Lambda School student and is embarked upon his path to a new rewarding career.'
+        bio: 'Kevin has a background in financial/brokerage management as well as supply chain management. He has recently expanded his early-on interest of creating websites/applications to becoming a full time Lambda School student and is embarking upon this parth to a new rewarding career. In his free time, he likes to be outoors, hike, and ride motorcycles.'
     },
     {
         id: 11,
