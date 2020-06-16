@@ -8,7 +8,19 @@ import {BunchesCard} from './components/Left-panel/bunches';
 import {GapsCard} from './components/Left-panel/gaps';
 import {Coverage} from './components/right-panel/coverage';
 import {OnTimePercent} from './components/right-panel/onTime';
-import {ScoreCardChart} from './components/right-panel/overallHealth'
+import {ScoreCardChart} from './components/right-panel/overallHealth';
+import {LineChart} from './components/central-panel/line-chart';
+import {Map} from './components/central-panel/Map';
+
+// Central Panel components
+
+test('map renders without crashing', () => {
+  render(<Map/>)
+})
+
+test('line chat renders without crashing', () => {
+  render(<LineChart/>)
+})
 
 
 // left side components rendering
