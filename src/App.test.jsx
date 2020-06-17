@@ -13,7 +13,7 @@ import {LineChart} from './components/central-panel/line-chart';
 import {Map} from './components/central-panel/Map';
 import {AboutCard} from './components/AboutUs/About-Cards';
 import {AboutUsMap} from './components/AboutUs/aboutUsMap';
-import {AboutUs} from './components/AboutUs/aboutUs';
+
 
 // Central Panel components
 
