@@ -4,7 +4,7 @@ import { CardList, ProfileCard } from "../../style";
 
 
 
-const AboutCard = () => {
+export const AboutCard = () => {
   return(
     <CardList>
       {profileData.map(Card => {

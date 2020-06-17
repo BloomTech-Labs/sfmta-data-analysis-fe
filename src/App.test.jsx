@@ -11,6 +11,9 @@ import {OnTimePercent} from './components/right-panel/onTime';
 import {ScoreCardChart} from './components/right-panel/overallHealth';
 import {LineChart} from './components/central-panel/line-chart';
 import {Map} from './components/central-panel/Map';
+import {AboutCard} from './components/AboutUs/About-Cards';
+import {AboutUsMap} from './components/AboutUs/aboutUsMap';
+import {AboutUs} from './components/AboutUs/aboutUs';
 
 // Central Panel components
 
@@ -121,7 +124,28 @@ test('copyright text appears in footer', () => {
   const { getByText } = render(<Footer />)
 
   getByText(/ All Rights Reserved/i);
+}) 
+
+
+// about us tests
+
+
+test('about us card component renders without crashing', () => {
+  render(<AboutCard/>)
 })
+
+test('this tests the about us user field', () => {
+  const { getByText } = render(<AboutCard  />);
+  const aboutcard = getByText('Nick Migel');
+  expect(aboutcard).toBeInTheDocument();
+})
+
+
+test('about us map component renders without crashing', () => {
+  render(<AboutUsMap/>)
+})
+
+
 
 
 
