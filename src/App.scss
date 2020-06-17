@@ -244,6 +244,7 @@ select.form-control {
 }
 
 .central-panel{
+  position: relative;
   display:flex;
   flex-direction: column;
   width: 60%;
@@ -251,6 +252,43 @@ select.form-control {
   .map {
     display: flex;
   }
+
+  .route-list{
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    
+    &:hover{
+      overflow: auto; 
+    }
+    .route{
+      height: 12%; 
+      font-size: 1.2rem;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      cursor: pointer;
+      *{
+        margin: 0;
+      }
+      &:first-child{
+        border-bottom: #636667 1px solid;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      &:hover{
+        color: rgba(253, 90, 30, 0.95);
+      }
+    }
+  }
+
 
   .line-chart {
     height: 18.8vh;

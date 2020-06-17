@@ -11,15 +11,22 @@ export const RouteList = (props) => {
         date: props.date
     })
     useEffect(() => {
-        props.getRouteList(object)
+        console.log(props.route_type)
+        if(props.route_type!="All")
+            props.getRouteList(object)
     }, [props.route_type])
 
     return (
-        <>
-            {props.routes.forEach(route => {
-                return <Route route={route} />
-            })}
-        </>
+        <div className="route-list">
+                <div className="route">
+                    <p>All</p>
+                    <p>Health</p>
+                </div>
+            {props.routes.map(route => {
+                return <Route route={route}/>
+                })
+            }
+        </div>
     )
 }
 
