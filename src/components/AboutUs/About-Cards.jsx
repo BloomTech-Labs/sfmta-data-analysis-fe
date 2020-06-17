@@ -26,7 +26,7 @@ const AboutCard = () => {
                   <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
               </li>
-              <li>
+               <li>
                 <a href={Card.linkedIn} target="_blank">
                   <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>

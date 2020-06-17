@@ -40,7 +40,7 @@ const profileData = [
         github: 'https://github.com/rivercrow25',
         linkedIn: 'https://www.linkedin.com/in/nick-migel-67b4831a2/',
         location: 'Orlando, FL',
-        bio: 'A full stack Developer at lambda school who specializes in back end apis and state management. Can speak english broken spanish and a few phrases in french'
+        bio: 'A full stack Developer at Lambda School who specializes in back end apis and state management. Can speak english broken Spanish and a few phrases in French.'
     },
     {
         id: 12,
@@ -94,8 +94,8 @@ const profileData = [
         img: Jonathan,
         github: 'https://github.com/jonDuke',
         linkedIn: 'https://www.linkedin.com/in/jonduke90/',
-        location: 'Lynnwood, Washington',
-        bio: ''
+        location: 'Seattle, WA',
+        bio: 'Jonathan learned computer science through traditional school, and data science at Lambda School.  He is excited by automation and machine learning, and loves to find ways to apply both.  He also maintains a few other hobbies such as video game development, learning Japanese, and hiking.'
     },
     {
         id: 17,
@@ -239,8 +239,7 @@ const profileData = [
         location: 'Surprise, AZ',
         bio: 'Michelle is a full-stack web developer from Arizona. In her free time, she enjoys baking, playing video games and spending time with her husband and her 3 dogs.'
     },
-    
-]
+  ]
 
 export default profileData;
 

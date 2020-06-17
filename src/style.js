@@ -265,6 +265,7 @@ export const ProfileCard = styled.div`
              width: 40%;
              li {
                margin: 3%;
+              
              }
            }
          }
