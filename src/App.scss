@@ -27,26 +27,26 @@ html {
   width: 600px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #636667;
-}
+// .card {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: #636667;
+// }
 
-.card img {
-  width: 40%;
-  border: 1px solid #27251F;
-  border-radius: 5px;
-  margin-top: 5%;
-}
+// .card img {
+//   width: 40%;
+//   border: 1px solid #27251F;
+//   border-radius: 5px;
+//   margin-top: 5%;
+// }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2%;
-}
+// .card-body {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin: 2%;
+// }
 
 .linksDiv {
   display: flex;
@@ -403,9 +403,52 @@ select.form-control {
     cursor: pointer;
   }
   .popup-text {
-    color: black;
+    // color: black;
   }
-  
+
+  .cardList{
+    border: 1px solid red;
+    // justify-content: left;
+    .card{
+      background-color: rgba(0, 0, 0, 0);
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 50% 42% 8%;
+      grid-template-areas: "image" "text" "social";
+      width: 25%;
+      height: 80vh;
+      .img{
+        height: 100%;
+        grid-area: image;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .text-info{
+        height: 100%;
+        grid-area: text;
+        overflow: hidden;
+        text-overflow: clip;
+        flex-direction: column;
+        transition: 0.5 ease;
+        &:hover{
+          overflow: auto;
+        }
+      }
+      .social{
+        grid-area: social;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        a img{
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+  }
 }
 ul {
   list-style-type: none;
