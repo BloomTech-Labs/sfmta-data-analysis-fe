@@ -9,7 +9,7 @@ import Footer from './components/footer';
 import AboutUs from './components/AboutUs/aboutUs';
 import Dashboard from './components/Dashboard/Dashboard'
 import { connect } from 'react-redux'
-import { getType, sendType, getCoordinates, getReport, getRoutereport } from './actions/index.jsx'
+import { getType, sendType, getCoordinates, getReport } from './actions/index.jsx'
 
 function App(props) {
   props.getType()
@@ -32,4 +32,4 @@ function App(props) {
   );
 }
 
-export default connect(null, { getType, sendType, getCoordinates, getReport, getRoutereport })(App)
+export default connect(null, { getType, sendType, getCoordinates, getReport })(App)
