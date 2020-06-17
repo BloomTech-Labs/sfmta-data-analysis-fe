@@ -9,8 +9,8 @@ const CentralPanel = () => {
     return (
         <div className="central-panel">
             <Map />
-            {/* <LineChart/> */}
-            <RouteList />
+            <LineChart />
+            {/* <RouteList /> */}
         </div>
     );
 }

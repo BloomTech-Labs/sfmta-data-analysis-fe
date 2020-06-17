@@ -1,6 +1,5 @@
 import React from 'react';
-import ScoreCardChart from "./scorecardChart";
-import { ScoreFooter } from "./scoreFooter";
+import ScoreCardChart from "./overallHealth";
 import OnTimePercent from "./onTime"
 import Coverage from "./coverage"
 
@@ -8,8 +7,7 @@ export const RightPanel = () => {
 
   return (
     <div className="right-panel">
-      <div className="score-card metrics">
-        <h3>Overall Health</h3>
+      <div >
         <ScoreCardChart />
       </div>
       <OnTimePercent />

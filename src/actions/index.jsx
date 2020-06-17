@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // //datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/
 
-export const SET_DATE = "SET_DATE";
+export const GET_DATE = "GET_DATE";
 export const SET_TRANSIT_TYPE = "SET_TRANSIT_TYPE";
 export const GET_ROUTE = "GET_ROUTE";
 export const GET_COORDINATES = "GET_COORDINATES";
@@ -61,12 +61,13 @@ export const getRoutereport = (param) => dispatch => {
         })
 }
 
-export const getRouteList = params => dispatch => {
-    axios.post('https://be.datadriventransit.org/api/route-report', params)
+export const getDate = (param) => dispatch => {
+    axios.post('http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report/date', param)
         .then(res => {
-            console.log(res.data)
+            console.log(res, "get report by date");
+            dispatch({ type: GET_DATE, paylood: res.data })
         })
-        .catch(err => {
-            console.log(err)
+        .catch(error => {
+            console.log(error, "couldnt get report by date")
         })
 }
