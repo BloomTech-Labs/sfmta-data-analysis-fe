@@ -1,10 +1,10 @@
-// import React from 'react'
+import React from 'react'
 
-// const Route = (props) => {
-//     console.log(props)
-//     return (
-//         null
-//     )
-// }
+const Route = (props) => {
+    console.log(props)
+    return (
+        null
+    )
+}
 
-// export default Route
+export default Route
