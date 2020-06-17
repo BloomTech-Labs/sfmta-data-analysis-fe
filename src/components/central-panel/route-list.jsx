@@ -10,6 +10,8 @@ export const RouteList = (props) => {
         route_type: props.route_type,
         date: props.date
     })
+    const [open, setOpen] = useState(false)
+
     useEffect(() => {
         console.log(props.route_type)
         if(props.route_type!="All")
@@ -17,15 +19,22 @@ export const RouteList = (props) => {
     }, [props.route_type])
 
     return (
+        <div>
+            <button onClick={()=>{setOpen(!open)}}>Toggle</button>
+        {open?
         <div className="route-list">
                 <div className="route">
                     <p>All</p>
                     <p>Health</p>
-                </div>
+                </div> 
             {props.routes.map(route => {
                 return <Route route={route}/>
                 })
             }
+        </div>:
+            null
+        }
+
         </div>
     )
 }
