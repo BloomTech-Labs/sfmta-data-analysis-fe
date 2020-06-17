@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScoreCardChart } from "./scorecardChart";
+import ScoreCardChart from "./scorecardChart";
 import { ScoreFooter } from "./scoreFooter";
 import OnTimePercent from "./onTime"
 import Coverage from "./coverage"

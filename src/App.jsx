@@ -15,7 +15,7 @@ import { getType, sendType, getCoordinates, getReport, getRouteList } from './ac
 
 function App(props) {
   props.getReport()
-  props.getRouteList({ date: '2020-06-01', route_type: 'Bus' })
+  // props.getRouteList({ date: '2020-06-01', route_type: 'Bus' })
   return (
     <div className="App">
       <Router>

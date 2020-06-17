@@ -40,7 +40,9 @@ const reducer = (state = initialState, action) => {
       }
 
     case GET_ROUTE_LIST:
-      return state
+      return {
+        ...state, route: action.payload
+      }
 
     default:
       return state;

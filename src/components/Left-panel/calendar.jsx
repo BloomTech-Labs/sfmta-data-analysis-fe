@@ -1,23 +1,31 @@
-import React, {useState, useEffect} from "../../../node_modules/react";
+import React, { useState, useEffect } from "../../../node_modules/react";
 import Calendar from "../../../node_modules/react-calendar";
 import './calendarStyles.css';
+import { connect } from 'react-redux'
 
 
-const SfmtaCalendar = () => {
-const [date, setDate] = useState(new Date());
-const onChange =  date => {
-  setDate(date)
+const SfmtaCalendar = (props) => {
+  console.log(props.report)
+  const [date, setDate] = useState(props.report.date);
+  const onChange = date => {
+    setDate(date)
 
-}
- 
-return(
-<div className="metrics">
- <Calendar calendarType="ISO 8601" onChange={onChange} value={date}/>
-</div>
+  }
+
+  return (
+    <div className="metrics">
+      <Calendar calendarType="ISO 8601" onChange={onChange} defaultValue={date} />
+    </div>
   );
 }
 
-export default SfmtaCalendar;
+const mapStateToProps = state => {
+  return {
+    report: state.report
+  }
+}
+
+export default connect(mapStateToProps, {})(SfmtaCalendar);
 
 
 

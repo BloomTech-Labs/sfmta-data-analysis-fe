@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux'
 
-export const ScoreCardChart = (props) => {
+const ScoreCardChart = (props) => {
 
   console.log('this is now props', props)
   return (
