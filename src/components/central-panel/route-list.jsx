@@ -12,7 +12,7 @@ export const RouteList = (props) => {
     })
     useEffect(() => {
         props.getRouteList(object)
-    }, [])
+    }, [props.route_type])
 
     return (
         <>
