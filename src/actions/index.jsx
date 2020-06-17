@@ -82,7 +82,7 @@ export const setDate = (date) => dispatch => {
 export const getRouteList = (object) => dispatch => {
     axios.post('https://be.datadriventransit.org/api/route-report/', object)
         .then(res => {
-            console.log('happy')
+            console.log('happy', res)
             dispatch({ type: GET_ROUTE_REPORT, payload: res.data })
         })
         .catch(err => {

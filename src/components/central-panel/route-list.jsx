@@ -12,13 +12,13 @@ export const RouteList = (props) => {
     })
     useEffect(() => {
         props.getRouteList(object)
-    }, [])
+    }, [props.route_type])
 
     return (
         <>
-            {/* {props.routes && props.routes.forEach(route => {
+            {props.routes.forEach(route => {
                 return <Route route={route} />
-            })} */}
+            })}
         </>
     )
 }
