@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useParams } from "react-router-dom";
 import { NavItem } from 'reactstrap';
 import { getRoutereport } from '../../actions/index.jsx';
-import { getRouteList } from '../../actions/index.jsx'
+import { getRouteList, getDate } from '../../actions/index.jsx'
 import { connect } from 'react-redux';
 
 
 const DashboardNav = (props) => {
+    console.log(props.date, 'date')
     const { id } = useParams()
     const [type, setType] = useState({
         route_type: id,
@@ -15,7 +16,11 @@ const DashboardNav = (props) => {
 
 
     const handleSubmit = () => {
-        props.getRoutereport({ route_type: id || 'All' })
+        if (props.date) {
+            props.getDate(type)
+        } else {
+            props.getRoutereport({ route_type: id || 'All' })
+        }
         if (type.route_type !== 'All') {
             props.getRouteList(type)
         }
@@ -70,4 +75,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { getRoutereport, getRouteList })(DashboardNav);
+export default connect(mapStateToProps, { getRoutereport, getRouteList, getDate })(DashboardNav);

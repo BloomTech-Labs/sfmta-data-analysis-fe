@@ -5,11 +5,11 @@ import { connect } from "react-redux";
 import { setDate } from '../../actions/index'
 
 const SfmtaCalendar = (props) => {
-  console.log(props.report)
   const [date, setDate] = useState(props.report.date);
+
   const onChange = date => {
     setDate(date)
-    props.setDate(date.toISOString().substring)
+    props.setDate(date.toISOString().substring(0, 10))
   }
 
   return (
@@ -23,7 +23,7 @@ const SfmtaCalendar = (props) => {
 
 const mapStateToProps = state => {
   return {
-    report: state.report
+    report: state.report,
   }
 }
 export default connect(mapStateToProps, { setDate })(SfmtaCalendar)

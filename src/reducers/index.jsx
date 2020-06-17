@@ -8,7 +8,7 @@ import { SET_DATE_STATE, GET_ROUTE_REPORT, SET_ROUTE_REPORT } from '../actions/i
 
 
 const initialState = {
-  date: '',
+  date: false,
   transit_type: [],
   routes: [],
   coordinates: [],

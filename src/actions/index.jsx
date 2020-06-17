@@ -65,12 +65,13 @@ export const getRoutereport = (param) => dispatch => {
 }
 
 export const getDate = (param) => dispatch => {
-    axios.post('https://be.datadriventransit.org/api/report/type/api/report/date', param)
+    axios.post('https://be.datadriventransit.org/api/report/date', param)
         .then(res => {
             console.log(res, "get report by date");
-            dispatch({ type: GET_DATE, paylood: res.data })
+            dispatch({ type: GET_DATE, payload: res.data })
         })
         .catch(error => {
+            console.log(param)
             console.log(error, "couldnt get report by date")
         })
 }
