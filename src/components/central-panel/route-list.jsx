@@ -16,9 +16,9 @@ export const RouteList = (props) => {
 
     return (
         <>
-            {/* {props.routes && props.routes.forEach(route => {
+            {props.routes.forEach(route => {
                 return <Route route={route} />
-            })} */}
+            })}
         </>
     )
 }

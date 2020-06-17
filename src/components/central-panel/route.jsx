@@ -3,7 +3,7 @@ import React from 'react'
 const Route = (props) => {
     console.log(props)
     return (
-        null
+        <h1>{props.route.route_name}</h1>
     )
 }
 
