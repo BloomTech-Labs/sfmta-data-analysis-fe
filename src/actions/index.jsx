@@ -11,7 +11,8 @@ export const GET_REPORTS = "GET_REPORTS";
 export const GET_ROUTEREPORT = "GET_ROUTEREPORT";
 export const GET_ROUTE_LIST = "GET_ROUTE_LIST";
 export const SET_DATE_STATE = "SET_DATE_STATE";
-export const GET_ROUTE_REPORT = "GET_ROUTE_REPORT"
+export const GET_ROUTE_REPORT = "GET_ROUTE_REPORT";
+export const SET_ROUTE_REPORT = "SET_ROUTE_REPORT";
 
 
 export const getType = () => dispatch => {
@@ -88,4 +89,8 @@ export const getRouteList = (object) => dispatch => {
         .catch(err => {
             console.log(err.message, 'sad')
         })
+}
+
+export const setRouteReport = (report) => dispatch => {
+    dispatch({ type: SET_ROUTE_REPORT, payload: report })
 }

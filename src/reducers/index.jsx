@@ -4,7 +4,7 @@ import { GET_COORDINATES } from '../actions/index.jsx'
 import { GET_REPORTS } from '../actions/index.jsx'
 import { GET_ROUTEREPORT } from '../actions/index.jsx'
 import { GET_DATE } from "../actions/index.jsx";
-import { SET_DATE_STATE, GET_ROUTE_REPORT } from '../actions/index.jsx'
+import { SET_DATE_STATE, GET_ROUTE_REPORT, SET_ROUTE_REPORT } from '../actions/index.jsx'
 
 
 const initialState = {
@@ -54,6 +54,11 @@ const reducer = (state = initialState, action) => {
     case GET_ROUTE_REPORT:
       return {
         ...state, routes: action.payload
+      }
+
+    case SET_ROUTE_REPORT:
+      return {
+        ...state, report: action.payload
       }
 
     default:
