@@ -6,25 +6,24 @@ import { getRouteList } from '../../actions/index'
 import Route from './route'
 
 export const RouteList = (props) => {
-    const [object, SetObject] = useState({
-        route_type: props.route_type,
-        date: props.date
-    })
-    useEffect(() => {
-        console.log(props.route_type)
-        if(props.route_type!="All")
-            props.getRouteList(object)
-    }, [props.route_type])
+    // const [object, SetObject] = useState({
+    //     route_type: props.route_type,
+    //     date: props.date
+    // })
+    // useEffect(() => {
+    //     console.log(props.route_type)
+    //     if (props.route_type != "All")
+    //         props.getRouteList(object)
+    // }, [props.route_type, props.date])
 
     return (
         <div className="route-list">
-                <div className="route">
-                    <p>All</p>
-                    <p>Health</p>
-                </div>
+            <div className="route">
+                <p>{props.route_type}</p>
+            </div>
             {props.routes.map(route => {
-                return <Route route={route}/>
-                })
+                return <Route route={route} />
+            })
             }
         </div>
     )
