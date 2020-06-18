@@ -266,6 +266,7 @@ select.form-control {
   .drop {
     height: 100vh;
     top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .hidden {
@@ -295,9 +296,7 @@ select.form-control {
       justify-content: space-between;
       user-select: none;
       cursor: pointer;
-      .health{
-        color: white;
-      }
+      
       *{
         margin: 0;
       }
@@ -308,6 +307,17 @@ select.form-control {
     .route:nth-child(odd){
       background-color: #272727;
     }
+    
+    .health:not(:first-child){
+      color: white;
+    }
+    .health-header{
+      color: #FF6D37;
+    }
+    .route:first-child{
+      color: rgba(253, 90, 30, 0.95)
+    }
+    
   }
   .drop-down{
     position: absolute;
@@ -321,12 +331,8 @@ select.form-control {
     padding-top: 1.3%;
     font-size: 1.2rem;
     cursor: pointer;
-    &:hover{
-      color: rgba(253, 90, 30, 0.95);
-    }
-    .health{
-      color: white;
-    }
+    color: #FF6D37;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
 
