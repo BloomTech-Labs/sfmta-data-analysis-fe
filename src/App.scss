@@ -431,6 +431,9 @@ select.form-control {
         text-overflow: clip;
         flex-direction: column;
         transition: 0.5 ease;
+        p, h5{
+          color: white;
+        }
         &:hover{
           overflow: auto;
         }
