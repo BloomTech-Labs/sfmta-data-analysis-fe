@@ -13,6 +13,7 @@ import {LineChart} from './components/central-panel/line-chart';
 import {Map} from './components/central-panel/Map';
 import {AboutCard} from './components/AboutUs/About-Cards';
 import {AboutUsMap} from './components/AboutUs/aboutUsMap';
+import Route from './components/central-panel/route';
 
 
 // Central Panel components
@@ -23,6 +24,10 @@ test('map renders without crashing', () => {
 
 test('line chat renders without crashing', () => {
   render(<LineChart/>)
+})
+
+test ('Route picker is rendering without crashing', () => {
+  render(<Route/>)
 })
 
 
@@ -57,7 +62,7 @@ test('tests gaps title', () => {
 
 test('tests gaps metric', () => {
   const { getByText } = render(<GapsCard  gaps={50} />);
-  const gaps = getByText('50');
+  const gaps = getByText('50%');
   expect(gaps).toBeInTheDocument();
 })
 
