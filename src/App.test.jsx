@@ -17,9 +17,6 @@ import {Route} from './components/central-panel/route';
 import AboutUs from './components/AboutUs/aboutUs';
 import {SfmtaCalendar} from './components/Left-panel/calendar';
 
-test('map renders without crashing', () => {
-  render(<SfmtaCalendar/>)
-})
 
 // Central Panel components
 
