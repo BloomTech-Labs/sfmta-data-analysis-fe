@@ -8,6 +8,11 @@ export const GET_ROUTE = "GET_ROUTE";
 export const GET_COORDINATES = "GET_COORDINATES";
 export const GET_REPORTS = "GET_REPORTS";
 export const GET_ROUTEREPORT = "GET_ROUTEREPORT";
+export const GET_ROUTE_LIST = "GET_ROUTE_LIST";
+export const SET_DATE_STATE = "SET_DATE_STATE";
+export const GET_ROUTE_REPORT = "GET_ROUTE_REPORT";
+export const SET_ROUTE_REPORT = "SET_ROUTE_REPORT";
+export const SET_ACTIVE_ROUTE = "SET_ACTIVE_ROUTE";
 
 
 export const getType = () => dispatch => {
@@ -61,12 +66,36 @@ export const getRoutereport = (param) => dispatch => {
 }
 
 export const getDate = (param) => dispatch => {
-    axios.post('http://datadriventransit-env.eba-f6pyasyj.us-east-1.elasticbeanstalk.com/api/report/date', param)
+    axios.post('https://be.datadriventransit.org/api/report/date', param)
         .then(res => {
             console.log(res, "get report by date");
-            dispatch({ type: GET_DATE, paylood: res.data })
+            dispatch({ type: GET_DATE, payload: res.data })
         })
         .catch(error => {
+            console.log(param)
             console.log(error, "couldnt get report by date")
         })
+}
+
+export const setDate = (date) => dispatch => {
+    dispatch({ type: SET_DATE_STATE, payload: date })
+}
+
+export const getRouteList = (object) => dispatch => {
+    axios.post('https://be.datadriventransit.org/api/route-report/', object)
+        .then(res => {
+            console.log('happy', res)
+            dispatch({ type: GET_ROUTE_REPORT, payload: res.data })
+        })
+        .catch(err => {
+            console.log(err.message, 'sad')
+        })
+}
+
+export const setRouteReport = (report) => dispatch => {
+    dispatch({ type: SET_ROUTE_REPORT, payload: report })
+}
+
+export const setActiveRoute = (route) => dispatch => {
+    dispatch({ type: SET_ACTIVE_ROUTE, payload: route })
 }

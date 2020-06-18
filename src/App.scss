@@ -201,6 +201,15 @@ select.form-control {
   .navigation{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
+  a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    margin-bottom: 0.6%;
+    margin-right: 0.5%;
+    padding-right: 0.5%;
+    border-right: 1px white solid;
+  }
 }
 
 .dashboard {
@@ -244,6 +253,7 @@ select.form-control {
 }
 
 .central-panel{
+  position: relative;
   display:flex;
   flex-direction: column;
   width: 60%;
@@ -251,6 +261,79 @@ select.form-control {
   .map {
     display: flex;
   }
+
+  .drop {
+    height: 100vh;
+    top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .route-list{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    &:hover{
+      overflow: auto; 
+    }
+    &:hover::-webkit-scrollbar{
+      display: none;
+    }
+    .route{
+      height: 7%;
+      font-size: 1.2rem;
+      padding: 0 2rem;
+      padding-top: 0.4rem;
+      color: #18A0FB;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      cursor: pointer;
+      
+      *{
+        margin: 0;
+      }
+      &:hover{
+        color: rgba(253, 90, 30, 0.95);
+      }
+    }
+    .route:nth-child(odd){
+      background-color: #272727;
+    }
+    
+    .health:not(:first-child){
+      color: white;
+    }
+    .health-header{
+      color: #FF6D37;
+    }
+    .route:first-child{
+      color: rgba(253, 90, 30, 0.95)
+    }
+    
+  }
+  .drop-down{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    width: 100%;
+    height: 5vh;
+    padding: 0 2rem;
+    padding-top: 1.3%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #FF6D37;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
 
   .line-chart {
     height: 18.8vh;
