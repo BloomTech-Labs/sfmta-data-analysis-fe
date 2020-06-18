@@ -194,22 +194,21 @@ select.form-control {
   justify-content: center;
   p{
     font-size: 0.8rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     margin-top: 0.5rem;
-    opacity: 40%;
+    
   }
   .navigation{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
   a{
     text-decoration: none;
-    color: white;
-    opacity: 40%;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
-    margin-bottom: 1%;
+    margin-bottom: 0.6%;
     margin-right: 0.5%;
     padding-right: 0.5%;
-    border-right: 1px white solid;
+    border-right: 1px rgba(255, 255, 255, 0.5) solid;
   }
 }
 

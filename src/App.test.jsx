@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 
 
-
-import Footer from './components/footer';
+import {Footer} from './components/footer';
 import {BunchesCard} from './components/Left-panel/bunches';
 import {GapsCard} from './components/Left-panel/gaps';
 import {Coverage} from './components/right-panel/coverage';
@@ -16,11 +16,8 @@ import {AboutUsMap} from './components/AboutUs/aboutUsMap';
 import {Route} from './components/central-panel/route';
 import AboutUs from './components/AboutUs/aboutUs';
 
-import {DashboardNav} from './components/Dashboard/DashboardNav';
 
-test('dashboardnav renders without crashing', () => {
-  render(<DashboardNav/>)
-})
+
 
 
 // Central Panel components
@@ -137,12 +134,13 @@ test('tests overall health title', () => {
 //footer tests
 
 test('Footer component renders without crashing', () => {
-  render(<Footer />)
+  render(<MemoryRouter> <Footer /> </MemoryRouter>  )
 })
-test('copyright text appears in footer', () => {
-  const { getByText } = render(<Footer />)
 
-  getByText(/ All Rights Reserved/i);
+test('copyright text appears in footer', () => {
+  const { getByText } = render(<MemoryRouter><Footer /></MemoryRouter>)
+
+  getByText('About us' );
 }) 
 
 
