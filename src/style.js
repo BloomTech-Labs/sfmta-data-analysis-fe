@@ -235,3 +235,25 @@ export const Footer = styled.div `
   padding: 1%;
   margin-bottom: 1%
 `
+export const CardList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+`;
+
+export const ProfileCard = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  img {
+    height: 20vh;
+    width: 10vw;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+  }
+  width: 25%;
+       `;

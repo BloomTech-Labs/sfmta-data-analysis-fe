@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {  NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { NavLink } from "react-router-dom";
 import logo from '../images/logo.png';
 import { MainNav, Wrapper } from '../style';
@@ -10,9 +10,8 @@ const NavBar = props => {
         <Wrapper>
             <MainNav color="#636667" expand="md" className="navigation">
                 <Nav className="mr-auto navigation" navbar>
-                    <a className='ddt' href='/'><NavbarBrand><img className='logo' src={logo} alt='logo'/> Data Driven Transit</NavbarBrand></a>
+                    <a className='ddt' href='/'><NavbarBrand><img className='logo' src={logo} alt='logo' /> Data Driven Transit</NavbarBrand></a>
                     <NavItem>
-                        <NavLink exact to="/info/aboutus">About us</NavLink>
                     </NavItem>
                 </Nav>
             </MainNav>

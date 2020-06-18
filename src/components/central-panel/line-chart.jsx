@@ -2,7 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2'
 import { connect } from "react-redux"
 
-function LineChart(props) {
+export function LineChart(props) {
   return (
     <div className="line-chart">
       <Line

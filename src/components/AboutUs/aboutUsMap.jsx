@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import ReactMapGL, {  Marker, Popup } from 'react-map-gl';
-import * as devData from './data/developer-data.json';
+import * as devData from '../data/developer-data.json';
 
-function AboutUs() {
+export function AboutUsMap() {
   // setup map of US based on central coorindate points 
   const [viewport, setViewPort] = useState({
     latitude: 37.71,
@@ -43,7 +43,7 @@ return (
               setSelectedDev(dev)
             }}
             >
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <i className="fa fa-map-marker" aria-hidden="true"></i>
           </button>
         </Marker>
       ))}
@@ -69,4 +69,4 @@ return (
   );
 }
 
-export default AboutUs
+export default AboutUsMap

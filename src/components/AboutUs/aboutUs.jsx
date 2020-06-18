@@ -1,13 +1,12 @@
 import React from 'react';
 import AboutUsMap from './aboutUsMap';
+import AboutCard from './About-Cards';
 
-import {StyledH2} from '../style'
-
-const AboutUs = props => {
+ const AboutUs = () => {
     return (
         <div className="about-us">
-            <StyledH2>Our Team</StyledH2>
             <AboutUsMap />
+            <AboutCard />
         </div>
     )
 }
