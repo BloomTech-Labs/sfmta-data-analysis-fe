@@ -244,6 +244,7 @@ select.form-control {
 }
 
 .central-panel{
+  position: relative;
   display:flex;
   flex-direction: column;
   width: 60%;
@@ -251,6 +252,57 @@ select.form-control {
   .map {
     display: flex;
   }
+
+  .drop {
+    height: 50%;
+    top: 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .route-list{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    &:hover{
+      overflow: auto; 
+    }
+    
+    .route{
+      height: 12%;
+      font-size: 1.2rem;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      cursor: pointer;
+      *{
+        margin: 0;
+      }
+      &:hover{
+        color: rgba(253, 90, 30, 0.95);
+      }
+    }
+  }
+  .drop-down{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    width: 100%;
+    height: 4vh;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    margin-top: 0.3%;
+    cursor: pointer;
+  }
+
 
   .line-chart {
     height: 18.8vh;
