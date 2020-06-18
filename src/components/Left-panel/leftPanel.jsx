@@ -2,7 +2,7 @@ import React from 'react';
 import SfmtaCalendar from "./calendar";
 import BunchesCard from "./bunches";
 import GapsCard from "./gaps";
-import OntimeCard from "./on-time";
+
 
 
  export const LeftPanel = () => {
@@ -12,7 +12,6 @@ import OntimeCard from "./on-time";
        <SfmtaCalendar/>
        <BunchesCard/>
        <GapsCard/>
-       {/* <OntimeCard/>  */}
     </div>
     );
 }

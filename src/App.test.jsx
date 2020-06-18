@@ -14,6 +14,13 @@ import {Map} from './components/central-panel/Map';
 import {AboutCard} from './components/AboutUs/About-Cards';
 import {AboutUsMap} from './components/AboutUs/aboutUsMap';
 import {Route} from './components/central-panel/route';
+import AboutUs from './components/AboutUs/aboutUs';
+
+import {DashboardNav} from './components/Dashboard/DashboardNav';
+
+test('dashboardnav renders without crashing', () => {
+  render(<DashboardNav/>)
+})
 
 
 // Central Panel components
@@ -75,6 +82,7 @@ test('tests gaps metric', () => {
 
 
 // right side components rendering
+
 test('Coverage component renders without crashing', () => {
   render(<Coverage/>)
 })
@@ -143,6 +151,10 @@ test('copyright text appears in footer', () => {
 
 test('about us card component renders without crashing', () => {
   render(<AboutCard/>)
+})
+
+test('testing about us component renders', () => {
+  render(<AboutUs/>)
 })
 
 test('this tests the about us user field', () => {

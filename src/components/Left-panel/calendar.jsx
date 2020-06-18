@@ -4,7 +4,7 @@ import './calendarStyles.css';
 import { connect } from "react-redux";
 import { setDate } from '../../actions/index'
 
-const SfmtaCalendar = (props) => {
+export const SfmtaCalendar = (props) => {
   const [date, setDate] = useState(props.report.date);
 
   const onChange = date => {
