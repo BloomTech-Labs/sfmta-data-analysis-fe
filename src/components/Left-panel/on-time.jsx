@@ -1,6 +1,6 @@
 import React from 'react';
 
-function OntimeCard(){
+export function OntimeCard(){
         return(
         <div className="leftsideMetrics metrics">
             <h2 className="leftsideTitles">ON TIME %</h2>

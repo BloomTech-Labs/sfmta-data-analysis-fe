@@ -1,95 +1,159 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import App from './App.jsx';
 
-import DashboardNav from './components/Dashboard/DashboardNav';
-import Dashboard from './components/Dashboard/Dashboard';
+
 import Footer from './components/footer';
-import Bunches from './components/Left-panel/bunches';
-import Gaps from './components/Left-panel/gaps';
-import SfmtaCalendar from './components/Left-panel/calendar';
-import Coverage from './components/right-panel/coverage';
-import Ontime from './components/right-panel/onTime';
-import Overallhealth from './components/right-panel/overallHealth';
-import Linechart from './components/central-panel/line-chart';
-import Map from './components/central-panel/Map';
-import Centralpanel from './components/central-panel/centralPanel';
-
-jest.mock('./App');
-jest.mock('./components/aboutUs');
-jest.mock('./components/Dashboard/Dashboard')
-jest.mock('./components/Dashboard/DashboardNav')
-jest.mock('./components/Left-panel/calendar')
-jest.mock('./components/Left-panel/bunches')
-jest.mock('./components/Left-panel/gaps')
-jest.mock('./components/right-panel/coverage')
-jest.mock('./components/right-panel/onTime')
-jest.mock('./components/right-panel/overallHealth')
-jest.mock('./components/central-panel/centralPanel')
-jest.mock('./components/central-panel/line-chart')
-jest.mock('./components/central-panel/Map')
+import {BunchesCard} from './components/Left-panel/bunches';
+import {GapsCard} from './components/Left-panel/gaps';
+import {Coverage} from './components/right-panel/coverage';
+import {OnTimePercent} from './components/right-panel/onTime';
+import {ScoreCardChart} from './components/right-panel/overallHealth';
+import {LineChart} from './components/central-panel/line-chart';
+import {Map} from './components/central-panel/Map';
+import {AboutCard} from './components/AboutUs/About-Cards';
+import {AboutUsMap} from './components/AboutUs/aboutUsMap';
+import {Route} from './components/central-panel/route';
 
 
-// need to figure out how to test calendar
+// Central Panel components
 
-//test for app
-test('renders app without crashing', () => {
-  render(<App />)
-});
-
-// dashboard and dashboard components rendering
-
-test('Dashboard tests renders without crashing', () => {
-  render(<Dashboard />)
+test('map renders without crashing', () => {
+  render(<Map/>)
 })
 
-test('Dashboard nav component renders without crashing', () => {
-  render(<DashboardNav/>)
+test('line chat renders without crashing', () => {
+  render(<LineChart/>)
 })
 
-test('Footer component renders without crashing', () => {
-  render(<Footer />)
+test ('Route picker is rendering without crashing', () => {
+  render(<Route route={{
+    route_name: 'bus',
+    overall_health: '86',
+    setRouteReport: () => {},
+    setActiveRoute: () => {},
+    toggleDropDown: () => {}
+  }}/>)
 })
+
 
 // left side components rendering
 
 test('Bunches component renders without crashing', () => {
-  render(<Bunches />)
+  render(<BunchesCard />)
+  
 })
+
+test('tests bunches title', () => {
+  const { getByText } = render(<BunchesCard  />);
+  const bunches = getByText('BUNCHES');
+  expect(bunches).toBeInTheDocument();
+})
+
+test('tests bunches metric', () => {
+  const { getByText } = render(<BunchesCard bunches={50} />);
+  const bunches = getByText('BUNCHES');
+  expect(bunches).toBeInTheDocument();
+})
+
 test('Gaps component renders without crashing', () => {
-  render(<Gaps />)
+  render(<GapsCard />)
 })
-test('calendar component renders without crashing', () => {
-  render(<SfmtaCalendar/>)
+
+test('tests gaps title', () => {
+  const { getByText } = render(<GapsCard   />);
+  const gaps = getByText('GAPS');
+  expect(gaps).toBeInTheDocument();
 })
+
+test('tests gaps metric', () => {
+  const { getByText } = render(<GapsCard  gaps={50} />);
+  const gaps = getByText('50%');
+  expect(gaps).toBeInTheDocument();
+})
+
 
 
 // right side components rendering
 test('Coverage component renders without crashing', () => {
-  render(<Coverage />)
+  render(<Coverage/>)
 })
+
+test('tests coverage title', () => {
+  const { getByText } = render(<Coverage  />);
+  const coverage = getByText('Coverage');
+  expect(coverage).toBeInTheDocument();
+})
+
+test('tests coverage metric', () => {
+  const { getByText } = render(<Coverage coverage={50} />);
+  const coverage = getByText('50%');
+  expect(coverage).toBeInTheDocument();
+})
+
 
 test('Ontime component renders without crashing', () => {
-  render(<Ontime />)
+  render(<OnTimePercent/>)
 })
 
-test('OverallHealth component renders without crashing', () => {
-  render(<Overallhealth />)
+test('tests on time title', () => {
+  const { getByText } = render(<OnTimePercent  />);
+  const ontime = getByText('On Time %');
+  expect(ontime).toBeInTheDocument();
 })
 
-// central panel 
-test('Map component renders without crashing', () => {
-  render(<centralPanel/>)
+test('tests on time metric', () => {
+  const { getByText } = render(<OnTimePercent on_time_percentage={50} />);
+  const on_time_percentage = getByText('50%');
+  expect(on_time_percentage).toBeInTheDocument();
+})
+
+test('overall health component renders without crashing', () => {
+  render(<ScoreCardChart/>)
+})
+
+test('tests overall health title', () => {
+  const { getByText } = render(<ScoreCardChart  />);
+  const overall_health = getByText('Health');
+  expect(overall_health).toBeInTheDocument();
+})
+
+test('tests overall health title', () => {
+  const { getByText } = render(<ScoreCardChart overall_health={50}  />);
+  const overall_health = getByText('50%');
+  expect(overall_health).toBeInTheDocument();
 })
 
 
-test('Line chart component renders without crashing', () => {
-  render(<Linechart/>)
+
+//footer tests
+
+test('Footer component renders without crashing', () => {
+  render(<Footer />)
+})
+test('copyright text appears in footer', () => {
+  const { getByText } = render(<Footer />)
+
+  getByText(/ All Rights Reserved/i);
+}) 
+
+
+// about us tests
+
+
+test('about us card component renders without crashing', () => {
+  render(<AboutCard/>)
 })
 
-test('Map component renders without crashing', () => {
-  render(<Map/>)
+test('this tests the about us user field', () => {
+  const { getByText } = render(<AboutCard  />);
+  const aboutcard = getByText('Nick Migel');
+  expect(aboutcard).toBeInTheDocument();
+})
+
+
+test('about us map component renders without crashing', () => {
+  render(<AboutUsMap/>)
 })
 
 
@@ -104,93 +168,6 @@ test('Map component renders without crashing', () => {
 
 
 
-
-// test('trolley image is rendering', () => {
-//   const { getByAltText } = render(<LandingPage />)
-
-//   getByAltText(/trolley/i);
-// })
-
-// test('city image renders on landing page', () => {
-//   const { getByAltText } = render(<LandingPage />)
-
-//   getByAltText(/city/i);
-// })
-
-// nav tests
-
-// test('logo renders in nav bar', () => {
-//   const { getByAltText } = render(<NavBar />)
-
-//   getByAltText(/logo/i);
-// })
-
-// test('Home link renders in nav bar', () => {
-//   const { getByText } = render(<NavBar />)
-
-//   getByText('Home');
-// })
-
-// test('Data link renders in nav bar', () => {
-//   const { getByText } = render(<NavBar />)
-
-//   getByText('Data');
-// })
-
-// test('About us link renders in nav bar', () => {
-//   const { getByText } = render(<NavBar />)
-
-//   getByText('About Us');
-// })
-
-// // footer tests
-
-// test('logo renders in footer', () => {
-//   const { getByAltText } = render(<Footer />)
-
-//   getByAltText(/logo/i);
-// })
-
-// test('Home link renders in footer', () => {
-//   const { getByText } = render(<Footer />)
-
-//   getByText(/home/i);
-// })
-
-// test('Data link renders in footer', () => {
-//   const { getByText } = render(<Footer />)
-
-//   getByText('Data');
-// })
-
-// test('About us link renders in footer', () => {
-//   const { getByText } = render(<Footer />)
-
-//   getByText(/about/i);
-// })
-
-// // data page tests
-// test('data page is rendering', () => {
-//   render(<RouteList />)
-// })
-
-// test('show route button is rendering', () => {
-//   const { queryByText } = render(<RouteList />)
-
-//   queryByText('Show Route')
-// })
-
-// test('select type is rendering', () => {
-//   const { queryByText } = render(<RouteList />)
-
-//   queryByText('Select a type')
-// })
-
-// test('select route is rendering', () => {
-//   const { queryByText } = render(<RouteList />)
-
-//   queryByText('Select type to see routes')
-// })
 
 
 
