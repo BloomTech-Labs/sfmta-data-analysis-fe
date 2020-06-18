@@ -17,4 +17,3 @@ const mapStateToProps = state => {
   }
 }
 export default connect(mapStateToProps, {})(Coverage)
-
