@@ -275,9 +275,10 @@ select.form-control {
       display: none;
     }
     .route{
-      height: 12%;
+      height: 7%;
       font-size: 1.2rem;
       padding: 0 2rem;
+      padding-top: 0.4rem;
       color: #18A0FB;
       display: flex;
       align-items: center;
@@ -290,6 +291,9 @@ select.form-control {
       &:hover{
         color: rgba(253, 90, 30, 0.95);
       }
+    }
+    .route:nth-child(odd){
+      background-color: #272727;
     }
   }
   .drop-down{
