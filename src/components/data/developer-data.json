@@ -284,6 +284,21 @@
         "role": "Data Scientist",
         "cohort": "Labs22"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.377200,
+          58.249500
+        ]
+      },
+      "properties": {
+        "name": "Mathias Skreden",
+        "role": "Data Scientist",
+        "cohort": "Labs22"
+      }
     }
   ]
 }
