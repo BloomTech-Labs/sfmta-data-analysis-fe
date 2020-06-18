@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setRouteReport, setActiveRoute } from '../../actions/index'
 
-const Route = (props) => {
+export const Route = (props) => {
 
     const setRoute = (route) => {
         props.setRouteReport(route)

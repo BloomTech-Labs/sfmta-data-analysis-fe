@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 
 
-
-import Footer from './components/footer';
+import {Footer} from './components/footer';
 import {BunchesCard} from './components/Left-panel/bunches';
 import {GapsCard} from './components/Left-panel/gaps';
 import {Coverage} from './components/right-panel/coverage';
@@ -13,6 +13,11 @@ import {LineChart} from './components/central-panel/line-chart';
 import {Map} from './components/central-panel/Map';
 import {AboutCard} from './components/AboutUs/About-Cards';
 import {AboutUsMap} from './components/AboutUs/aboutUsMap';
+import {Route} from './components/central-panel/route';
+import AboutUs from './components/AboutUs/aboutUs';
+
+
+
 
 
 // Central Panel components
@@ -23,6 +28,16 @@ test('map renders without crashing', () => {
 
 test('line chat renders without crashing', () => {
   render(<LineChart/>)
+})
+
+test ('Route picker is rendering without crashing', () => {
+  render(<Route route={{
+    route_name: 'bus',
+    overall_health: '86',
+    setRouteReport: () => {},
+    setActiveRoute: () => {},
+    toggleDropDown: () => {}
+  }}/>)
 })
 
 
@@ -57,13 +72,14 @@ test('tests gaps title', () => {
 
 test('tests gaps metric', () => {
   const { getByText } = render(<GapsCard  gaps={50} />);
-  const gaps = getByText('50');
+  const gaps = getByText('50%');
   expect(gaps).toBeInTheDocument();
 })
 
 
 
 // right side components rendering
+
 test('Coverage component renders without crashing', () => {
   render(<Coverage/>)
 })
@@ -118,12 +134,13 @@ test('tests overall health title', () => {
 //footer tests
 
 test('Footer component renders without crashing', () => {
-  render(<Footer />)
+  render(<MemoryRouter> <Footer /> </MemoryRouter>  )
 })
-test('copyright text appears in footer', () => {
-  const { getByText } = render(<Footer />)
 
-  getByText(/ All Rights Reserved/i);
+test('copyright text appears in footer', () => {
+  const { getByText } = render(<MemoryRouter><Footer /></MemoryRouter>)
+
+  getByText('About us' );
 }) 
 
 
@@ -132,6 +149,10 @@ test('copyright text appears in footer', () => {
 
 test('about us card component renders without crashing', () => {
   render(<AboutCard/>)
+})
+
+test('testing about us component renders', () => {
+  render(<AboutUs/>)
 })
 
 test('this tests the about us user field', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-const Footer = props => {
+export const Footer = props => {
     return (
         <div className="footer">
             <NavLink exact to="/info/aboutus">About us</NavLink>

@@ -27,26 +27,26 @@ html {
   width: 600px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #636667;
-}
+// .card {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: #636667;
+// }
 
-.card img {
-  width: 40%;
-  border: 1px solid #27251F;
-  border-radius: 5px;
-  margin-top: 5%;
-}
+// .card img {
+//   width: 40%;
+//   border: 1px solid #27251F;
+//   border-radius: 5px;
+//   margin-top: 5%;
+// }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2%;
-}
+// .card-body {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin: 2%;
+// }
 
 .linksDiv {
   display: flex;
@@ -194,9 +194,9 @@ select.form-control {
   justify-content: center;
   p{
     font-size: 0.8rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     margin-top: 0.5rem;
-    opacity: 40%;
+    
   }
   .navigation{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -488,7 +488,62 @@ select.form-control {
   .popup-text {
     color: black;
   }
-  
+
+  .cardList{
+    margin: 0 auto;
+    width: 85%;
+    .card{
+      background-color: rgba(0, 0, 0, 0);
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 50% 42% 8%;
+      grid-template-areas: "image" "text" "social";
+      width: 27%;
+      height: 80vh;
+      border: none;
+      margin: 1rem 0.5rem;
+      .img{
+        height: 100%;
+        grid-area: image;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .text-info{
+        height: 100%;
+        grid-area: text;
+        overflow: hidden;
+        text-overflow: clip;
+        flex-direction: column;
+        transition: 0.5 ease;
+        padding: 1rem 0rem;
+        p, h5{
+          color: white;
+        }
+        &:hover{
+          overflow: auto;
+        }
+      }
+      .social{
+        grid-area: social;
+        align-items: center;
+        justify-content: left;
+        width: 100%;
+        height: 100%;
+        a{ 
+          margin: 0.2rem 1rem;
+          img{
+            height: 25px;
+            width: 25px;
+          }
+          .linkedIn{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 ul {
   list-style-type: none;

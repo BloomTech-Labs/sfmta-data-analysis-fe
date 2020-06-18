@@ -7,8 +7,9 @@ import { GET_DATE } from "../actions/index.jsx";
 import { SET_DATE_STATE, GET_ROUTE_REPORT, SET_ROUTE_REPORT, SET_ACTIVE_ROUTE } from '../actions/index.jsx'
 
 
-export const initialState = {
+const initialState = {
   active: false,
+  date: false,
   transit_type: [],
   routes: [],
   coordinates: [],
