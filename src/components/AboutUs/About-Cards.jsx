@@ -30,7 +30,7 @@ const AboutCard = () => {
               {/* <i class="fa fa-linkedin" aria-hidden="true"></i> */}
             </a>
             <a href={Card.linkedIn} target="_blank">
-            <img src={require("../../images/Icons/mary_Portfolio.svg")}/>
+            <img src={require("../../images/Icons/mary_Portfolio.svg")} className="linkedIn"/>
               {/* <i class="fa fa-linkedin" aria-hidden="true"></i> */}
             </a>
           </div>
