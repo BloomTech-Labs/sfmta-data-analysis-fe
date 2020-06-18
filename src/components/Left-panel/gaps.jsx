@@ -15,7 +15,7 @@ export function GapsCard(props) {
 
 const mapStateToProps = state => {
     return {
-        gaps: state.report.gapped_percentage
+        gaps: state.report.gapped_percentage || state.report.gapped_percengage
     }
 }
 
