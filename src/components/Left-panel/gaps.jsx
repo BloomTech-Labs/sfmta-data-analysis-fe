@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-function GapsCard(props) {
+export function GapsCard(props) {
     return (
 
         <div className="metricsgaps">
