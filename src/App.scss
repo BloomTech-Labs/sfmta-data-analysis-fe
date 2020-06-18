@@ -464,12 +464,13 @@ select.form-control {
     border: none;
     cursor: pointer;
   }
-  // .popup-text {
-  //   // color: black;
-  // }
+  .popup-text {
+    color: black;
+  }
 
   .cardList{
     margin: 0 auto;
+    width: 85%;
     .card{
       background-color: rgba(0, 0, 0, 0);
       display: grid;
