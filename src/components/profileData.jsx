@@ -40,7 +40,8 @@ const profileData = [
         github: 'https://github.com/rivercrow25',
         linkedIn: 'https://www.linkedin.com/in/nick-migel-67b4831a2/',
         location: 'Orlando, FL',
-        bio: 'A full stack Developer at Lambda School who specializes in back end apis and state management. Can speak english broken Spanish and a few phrases in French.'
+        bio: 'A full stack Developer at Lambda School who specializes in back end apis and state management. Can speak english broken Spanish and a few phrases in French.',
+        portfolio: 'https://www.nickmigel.com/'
     },
     {
         id: 12,
@@ -51,7 +52,8 @@ const profileData = [
         github: 'https://github.com/justinruss24',
         linkedIn: 'https://www.linkedin.com/in/justinrussell-web/',
         location: 'Portland, OR',
-        bio: 'Justin Russell is a Full stack web developer on track to endorsement at Lambda School. As a former collegiate athlete, his love for competition and sport spread to the golf course. When Justin isn’t at his computer, he is out walking 18 holes somewhere enjoying the time outside.'
+        bio: 'Justin Russell is a Full stack web developer on track to endorsement at Lambda School. As a former collegiate athlete, his love for competition and sport spread to the golf course. When Justin isn’t at his computer, he is out walking 18 holes somewhere enjoying the time outside.',
+        portfolio: 'https://www.justinruss.com/'
     },
     {
         id: 13,
@@ -62,7 +64,9 @@ const profileData = [
         github: 'https://github.com/MrR3set',
         linkedIn: 'https://www.linkedin.com/in/byronpaz',
         location: 'Los Angelos, CA',
-        bio: 'Bairon is a full Stack Web Developer at lambda. He attended 2 years of Software engineering in college. Can Speak Spanish and English.'
+        bio: 'Bairon is a full Stack Web Developer at lambda. He attended 2 years of Software engineering in college. Can Speak Spanish and English.',
+        portolio: 'http://baironpaz.com/'
+        
     },
     {
         id: 14,
@@ -117,7 +121,8 @@ const profileData = [
         github: 'https://github.com/marinastr',
         linkedIn: 'https://www.linkedin.com/in/mstreletska/',
         location: 'Boston, MA',
-        bio: 'Mary specializes in UX/UI and Front-end Design. Mary’s work  is  fueled by  empathy and interest in understanding user psychology.Mary speaks English, Russian and Ukrainian.'
+        bio: 'Mary specializes in UX/UI and Front-end Design. Mary’s work  is  fueled by  empathy and interest in understanding user psychology.Mary speaks English, Russian and Ukrainian.',
+        portfolio: 'https://www.behance.net/marinastrelet '
     },
     {
         id: 19,
@@ -128,7 +133,8 @@ const profileData = [
         github: 'https://github.com/kylewp13',
         linkedIn: 'https://www.linkedin.com/in/kyletech',
         location: 'Tampa, FL',
-        bio: 'Kyle Porter is a Full Stack Web Developer who graduated from Lambda School. During his tenure at Lambda, Kyle engaged in hands-on coding through all phases of several projects. Most notably, Kyle was involved in creating Citrics as we know it today. From Jacksonville, Florida, Kyle knew Web Developing was his jam when he began coding personal websites during his free time using Google and Trial-and-error. Fast-forward a few months and Kyle was assisting several ecommerce go-lives. During his free time, Kyle enjoys traveling domestically to explore major metro cities, trying different local eateries, and home renovations.'
+        bio: 'Kyle Porter is a Full Stack Web Developer who graduated from Lambda School. During his tenure at Lambda, Kyle engaged in hands-on coding through all phases of several projects. Most notably, Kyle was involved in creating Citrics as we know it today. From Jacksonville, Florida, Kyle knew Web Developing was his jam when he began coding personal websites during his free time using Google and Trial-and-error. Fast-forward a few months and Kyle was assisting several ecommerce go-lives. During his free time, Kyle enjoys traveling domestically to explore major metro cities, trying different local eateries, and home renovations.',
+        portfolio: 'https://www.kyleporter.tech/'
     },
     {
         id: 19,
