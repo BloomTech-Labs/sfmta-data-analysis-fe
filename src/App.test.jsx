@@ -13,7 +13,7 @@ import {LineChart} from './components/central-panel/line-chart';
 import {Map} from './components/central-panel/Map';
 import {AboutCard} from './components/AboutUs/About-Cards';
 import {AboutUsMap} from './components/AboutUs/aboutUsMap';
-import Route from './components/central-panel/route';
+import {Route} from './components/central-panel/route';
 
 
 // Central Panel components
@@ -27,7 +27,13 @@ test('line chat renders without crashing', () => {
 })
 
 test ('Route picker is rendering without crashing', () => {
-  render(<Route/>)
+  render(<Route route={{
+    route_name: 'bus',
+    overall_health: '86',
+    setRouteReport: () => {},
+    setActiveRoute: () => {},
+    toggleDropDown: () => {}
+  }}/>)
 })
 
 
