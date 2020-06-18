@@ -22,16 +22,13 @@ const AboutCard = () => {
           </div>
           <div className="social">
             <a href={Card.github} target="_blank">
-              <img src={require("../../images/Icons/mary_Github.svg")}/>
-              {/* <i class="fa fa-github" aria-hidden="true"></i> */}
+              <img src={require("../../images/Icons/mary_Github.svg")} alt="Github"/>
             </a>
             <a href={Card.linkedIn} target="_blank">
-            <img src={require("../../images/Icons/mary_LinkedIn.svg")}/>
-              {/* <i class="fa fa-linkedin" aria-hidden="true"></i> */}
+            <img src={require("../../images/Icons/mary_LinkedIn.svg")} alt="Linkedin"/>
             </a>
-            <a href={Card.linkedIn} target="_blank">
-            <img src={require("../../images/Icons/mary_Portfolio.svg")} className="linkedIn"/>
-              {/* <i class="fa fa-linkedin" aria-hidden="true"></i> */}
+            <a href={Card.Portfolio} target="_blank">
+            <img src={require("../../images/Icons/mary_Portfolio.svg")} alt="Portfolio" className="linkedIn"/>
             </a>
           </div>
         </ProfileCard>
