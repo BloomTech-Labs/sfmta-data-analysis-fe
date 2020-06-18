@@ -2,13 +2,11 @@ import React from "react";
 import { connect } from 'react-redux';
 
 export const ScoreCardChart = (props) => {
-
-  console.log('This is scorecard', props)
   return (
     <div className='metrics'>
       <h2 className='title'>Health</h2>
-     <h1 className='contenthealth'>{props.overall_health}%</h1>
-     </div>
+      <h1 className='contenthealth'>{props.overall_health}%</h1>
+    </div>
   );
 };
 

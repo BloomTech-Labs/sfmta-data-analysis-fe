@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 
 
 const DashboardNav = (props) => {
-    console.log(props.date, 'date')
     const { id } = useParams()
     const [type, setType] = useState({
         route_type: id,
@@ -24,7 +23,6 @@ const DashboardNav = (props) => {
         if (type.route_type !== 'All') {
             props.getRouteList(type)
         }
-        console.log(type)
 
     }
 
@@ -35,9 +33,7 @@ const DashboardNav = (props) => {
 
 
     return (
-
         <nav className="navigation">
-            {console.log('this rerenderd')}
             <NavItem>
                 <NavLink exact to="/" onClick={() => setType({ route_type: 'All', date: props.date })}>All</NavLink>
             </NavItem>

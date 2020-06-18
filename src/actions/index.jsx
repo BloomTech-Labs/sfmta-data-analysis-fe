@@ -12,6 +12,7 @@ export const GET_ROUTE_LIST = "GET_ROUTE_LIST";
 export const SET_DATE_STATE = "SET_DATE_STATE";
 export const GET_ROUTE_REPORT = "GET_ROUTE_REPORT";
 export const SET_ROUTE_REPORT = "SET_ROUTE_REPORT";
+export const SET_ACTIVE_ROUTE = "SET_ACTIVE_ROUTE";
 
 
 export const getType = () => dispatch => {
@@ -93,4 +94,8 @@ export const getRouteList = (object) => dispatch => {
 
 export const setRouteReport = (report) => dispatch => {
     dispatch({ type: SET_ROUTE_REPORT, payload: report })
+}
+
+export const setActiveRoute = (route) => dispatch => {
+    dispatch({ type: SET_ACTIVE_ROUTE, payload: route })
 }

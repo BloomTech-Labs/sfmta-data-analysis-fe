@@ -1,16 +1,21 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { setRouteReport } from '../../actions/index'
+import { setRouteReport, setActiveRoute } from '../../actions/index'
 
 const Route = (props) => {
-    console.log("route", props)
+
+    const setRoute = (route) => {
+        props.setRouteReport(route)
+        props.setActiveRoute(route)
+        props.toggleDropDown(true)
+    }
 
     return (
-        <div className="route" onClick={() => props.setRouteReport(props.route)}>
+        <div className="route" onClick={() => setRoute(props.route)}>
             <p>{props.route.route_name}</p>
             {/* <p>{props.route.coverage}</p> */}
         </div>
     )
 }
 
-export default connect(null, { setRouteReport })(Route)
+export default connect(null, { setRouteReport, setActiveRoute })(Route)
