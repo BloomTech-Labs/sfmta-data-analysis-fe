@@ -14,7 +14,12 @@ import {Map} from './components/central-panel/Map';
 import {AboutCard} from './components/AboutUs/About-Cards';
 import {AboutUsMap} from './components/AboutUs/aboutUsMap';
 import {Route} from './components/central-panel/route';
+import AboutUs from './components/AboutUs/aboutUs';
+import {SfmtaCalendar} from './components/Left-panel/calendar';
 
+test('map renders without crashing', () => {
+  render(<SfmtaCalendar/>)
+})
 
 // Central Panel components
 
@@ -144,6 +149,10 @@ test('copyright text appears in footer', () => {
 
 test('about us card component renders without crashing', () => {
   render(<AboutCard/>)
+})
+
+test('testing about us component renders', () => {
+  render(<AboutUs/>)
 })
 
 test('this tests the about us user field', () => {
