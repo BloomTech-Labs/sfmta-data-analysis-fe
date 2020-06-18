@@ -13,7 +13,7 @@ export const Route = (props) => {
     return (
         <div className="route" onClick={() => setRoute(props.route)}>
             <p>{props.route.route_name}</p>
-            <p>{props.route.overall_health}</p>
+            <p className='health'>{props.route.overall_health}</p>
         </div>
     )
 }

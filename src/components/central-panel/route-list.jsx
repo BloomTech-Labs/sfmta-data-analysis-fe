@@ -21,7 +21,7 @@ export const RouteList = (props) => {
 
                 <div className="route" onClick={() => toggleDropDown(open)}>
                     <p>Route</p>
-                    <p>Health</p>
+                    <p id='health-header'>Health</p>
                 </div>
                 {
                     props.routes.map(route => {
