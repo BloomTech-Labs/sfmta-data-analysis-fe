@@ -75,6 +75,7 @@ test('tests gaps metric', () => {
 
 
 // right side components rendering
+
 test('Coverage component renders without crashing', () => {
   render(<Coverage/>)
 })
