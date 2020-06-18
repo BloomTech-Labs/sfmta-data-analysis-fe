@@ -15,7 +15,12 @@ import {AboutCard} from './components/AboutUs/About-Cards';
 import {AboutUsMap} from './components/AboutUs/aboutUsMap';
 import {Route} from './components/central-panel/route';
 import AboutUs from './components/AboutUs/aboutUs';
-import {SfmtaCalendar} from './components/Left-panel/calendar';
+
+import {DashboardNav} from './components/Dashboard/DashboardNav';
+
+test('dashboardnav renders without crashing', () => {
+  render(<DashboardNav/>)
+})
 
 
 // Central Panel components
