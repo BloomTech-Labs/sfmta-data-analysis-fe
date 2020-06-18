@@ -264,7 +264,7 @@ select.form-control {
   }
 
   .drop {
-    height: 50%;
+    height: 100vh;
     top: 0;
   }
 
@@ -295,6 +295,9 @@ select.form-control {
       justify-content: space-between;
       user-select: none;
       cursor: pointer;
+      .health{
+        color: white;
+      }
       *{
         margin: 0;
       }
