@@ -402,20 +402,23 @@ select.form-control {
     border: none;
     cursor: pointer;
   }
-  // .popup-text {
-  //   // color: black;
-  // }
+  .popup-text {
+    color: black;
+  }
 
   .cardList{
-    // justify-content: left;
+    margin: 0 auto;
+    width: 85%;
     .card{
       background-color: rgba(0, 0, 0, 0);
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 50% 42% 8%;
       grid-template-areas: "image" "text" "social";
-      width: 25%;
+      width: 27%;
       height: 80vh;
+      border: none;
+      margin: 1rem 0.5rem;
       .img{
         height: 100%;
         grid-area: image;
@@ -431,6 +434,10 @@ select.form-control {
         text-overflow: clip;
         flex-direction: column;
         transition: 0.5 ease;
+        padding: 1rem 0rem;
+        p, h5{
+          color: white;
+        }
         &:hover{
           overflow: auto;
         }
@@ -438,12 +445,18 @@ select.form-control {
       .social{
         grid-area: social;
         align-items: center;
-        justify-content: space-around;
+        justify-content: left;
         width: 100%;
         height: 100%;
-        a img{
-          height: 50px;
-          width: 50px;
+        a{ 
+          margin: 0.2rem 1rem;
+          img{
+            height: 25px;
+            width: 25px;
+          }
+          .linkedIn{
+            width: 100%;
+          }
         }
       }
     }
