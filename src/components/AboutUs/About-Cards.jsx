@@ -27,9 +27,10 @@ export const AboutCard = () => {
             <a href={Card.linkedIn} target="_blank">
             <img src={require("../../images/Icons/mary_LinkedIn.svg")} alt="Linkedin"/>
             </a>
-            <a href={Card.Portfolio} target="_blank">
+            {Card.portfolio && <a href={Card.portfolio} target="_blank">
             <img src={require("../../images/Icons/mary_Portfolio.svg")} alt="Portfolio" className="linkedIn"/>
-            </a>
+            </a>}  
+                        
           </div>
         </ProfileCard>
       );
