@@ -201,6 +201,16 @@ select.form-control {
   .navigation{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
+  a{
+    text-decoration: none;
+    color: white;
+    opacity: 40%;
+    font-size: 0.8rem;
+    margin-bottom: 1%;
+    margin-right: 0.5%;
+    padding-right: 0.5%;
+    border-right: 1px white solid;
+  }
 }
 
 .dashboard {
