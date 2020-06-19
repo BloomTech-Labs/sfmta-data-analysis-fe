@@ -1,10 +1,15 @@
-import { SET_TRANSIT_TYPE } from '../actions/index.jsx'
-import { GET_ROUTE } from '../actions/index.jsx'
-import { GET_COORDINATES } from '../actions/index.jsx'
-import { GET_REPORTS } from '../actions/index.jsx'
-import { GET_ROUTEREPORT } from '../actions/index.jsx'
-import { GET_DATE } from "../actions/index.jsx";
-import { SET_DATE_STATE, GET_ROUTE_REPORT, SET_ROUTE_REPORT, SET_ACTIVE_ROUTE } from '../actions/index.jsx'
+import {
+  SET_TRANSIT_TYPE,
+  GET_ROUTE,
+  GET_COORDINATES,
+  GET_REPORTS,
+  GET_ROUTEREPORT,
+  GET_DATE,
+  SET_DATE_STATE,
+  GET_ROUTE_REPORT,
+  SET_ROUTE_REPORT,
+  SET_ACTIVE_ROUTE
+} from '../actions/index.jsx'
 
 
 const initialState = {
@@ -40,7 +45,7 @@ const reducer = (state = initialState, action) => {
 
     case GET_ROUTEREPORT:
       return {
-        ...state, report: action.payload
+        ...state, report: action.payload, active: false
       }
     case GET_DATE:
       return {
