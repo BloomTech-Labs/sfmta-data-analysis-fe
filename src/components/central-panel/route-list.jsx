@@ -14,8 +14,7 @@ export const RouteList = (props) => {
     return (
         <div>
             <div className={"route-list" + (open ? ' hidden' : ' drop-down')} onClick={() => toggleDropDown(open)}>
-                <p>{props.active.route_name || 'Route'}</p>
-                <p>{props.active.overall_health || 'Health'}</p>
+                <p>{props.active.route_name || 'Select A Route'}</p>
                 <div className='triangle' />
             </div>
             <div className={"route-list" + (open ? ' drop' : ' hidden')}>
