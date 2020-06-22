@@ -52,7 +52,7 @@ You can find the staging server at https://staging.d3j9ctmbednoov.amplifyapp.com
 ## 1️⃣ Tech Stack
 
 ### Front end built using:
-    React, plotly
+    React, MapBox, Redux
 
 #### _Front end framework goes here_
 React
@@ -83,7 +83,8 @@ Flask App API that returns real time data with vehicle ID and vehicle direction 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
 
-    *  REACT_APP_PLOTLY_API_KEY = pk.eyJ1IjoicGFuZHVoaCIsImEiOiJjanpiaG53bTgwMTQwM25sbmZhcGp6cGJqIn0.Cp4ld9nKsu7zE4-YbSeeQg 
+  * REACT_APP_MAPBOX_TOKEN = pk.eyJ1Ijoic2ZtdGFsYW1iZGEiLCJhIjoiY2thc2ppM2RtMWo4NzJxcDE1MDB3MWNieiJ9.M5tx0lpksjJp3OY4BXkyow 
+
 
 # 5️⃣ Content Licenses
 

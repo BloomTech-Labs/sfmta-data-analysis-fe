@@ -13,7 +13,7 @@ export function LineChart(props) {
               data: props.line_chart ? props.line_chart.gaps : null,
               label: '# gapped',
               backgroundColor: ["#FBD03F", "#40FFCE"],
-              borderColor: '#00FFFF',
+              borderColor: '#40FFCE', 
               fill: false,
             },
             {
@@ -31,12 +31,38 @@ export function LineChart(props) {
           aspectRatio: 1,
           maintainAspectRatio: false,
           scales: {
-            yAxes: [{
+              yAxes: [{
+                gridLines: {
+                  display: true,
+                  color: "",
+                  lineWidth: 3,
+                  zeroLineWidth: 3,
+                  zeroLineColor: "#40FFCE",
+                  drawTicks: false,
+                  tickMarkLength: 3
+                },
               ticks: {
                 max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
-                stepSize: 50
+                stepSize: 50,
               }
-            }]
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false,
+                color: "",
+                lineWidth: 3,
+                zeroLineWidth: 3,
+                zeroLineColor: "#40FFCE",
+                drawTicks: false,
+                tickMarkLength: 0,
+                showLines: false
+              },
+            ticks: {
+              max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
+              stepSize: 50,
+            }
+          }],
+            
           }
 
         }}

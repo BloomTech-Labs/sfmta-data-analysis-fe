@@ -2,8 +2,6 @@ import React from 'react';
 import profileData from '../profileData';
 import { CardList, ProfileCard } from "../../style";
 
-
-
 export const AboutCard = () => {
   return(
     <CardList className="cardList">
