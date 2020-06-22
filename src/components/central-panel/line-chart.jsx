@@ -37,10 +37,7 @@ export function LineChart(props) {
                   lineWidth: 3,
                   zeroLineWidth: 3,
                   zeroLineColor: "#40FFCE",
-                  fontColor: "#40FFCE",
-                  scaleLabel: {
-                    fontColor: "#40FFCE"
-                  }
+                  
                 },
               ticks: {
                 max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
@@ -54,10 +51,7 @@ export function LineChart(props) {
                 lineWidth: 3,
                 zeroLineWidth: 3,
                 zeroLineColor: "#40FFCE",
-                fontColor: "#40FFCE",
-                scaleLabel: {
-                  fontColor: "#40FFCE"
-                }
+                
               },
             ticks: {
               max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
