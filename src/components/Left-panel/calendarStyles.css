@@ -1,7 +1,7 @@
 /* need to change the page for responsiveness */
 .react-calendar {
     width: 17.5rem;
-    background: #333333;
+    background: #272B2F;
     /* background-image: linear-gradient(180deg, rgba(64, 255, 207, 0.055) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%); */
     border:  0.125rem solid #00A493;
     text-decoration: #00A493;
@@ -44,7 +44,7 @@
   /* This controls the top monthly navigation */
   .react-calendar__navigation button {
     min-width: 2.7rem;
-    background: #333333;
+    background: #272B2F;
     /* background-image:linear-gradient(180deg, rgba(64, 255, 207, 0.281) 1%, rgba(64, 255, 207, 0.055) 40.47%, rgba(51, 51, 51, 0.02) 105.71%); */
     text-decoration: bold;
     color: white;
