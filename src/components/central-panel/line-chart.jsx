@@ -45,7 +45,7 @@ export function LineChart(props) {
               ticks: {
                 max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
                 stepSize: 50,
-                fontColor: "#40FFCE"
+                
               }
             }],
             xAxes: [{
@@ -62,7 +62,7 @@ export function LineChart(props) {
             ticks: {
               max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
               stepSize: 50,
-              fontColor: "#40FFCE"      
+                   
             }
           }],
             
