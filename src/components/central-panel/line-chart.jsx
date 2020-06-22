@@ -34,32 +34,35 @@ export function LineChart(props) {
               yAxes: [{
                 gridLines: {
                   display: true,
-                  color: "",
                   lineWidth: 3,
                   zeroLineWidth: 3,
                   zeroLineColor: "#40FFCE",
-                  drawTicks: false,
-                  tickMarkLength: 3
+                  fontColor: "#40FFCE",
+                  scaleLabel: {
+                    fontColor: "#40FFCE"
+                  }
                 },
               ticks: {
                 max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
                 stepSize: 50,
+                fontColor: "#40FFCE"
               }
             }],
             xAxes: [{
               gridLines: {
-                display: false,
-                color: "",
+                display: true,
                 lineWidth: 3,
                 zeroLineWidth: 3,
                 zeroLineColor: "#40FFCE",
-                drawTicks: false,
-                tickMarkLength: 0,
-                showLines: false
+                fontColor: "#40FFCE",
+                scaleLabel: {
+                  fontColor: "#40FFCE"
+                }
               },
             ticks: {
               max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
               stepSize: 50,
+              fontColor: "#40FFCE"      
             }
           }],
             
