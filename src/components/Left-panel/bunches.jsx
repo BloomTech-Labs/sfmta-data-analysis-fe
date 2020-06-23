@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {Hover} from '../hover';
 
 export function BunchesCard(props) {
     return (
         <div className="metricsbunches metrics">
+            <Hover/>
             <h2 className="title">Bunches</h2>
             <h1 className="contentbunches">{props.bunches}%</h1>
         </div>

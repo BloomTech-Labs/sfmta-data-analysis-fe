@@ -405,6 +405,7 @@ select.form-control {
 .metrics{
   display: flex;
   flex-direction: column;
+  position:relative;
   height: auto;
   min-height: 14.81rem;
   width: 100%;
@@ -556,6 +557,20 @@ ul {
   list-style-type: none;
 }
 
+.hoverdiv{
+display:flex;
+justify-content:center;
+position: absolute;
+right:0;
+top:0;
+margin: 1% 1% 0 0;
+width:1.875rem;
+height:1.875rem;
+align-items:center;
+border: 1px solid #40ffcf10;
+color: #40ffce;
+
+}
 
 
  
