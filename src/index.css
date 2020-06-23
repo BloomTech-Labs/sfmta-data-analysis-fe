@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: 'Khula', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #27251F;
