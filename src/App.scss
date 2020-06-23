@@ -558,31 +558,29 @@ ul {
 }
 
 .hoverdiv{
-display:flex;
-justify-content:center;
-position: absolute;
-right:0;
-top:0;
-margin: 1% 1% 0 0;
-width:1.875rem;
-height:1.875rem;
-align-items:center;
-border: 1px solid #40ffcf10;
-color: #40ffce;
-
+  display:flex;
+  justify-content:center;
+  position: absolute;
+  right:0;
+  top:0;
+  margin: 1% 1% 0 0;
+  width:1.875rem;
+  height:1.875rem;
+  align-items:center;
+  border: 1px solid #40ffcf10;
+  color: #40ffce;
 }
-
 .hiddenpopup{
   display:none;
 }
 .hover{
   display:flex;
 }
-.hoverdiv{
- position: absolute;
- 
-}
 .popup{ 
+  position: absolute;
+  left: 0;
+  margin-left: 24rem;
+  z-index: 1;
   background-color: #2a2e4170;
   width: 13.98rem;
   height: 7.6875rem;
