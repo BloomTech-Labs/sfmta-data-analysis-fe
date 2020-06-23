@@ -413,6 +413,17 @@ select.form-control {
  align-items: center;
   background-color: #272B2F;
   color:white;
+  .popup{ 
+    position: absolute;
+    margin-left: 8rem;
+    padding: 2%;
+    text-align: center;
+    left: 0;
+    z-index: 1;
+    background-color: #2a2e41;
+    width: 13.98rem;
+    height: 7.6875rem;
+  }
 
   .title{
     margin-top:15%;
@@ -444,6 +455,19 @@ select.form-control {
   background-color: #272B2F;
   color:#ffffff;
 
+  .metrics{
+    .popup{ 
+      position: absolute;
+      left: 0;
+      margin-left: 16.5rem;
+      z-index: 1;
+      background-color: #2a2e41;
+      width: 17.98rem;
+      height: 17.6875rem;
+    }
+  }
+  
+
   .title{
     margin-top:15%;
     font-size:3.125rem;
@@ -458,12 +482,23 @@ select.form-control {
 .metricsgaps{
   display: flex;
   flex-direction: column;
+  position: relative;
   height: auto;
   min-height: 14.81rem;
   width: 100%;
   align-items: center;
   background-color: #272B2F;
   color:#ffffff;
+  .popup{ 
+    position: absolute;
+    left: 0;
+    margin-left: 23.5rem;
+    text-align: center;
+    z-index: 1;
+    background-color: #2a2e41;
+    width: 13.98rem;
+    height: 7.6875rem;
+  }
 
   .title{
     margin-top:15%;
@@ -575,15 +610,6 @@ ul {
 }
 .hover{
   display:flex;
-}
-.popup{ 
-  position: absolute;
-  left: 0;
-  margin-left: 24rem;
-  z-index: 1;
-  background-color: #2a2e4170;
-  width: 13.98rem;
-  height: 7.6875rem;
 }
 
  

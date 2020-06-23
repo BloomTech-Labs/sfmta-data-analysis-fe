@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Hover} from '../hover';
+import { Hover } from '../hover';
 
 export function BunchesCard(props) {
     return (
         <div className="metricsbunches metrics">
-            <Hover sentence={'We define bunches on the route as areas where vehicles get too close to each other throughout out the day, measured at every stop'}/>
+            <Hover sentence={'Define bunches on the route as areas where vehicles get too close to each other through the day, measured at every stop'} />
             <h2 className="title">Bunches</h2>
             <h1 className="contentbunches">{props.bunches}%</h1>
         </div>
