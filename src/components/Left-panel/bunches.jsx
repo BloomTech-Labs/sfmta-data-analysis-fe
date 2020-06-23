@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 export function BunchesCard(props) {
     return (
         <div className="metricsbunches metrics">
-            <h2 className="title">BUNCHES</h2>
+            <h2 className="title">Bunches</h2>
             <h1 className="contentbunches">{props.bunches}%</h1>
         </div>
 

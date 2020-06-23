@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   body {
-    background-color: #1f1f1f;
+    background-color: #272727;
   }
 }
 
@@ -12,7 +12,7 @@ html {
 //   max-width: 100%;
 //   min-height: 100vh;
 //   width: 100%;
-//   margin: auto;
+//   margin: auto;1
 // } 
 .content {
   flex: 1;
@@ -185,10 +185,10 @@ select.form-control {
 
 .footer{
   position: sticky;
-
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 3rem;
-  background-color: #1F1F1F;
+  background-color: #272727;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,9 +197,6 @@ select.form-control {
     color: rgba(255, 255, 255, 0.5);
     margin-top: 0.5rem;
     
-  }
-  .navigation{
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
   a{
     text-decoration: none;
@@ -323,7 +320,7 @@ select.form-control {
     top: 0;
     display: flex;
     justify-content: space-between;
-    background-color: #1f1f1f;
+    background-color:#272727;
     width: 100%;
     height: 5vh;
     padding: 0 2rem;

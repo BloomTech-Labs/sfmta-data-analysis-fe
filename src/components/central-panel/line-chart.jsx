@@ -3,9 +3,10 @@ import { Line } from 'react-chartjs-2'
 import { connect } from "react-redux"
 
 export function LineChart(props) {
-  return (
+ return (
     <div className="line-chart">
       <Line
+    
         data={{
           labels: props.line_chart ? props.line_chart.times : null,
           datasets: [
@@ -14,6 +15,7 @@ export function LineChart(props) {
               label: '# gapped',
               backgroundColor: ["#FBD03F", "#40FFCE"],
               borderColor: '#00FFFF',
+             lineColor: '#FF6D37',
               fill: false,
             },
             {
@@ -21,6 +23,7 @@ export function LineChart(props) {
               label: '# bunches',
               backgroundColor: ["#FF6D37", "#232323"],
               borderColor: '#FF4500',
+          
               fill: false
             }
           ]

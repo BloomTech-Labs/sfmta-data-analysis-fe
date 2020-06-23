@@ -5,7 +5,7 @@ export function GapsCard(props) {
     return (
 
         <div className="metricsgaps">
-            <h2 className="title">GAPS</h2>
+            <h2 className="title">Gaps</h2>
             <h1 className="contentgaps">{props.gaps}%</h1>
         </div>
 
