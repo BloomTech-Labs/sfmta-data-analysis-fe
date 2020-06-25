@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   body {
-    background-color: #1f1f1f;
+    background-color: #272727;
   }
 }
 
@@ -12,7 +12,7 @@ html {
 //   max-width: 100%;
 //   min-height: 100vh;
 //   width: 100%;
-//   margin: auto;
+//   margin: auto;1
 // } 
 .content {
   flex: 1;
@@ -185,10 +185,10 @@ select.form-control {
 
 .footer{
   position: sticky;
-
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 3rem;
-  background-color: #1F1F1F;
+  background-color: #272727;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,9 +197,6 @@ select.form-control {
     color: rgba(255, 255, 255, 0.5);
     margin-top: 0.5rem;
     
-  }
-  .navigation{
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
   a{
     text-decoration: none;
@@ -323,7 +320,7 @@ select.form-control {
     top: 0;
     display: flex;
     justify-content: space-between;
-    background-color: #1f1f1f;
+    background-color:#272727;
     width: 100%;
     height: 5vh;
     padding: 0 2rem;
@@ -332,6 +329,16 @@ select.form-control {
     cursor: pointer;
     color: #FF6D37;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    .triangle{
+      width: 0;
+      height: 0;
+      position: relative;
+      left: 3.5%;
+      top: 40%;
+      border-style: solid;
+      border-width: 0 0 1rem 1rem;
+    border-color: transparent transparent #40FFCE transparent;
+    }
   }
 
 
@@ -398,6 +405,7 @@ select.form-control {
 .metrics{
   display: flex;
   flex-direction: column;
+  position:relative;
   height: auto;
   min-height: 14.81rem;
   width: 100%;
@@ -405,6 +413,17 @@ select.form-control {
  align-items: center;
   background-color: #272B2F;
   color:white;
+  .popup{ 
+    position: absolute;
+    margin-left: 8rem;
+    padding: 2%;
+    text-align: center;
+    left: 0;
+    z-index: 1;
+    background-color: #2a2e41;
+    width: 13.98rem;
+    height: 7.6875rem;
+  }
 
   .title{
     margin-top:15%;
@@ -436,6 +455,19 @@ select.form-control {
   background-color: #272B2F;
   color:#ffffff;
 
+  .metrics{
+    .popup{ 
+      position: absolute;
+      left: 0;
+      margin-left: 16.5rem;
+      z-index: 1;
+      background-color: #2a2e41;
+      width: 17.98rem;
+      height: 17.6875rem;
+    }
+  }
+  
+
   .title{
     margin-top:15%;
     font-size:3.125rem;
@@ -450,12 +482,23 @@ select.form-control {
 .metricsgaps{
   display: flex;
   flex-direction: column;
+  position: relative;
   height: auto;
   min-height: 14.81rem;
   width: 100%;
   align-items: center;
   background-color: #272B2F;
   color:#ffffff;
+  .popup{ 
+    position: absolute;
+    left: 0;
+    margin-left: 23.5rem;
+    text-align: center;
+    z-index: 1;
+    background-color: #2a2e41;
+    width: 13.98rem;
+    height: 7.6875rem;
+  }
 
   .title{
     margin-top:15%;
@@ -549,6 +592,24 @@ ul {
   list-style-type: none;
 }
 
-
+.hoverdiv{
+  display:flex;
+  justify-content:center;
+  position: absolute;
+  right:0;
+  top:0;
+  margin: 1% 1% 0 0;
+  width:1.875rem;
+  height:1.875rem;
+  align-items:center;
+  border: 1px solid #40ffcf10;
+  color: #40ffce;
+}
+.hiddenpopup{
+  display:none;
+}
+.hover{
+  display:flex;
+}
 
  

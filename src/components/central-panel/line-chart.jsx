@@ -1,7 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2'
 import { connect } from "react-redux"
-
 export function LineChart(props) {
   return (
     <div className="line-chart">
@@ -25,7 +24,6 @@ export function LineChart(props) {
             }
           ]
         }}
-
         options={{
           responsive: true,
           aspectRatio: 1,
@@ -37,12 +35,11 @@ export function LineChart(props) {
                   lineWidth: 3,
                   zeroLineWidth: 3,
                   zeroLineColor: "#40FFCE",
-                  
                 },
               ticks: {
                 max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
                 stepSize: 50,
-                
+                fontColor: "#40FFCE"
               }
             }],
             xAxes: [{
@@ -51,31 +48,25 @@ export function LineChart(props) {
                 lineWidth: 3,
                 zeroLineWidth: 3,
                 zeroLineColor: "#40FFCE",
-                
               },
             ticks: {
               max: props.line_chart ? getMaxYValue(props.line_chart.gaps, props.line_chart.bunches) : 0,
               stepSize: 50,
-                   
+              fontColor: "#40FFCE"
             }
           }],
-            
           }
-
         }}
       />
     </div>
   )
 };
-
 function getMaxYValue(gaps, bunches) {
   return Math.max(...gaps, ...bunches);
 }
-
 const mapStateToProps = state => {
   return {
     line_chart: state.report.line_chart
   }
 }
-
 export default connect(mapStateToProps, {})(LineChart);
